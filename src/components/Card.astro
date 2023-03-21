@@ -8,56 +8,56 @@ export interface Props {
 const { href, title, body } = Astro.props;
 ---
 
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
-</li>
-<style>
-	.link-card {
-		list-style: none;
-		display: flex;
-		padding: 0.25rem;
-		background-color: white;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 0.6rem;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-	}
+<article
+  class="flex bg-white transition hover:shadow-xl dark:bg-gray-800 dark:shadow-gray-800/25"
+>
+  <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
+    <time
+      datetime="2022-10-10"
+      class="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900 dark:text-white"
+    >
+      <span>2022</span>
+      <span class="w-px flex-1 bg-gray-900/10 dark:bg-white/10"></span>
+      <span>Oct 10</span>
+    </time>
+  </div>
 
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: 1rem 1.3rem;
-		border-radius: 0.35rem;
-		color: #111;
-		background-color: white;
-		opacity: 0.8;
-	}
-	h2 {
-		margin: 0;
-		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
-		color: #444;
-	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent));
-	}
-</style>
+  <div class="hidden sm:block sm:basis-56">
+    <img
+      alt="Guitar"
+      src="https://images.unsplash.com/photo-1609557927087-f9cf8e88de18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+      class="aspect-square h-full w-full object-cover"
+    />
+  </div>
+
+  <div class="flex flex-1 flex-col justify-between">
+    <div
+      class="border-l border-gray-900/10 p-4 dark:border-white/10 sm:!border-l-transparent sm:p-6"
+    >
+      <a href="#">
+        <h3 class="font-bold uppercase text-gray-900 dark:text-white">
+          Finding the right guitar for your style - 5 tips
+        </h3>
+      </a>
+
+      <p
+        class="mt-2 text-sm leading-relaxed text-gray-700 line-clamp-3 dark:text-gray-200"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
+        dolores, possimus pariatur animi temporibus nesciunt praesentium dolore
+        sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta,
+        voluptates neque explicabo tempora nisi culpa eius atque dignissimos.
+        Molestias explicabo corporis voluptatem?
+      </p>
+    </div>
+
+    <div class="sm:flex sm:items-end sm:justify-end">
+      <a
+        href="#"
+        class="block bg-yellow-400 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-500"
+      >
+        Read Blog
+      </a>
+    </div>
+  </div>
+</article>
