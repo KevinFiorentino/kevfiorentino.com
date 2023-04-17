@@ -3,9 +3,10 @@ export interface Props {
 	title: string;
 	body: string;
 	href: string;
+  description: string;
 }
 
-const { href, title, body } = Astro.props;
+const { href, title, body, description } = Astro.props;
 ---
 
 <article
@@ -36,18 +37,14 @@ const { href, title, body } = Astro.props;
     >
       <a href="#">
         <h3 class="font-bold uppercase text-gray-900 dark:text-white">
-          Finding the right guitar for your style - 5 tips
+          { title }
         </h3>
       </a>
 
       <p
         class="mt-2 text-sm leading-relaxed text-gray-700 line-clamp-3 dark:text-gray-200"
       >
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
-        dolores, possimus pariatur animi temporibus nesciunt praesentium dolore
-        sed nulla ipsum eveniet corporis quidem, mollitia itaque minus soluta,
-        voluptates neque explicabo tempora nisi culpa eius atque dignissimos.
-        Molestias explicabo corporis voluptatem?
+        { description }
       </p>
     </div>
 
