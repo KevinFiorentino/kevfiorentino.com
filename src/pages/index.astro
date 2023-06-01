@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import BlogCard from '../components/BlogCard.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
@@ -17,10 +17,10 @@ const solana = await Astro.glob('../content/*.md');
 		<ul role="list" class="link-card-grid">
       {
         solana.map(item => (
-          <Card
-            href="https://docs.astro.build/"
+          <BlogCard
             title={item.frontmatter.title}
             body="asd"
+            href="https://docs.astro.build/"
             description={item.frontmatter.description}
           />
         ))
