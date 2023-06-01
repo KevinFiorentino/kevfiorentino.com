@@ -9,12 +9,12 @@ export interface Props {
 const { href, title, body, description } = Astro.props;
 ---
 
-<article class="blog-card-background">
-  <a href={ href } title={ title } class="flex transition hover:shadow-xl dark:bg-gray-800 dark:shadow-gray-800/25">
+<article class="blog-card-background hover:shadow-xl">
+  <a href={ href } title={ title } class="flex transition">
     <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
-      <time datetime="2022-10-10" class="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900 dark:text-white">
+      <time datetime="2022-10-10" class="flex items-center justify-between text-white text-xs font-bold uppercase gap-4">
         <span>2022</span>
-        <span class="w-px flex-1 bg-gray-900/10 dark:bg-white/10"></span>
+        <span class="w-px flex-1"></span>
         <span>Oct 10</span>
       </time>
     </div>
@@ -28,17 +28,17 @@ const { href, title, body, description } = Astro.props;
 
     <div class="flex flex-1 flex-col justify-between">
       <div class="border-l border-gray-900/10 p-4 dark:border-white/10 sm:!border-l-transparent sm:p-6">
-        <h3 class="font-bold uppercase text-gray-900 dark:text-white">
+        <h3 class="font-bold uppercase text-white">
           { title }
         </h3>
-        <p class="mt-2 text-sm leading-relaxed text-gray-700 line-clamp-3 dark:text-gray-200">
+        <p class="mt-2 text-sm leading-relaxed text-white line-clamp-3">
           { description }
         </p>
       </div>
 
       <div class="sm:flex sm:items-end sm:justify-end">
-        <button class="block px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition">
-          Read Blog
+        <button class="block px-5 py-3 text-center text-xs font-bold uppercase text-white transition">
+          Read Article
         </button>
       </div>
     </div>
@@ -47,10 +47,9 @@ const { href, title, body, description } = Astro.props;
 
 <style>
 .blog-card-background {
-  background: linear-gradient(45deg, var(--accent), #6d474a 30%, var(--accent) 60%);
+  background: var(--meddle-background);
 }
 .block {
-  color: white;
-  background-color: #6d474a;
+  background-color: var(--accent);
 }
 </style>

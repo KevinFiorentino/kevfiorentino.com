@@ -6,7 +6,7 @@ import Footer from '../components/Footer.astro';
 
 import '../styles/global.css';
 
-const solana = await Astro.glob('../content/*.md');
+const solana = await Astro.glob('../content/solana/*.md');
 
 ---
 
@@ -14,7 +14,7 @@ const solana = await Astro.glob('../content/*.md');
   <Header></Header>
 	<main>
 		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<ul role="list" class="link-card-grid">
+		<div role="list" class="link-card-grid">
       {
         solana.map(item => (
           <BlogCard
@@ -25,7 +25,7 @@ const solana = await Astro.glob('../content/*.md');
           />
         ))
       }
-		</ul>
+		</div>
 	</main>
   <Footer></Footer>
 </Layout>
