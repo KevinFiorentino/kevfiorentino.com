@@ -1,0 +1,16 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import BlogCard from '../components/BlogCard.astro';
+
+const solana = await Astro.glob('../content/solana/*.md');
+---
+
+<MainLayout title="Blog | Kevin Fiorentino">
+  <h1 class="text-gradient">
+    Blog
+  </h1>
+</MainLayout>
+
+<style>
+
+</style>

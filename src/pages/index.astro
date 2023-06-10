@@ -1,41 +1,29 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import MainLayout from '../layouts/MainLayout.astro';
 import BlogCard from '../components/BlogCard.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-
-import '../styles/global.css';
 
 const solana = await Astro.glob('../content/solana/*.md');
-
 ---
 
-<Layout title="Welcome to Astro.">
-  <Header></Header>
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<div role="list" class="link-card-grid">
-      {
-        solana.map(item => (
-          <BlogCard
-            title={item.frontmatter.title}
-            body="asd"
-            href="https://docs.astro.build/"
-            description={item.frontmatter.description}
-          />
-        ))
-      }
-		</div>
-	</main>
-  <Footer></Footer>
-</Layout>
+<MainLayout title="Home | Kevin Fiorentino">
+  <h1 class="text-gradient">
+    Kevin Fiorentino
+  </h1>
+  <div role="list" class="link-card-grid">
+    {
+      solana.map(item => (
+        <BlogCard
+          title={item.frontmatter.title}
+          body="asd"
+          href="https://docs.astro.build/"
+          description={item.frontmatter.description}
+        />
+      ))
+    }
+  </div>
+</MainLayout>
 
 <style>
-main {
-  margin: auto;
-  padding: 1.5rem;
-  max-width: 150ch;
-}
 .link-card-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
