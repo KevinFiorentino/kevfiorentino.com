@@ -1,29 +1,39 @@
 ---
 export interface Props {
 	title: string;
-	body: string;
+  desc: string;
+  image: string;
+  date: string;
 	href: string;
-  description: string;
 }
 
-const { href, title, body, description } = Astro.props;
+const {
+  title,
+  desc,
+  image,
+  date,
+  href
+} = Astro.props;
+
+const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const d = new Date(date);
+const year = d.getFullYear();
+const month = months[d.getMonth()];
+const day = d.getDate();
 ---
 
 <article class="blog-card-background hover:shadow-xl">
   <a href={ href } title={ title } class="flex transition">
     <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
-      <time datetime="2022-10-10" class="flex items-center justify-between text-white text-xs font-bold uppercase gap-4">
-        <span>2022</span>
+      <time datetime="" class="flex items-center justify-between text-white text-xs font-bold uppercase gap-4">
+        <span>{ year }</span>
         <span class="w-px flex-1"></span>
-        <span>Oct 10</span>
+        <span>{ month } { day }</span>
       </time>
     </div>
 
     <div class="hidden sm:block sm:basis-56">
-      <img class="aspect-square h-full w-full object-cover"
-        src="https://images.unsplash.com/photo-1609557927087-f9cf8e88de18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
-        alt="Guitar"
-      />
+      <img class="aspect-square h-full w-full object-cover" src={ image } alt={ title }/>
     </div>
 
     <div class="flex flex-1 flex-col justify-between">
@@ -32,24 +42,24 @@ const { href, title, body, description } = Astro.props;
           { title }
         </h3>
         <p class="mt-2 text-sm leading-relaxed text-white line-clamp-3">
-          { description }
+          { desc }
         </p>
       </div>
 
       <div class="sm:flex sm:items-end sm:justify-end">
-        <button class="block px-5 py-3 text-center text-xs font-bold uppercase text-white transition">
+        <div class="block px-5 py-3 text-center text-xs font-bold uppercase text-white transition">
           Read Article
-        </button>
+        </div>
       </div>
     </div>
   </a>
 </article>
 
 <style>
-.blog-card-background {
-  background: var(--meddle-background);
-}
-.block {
-  background-color: var(--accent);
-}
+  .blog-card-background {
+    background: var(--meddle-background);
+  }
+  .block {
+    background-color: var(--accent);
+  }
 </style>
