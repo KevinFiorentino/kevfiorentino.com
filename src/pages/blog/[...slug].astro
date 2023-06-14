@@ -1,0 +1,20 @@
+---
+import { getCollection } from 'astro:content';
+import MainLayout from '../../layouts/MainLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('solana');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<MainLayout title={`${post.data.title} | Kevin Fiorentino`}>
+  <div>
+    <Content />
+  </div>
+</MainLayout>

@@ -1,8 +1,11 @@
 ---
+import { getCollection } from 'astro:content';
 import MainLayout from '../layouts/MainLayout.astro';
 import BlogCard from '../components/BlogCard.astro';
 
-const solana = await Astro.glob('../content/solana/*.md');
+const solanaPosts = await getCollection('solana');
+console.log('solanaPosts', solanaPosts);
+
 ---
 
 <MainLayout title="Blog | Kevin Fiorentino">

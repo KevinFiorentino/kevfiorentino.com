@@ -1,9 +1,13 @@
 ---
+import { getCollection } from 'astro:content';
 import MainLayout from '../layouts/MainLayout.astro';
 import BlogCard from '../components/BlogCard.astro';
 
-const solana = await Astro.glob('../content/solana/*.md');
+const solanaPosts = await getCollection('solana');
+console.log('solana', solanaPosts[0]);
 ---
+
+
 
 <MainLayout title="Home | Kevin Fiorentino">
   <h1 class="text-gradient">
@@ -11,14 +15,15 @@ const solana = await Astro.glob('../content/solana/*.md');
   </h1>
   <div role="list" class="link-card-grid">
     {
-      solana.map(item => (
+      solanaPosts.map(item => (
         <BlogCard
-          title={item.frontmatter.title}
-          desc={item.frontmatter.description}
-          image={item.frontmatter.image}
-          date={item.frontmatter.date}
-          href={item.frontmatter.href}
-        />
+          slug={item.slug}
+          title={item.data.title}
+          desc={item.data.description}
+          image={item.data.image}
+          date={item.data.date}
+        >
+        </BlogCard>
       ))
     }
   </div>

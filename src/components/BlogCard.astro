@@ -1,18 +1,18 @@
 ---
 export interface Props {
+  slug: string;
 	title: string;
   desc: string;
   image: string;
   date: string;
-	href: string;
 }
 
 const {
+  slug,
   title,
   desc,
   image,
   date,
-  href
 } = Astro.props;
 
 const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -23,9 +23,9 @@ const day = d.getDate();
 ---
 
 <article class="blog-card-background hover:shadow-xl">
-  <a href={ href } title={ title } class="flex transition">
+  <a href=`blog/${slug}` title={ title } class="flex transition">
     <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
-      <time datetime="" class="flex items-center justify-between text-white text-xs font-bold uppercase gap-4">
+      <time datetime={date} class="flex items-center justify-between text-white text-xs font-bold uppercase gap-4">
         <span>{ year }</span>
         <span class="w-px flex-1"></span>
         <span>{ month } { day }</span>
@@ -53,6 +53,9 @@ const day = d.getDate();
       </div>
     </div>
   </a>
+
+  <slot />
+
 </article>
 
 <style>
