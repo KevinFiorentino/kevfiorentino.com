@@ -1,0 +1,8 @@
+---
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('ipfs');
+console.log('IPFS posts', posts);
+---
+
+IPFS posts
