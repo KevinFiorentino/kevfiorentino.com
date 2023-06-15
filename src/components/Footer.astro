@@ -2,7 +2,7 @@
 const year = new Date().getFullYear();
 ---
 
-<footer aria-label="Site Footer" class="bg-white lg:grid lg:grid-cols-5">
+<footer aria-label="Site Footer" class="bg-white lg:grid lg:grid-cols-5 dark:bg-gray-800">
   <div class="relative block h-32 lg:col-span-2 lg:h-full">
     <img src="/tdsotm.webp" class="absolute inset-0 object-cover w-full h-full" alt="The Dark Side Of The Moon"/>
   </div>
@@ -10,9 +10,9 @@ const year = new Date().getFullYear();
   <div class="px-4 py-16 sm:px-6 lg:col-span-3 lg:px-8">
     <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
       <div>
-        <p class="block text-2xl font-medium sm:text-3xl">
+        <p class="block text-2xl font-medium sm:text-3xl dark:text-white">
           Kev <br>
-          <span class="text-xs tracking-wide text-gray-500 uppercase">
+          <span class="text-xs tracking-wide text-gray-500 uppercase dark:text-white">
             I got amazing power of observation
           </span>
         </p>
@@ -47,28 +47,28 @@ const year = new Date().getFullYear();
 
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div>
-          <p class="font-medium text-gray-900">
+          <p class="font-medium text-gray-900 dark:text-white">
             Website
           </p>
           <nav aria-label="Website navigation" class="mt-6">
             <ul class="space-y-4 text-sm">
               <li>
-                <a href="/" title="Home" class="text-gray-700 transition hover:opacity-75">
+                <a href="/" title="Home" class="text-gray-700 transition hover:opacity-75 dark:text-white">
                   Home
                 </a>
               </li>
               <li>
-                <a href="/blog" title="Blog" class="text-gray-700 transition hover:opacity-75">
+                <a href="/blog" title="Blog" class="text-gray-700 transition hover:opacity-75 dark:text-white">
                   Blog
                 </a>
               </li>
               <li>
-                <a href="/who-i-am" title="Who I am" class="text-gray-700 transition hover:opacity-75">
+                <a href="/who-i-am" title="Who I am" class="text-gray-700 transition hover:opacity-75 dark:text-white">
                   Who I am
                 </a>
               </li>
               <li>
-                <a href="/contact" title="Contact" class="text-gray-700 transition hover:opacity-75">
+                <a href="/contact" title="Contact" class="text-gray-700 transition hover:opacity-75 dark:text-white">
                   Contact
                 </a>
               </li>
@@ -77,23 +77,23 @@ const year = new Date().getFullYear();
         </div>
 
         <div>
-          <p class="font-medium text-gray-900">
+          <p class="font-medium text-gray-900 dark:text-white">
             Might interest you
           </p>
           <nav aria-label="Might interest you" class="mt-6">
             <ul class="space-y-4 text-sm">
               <li>
-                <a href="/blog/javascript" title="Blog Javascript" class="text-gray-700 transition hover:opacity-75">
+                <a href="/blog/javascript" title="Blog Javascript" class="text-gray-700 transition hover:opacity-75 dark:text-white">
                   Javascript
                 </a>
               </li>
               <li>
-                <a href="/blog/solana" title="Blog Solana" class="text-gray-700 transition hover:opacity-75">
+                <a href="/blog/solana" title="Blog Solana" class="text-gray-700 transition hover:opacity-75 dark:text-white">
                   Solana
                 </a>
               </li>
               <li>
-                <a href="/blog/ipfs" title="Blog IPFS" class="text-gray-700 transition hover:opacity-75">
+                <a href="/blog/ipfs" title="Blog IPFS" class="text-gray-700 transition hover:opacity-75 dark:text-white">
                   IPFS
                 </a>
               </li>
@@ -107,15 +107,15 @@ const year = new Date().getFullYear();
       <div class="sm:flex sm:items-center sm:justify-between">
         <nav aria-label="This website was made with Astro">
           <ul class="flex flex-wrap gap-4 text-xs">
-            <li class="flex">
+            <li class="flex dark:text-white">
               This website was made with
               <a href="https://astro.build/" title="Astro website" target="_blank" class="text-gray transition hover:opacity-75">
-                <img src="/astro-logo.svg" title="Astro Logo" width="70px" class="ml-1">
+                <img src="/astro-logo-light.svg" title="Astro Logo" width="70px" class="ml-1">
               </a>
             </li>
           </ul>
         </nav>
-        <p class="mt-8 text-xs text-gray-500 sm:mt-0">
+        <p class="mt-8 text-xs text-gray-500 sm:mt-0 dark:text-white">
           &copy; {year} Kevin Fiorentino
         </p>
       </div>
