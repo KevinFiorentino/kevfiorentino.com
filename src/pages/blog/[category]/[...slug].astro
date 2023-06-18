@@ -1,33 +1,21 @@
 ---
 import { getCollection } from 'astro:content';
+import { collectionMetadata } from '@content/config';
 
 export async function getStaticPaths() {
 
   const pages: any[] = [];
 
-  const ipfs = await getCollection('ipfs');
-  ipfs.map((post) => {
-    pages.push({
-      params: { category: 'ipfs', slug: post.slug },
-      props: post,
-    })
-  });
-
-  const javascript = await getCollection('javascript');
-  javascript.map((post) => {
-    pages.push({
-      params: { category: 'javascript', slug: post.slug },
-      props: post,
-    })
-  });
-
-  const solana = await getCollection('solana');
-  solana.map((post) => {
-    pages.push({
-      params: { category: 'solana', slug: post.slug },
-      props: post,
-    })
-  });
+  // Build pages of each content
+  for await (let c of collectionMetadata) {
+    const ipfs = await getCollection(c.name as any);
+    ipfs.map((post) => {
+      pages.push({
+        params: { category: c.name, slug: post.slug },
+        props: post,
+      })
+    });
+  }
 
   return pages;
 }

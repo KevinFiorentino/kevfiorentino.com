@@ -1,5 +1,10 @@
 import { z, defineCollection } from 'astro:content';
 
+
+/* ******************************
+         ASTRO CONFIGS
+****************************** */
+
 const mainSchema = z.object({
   title: z.string(),
   desc: z.string(),
@@ -28,3 +33,32 @@ export const collections = {
   'javascript': javascriptCollection,
   'solana': solanaCollection,
 };
+
+
+/* ******************************
+         CUSTOM CONFIGS
+****************************** */
+
+export interface CollectionMetadata {
+  name: string;
+  logo: string;
+  background: string;
+}
+
+export const collectionMetadata: CollectionMetadata[] = [
+  {
+    name: 'ipfs',
+    logo: '',
+    background: ''
+  },
+  {
+    name: 'javascript',
+    logo: '',
+    background: ''
+  },
+  {
+    name: 'solana',
+    logo: '',
+    background: ''
+  },
+];

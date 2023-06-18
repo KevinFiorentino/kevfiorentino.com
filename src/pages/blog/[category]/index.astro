@@ -1,32 +1,27 @@
 ---
 import { getCollection } from 'astro:content';
-import MainLayout from '../../../layouts/MainLayout.astro';
-import BlogCard from '../../../components/BlogCard.astro';
+import { collectionMetadata } from '@content/config';
+import MainLayout from '@layouts/MainLayout.astro';
+import BlogCard from '@components/BlogCard.astro';
 
 export async function getStaticPaths() {
 
   const pages: any[] = [];
 
-
-
-
-
-  /* for await (let c of collections) { */
-    /* const posts = await getCollection(collections);
+  // Build categorie pages
+  for await (let c of collectionMetadata) {
+    const posts = await getCollection(c.name as any);
     pages.push({
-      params: { category: c },
+      params: { category: c.name },
       props: { posts: posts },
-    }); */
-  /* } */
+    });
+  }
 
   return pages;
 }
 
 const param = Astro.params;
 const post = Astro.props;
-
-console.log('param', param);
-console.log('post', post);
 ---
 
 <MainLayout title="Blog | Kevin Fiorentino">
