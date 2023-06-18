@@ -1,0 +1,61 @@
+---
+import { getCollection, CollectionEntry } from 'astro:content';
+import MainLayout from '../../../layouts/MainLayout.astro';
+import BlogCard from '../../../components/BlogCard.astro';
+
+export async function getStaticPaths() {
+
+  const categories: any[] = [ 'ipfs', 'javascript', 'solana' ];
+  const pages: any[] = [];
+
+  for await (let c of categories) {
+    const posts = await getCollection(c);
+    pages.push({
+      params: { category: c },
+      props: { posts: posts },
+    });
+  }
+
+  return pages;
+}
+
+const param = Astro.params;
+const post = Astro.props;
+
+console.log('param', param);
+console.log('post', post);
+---
+
+<MainLayout title="Blog | Kevin Fiorentino">
+  <h1 class="text-gradient">
+    Blog {param.category}
+  </h1>
+  <div role="list" class="link-card-grid">
+    {
+      post.posts.map((item: any) => (
+        <BlogCard
+          slug={item.slug}
+          title={item.data.title}
+          desc={item.data.description}
+          image={item.data.image}
+          date={item.data.date}
+        >
+        </BlogCard>
+      ))
+    }
+  </div>
+</MainLayout>
+
+<style>
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 0;
+  }
+  @media (max-width: 768px) {
+    .link-card-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

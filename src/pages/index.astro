@@ -7,8 +7,6 @@ const solanaPosts = await getCollection('solana');
 console.log('solana', solanaPosts[0]);
 ---
 
-
-
 <MainLayout title="Home | Kevin Fiorentino">
   <h1 class="text-gradient">
     Kevin Fiorentino
@@ -30,15 +28,15 @@ console.log('solana', solanaPosts[0]);
 </MainLayout>
 
 <style>
-.link-card-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  padding: 0;
-}
-@media (max-width: 768px) {
   .link-card-grid {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 0;
   }
-}
+  @media (max-width: 768px) {
+    .link-card-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>

@@ -1,0 +1,43 @@
+---
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+
+  const pages: any[] = [];
+
+  const ipfs = await getCollection('ipfs');
+  ipfs.map((post) => {
+    pages.push({
+      params: { category: 'ipfs', slug: post.slug },
+      props: post,
+    })
+  });
+
+  const javascript = await getCollection('javascript');
+  javascript.map((post) => {
+    pages.push({
+      params: { category: 'javascript', slug: post.slug },
+      props: post,
+    })
+  });
+
+  const solana = await getCollection('solana');
+  solana.map((post) => {
+    pages.push({
+      params: { category: 'solana', slug: post.slug },
+      props: post,
+    })
+  });
+
+  return pages;
+}
+
+const param = Astro.params;
+const post = Astro.props;
+
+console.log('param', param);
+
+const { Content } = await post.render();
+---
+
+<Content />
