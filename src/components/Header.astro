@@ -1,58 +1,123 @@
 <header aria-label="Page Header" class="bg-gray-50 dark:bg-gray-800">
   <div class="mx-auto max-w-screen-xl px-4 py-6 sm:py-10 sm:px-6 lg:px-8">
-    <div class="sm:flex sm:items-center sm:justify-between">
 
-      <div class="text-center sm:text-left">
-        <a href="/" class="text-2xl font-bold text-gray-900 sm:text-3xl dark:text-white">
-          Kevin Fiorentino —△🌈
-        </a>
-        <p class="mt-1.5 text-sm text-gray-500 dark:text-white">
-          Javascript Engineer | Blockchain & Web3 | Graduate in Systems
-        </p>
+    <nav>
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+
+          <div class="flex flex-1 items-center justify-center sm:items-center sm:justify-between">
+
+            <div class="text-center sm:text-left">
+              <a href="/" class="text-2xl font-bold text-gray-900 lg:text-3xl dark:text-white">
+                Kevin Fiorentino —△🌈
+              </a>
+              <p class="mt-1.5 text-sm text-gray-500 dark:text-white">
+                Javascript Engineer | Blockchain & Web3 | Graduate in Systems
+              </p>
+            </div>
+
+            <div class="hidden sm:ml-6 md:block">
+              <div class="flex space-x-4">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="/" title="Home" class="text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring px-4 py-1 dark:text-white">
+                  <span class="text-sm font-medium">Home</span>
+                </a>
+                <a href="/blog" title="Blog" class="text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring px-4 py-1 dark:text-white">
+                  <span class="text-sm font-medium">Blog</span>
+                </a>
+                <a href="/who-i-am" title="Who I am" class="text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring px-4 py-1 dark:text-white">
+                  <span class="text-sm font-medium">Who I am</span>
+                </a>
+                <a href="/contact" title="Contact" class="text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring px-4 py-1 dark:text-white">
+                  <span class="text-sm font-medium">Contact</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="flex flex-col justify-center items-center">
+
+              <div>
+                <button id="toggle-dark-mode" class="inline-flex items-center justify-center rounded-md text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue">
+                  <svg id="moon-icon" fill="none" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="white" stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"></path>
+                  </svg>
+                  <svg id="sun-icon" class="hide-icon" stroke="black" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"></path>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="inset-y-0 left-0 flex items-center md:hidden">
+                <!-- Mobile menu button -->
+                <button id="toggle-mobile-menu" type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue" aria-controls="mobile-menu" aria-expanded="false">
+                  <span class="sr-only">Open main menu</span>
+                  <!-- Icon when menu is closed. Menu open: "hidden", Menu closed: "block" -->
+                  <svg id="menu-open" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">            <!-- aria-hidden="true" -->
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+                  <!-- Icon when menu is open. Menu open: "block", Menu closed: "hidden" -->
+                  <svg id="menu-close" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
       </div>
 
-      <div class="mt-4 flex flex-col gap-4 sm:mt-0 sm:flex-row sm:items-center">
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div id="mobile-menu" class="hidden md:hidden mt-3">
+        <div class="text-center space-y-1 px-2 pb-3 pt-2">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
 
-        <a href="/" title="Home" class="text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring px-5 py-1 dark:text-white">
-          <span class="text-sm font-medium">Home</span>
-        </a>
+          <a href="/" title="Home" class="text-gray-500 transition block rounded-md dark:text-white px-3 py-2 text-base font-medium"> <!-- aria-current="page" -->
+            <span class="text-sm font-medium">Home</span>
+          </a>
+          <a href="/blog" title="Blog" class="text-gray-500 transition block rounded-md dark:text-white px-3 py-2 text-base font-medium">
+            <span class="text-sm font-medium">Blog</span>
+          </a>
+          <a href="/who-i-am" title="Who I am" class="text-gray-500 transition block rounded-md dark:text-white px-3 py-2 text-base font-medium">
+            <span class="text-sm font-medium">Who I am</span>
+          </a>
+          <a href="/contact" title="Contact" class="text-gray-500 transition block rounded-md dark:text-white px-3 py-2 text-base font-medium">
+            <span class="text-sm font-medium">Contact</span>
+          </a>
 
-        <a href="/blog" title="Blog" class="text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring px-5 py-1 dark:text-white">
-          <span class="text-sm font-medium">Blog</span>
-        </a>
+          <hr>
 
-        <a href="/who-i-am" title="Who I am" class="text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring px-5 py-1 dark:text-white">
-          <span class="text-sm font-medium">Who I am</span>
-        </a>
-
-        <a href="/contact" title="Contact" class="text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring px-5 py-1 dark:text-white">
-          <span class="text-sm font-medium">Contact</span>
-        </a>
-
-        <button id="toggle-dark-mode">
-          <svg id="moon-icon" fill="none" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path fill="white" stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"></path>
-          </svg>
-          <svg id="sun-icon" class="hide-icon" stroke="black" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"></path>
-          </svg>
-        </button>
-
+        </div>
       </div>
 
-    </div>
+    </nav>
+
   </div>
 </header>
 
 <script>
-  const html = document.getElementById('kevin');
-  const moon = document.getElementById('moon-icon');
-  const sun = document.getElementById('sun-icon');
+  const elementMenu = document.getElementById('mobile-menu');
+  const svgOpen = document.getElementById('menu-open');
+  const svgClose = document.getElementById('menu-close');
+  document.getElementById('toggle-mobile-menu')
+    ?.addEventListener('click', () => {
+      elementMenu?.classList.toggle('hidden');
+      svgOpen?.classList.toggle('hidden');
+      svgClose?.classList.toggle('hidden');
+    });
+</script>
+
+<script>
+  const elementHtml = document.getElementById('kevin');
+  const svgMoon = document.getElementById('moon-icon');
+  const svgSun = document.getElementById('sun-icon');
   document.getElementById('toggle-dark-mode')
     ?.addEventListener('click', () => {
-      html?.classList.toggle('dark');
-      moon?.classList.toggle('hide-icon');
-      sun?.classList.toggle('hide-icon');
+      elementHtml?.classList.toggle('dark');
+      svgMoon?.classList.toggle('hide-icon');
+      svgSun?.classList.toggle('hide-icon');
     });
 </script>
 
