@@ -4,7 +4,6 @@ import MainLayout from '../layouts/MainLayout.astro';
 import BlogCard from '../components/BlogCard.astro';
 
 const solanaPosts = await getCollection('solana');
-console.log('solana', solanaPosts[0]);
 ---
 
 <MainLayout title="Home | Kevin Fiorentino">
@@ -17,8 +16,8 @@ console.log('solana', solanaPosts[0]);
         <BlogCard
           slug={item.slug}
           title={item.data.title}
-          desc={item.data.description}
-          image={item.data.image}
+          desc={item.data.desc}
+          image={item.data.image.url}
           date={item.data.date}
         >
         </BlogCard>

@@ -1,20 +1,23 @@
 ---
-import { getCollection, CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 import MainLayout from '../../../layouts/MainLayout.astro';
 import BlogCard from '../../../components/BlogCard.astro';
 
 export async function getStaticPaths() {
 
-  const categories: any[] = [ 'ipfs', 'javascript', 'solana' ];
   const pages: any[] = [];
 
-  for await (let c of categories) {
-    const posts = await getCollection(c);
+
+
+
+
+  /* for await (let c of collections) { */
+    /* const posts = await getCollection(collections);
     pages.push({
       params: { category: c },
       props: { posts: posts },
-    });
-  }
+    }); */
+  /* } */
 
   return pages;
 }
@@ -36,8 +39,8 @@ console.log('post', post);
         <BlogCard
           slug={item.slug}
           title={item.data.title}
-          desc={item.data.description}
-          image={item.data.image}
+          desc={item.data.desc}
+          image={item.data.image.url}
           date={item.data.date}
         >
         </BlogCard>
