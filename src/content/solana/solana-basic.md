@@ -9,3 +9,8 @@ tags: ['Blockchain', 'Solana']
 # SOLANA !!!!!!!!!
 
 Solana basic...
+
+```javascript
+const asd = 'hola!';
+console.log(asd);
+```
