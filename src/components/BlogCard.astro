@@ -1,14 +1,19 @@
 ---
 export interface Props {
   slug: string;
+  collection: string;
 	title: string;
   desc: string;
-  image: string;
+  image: {
+    url: string,
+    alt: string
+  };
   date: string;
 }
 
 const {
   slug,
+  collection,
   title,
   desc,
   image,
@@ -23,9 +28,9 @@ const day = d.getDate();
 ---
 
 <article class="blog-card-background hover:shadow-xl">
-  <a href={slug} title={ title } class="flex transition">
+  <a href=`/blog/${collection}/${slug}` title={ title } class="flex transition">
     <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
-      <time datetime={date} class="flex items-center justify-between text-white text-xs font-bold uppercase gap-4">
+      <time datetime={ date } class="flex items-center justify-between text-white text-xs font-bold uppercase gap-4">
         <span>{ year }</span>
         <span class="w-px flex-1"></span>
         <span>{ month } { day }</span>
@@ -33,7 +38,7 @@ const day = d.getDate();
     </div>
 
     <div class="hidden sm:block sm:basis-56">
-      <img class="aspect-square h-full w-full object-cover" src={ image } alt={ title }/>
+      <img class="aspect-square h-full w-full object-cover" src={ image.url } alt={ image.alt }/>
     </div>
 
     <div class="flex flex-1 flex-col justify-between">
@@ -53,9 +58,6 @@ const day = d.getDate();
       </div>
     </div>
   </a>
-
-  <slot />
-
 </article>
 
 <style>

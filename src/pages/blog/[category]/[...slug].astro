@@ -23,8 +23,6 @@ export async function getStaticPaths() {
 const param = Astro.params;
 const post = Astro.props;
 
-console.log('param', param);
-
 const { Content } = await post.render();
 ---
 

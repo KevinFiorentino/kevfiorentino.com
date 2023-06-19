@@ -33,9 +33,10 @@ const post = Astro.props;
       post.posts.map((item: any) => (
         <BlogCard
           slug={item.slug}
+          collection={item.collection}
           title={item.data.title}
           desc={item.data.desc}
-          image={item.data.image.url}
+          image={item.data.image}
           date={item.data.date}
         >
         </BlogCard>
