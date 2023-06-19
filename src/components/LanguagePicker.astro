@@ -1,0 +1,35 @@
+---
+import { languages } from '@i18n/ui';
+
+const currentUrl = Astro.url.pathname;
+const urlWithoutLang = currentUrl.slice(4);   // Remove /{lang}/
+---
+
+<div id="language-picker">
+  <ul>
+    {Object.entries(languages).map(([lang, label]) => (
+      <li class="p-3">
+        <a href={`/${lang}/${urlWithoutLang}`} title={`Change language to ${label}`}>{lang}</a>
+      </li>
+    ))}
+  </ul>
+</div>
+
+
+<style>
+#language-picker {
+  position: fixed;
+  background: red;
+  top: calc(50% - 100px);
+  right: 0;
+}
+#language-picker ul {
+
+}
+#language-picker li {
+  text-transform: uppercase;
+}
+#language-picker li:hover, #language-picker li:focus {
+  background: green;
+}
+</style>
