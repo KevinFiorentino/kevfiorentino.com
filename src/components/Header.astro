@@ -1,3 +1,9 @@
+---
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
 <header aria-label="Page Header" class="bg-gray-50 dark:bg-gray-800">
   <div class="mx-auto max-w-screen-xl px-4 py-6 sm:py-10 sm:px-6 lg:px-8">
 
@@ -19,16 +25,16 @@
             <div class="hidden sm:ml-6 md:block">
               <div class="flex space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="/" title="Home" class="text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring px-4 py-1 dark:text-white">
+                <a href={`/${lang}`} title="Home" class="text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring px-4 py-1 dark:text-white">
                   <span class="text-sm font-medium">Home</span>
                 </a>
-                <a href="/blog" title="Blog" class="text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring px-4 py-1 dark:text-white">
+                <a href={`/${lang}/blog`} title="Blog" class="text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring px-4 py-1 dark:text-white">
                   <span class="text-sm font-medium">Blog</span>
                 </a>
-                <a href="/who-i-am" title="Who I am" class="text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring px-4 py-1 dark:text-white">
+                <a href={`/${lang}/who-i-am`} title="Who I am" class="text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring px-4 py-1 dark:text-white">
                   <span class="text-sm font-medium">Who I am</span>
                 </a>
-                <a href="/contact" title="Contact" class="text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring px-4 py-1 dark:text-white">
+                <a href={`/${lang}/contact`} title="Contact" class="text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring px-4 py-1 dark:text-white">
                   <span class="text-sm font-medium">Contact</span>
                 </a>
               </div>

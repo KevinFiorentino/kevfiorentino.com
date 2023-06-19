@@ -1,4 +1,9 @@
 ---
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const year = new Date().getFullYear();
 ---
 
@@ -51,22 +56,22 @@ const year = new Date().getFullYear();
           <nav aria-label="Website navigation" class="mt-6">
             <ul class="space-y-4 text-sm">
               <li>
-                <a href="/" title="Home" class="text-gray-700 transition hover:opacity-75 dark:text-white">
+                <a href={`/${lang}`} title="Home" class="text-gray-700 transition hover:opacity-75 dark:text-white">
                   Home
                 </a>
               </li>
               <li>
-                <a href="/blog" title="Blog" class="text-gray-700 transition hover:opacity-75 dark:text-white">
+                <a href={`/${lang}/blog`} title="Blog" class="text-gray-700 transition hover:opacity-75 dark:text-white">
                   Blog
                 </a>
               </li>
               <li>
-                <a href="/who-i-am" title="Who I am" class="text-gray-700 transition hover:opacity-75 dark:text-white">
+                <a href={`/${lang}/who-i-am`} title="Who I am" class="text-gray-700 transition hover:opacity-75 dark:text-white">
                   Who I am
                 </a>
               </li>
               <li>
-                <a href="/contact" title="Contact" class="text-gray-700 transition hover:opacity-75 dark:text-white">
+                <a href={`/${lang}/contact`} title="Contact" class="text-gray-700 transition hover:opacity-75 dark:text-white">
                   Contact
                 </a>
               </li>
@@ -81,17 +86,17 @@ const year = new Date().getFullYear();
           <nav aria-label="Might interest you" class="mt-6">
             <ul class="space-y-4 text-sm">
               <li>
-                <a href="/blog/javascript" title="Blog Javascript" class="text-gray-700 transition hover:opacity-75 dark:text-white">
+                <a href={`/${lang}/blog/javascript`} title="Blog Javascript" class="text-gray-700 transition hover:opacity-75 dark:text-white">
                   Javascript
                 </a>
               </li>
               <li>
-                <a href="/blog/solana" title="Blog Solana" class="text-gray-700 transition hover:opacity-75 dark:text-white">
+                <a href={`/${lang}/blog/solana`} title="Blog Solana" class="text-gray-700 transition hover:opacity-75 dark:text-white">
                   Solana
                 </a>
               </li>
               <li>
-                <a href="/blog/ipfs" title="Blog IPFS" class="text-gray-700 transition hover:opacity-75 dark:text-white">
+                <a href={`/${lang}/blog/ipfs`} title="Blog IPFS" class="text-gray-700 transition hover:opacity-75 dark:text-white">
                   IPFS
                 </a>
               </li>
@@ -106,7 +111,7 @@ const year = new Date().getFullYear();
           <nav aria-label="Legal" class="mt-6">
             <ul class="space-y-4 text-sm">
               <li>
-                <a href="#" title="#" class="text-gray-700 transition hover:opacity-75 dark:text-white">
+                <a href={`/${lang}/policy`} title="Privacy policy" class="text-gray-700 transition hover:opacity-75 dark:text-white">
                   Privacy policy
                 </a>
               </li>

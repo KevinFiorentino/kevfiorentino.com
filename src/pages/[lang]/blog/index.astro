@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+import { languages } from '@i18n/ui';
+import MainLayout from '@layouts/MainLayout.astro';
+
+export async function getStaticPaths() {
+  const pages: any[] = [];
+
+  Object.keys(languages).map((l: string) => {
+    pages.push({
+      params: { lang: l },
+      props: { },
+    });
+  });
+
+  return pages;
+}
+---
+
+<MainLayout title="Blog | Kevin Fiorentino">
+  <h1 class="text-gradient">
+    Blog ENGLISH
+  </h1>
+</MainLayout>
+
+<style>
+
+</style>

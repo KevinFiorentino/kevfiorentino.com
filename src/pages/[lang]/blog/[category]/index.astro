@@ -9,13 +9,13 @@ export async function getStaticPaths() {
   const pages: any[] = [];
 
   // Build categorie pages
-  for await (let c of collectionMetadata) {
+  /* for await (let c of collectionMetadata) {
     const posts = await getCollection(c.name as any);
     pages.push({
       params: { category: c.name },
       props: { posts: posts },
     });
-  }
+  } */
 
   return pages;
 }

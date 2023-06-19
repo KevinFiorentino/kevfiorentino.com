@@ -1,0 +1,27 @@
+---
+import MainLayout from '@layouts/MainLayout.astro';
+import { languages } from '@i18n/ui';
+
+export async function getStaticPaths() {
+  const pages: any[] = [];
+
+  Object.keys(languages).map((l: string) => {
+    pages.push({
+      params: { lang: l },
+      props: { },
+    });
+  });
+
+  return pages;
+}
+---
+
+<MainLayout title="Word experience | Kevin Fiorentino">
+  <h1 class="text-gradient">
+    Word experience
+  </h1>
+</MainLayout>
+
+<style>
+
+</style>
