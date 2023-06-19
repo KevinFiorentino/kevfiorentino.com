@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import { collectionMetadata } from '@content/config';
+import { languages } from '@i18n/ui';
 import MainLayout from '@layouts/MainLayout.astro';
 import BlogCard from '@components/BlogCard.astro';
 
@@ -8,14 +9,17 @@ export async function getStaticPaths() {
 
   const pages: any[] = [];
 
-  // Build categorie pages
-  /* for await (let c of collectionMetadata) {
+  // Build category pages
+  for await (let c of collectionMetadata) {
     const posts = await getCollection(c.name as any);
-    pages.push({
-      params: { category: c.name },
-      props: { posts: posts },
+
+    Object.keys(languages).map((l: string) => {
+      pages.push({
+        params: { lang: l, category: c.name },
+        props: { posts: posts.filter(p => (p.slug.split('/')[0] == l)) },
+      });
     });
-  } */
+  }
 
   return pages;
 }

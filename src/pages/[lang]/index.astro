@@ -8,7 +8,7 @@ import BlogCard from '@components/BlogCard.astro';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-/* const solanaPosts = await getCollection('solana'); */
+const solanaPosts = await getCollection('solana');
 
 export async function getStaticPaths() {
   const pages: any[] = [];
@@ -29,7 +29,7 @@ export async function getStaticPaths() {
   <h1 class="text-gradient">
     Kevin Fiorentino {lang}
   </h1>
-  <!-- <div role="list" class="link-card-grid">
+  <div role="list" class="link-card-grid">
     {
       solanaPosts.map(item => (
         <BlogCard
@@ -43,7 +43,7 @@ export async function getStaticPaths() {
         </BlogCard>
       ))
     }
-  </div> -->
+  </div>
 </MainLayout>
 
 <style>

@@ -62,3 +62,9 @@ export const collectionMetadata: CollectionMetadata[] = [
     background: ''
   },
 ];
+
+export const tagsList: string[] = [
+  'decentralization',
+  'phamtom-wallet',
+  ''
+]

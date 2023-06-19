@@ -11,6 +11,8 @@ export interface Props {
   date: string;
 }
 
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+
 const {
   slug,
   collection,
@@ -20,6 +22,9 @@ const {
   date,
 } = Astro.props;
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 const d = new Date(date);
 const year = d.getFullYear();
@@ -28,7 +33,7 @@ const day = d.getDate();
 ---
 
 <article class="blog-card-background hover:shadow-xl">
-  <a href={`/blog/${collection}/${slug}`} title={ title } class="flex transition">
+  <a href={`/${lang}/blog/${collection}/${slug.slice(3)}`} title={ title } class="flex transition">
     <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
       <time datetime={ date } class="flex items-center justify-between text-white text-xs font-bold uppercase gap-4">
         <span>{ year }</span>

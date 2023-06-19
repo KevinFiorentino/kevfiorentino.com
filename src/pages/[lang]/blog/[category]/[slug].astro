@@ -1,21 +1,24 @@
 ---
 import { getCollection } from 'astro:content';
 import { collectionMetadata } from '@content/config';
+import { languages } from '@i18n/ui';
 
 export async function getStaticPaths() {
 
   const pages: any[] = [];
 
   // Build pages of each content
-  /* for await (let c of collectionMetadata) {
+  for await (let c of collectionMetadata) {
     const ipfs = await getCollection(c.name as any);
     ipfs.map((post) => {
-      pages.push({
-        params: { category: c.name, slug: post.slug },
-        props: post,
-      })
+      Object.keys(languages).map((l: string) => {
+        pages.push({
+          params: { lang: l, category: c.name, slug: post.slug.slice(3) },      // Remove /{lang}
+          props: post,
+        })
+      });
     });
-  } */
+  }
 
   return pages;
 }
