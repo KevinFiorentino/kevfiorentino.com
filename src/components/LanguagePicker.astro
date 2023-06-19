@@ -2,14 +2,17 @@
 import { languages } from '@i18n/ui';
 
 const currentUrl = Astro.url.pathname;
+const currentLang = currentUrl.split('/')[1];
 const urlWithoutLang = currentUrl.slice(4);   // Remove /{lang}/
 ---
 
-<div id="language-picker">
+<div id="language-picker" class="bg-white dark:bg-gray-500">
   <ul>
     {Object.entries(languages).map(([lang, label]) => (
-      <li class="p-3">
-        <a href={`/${lang}/${urlWithoutLang}`} title={`Change language to ${label}`}>{lang}</a>
+      <li class={`hover:bg-gray-300 ${currentLang == lang ? 'active' : ''}`}>
+        <a href={`/${lang}/${urlWithoutLang}`} class={`grid justify-center items-center capitalize`} title={`Change language to ${label}`}>
+          {lang}
+        </a>
       </li>
     ))}
   </ul>
@@ -19,17 +22,20 @@ const urlWithoutLang = currentUrl.slice(4);   // Remove /{lang}/
 <style>
 #language-picker {
   position: fixed;
-  background: red;
   top: calc(50% - 100px);
-  right: 0;
+  right: 5px;
+  box-shadow: 0px 3px 6px #00000029;
 }
 #language-picker ul {
 
 }
-#language-picker li {
-  text-transform: uppercase;
+#language-picker li a {
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  padding-bottom: 3px;
 }
-#language-picker li:hover, #language-picker li:focus {
-  background: green;
+.active {
+  outline: 2px solid black;
 }
 </style>
