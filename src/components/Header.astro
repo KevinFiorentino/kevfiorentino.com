@@ -104,6 +104,7 @@ const t = useTranslations(lang);
 </header>
 
 <script>
+  // Script Menu Mobile
   const elementMenu = document.getElementById('mobile-menu');
   const svgOpen = document.getElementById('menu-open');
   const svgClose = document.getElementById('menu-close');
@@ -115,15 +116,26 @@ const t = useTranslations(lang);
     });
 </script>
 
+
 <script>
+  // Script Dark Mode
   const elementHtml = document.getElementById('kevin');
   const svgMoon = document.getElementById('moon-icon');
   const svgSun = document.getElementById('sun-icon');
+
+  const dark = localStorage.getItem('kevin-them');
+  if (dark && dark == 'false') {
+    elementHtml?.classList.toggle('dark');
+    svgMoon?.classList.toggle('hide-icon');
+    svgSun?.classList.toggle('hide-icon');
+  }
+
   document.getElementById('toggle-dark-mode')
     ?.addEventListener('click', () => {
       elementHtml?.classList.toggle('dark');
       svgMoon?.classList.toggle('hide-icon');
       svgSun?.classList.toggle('hide-icon');
+      localStorage.setItem('kevin-them', elementHtml?.classList.contains('dark') ? 'true' : 'false');
     });
 </script>
 
