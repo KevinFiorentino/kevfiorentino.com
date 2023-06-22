@@ -16,22 +16,22 @@ const mainSchema = z.object({
   tags: z.array(z.string()),
 });
 
-const ipfsCollection = defineCollection({
+const blockchainColl = defineCollection({
   schema: mainSchema
 });
 
-const javascriptCollection = defineCollection({
+const decentralizationColl = defineCollection({
   schema: mainSchema
 });
 
-const solanaCollection = defineCollection({
+const javascriptColl = defineCollection({
   schema: mainSchema
 });
 
 export const collections = {
-  'ipfs': ipfsCollection,
-  'javascript': javascriptCollection,
-  'solana': solanaCollection,
+  'blockchain': blockchainColl,
+  'decentralization': decentralizationColl,
+  'javascript': javascriptColl,
 };
 
 
@@ -47,7 +47,12 @@ export interface CollectionMetadata {
 
 export const collectionMetadata: CollectionMetadata[] = [
   {
-    name: 'ipfs',
+    name: 'blockchain',
+    logo: '',
+    background: ''
+  },
+  {
+    name: 'decentralization',
     logo: '',
     background: ''
   },
@@ -56,15 +61,10 @@ export const collectionMetadata: CollectionMetadata[] = [
     logo: '',
     background: ''
   },
-  {
-    name: 'solana',
-    logo: '',
-    background: ''
-  },
 ];
 
-export const tagsList: string[] = [
+/* export const tagsList: string[] = [
   'decentralization',
   'phamtom-wallet',
   ''
-]
+] */

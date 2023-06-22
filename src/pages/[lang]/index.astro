@@ -8,8 +8,6 @@ import BlogCard from '@components/BlogCard.astro';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const solanaPosts = await getCollection('solana');
-
 export async function getStaticPaths() {
   const pages: any[] = [];
 
@@ -33,19 +31,7 @@ export async function getStaticPaths() {
     Kevin Fiorentino {lang}
   </h1>
   <div role="list" class="cards-grid">
-    {
-      solanaPosts.map(item => (
-        <BlogCard
-          slug={item.slug}
-          collection={item.collection}
-          title={item.data.title}
-          desc={item.data.desc}
-          image={item.data.image}
-          date={item.data.date}
-        >
-        </BlogCard>
-      ))
-    }
+
   </div>
 </MainLayout>
 

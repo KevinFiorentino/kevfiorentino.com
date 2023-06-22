@@ -48,7 +48,7 @@ console.log('tags', tags)
     Tags
   </h1>
   <div class="tags">
-    {tags.map((tag) => (
+    {tags.map((tag: string) => (
       <p class="tag">
         <a href={`/${lang}/tags/${tag}`}>{tag}</a>
       </p>
