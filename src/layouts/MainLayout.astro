@@ -1,6 +1,7 @@
 ---
 export interface Props {
 	title: string;
+  description: string;
 }
 
 import { getLangFromUrl } from '@i18n/utils';
@@ -10,7 +11,7 @@ import LanguagePicker from '@components/LanguagePicker.astro';
 
 import '@styles/global.css';
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 
 const lang = getLangFromUrl(Astro.url);
 ---
@@ -20,8 +21,10 @@ const lang = getLangFromUrl(Astro.url);
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link href="/favicon.ico" type="image/x-icon" rel="icon" />
 		<meta name="generator" content={Astro.generator} />
+    <meta name="author" content="Kevin Fiorentino" />
+    <meta name="description" content={description} />
+		<link href="/favicon.ico" type="image/x-icon" rel="icon" />
 		<title>{title}</title>
 	</head>
 	<body class="dark:bg-gray-900">
@@ -31,7 +34,6 @@ const lang = getLangFromUrl(Astro.url);
       <slot />
     </main>
     <Footer></Footer>
-
 	</body>
 </html>
 

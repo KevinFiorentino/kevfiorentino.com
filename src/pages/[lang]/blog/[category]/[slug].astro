@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import { collectionMetadata } from '@content/config';
 import { languages } from '@i18n/ui';
+import MainLayout from '@layouts/MainLayout.astro';
 
 export async function getStaticPaths() {
 
@@ -13,8 +14,15 @@ export async function getStaticPaths() {
     ipfs.map((post) => {
       Object.keys(languages).map((l: string) => {
         pages.push({
-          params: { lang: l, category: c.name, slug: post.slug.slice(3) },      // Remove /{lang}
-          props: post,
+          params: {
+            lang: l,
+            category: c.name,
+            slug: post.slug.slice(3)    // Remove /{lang}
+          },
+          props: {
+            category: c.name,
+            post: post,
+          },
         })
       });
     });
@@ -24,9 +32,14 @@ export async function getStaticPaths() {
 }
 
 const param = Astro.params;
-const post = Astro.props;
+const post = Astro.props.post;
 
 const { Content } = await post.render();
 ---
 
-<Content />
+<MainLayout
+  title={`${post.data.title} | Kevin Fiorentino`}
+  description={`${post.data.desc}`}
+>
+  <Content />
+</MainLayout>

@@ -15,8 +15,14 @@ export async function getStaticPaths() {
 
     Object.keys(languages).map((l: string) => {
       pages.push({
-        params: { lang: l, category: c.name },
-        props: { posts: posts.filter(p => (p.slug.split('/')[0] == l)) },
+        params: {
+          lang: l,
+          category: c.name
+        },
+        props: {
+          category: c.name,
+          posts: posts.filter(p => (p.slug.split('/')[0] == l))
+        },
       });
     });
   }
@@ -28,7 +34,10 @@ const param = Astro.params;
 const post = Astro.props;
 ---
 
-<MainLayout title="Blog | Kevin Fiorentino">
+<MainLayout
+title="Blog | Kevin Fiorentino"
+description={`Kevin Fiorentino's blog about ${post.category}`}
+>
   <h1 class="text-gradient">
     Blog {param.category}
   </h1>
