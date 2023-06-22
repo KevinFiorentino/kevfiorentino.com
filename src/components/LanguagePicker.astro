@@ -6,10 +6,10 @@ const currentLang = currentUrl.split('/')[1];
 const urlWithoutLang = currentUrl.slice(4);   // Remove /{lang}/
 ---
 
-<div id="language-picker" class="bg-white dark:bg-gray-500">
+<div id="language-picker" class="bg-gray-200 dark:bg-gray-500">
   <ul>
     {Object.entries(languages).map(([lang, label]) => (
-      <li class={`hover:bg-gray-300 ${currentLang == lang ? 'active' : ''}`}>
+      <li class={`lang-pointer ${currentLang == lang ? 'active' : ''}`}>
         <a href={`/${lang}/${urlWithoutLang}`} class={`grid justify-center items-center capitalize`} title={`Change language to ${label}`}>
           {lang}
         </a>
@@ -35,7 +35,12 @@ const urlWithoutLang = currentUrl.slice(4);   // Remove /{lang}/
   height: 50px;
   padding-bottom: 3px;
 }
+.lang-pointer:hover, .lang-pointer:focus {
+  text-decoration: underline;
+}
 .active {
-  outline: 2px solid black;
+  color: white;
+  background-color: var(--primary);
+  text-decoration: none !important;
 }
 </style>
