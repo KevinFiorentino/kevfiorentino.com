@@ -41,7 +41,7 @@ const post = Astro.props;
   <h1 class="text-gradient">
     Blog {param.category}
   </h1>
-  <div role="list" class="link-card-grid">
+  <div role="list" class="cards-grid">
     {
       post.posts.map((item: any) => (
         <BlogCard
@@ -59,15 +59,5 @@ const post = Astro.props;
 </MainLayout>
 
 <style>
-.link-card-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  padding: 0;
-}
-@media (max-width: 768px) {
-  .link-card-grid {
-    grid-template-columns: 1fr;
-  }
-}
+
 </style>

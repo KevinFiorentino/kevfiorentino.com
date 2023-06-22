@@ -1,4 +1,9 @@
 ---
+interface TagPage {
+  tag: string;
+  posts: any[];
+}
+
 import { getCollection } from 'astro:content';
 import { collectionMetadata } from '@content/config';
 import { languages } from '@i18n/ui';
@@ -12,6 +17,7 @@ const t = useTranslations(lang);
 export async function getStaticPaths() {
 
   const pages: any[] = [];
+
   let allPosts: any[] = []
   let tags: string[] = [];
 
@@ -21,32 +27,32 @@ export async function getStaticPaths() {
     allPosts = allPosts.concat(coll);
     tags = tags.concat([...new Set(coll.map((post) => post.data.tags).flat())]);
   }
-  console.log('allPosts', allPosts);
 
   // Remove duplicated tags
   tags = [...new Set(tags)];
-  console.log('tags', tags);
 
-  const tagPages = tags.map((t: string) => ({ tag: t, posts: [] }));
+  // Create a object for each tag to save its posts
+  const tagPages: TagPage[] = tags.map((t: string) => { return { tag: t, posts: [] } });
 
-  allPosts.forEach((p: any) => {
-    p.data.tags.forEach((t: string) => {
-      tagPages.forEach((t2) => {
-        if (t2.tag == t) {
-          t2.posts.push(p);
+  // Interate each post and save it on its tags, a post can have several tags
+  allPosts.forEach((post: any) => {
+    post.data.tags.forEach((postTag: string) => {
+      tagPages.forEach((tagPage: TagPage) => {
+        if (tagPage.tag == postTag) {
+          tagPage.posts.push(post);
         }
       });
     });
   });
-  console.log('tagPages', tagPages);
 
-  tagPages.forEach(p => {
-    Object.keys(languages).map((l: string) => {
+  // Build each tag page with its posts
+  tagPages.forEach((tagPage: TagPage) => {
+    Object.keys(languages).forEach((l: string) => {
       pages.push({
-        params: { lang: l, tag: p.tag },
+        params: { lang: l, tag: tagPage.tag },
         props: {
-          tag: p.tag,
-          posts: p.posts.filter(p => (p.slug.split('/')[0] == l))
+          tag: tagPage.tag,
+          posts: tagPage.posts.filter(tagPage => (tagPage.slug.split('/')[0] == l))
         },
       })
     });
@@ -55,12 +61,8 @@ export async function getStaticPaths() {
   return pages;
 }
 
-
 const param = Astro.params;
 const props = Astro.props;
-
-console.log('props', props)
-
 ---
 
 <MainLayout
@@ -70,7 +72,7 @@ console.log('props', props)
   <h1 class="text-gradient">
     Tag {param.tag}
   </h1>
-  <div role="list" class="link-card-grid">
+  <div role="list" class="cards-grid">
     {
       props.posts.map((item: any) => (
         <BlogCard
@@ -88,15 +90,5 @@ console.log('props', props)
 </MainLayout>
 
 <style>
-.link-card-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  padding: 0;
-}
-@media (max-width: 768px) {
-  .link-card-grid {
-    grid-template-columns: 1fr;
-  }
-}
+
 </style>

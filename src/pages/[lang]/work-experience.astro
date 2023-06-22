@@ -5,7 +5,7 @@ import { languages } from '@i18n/ui';
 export async function getStaticPaths() {
   const pages: any[] = [];
 
-  Object.keys(languages).map((l: string) => {
+  Object.keys(languages).forEach((l: string) => {
     pages.push({
       params: { lang: l },
       props: { },

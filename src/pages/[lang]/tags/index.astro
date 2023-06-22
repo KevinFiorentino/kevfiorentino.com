@@ -22,7 +22,7 @@ export async function getStaticPaths() {
   // Remove duplicated tags
   tags = [...new Set(tags)];
 
-  Object.keys(languages).map((l: string) => {
+  Object.keys(languages).forEach((l: string) => {
     pages.push({
       params: { lang: l },
       props: {

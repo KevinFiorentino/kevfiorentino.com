@@ -1,9 +1,9 @@
 # Content organization
 
-### How to organize the content with categories, subcategories and tags?
+### How to organize the content with categories and tags?
 
 - Each article will have only a category (the directory where it belong)
-- Each article could have a subcategory (as a prop)
-  - Each article with subcategories belonging to a other category, it should be displayed on the subcategory page too
+  - The category have to be general
 - Each article will have at least one tag
-  - Each tag cannot be a category
+  - A tag cannot be a category and have to be more specific inside a category
+  - A tag can belong on several categories

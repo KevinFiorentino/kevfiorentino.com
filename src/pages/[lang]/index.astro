@@ -13,7 +13,7 @@ const solanaPosts = await getCollection('solana');
 export async function getStaticPaths() {
   const pages: any[] = [];
 
-  Object.keys(languages).map((l: string) => {
+  Object.keys(languages).forEach((l: string) => {
     pages.push({
       params: { lang: l },
       props: { },
@@ -32,7 +32,7 @@ export async function getStaticPaths() {
   <h1 class="text-gradient">
     Kevin Fiorentino {lang}
   </h1>
-  <div role="list" class="link-card-grid">
+  <div role="list" class="cards-grid">
     {
       solanaPosts.map(item => (
         <BlogCard
@@ -50,15 +50,5 @@ export async function getStaticPaths() {
 </MainLayout>
 
 <style>
-.link-card-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  padding: 0;
-}
-@media (max-width: 768px) {
-  .link-card-grid {
-    grid-template-columns: 1fr;
-  }
-}
+
 </style>
