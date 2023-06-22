@@ -1,0 +1,102 @@
+---
+import { getCollection } from 'astro:content';
+import { collectionMetadata } from '@content/config';
+import { languages } from '@i18n/ui';
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+import MainLayout from '@layouts/MainLayout.astro';
+import BlogCard from '@components/BlogCard.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+export async function getStaticPaths() {
+
+  const pages: any[] = [];
+  let allPosts: any[] = []
+  let tags: string[] = [];
+
+  // Get all tags on every category
+  for await (let c of collectionMetadata) {
+    const coll = await getCollection(c.name as any);
+    allPosts = allPosts.concat(coll);
+    tags = tags.concat([...new Set(coll.map((post) => post.data.tags).flat())]);
+  }
+  console.log('allPosts', allPosts);
+
+  // Remove duplicated tags
+  tags = [...new Set(tags)];
+  console.log('tags', tags);
+
+  const tagPages = tags.map((t: string) => ({ tag: t, posts: [] }));
+
+  allPosts.forEach((p: any) => {
+    p.data.tags.forEach((t: string) => {
+      tagPages.forEach((t2) => {
+        if (t2.tag == t) {
+          t2.posts.push(p);
+        }
+      });
+    });
+  });
+  console.log('tagPages', tagPages);
+
+  tagPages.forEach(p => {
+    Object.keys(languages).map((l: string) => {
+      pages.push({
+        params: { lang: l, tag: p.tag },
+        props: {
+          tag: p.tag,
+          posts: p.posts.filter(p => (p.slug.split('/')[0] == l))
+        },
+      })
+    });
+  });
+
+  return pages;
+}
+
+
+const param = Astro.params;
+const props = Astro.props;
+
+console.log('props', props)
+
+---
+
+<MainLayout
+  title={`Blog ${param.tag} | Kevin Fiorentino`}
+  description={`Kevin Fiorentino's blog about ${param.tag}`}
+>
+  <h1 class="text-gradient">
+    Tag {param.tag}
+  </h1>
+  <div role="list" class="link-card-grid">
+    {
+      props.posts.map((item: any) => (
+        <BlogCard
+          slug={item.slug}
+          collection={item.collection}
+          title={item.data.title}
+          desc={item.data.desc}
+          image={item.data.image}
+          date={item.data.date}
+        >
+        </BlogCard>
+      ))
+    }
+  </div>
+</MainLayout>
+
+<style>
+.link-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 0;
+}
+@media (max-width: 768px) {
+  .link-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

@@ -1,0 +1,78 @@
+---
+import { getCollection } from 'astro:content';
+import { collectionMetadata } from '@content/config';
+import { languages } from '@i18n/ui';
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+import MainLayout from '@layouts/MainLayout.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+export async function getStaticPaths() {
+
+  const pages: any[] = [];
+  let tags: string[] = [];
+
+  // Get all tags on every category
+  for await (let c of collectionMetadata) {
+    const coll = await getCollection(c.name as any);
+    tags = tags.concat([...new Set(coll.map((post) => post.data.tags).flat())]);
+  }
+
+  // Remove duplicated tags
+  tags = [...new Set(tags)];
+
+  Object.keys(languages).map((l: string) => {
+    pages.push({
+      params: { lang: l },
+      props: {
+        tags: tags
+      },
+    });
+  });
+
+  return pages;
+}
+
+const param = Astro.params;
+const tags = Astro.props.tags;
+
+console.log('tags', tags)
+---
+
+<MainLayout
+  title="Tags | Kevin Fiorentino"
+  description={`Kevin Fiorentino's tags`}
+>
+  <h1 class="text-gradient">
+    Tags
+  </h1>
+  <div class="tags">
+    {tags.map((tag) => (
+      <p class="tag">
+        <a href={`/${lang}/tags/${tag}`}>{tag}</a>
+      </p>
+    ))}
+  </div>
+</MainLayout>
+
+<style>
+a {
+  color: #00539F;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.tag {
+  margin: 0.25em;
+  border: dotted 1px #a1a1a1;
+  border-radius: .5em;
+  padding: .5em 1em;
+  font-size: 1.15em;
+  background-color: #F8FCFD;
+}
+</style>

@@ -10,8 +10,8 @@ export async function getStaticPaths() {
 
   // Build pages of each content
   for await (let c of collectionMetadata) {
-    const ipfs = await getCollection(c.name as any);
-    ipfs.map((post) => {
+    const coll = await getCollection(c.name as any);
+    coll.map((post) => {
       Object.keys(languages).map((l: string) => {
         pages.push({
           params: {

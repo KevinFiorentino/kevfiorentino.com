@@ -35,8 +35,8 @@ const post = Astro.props;
 ---
 
 <MainLayout
-title="Blog | Kevin Fiorentino"
-description={`Kevin Fiorentino's blog about ${post.category}`}
+  title={`Blog ${param.category} | Kevin Fiorentino`}
+  description={`Kevin Fiorentino's blog about ${post.category}`}
 >
   <h1 class="text-gradient">
     Blog {param.category}
