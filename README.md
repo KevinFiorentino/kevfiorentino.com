@@ -1,4 +1,4 @@
-# kevinfiorentino.com
+# kevfiorentino.com
 
 - `nvm use`
 - `npm install`
