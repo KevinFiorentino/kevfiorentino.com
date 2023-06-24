@@ -10,6 +10,7 @@ import { languages } from '@i18n/ui';
 import { getLangFromUrl, useTranslations } from '@i18n/utils';
 import MainLayout from '@layouts/MainLayout.astro';
 import BlogCard from '@components/BlogCard.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -70,6 +71,9 @@ const props = Astro.props;
   description={`Kevin Fiorentino's blog about ${param.tag}`}
   image=''
 >
+  <Breadcrumbs
+    tag={param.tag}
+  ></Breadcrumbs>
   <h1 class="text-gradient">
     Tag {param.tag}
   </h1>

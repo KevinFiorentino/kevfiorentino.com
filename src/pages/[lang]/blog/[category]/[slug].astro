@@ -4,6 +4,7 @@ import { collectionMetadata } from '@content/config';
 import { languages } from '@i18n/ui';
 import MainLayout from '@layouts/MainLayout.astro';
 import ArticleLayout from '@layouts/ArticleLayout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
 import DisplayTags from '@components/DisplayTags.astro';
 
 export async function getStaticPaths() {
@@ -34,6 +35,7 @@ export async function getStaticPaths() {
 const param = Astro.params;
 const post = Astro.props.post;
 
+const { collection } = post;
 const { title, description, image, tags } = post.data;
 const { Content } = await post.render();
 ---
@@ -44,6 +46,9 @@ const { Content } = await post.render();
   image=''
 >
   <ArticleLayout>
+    <Breadcrumbs
+      collection={collection}
+    ></Breadcrumbs>
     <DisplayTags
       tags={tags}
     ></DisplayTags>
