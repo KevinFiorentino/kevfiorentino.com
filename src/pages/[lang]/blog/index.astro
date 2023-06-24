@@ -1,6 +1,8 @@
 ---
-import { getCollection } from 'astro:content';
 import { languages } from '@i18n/ui';
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+import { getCollection } from 'astro:content';
+import { CollectionMetadata, collectionMetadata } from '@content/config';
 import MainLayout from '@layouts/MainLayout.astro';
 
 export async function getStaticPaths() {
@@ -9,12 +11,18 @@ export async function getStaticPaths() {
   Object.keys(languages).map((l: string) => {
     pages.push({
       params: { lang: l },
-      props: { },
+      props: {
+        collections: collectionMetadata
+      },
     });
   });
 
   return pages;
 }
+
+const lang = getLangFromUrl(Astro.url);
+
+const { collections } = Astro.props;
 ---
 
 <MainLayout
@@ -23,8 +31,21 @@ export async function getStaticPaths() {
   image=''
 >
   <h1 class="text-gradient">
-    Blog ENGLISH
+    Blog
   </h1>
+  <section>
+    <ul>
+      {
+        collections.map((c: CollectionMetadata) => (
+          <li>
+            <a href={`/${lang}/blog/${c.name}`} class="dark:text-white" title={`Blog ${c.name}`}>
+              {c.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
 </MainLayout>
 
 <style>

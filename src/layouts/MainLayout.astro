@@ -18,13 +18,13 @@ const lang = getLangFromUrl(Astro.url);
 ---
 
 <!DOCTYPE html>
-<html id="kevin" class="dark" lang={lang}>
+<html id='kevin' class='dark' lang={lang}>
 	<Head
     title={title}
     description={description}
-    image=""
+    image=''
   ></Head>
-	<body class="dark:bg-gray-900">
+	<body class='dark:bg-gray-900'>
     <Header></Header>
     <LanguagePicker></LanguagePicker>
     <main>
@@ -42,7 +42,8 @@ const lang = getLangFromUrl(Astro.url);
   --meddle-background: linear-gradient(45deg, var(--primary), var(--accent) 30%, var(--primary) 60%);
 }
 html {
-  font-family: system-ui, sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   background-color: #F6F6F6;
 }
 code {
