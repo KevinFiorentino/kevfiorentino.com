@@ -36,13 +36,12 @@ export async function getStaticPaths() {
 
 const param = Astro.params;
 const tags = Astro.props.tags;
-
-console.log('tags', tags)
 ---
 
 <MainLayout
   title="Tags | Kevin Fiorentino"
   description={`Kevin Fiorentino's tags`}
+  image=''
 >
   <h1 class="text-gradient">
     Tags

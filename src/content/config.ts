@@ -7,12 +7,12 @@ import { defineCollection, z } from 'astro:content';
 
 const mainSchema = z.object({
   title: z.string(),
-  desc: z.string(),
+  description: z.string(),
   image: z.object({
     url: z.string(),
     alt: z.string()
   }),
-  date: z.string(),
+  pubDate: z.string(),
   tags: z.array(z.string()),
 });
 

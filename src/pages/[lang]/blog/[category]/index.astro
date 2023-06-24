@@ -37,6 +37,7 @@ const post = Astro.props;
 <MainLayout
   title={`Blog ${param.category} | Kevin Fiorentino`}
   description={`Kevin Fiorentino's blog about ${post.category}`}
+  image=''
 >
   <h1 class="text-gradient">
     Blog {param.category}
@@ -48,9 +49,9 @@ const post = Astro.props;
           slug={item.slug}
           collection={item.collection}
           title={item.data.title}
-          desc={item.data.desc}
+          description={item.data.description}
           image={item.data.image}
-          date={item.data.date}
+          pubDate={item.data.pubDate}
         >
         </BlogCard>
       ))

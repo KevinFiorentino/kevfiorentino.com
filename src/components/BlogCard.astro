@@ -3,12 +3,12 @@ export interface Props {
   slug: string;
   collection: string;
 	title: string;
-  desc: string;
+  description: string;
   image: {
     url: string,
     alt: string
   };
-  date: string;
+  pubDate: string;
 }
 
 import { getLangFromUrl, useTranslations } from '@i18n/utils';
@@ -17,16 +17,16 @@ const {
   slug,
   collection,
   title,
-  desc,
+  description,
   image,
-  date,
+  pubDate,
 } = Astro.props;
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-const d = new Date(date);
+const d = new Date(pubDate);
 const year = d.getFullYear();
 const month = months[d.getMonth()];
 const day = d.getDate();
@@ -35,7 +35,7 @@ const day = d.getDate();
 <article class="blog-card-background hover:shadow-xl">
   <a href={`/${lang}/blog/${collection}/${slug.slice(3)}`} title={ title } class="flex transition">
     <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
-      <time datetime={ date } class="flex items-center justify-between text-white text-xs font-bold uppercase gap-4">
+      <time datetime={ pubDate } class="flex items-center justify-between text-white text-xs font-bold uppercase gap-4">
         <span>{ year }</span>
         <span class="w-px flex-1"></span>
         <span>{ month } { day }</span>
@@ -52,7 +52,7 @@ const day = d.getDate();
           { title }
         </h3>
         <p class="mt-2 text-sm leading-relaxed text-white line-clamp-3">
-          { desc }
+          { description }
         </p>
       </div>
 

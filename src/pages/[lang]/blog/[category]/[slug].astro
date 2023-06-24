@@ -12,21 +12,21 @@ export async function getStaticPaths() {
   for await (let c of collectionMetadata) {
     const coll = await getCollection(c.name as any);
     coll.map((post) => {
-      Object.keys(languages).map((l: string) => {
-        pages.push({
-          params: {
-            lang: l,
-            category: c.name,
-            slug: post.slug.slice(3)    // Remove /{lang}
-          },
-          props: {
-            category: c.name,
-            post: post,
-          },
-        })
+      pages.push({
+        params: {
+          lang: post.slug.split('/')[0],
+          category: c.name,
+          slug: post.slug.slice(3),
+        },
+        props: {
+          category: c.name,
+          post: post,
+        },
       });
     });
   }
+
+  console.log('pages', pages)
 
   return pages;
 }
@@ -40,6 +40,7 @@ const { Content } = await post.render();
 <MainLayout
   title={`${post.data.title} | Kevin Fiorentino`}
   description={`${post.data.desc}`}
+  image=''
 >
   <Content />
 </MainLayout>
