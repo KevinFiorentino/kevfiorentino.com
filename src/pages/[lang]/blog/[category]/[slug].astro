@@ -3,6 +3,8 @@ import { getCollection } from 'astro:content';
 import { collectionMetadata } from '@content/config';
 import { languages } from '@i18n/ui';
 import MainLayout from '@layouts/MainLayout.astro';
+import ArticleLayout from '@layouts/ArticleLayout.astro';
+import DisplayTags from '@components/DisplayTags.astro';
 
 export async function getStaticPaths() {
 
@@ -26,21 +28,25 @@ export async function getStaticPaths() {
     });
   }
 
-  console.log('pages', pages)
-
   return pages;
 }
 
 const param = Astro.params;
 const post = Astro.props.post;
 
+const { title, description, image, tags } = post.data;
 const { Content } = await post.render();
 ---
 
 <MainLayout
-  title={`${post.data.title} | Kevin Fiorentino`}
-  description={`${post.data.desc}`}
+  title={`${title} | Kevin Fiorentino`}
+  description={`${description}`}
   image=''
 >
-  <Content />
+  <ArticleLayout>
+    <DisplayTags
+      tags={tags}
+    ></DisplayTags>
+    <Content />
+  </ArticleLayout>
 </MainLayout>

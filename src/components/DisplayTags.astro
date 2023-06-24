@@ -1,0 +1,13 @@
+---
+export interface Props {
+  tags: string[];
+}
+
+import { getLangFromUrl } from '@i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+
+const { tags } = Astro.props;
+---
+
+{tags?.map((t) => (<a href={`/${lang}/tags/${t}`}>{t}</a>))}
