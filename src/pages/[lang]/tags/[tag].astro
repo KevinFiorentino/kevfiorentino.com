@@ -10,7 +10,7 @@ import { languages } from '@i18n/ui';
 import { getLangFromUrl, useTranslations } from '@i18n/utils';
 import MainLayout from '@layouts/MainLayout.astro';
 import BlogCard from '@components/BlogCard.astro';
-import Breadcrumbs from '@components/Breadcrumbs.astro';
+import Breadcrumbs from '@components/articles/Breadcrumbs.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
