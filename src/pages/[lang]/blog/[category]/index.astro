@@ -4,7 +4,6 @@ import { collectionMetadata } from '@content/config';
 import { languages } from '@i18n/ui';
 import MainLayout from '@layouts/MainLayout.astro';
 import BlogCard from '@components/BlogCard.astro';
-import Breadcrumbs from '@components/Breadcrumbs.astro';
 
 export async function getStaticPaths() {
 
@@ -40,12 +39,12 @@ const post = Astro.props;
   description={`Kevin Fiorentino's blog about ${post.category}`}
   image=''
 >
-  <Breadcrumbs
-    collection={param.category}
-  ></Breadcrumbs>
-  <h1 class="text-gradient">
-    Blog {param.category}
-  </h1>
+  <div>
+    <p class="dark:text-white">Blog</p>
+    <h1 class="text-gradient capitalize">
+      {param.category}
+    </h1>
+  </div>
   <div role="list" class="cards-grid">
     {
       post.posts.map((item: any) => (

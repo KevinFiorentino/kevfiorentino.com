@@ -1,14 +1,13 @@
 ---
 export interface Props {
-  collection?: string;
-  tag?: string;
+  collection: string;
 }
 
 import { getLangFromUrl } from '@i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 
-const { collection, tag } = Astro.props;
+const { collection } = Astro.props;
 ---
 
 <section class="mb-3">
@@ -17,40 +16,18 @@ const { collection, tag } = Astro.props;
       <a href=`/${lang}` class="" title="Home">Home</a>
     </li>
     <li class="dark:text-white mr-2">/</li>
-
-    {
-      collection && !tag ?
-        <li class="dark:text-white hover:opacity-75 mr-2">
-          <a href=`/${lang}/blog` class="" title="Blog">Blog</a>
-        </li>
-        <li class="dark:text-white mr-2">/</li>
-        <li class="dark:text-white hover:opacity-75 mr-2">
-          <a href=`/${lang}/blog/${collection}` class="collection mr-2" title={`Collection: ${collection}`}>{collection}</a>
-        </li>
-        : null
-    }
-
-    {
-      tag && !collection ?
-        <li class="dark:text-white hover:opacity-75 mr-2">
-          <a href=`/${lang}/tags` class="" title="Tags">Tags</a>
-        </li>
-        <li class="dark:text-white mr-2">/</li>
-        <li class="dark:text-white hover:opacity-75 mr-2">
-          <a href=`/${lang}/tags/${tag}` class="collection" title={`Tag: ${tag}`}>{tag}</a>
-        </li>
-        : null
-    }
-
+    <li class="dark:text-white hover:opacity-75 mr-2">
+      <a href=`/${lang}/blog` class="" title="Blog">Blog</a>
+    </li>
+    <li class="dark:text-white mr-2">/</li>
+    <li class="dark:text-white hover:opacity-75 mr-2">
+      <a href=`/${lang}/blog/${collection}` class="capitalize mr-2" title={`Collection: ${collection}`}>{collection}</a>
+    </li>
   </ul>
 </section>
-
 
 <style>
 li a {
   font-weight: 400;
-}
-.collection {
-  text-transform: capitalize;
 }
 </style>

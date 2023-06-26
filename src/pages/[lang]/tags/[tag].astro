@@ -71,12 +71,12 @@ const props = Astro.props;
   description={`Kevin Fiorentino's blog about ${param.tag}`}
   image=''
 >
-  <Breadcrumbs
-    tag={param.tag}
-  ></Breadcrumbs>
-  <h1 class="text-gradient">
-    Tag {param.tag}
-  </h1>
+  <div>
+    <p class="dark:text-white">Tag</p>
+    <h1 class="text-gradient capitalize">
+      {param.tag}
+    </h1>
+  </div>
   <div role="list" class="cards-grid">
     {
       props.posts.map((item: any) => (
