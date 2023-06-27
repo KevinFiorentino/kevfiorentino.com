@@ -20,10 +20,8 @@ const day = d.getDate();
 <section class="flex items-center justify-between">
   <div>
     {
-      tags?.map((t) => (
-        <a href={`/${lang}/tags/${t}`} class="tag text-gradient mr-1" title={`Tag: ${t}`}>
-          {t}
-        </a>
+      tags?.map((t: string) => (
+        <a href={`/${lang}/tags/${t}`} class="tag text-gradient mr-2" title={`Tag: ${t}`}>{t.charAt(0).toUpperCase() + t.slice(1)}</a>
       ))
     }
   </div>
@@ -38,7 +36,6 @@ const day = d.getDate();
 <style>
 .tag {
   font-weight: 800;
-  text-transform: capitalize;
 }
 .tag:hover, .tag:focus {
   text-decoration: underline;

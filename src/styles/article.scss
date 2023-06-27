@@ -22,15 +22,32 @@
         font-weight: 500;
     }
     img {
+        border-radius: 5px;
         box-shadow: 0 3px 6px #00000029;
     }
     p {
+        font-weight: 300;
         margin-bottom: 15px;
+
+        code {
+            color: white;
+            background-color: var(--primary);
+            border-radius: 5px;
+            padding: 2px;
+            box-shadow: 0 3px 6px #00000029;
+        }
+    }
+    strong {
+        font-weight: 600;
     }
     ul {
         list-style: none;
         padding: revert;
         margin-bottom: 15px;
+
+        li {
+            font-weight: 300;
+        }
     }
     ul li::before {
         color: var(--primary);
@@ -42,12 +59,9 @@
     }
     pre {
         padding: 15px;
+        border-radius: 5px;
         margin-bottom: 15px;
         box-shadow: 0 3px 6px #00000029;
-
-        code {
-
-        }
     }
     blockquote {
         font-style: italic;
