@@ -7,6 +7,8 @@ import ArticleLayout from '@layouts/ArticleLayout.astro';
 import Breadcrumbs from '@components/articles/Breadcrumbs.astro';
 import DisplayTagsDate from '@components/articles/DisplayTagsDate.astro';
 
+import '@styles/article.scss';
+
 export async function getStaticPaths() {
 
   const pages: any[] = [];
@@ -53,6 +55,8 @@ const { Content } = await post.render();
       tags={tags}
       pubDate={pubDate}
     ></DisplayTagsDate>
-    <Content />
+    <section class="main-article-content">
+      <Content />
+    </section>
   </ArticleLayout>
 </MainLayout>
