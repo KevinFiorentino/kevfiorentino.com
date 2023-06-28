@@ -1,7 +1,35 @@
 ---
+export interface Props {
+  relatedPosts?: {
+    collection: string,
+    slug: string
+  };
+}
+
+import { ContentEntryType } from 'astro';
+
+import { getEntries } from 'astro:content';
+import { getLangFromUrl } from '@i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+
+const { relatedPosts } = Astro.props;
+console.log('relatedPosts', relatedPosts)
+
+const content = await getEntries(relatedPosts as any);
+console.log('content aside', content)
+
 ---
 
 <aside>
 
 
 </aside>
+
+<style>
+aside {
+  width: 100%;
+  height: 500px;
+  background-color: red;
+}
+</style>

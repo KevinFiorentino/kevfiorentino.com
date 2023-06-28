@@ -17,7 +17,7 @@ const month = months[d.getMonth()];
 const day = d.getDate();
 ---
 
-<section class="flex items-center justify-between">
+<div class="flex items-center justify-between">
   <div>
     {
       tags?.map((t: string) => (
@@ -31,7 +31,7 @@ const day = d.getDate();
       { month } { day }, { year }
     </time>
   </div>
-</section>
+</div>
 
 <style>
 .tag {

@@ -1,9 +1,8 @@
 ---
-import { getCollection, getEntry, getEntries } from 'astro:content';
+import { getCollection } from 'astro:content';
 import { collectionMetadata } from '@content/config';
-import { languages } from '@i18n/ui';
 import MainLayout from '@layouts/MainLayout.astro';
-import ArticleLayout from '@layouts/ArticleLayout.astro';
+import Aside from '@components/articles/Aside.astro';
 import Breadcrumbs from '@components/articles/Breadcrumbs.astro';
 import DisplayTagsDate from '@components/articles/DisplayTagsDate.astro';
 
@@ -40,12 +39,6 @@ const post = Astro.props.post;
 const { collection } = post;
 const { title, description, image, tags, pubDate, relatedPosts } = post.data;
 const { Content } = await post.render();
-
-console.log('relatedPosts', relatedPosts)
-
-const content = await getEntries(relatedPosts);
-console.log('content', content)
-
 ---
 
 <MainLayout
@@ -53,16 +46,28 @@ console.log('content', content)
   description={`${description}`}
   image=''
 >
-  <ArticleLayout>
-    <Breadcrumbs
-      collection={collection}
-    ></Breadcrumbs>
-    <DisplayTagsDate
-      tags={tags}
-      pubDate={pubDate}
-    ></DisplayTagsDate>
-    <section class="main-article-content">
-      <Content />
+  <section class="grid grid-cols-3 gap-5">
+
+    <section class="col-span-3 sm:col-span-2">
+      <section class="header-article-content">
+        <Breadcrumbs
+          collection={collection}
+        ></Breadcrumbs>
+        <DisplayTagsDate
+          tags={tags}
+          pubDate={pubDate}
+        ></DisplayTagsDate>
+      </section>
+      <article class="main-article-content" >
+        <Content />
+      </article>
     </section>
-  </ArticleLayout>
+
+    <section class="col-span-3 sm:col-span-1">
+      <Aside
+        relatedPosts={relatedPosts}
+      ></Aside>
+    </section>
+
+  </section>
 </MainLayout>

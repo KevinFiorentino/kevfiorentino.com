@@ -10,7 +10,7 @@ const lang = getLangFromUrl(Astro.url);
 const { collection } = Astro.props;
 ---
 
-<section class="mb-3">
+<div class="mb-3">
   <ul class="flex">
     <li class="dark:text-white hover:opacity-75 mr-2">
       <a href=`/${lang}` class="" title="Home">Home</a>
@@ -24,7 +24,7 @@ const { collection } = Astro.props;
       <a href=`/${lang}/blog/${collection}` class="capitalize mr-2" title={`Collection: ${collection}`}>{collection}</a>
     </li>
   </ul>
-</section>
+</div>
 
 <style>
 li a {
