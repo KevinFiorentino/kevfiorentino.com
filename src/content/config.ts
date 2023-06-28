@@ -1,9 +1,14 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, reference, z } from 'astro:content';
 
 
 /* ******************************
          ASTRO CONFIGS
 ****************************** */
+
+const relatedSchema = z.object({
+  collection: z.string(),
+  slug: z.string(),
+});
 
 const mainSchema = z.object({
   title: z.string(),
@@ -14,6 +19,7 @@ const mainSchema = z.object({
   }),
   pubDate: z.string(),
   tags: z.array(z.string()),
+  relatedPosts: z.array(relatedSchema).optional(),
 });
 
 const blockchainColl = defineCollection({
