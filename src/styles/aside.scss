@@ -1,0 +1,30 @@
+.main-aside-content {
+    h3 {
+        font-size: 1.7rem;
+        color: var(--primary);
+        font-weight: 500;
+    }
+    h4 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    small {
+        color: var(--primary);
+    }
+    .badge {
+        color: var(--primary);
+        border: 1px solid var(--primary);
+        padding: 5px 10px;
+        border-radius: 15px;
+    }
+    .badge:hover, .badge:focus {
+        color: white;
+        background: var(--meddle-background);
+    }
+}
+
+/* .dark .main-aside-content {
+    h4, p, small {
+        color: white;
+    }
+} */

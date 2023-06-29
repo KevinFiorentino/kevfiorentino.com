@@ -1,7 +1,7 @@
 ---
 export interface Props {
   tags: string[];
-  pubDate: string;
+  pubDate: Date;
 }
 
 import { getLangFromUrl } from '@i18n/utils';
@@ -11,10 +11,9 @@ const { tags, pubDate } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 
 const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-const d = new Date(pubDate);
-const year = d.getFullYear();
-const month = months[d.getMonth()];
-const day = d.getDate();
+const year = pubDate.getFullYear();
+const month = months[pubDate.getMonth()];
+const day = pubDate.getDate();
 ---
 
 <div class="flex items-center justify-between">
@@ -27,7 +26,7 @@ const day = d.getDate();
   </div>
   <div>
     <span class="text-gray-300 dark:text-gray-300 mr-2">|</span>
-    <time datetime={ pubDate } class="text-gray-500 dark:text-gray-300">
+    <time datetime={ pubDate.toString() } class="text-gray-500 dark:text-gray-300">
       { month } { day }, { year }
     </time>
   </div>

@@ -1,4 +1,4 @@
-import { defineCollection, reference, z } from 'astro:content';
+import { defineCollection, z } from 'astro:content';
 
 
 /* ******************************
@@ -17,22 +17,14 @@ const mainSchema = z.object({
     url: z.string(),
     alt: z.string()
   }),
-  pubDate: z.string(),
+  pubDate: z.string().transform((str) => new Date(str)),
   tags: z.array(z.string()),
   relatedPosts: z.array(relatedSchema).optional(),
 });
 
-const blockchainColl = defineCollection({
-  schema: mainSchema
-});
-
-const decentralizationColl = defineCollection({
-  schema: mainSchema
-});
-
-const javascriptColl = defineCollection({
-  schema: mainSchema
-});
+const blockchainColl = defineCollection({ schema: mainSchema });
+const decentralizationColl = defineCollection({ schema: mainSchema });
+const javascriptColl = defineCollection({ schema: mainSchema });
 
 export const collections = {
   'blockchain': blockchainColl,

@@ -6,30 +6,52 @@ export interface Props {
   };
 }
 
-import { ContentEntryType } from 'astro';
-
 import { getEntries } from 'astro:content';
 import { getLangFromUrl } from '@i18n/utils';
+import { collectionMetadata } from '@content/config';
+
+import '@styles/aside.scss';
 
 const lang = getLangFromUrl(Astro.url);
 
 const { relatedPosts } = Astro.props;
-console.log('relatedPosts', relatedPosts)
-
-const content = await getEntries(relatedPosts as any);
-console.log('content aside', content)
+const relateds = relatedPosts ? await getEntries(relatedPosts as any) : null;
 
 ---
 
-<aside>
-
+<aside class="p-0 sm:p-4">
+  <div>
+    <div class="flex flex-col">
+      <h3>{ relateds ? 'Related content' : '' }</h3>
+      {
+        relateds?.map((post: any) => (
+          post ? <a href={`/${lang}/blog/${post.collection}/${post.slug.slice(3)}`} class="hover:opacity-80" title={ post.data.title }>
+            <h4 class="text-gradient">{ post.data.title }</h4>
+            <p class="text-gradient">{ post.data.description }</p>
+            <small class="block text-right w-full">
+              Read Article
+            </small>
+            <hr class="my-4" />
+          </a> : null
+        ))
+      }
+    </div>
+    <div>
+      <h3>Might interest you</h3>
+      <div class="flex flex-wrap">
+        {
+          collectionMetadata?.map((coll: any) => (
+            <a href={`/${lang}/blog/${coll.name}`} class="badge capitalize hover:opacity-80 mt-3 mr-2" title={`Collection: ${coll.name}`}>
+              { coll.name }
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
 
 </aside>
 
-<style>
-aside {
-  width: 100%;
-  height: 500px;
-  background-color: red;
-}
+<style lang="scss">
+
 </style>
