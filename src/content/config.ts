@@ -19,7 +19,7 @@ const mainSchema = z.object({
   }),
   pubDate: z.string().transform((str) => new Date(str)),
   tags: z.array(z.string()),
-  relatedPosts: z.array(relatedSchema).optional(),
+  relatedPosts: z.array(relatedSchema).optional().nullable(),
 });
 
 const blockchainColl = defineCollection({ schema: mainSchema });
