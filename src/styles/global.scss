@@ -3,6 +3,41 @@ h1 {
     font-weight: 800;
     margin: 0;
 }
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.7rem;
+}
+h4 {
+    font-size: 1.5rem;
+}
+h5, h6 {
+    font-size: 1.2rem;
+}
+h2, h3, h4, h5, h5, h6 {
+    font-weight: 500;
+}
+img {
+    border-radius: 5px;
+    box-shadow: 0 3px 6px #00000029;
+}
+p {
+    font-weight: 300;
+}
+strong {
+    font-weight: 600;
+}
+hr {
+    margin-bottom: 15px;
+}
+
+.dark {
+    h2, h3, h4, h5, h5, h6, p, li {
+        color: white;
+    }
+}
+
 .text-gradient {
     background-image: var(--meddle-background);
     -webkit-background-clip: text;
@@ -10,6 +45,7 @@ h1 {
     background-size: 400%;
     background-position: 0%;
 }
+
 .cards-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
