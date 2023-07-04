@@ -29,12 +29,16 @@ strong {
     font-weight: 600;
 }
 hr {
+    border-color: #1D1D1D;
     margin-bottom: 15px;
 }
 
 .dark {
     h2, h3, h4, h5, h5, h6, p, li {
         color: white;
+    }
+    hr {
+        border-color: #FAFAFA;
     }
 }
 
@@ -56,4 +60,8 @@ hr {
     .cards-grid {
         grid-template-columns: 1fr;
     }
+}
+
+.fill-custom {
+    fill: var(--primary);
 }
