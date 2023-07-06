@@ -66,13 +66,13 @@ const year = new Date().getFullYear();
                 </a>
               </li>
               <li>
-                <a href={`/${lang}/who-i-am`} title="Who I am" class="text-gray-700 transition hover:opacity-75 dark:text-white">
-                  Who I am
+                <a href={`/${lang}/who-i-am`} title={t('who')} class="text-gray-700 transition hover:opacity-75 dark:text-white">
+                  {t('who')}
                 </a>
               </li>
               <li>
-                <a href={`/${lang}/contact`} title="Contact" class="text-gray-700 transition hover:opacity-75 dark:text-white">
-                  Contact
+                <a href={`/${lang}/contact`} title={t('contact')} class="text-gray-700 transition hover:opacity-75 dark:text-white">
+                  {t('contact')}
                 </a>
               </li>
             </ul>
@@ -81,9 +81,9 @@ const year = new Date().getFullYear();
 
         <div>
           <p class="font-medium text-gray-900 dark:text-white">
-            Might interest you
+            {t('footer.recommends')}
           </p>
-          <nav aria-label="Might interest you" class="mt-6">
+          <nav aria-label={t('footer.recommends')} class="mt-6">
             <ul class="space-y-4 text-sm">
               <li>
                 <a href={`/${lang}/blog/javascript`} title="Blog Javascript" class="text-gray-700 transition hover:opacity-75 dark:text-white">
@@ -111,8 +111,8 @@ const year = new Date().getFullYear();
           <nav aria-label="Legal" class="mt-6">
             <ul class="space-y-4 text-sm">
               <li>
-                <a href={`/${lang}/policy`} title="Privacy policy" class="text-gray-700 transition hover:opacity-75 dark:text-white">
-                  Privacy policy
+                <a href={`/${lang}/policy`} title={t('policy')} class="text-gray-700 transition hover:opacity-75 dark:text-white">
+                  {t('policy')}
                 </a>
               </li>
             </ul>

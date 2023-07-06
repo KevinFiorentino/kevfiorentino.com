@@ -1,6 +1,10 @@
 ---
 import MainLayout from '@layouts/MainLayout.astro';
 import { languages } from '@i18n/ui';
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 export async function getStaticPaths() {
   const pages: any[] = [];
@@ -17,12 +21,12 @@ export async function getStaticPaths() {
 ---
 
 <MainLayout
-  title="Word experience | Kevin Fiorentino"
-  description="Kevin Fiorentino's work experience"
-  image=''
+  title={`${t('experience')} | Kevin Fiorentino`}
+  description={t('experience.description')}
+  image={``}
 >
   <h1 class="text-gradient">
-    Word experience
+    {t('experience')}
   </h1>
 </MainLayout>
 

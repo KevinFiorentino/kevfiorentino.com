@@ -1,6 +1,10 @@
 ---
 import MainLayout from '@layouts/MainLayout.astro';
 import { languages } from '@i18n/ui';
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 export async function getStaticPaths() {
   const pages: any[] = [];
@@ -17,18 +21,18 @@ export async function getStaticPaths() {
 ---
 
 <MainLayout
-  title="Contact | Kevin Fiorentino"
-  description="Contact to Kevin Fiorentino"
+  title={`${t('contact')} | Kevin Fiorentino`}
+  description={t('contact.description')}
   image=''
 >
   <section>
     <h1 class="text-gradient">
-      Contact
+      {t('contact')}
     </h1>
     <div>
       <div class="flex justify-center">
 
-        <div class="contact-box max-w-max p-6">
+        <div class="contact-box bg-gray-200 dark:bg-gray-900 max-w-max p-6">
           <ul>
             <li class="flex justify-start items-center mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30" class="mr-2">
@@ -39,8 +43,8 @@ export async function getStaticPaths() {
             <hr>
             <li class="flex justify-start items-center mb-4">
               <p class="text-lg text-center">
-                Favorite means of contact: <br>
-                <small class="">(I'm always there)</small>
+                {t('contact.means1')} <br>
+                <small class="">{t('contact.means2')}</small>
               </p>
               <a href="https://www.linkedin.com/in/kevinfiorentino/" title="LinkedIn" target="_blank" rel="noreferrer" class="transition hover:opacity-75 ml-3">
                 <span class="sr-only">LinkedIn</span>
@@ -75,7 +79,7 @@ export async function getStaticPaths() {
 
 <style lang="scss">
 .contact-box {
-  border: 1px solid var(--primary);
+  border: 2px solid var(--primary);
   border-radius: 25px;
   margin-bottom: 25px;
   box-shadow: 0 3px 6px #00000029;

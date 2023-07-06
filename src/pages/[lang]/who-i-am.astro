@@ -1,6 +1,10 @@
 ---
 import MainLayout from '@layouts/MainLayout.astro';
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
 import { languages } from '@i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 export async function getStaticPaths() {
   const pages: any[] = [];
@@ -17,15 +21,29 @@ export async function getStaticPaths() {
 ---
 
 <MainLayout
-  title="Who I am? | Kevin Fiorentino"
-  description="Who is Kevin Fiorentino?"
+  title={`${t('who')} | Kevin Fiorentino`}
+  description={t('who.description')}
   image=''
 >
   <h1 class="text-gradient">
-    Who I am?
+    {t('who')}
   </h1>
+  <section class="grid grid-cols-1 gap-5 lg:grid-cols-3 lg:gap-8">
+    <div class="lg:col-span-2">
+      <p class="mb-3">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda tempora sunt iste quia officia illo obcaecati esse alias, nihil corrupti animi cupiditate adipisci temporibus aliquam quaerat vitae culpa, vel omnis.
+      </p>
+      <p class="mb-3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus rerum laborum facilis corrupti aliquam praesentium. Voluptate, provident! Esse culpa omnis nesciunt quo vitae excepturi alias reprehenderit, temporibus odio modi doloribus.
+      </p>
+      <hr>
+      <div class="">
+
+      </div>
+    </div>
+    <div class="order-first md:order-last">
+      <img src="https://i.pravatar.cc/300" class="rounded-full m-auto" alt="Jose Vigil" />
+      <p class="uppercase dark:text-white text-center mt-3">I got amazing power of observation</p>
+    </div>
+  </section>
 </MainLayout>
-
-<style>
-
-</style>

@@ -9,12 +9,37 @@ export const defaultLang = 'en';
 
 export const ui = {
   en: {
-    'nav.home': 'Home',
-    'nav.about': 'About',
-    'nav.twitter': 'Twitter',
+    'contact': 'Contact',
+    'contact.description': 'Means of contact with Kevin Fiorentino',
+    'contact.means1': 'Favorite means of contact:',
+    'contact.means2': '(I\'m always there)',
+
+    'experience': 'Work experience',
+    'experience.description': 'Kevin Fiorentino\'s work experience',
+
+    'footer.recommends': 'Might interest you',
+
+    'policy': 'Privacy policy ',
+
+    'who': 'Who I am?',
+    'who.description': 'Who is Kevin Fiorentino?',
+
   },
   es: {
-    'nav.home': 'Acceuil',
-    'nav.about': 'À propos',
+    'contact': 'Contacto',
+    'contact.description': 'Medios de contacto con Kevin Fiorentino',
+    'contact.means1': 'Medio de contacto favorito:',
+    'contact.means2': '(Siempre estoy ahí)',
+
+    'experience': 'Experiencia laboral',
+    'experience.description': 'Experiencia laboral de Kevin Fiorentino',
+
+    'footer.recommends': 'Puede interesarte',
+
+    'policy': 'Politicas de privacidad',
+
+    'who': '¿Quién soy?',
+    'who.description': '¿Quién es Kevin Fiorentino?',
+
   },
 } as const;
