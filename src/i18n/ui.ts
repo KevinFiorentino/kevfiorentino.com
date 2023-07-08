@@ -11,7 +11,7 @@ export const ui = {
   en: {
     'contact': 'Contact',
     'contact.description': 'Means of contact with Kevin Fiorentino',
-    'contact.means1': 'Favorite means of contact:',
+    'contact.means1': 'Please, contact me through:',
     'contact.means2': '(I\'m always there)',
 
     'experience': 'Work experience',
@@ -28,7 +28,7 @@ export const ui = {
   es: {
     'contact': 'Contacto',
     'contact.description': 'Medios de contacto con Kevin Fiorentino',
-    'contact.means1': 'Medio de contacto favorito:',
+    'contact.means1': 'Por favor, contáctame por:',
     'contact.means2': '(Siempre estoy ahí)',
 
     'experience': 'Experiencia laboral',
