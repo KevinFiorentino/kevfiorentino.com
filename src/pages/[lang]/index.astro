@@ -33,9 +33,39 @@ export async function getStaticPaths() {
   </h1>
   <div role="list" class="cards-grid">
 
+    <div class="stack">
+      <h2 class="mb-3">My stack</h2>
+      <div class="flex justify-between items-center">
+        <div>
+          <img src="/tech/solana.svg" />
+        </div>
+        <div>
+          <img src="/tech/ethereum.svg" />
+        </div>
+        <div>
+          <img src="/tech/javascript.png" />
+        </div>
+        <div>
+          <img src="/tech/typescript.svg" />
+        </div>
+        <div>
+          <img src="/tech/angular.svg" />
+        </div>
+        <div>
+          <img src="/tech/nodejs.png" />
+        </div>
+        <div>
+          <img src="/tech/rust.svg" />
+        </div>
+      </div>
+    </div>
+
   </div>
 </MainLayout>
 
-<style>
-
+<style lang="scss">
+.stack img {
+  width: 100px;
+  box-shadow: none;
+}
 </style>
