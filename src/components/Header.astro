@@ -31,8 +31,8 @@ const t = useTranslations(lang);
                 <a href={`/${lang}/blog`} title="Blog" class="text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring px-4 py-1 dark:text-white">
                   <span class="text-sm font-medium">Blog</span>
                 </a>
-                <a href={`/${lang}/who-i-am`} title={t('who')} class="text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring px-4 py-1 dark:text-white">
-                  <span class="text-sm font-medium">{t('who')}</span>
+                <a href={`/${lang}/work-experience`} title={t('experience')} class="text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring px-4 py-1 dark:text-white">
+                  <span class="text-sm font-medium">{t('experience')}</span>
                 </a>
                 <a href={`/${lang}/contact`} title={t('contact')} class="text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring px-4 py-1 dark:text-white">
                   <span class="text-sm font-medium">{t('contact')}</span>
@@ -80,16 +80,16 @@ const t = useTranslations(lang);
         <div class="text-center space-y-1 px-2 pb-3 pt-2">
           <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
 
-          <a href="/" title="Home" class="text-gray-500 transition block rounded-md dark:text-white px-3 py-2 text-base font-medium"> <!-- aria-current="page" -->
+          <a href={`/${lang}`} title="Home" class="text-gray-500 transition block rounded-md dark:text-white px-3 py-2 text-base font-medium"> <!-- aria-current="page" -->
             <span class="text-sm font-medium">Home</span>
           </a>
-          <a href="/blog" title="Blog" class="text-gray-500 transition block rounded-md dark:text-white px-3 py-2 text-base font-medium">
+          <a href={`/${lang}/blog`} title="Blog" class="text-gray-500 transition block rounded-md dark:text-white px-3 py-2 text-base font-medium">
             <span class="text-sm font-medium">Blog</span>
           </a>
-          <a href="/who-i-am" title={t('who')} class="text-gray-500 transition block rounded-md dark:text-white px-3 py-2 text-base font-medium">
-            <span class="text-sm font-medium">{t('who')}</span>
+          <a href={`/${lang}/work-experience`} title={t('experience')} class="text-gray-500 transition block rounded-md dark:text-white px-3 py-2 text-base font-medium">
+            <span class="text-sm font-medium">{t('experience')}</span>
           </a>
-          <a href="/contact" title={t('contact')} class="text-gray-500 transition block rounded-md dark:text-white px-3 py-2 text-base font-medium">
+          <a href={`/${lang}/contact`} title={t('contact')} class="text-gray-500 transition block rounded-md dark:text-white px-3 py-2 text-base font-medium">
             <span class="text-sm font-medium">{t('contact')}</span>
           </a>
 

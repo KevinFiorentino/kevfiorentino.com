@@ -26,46 +26,107 @@ export async function getStaticPaths() {
 <MainLayout
   title="Home | Kevin Fiorentino"
   description={`Kevin Fiorentino's personal and professional website`}
-  image=''
+  image=""
 >
-  <h1 class="text-gradient">
-    Kevin Fiorentino {lang}
-  </h1>
-  <div role="list" class="cards-grid">
+  <section class="grid grid-cols-1 gap-5 lg:grid-cols-3 lg:gap-8">
+    <div class="lg:col-span-2">
+      <h1 class="text-gradient">
+        I'm Kev
+      </h1>
+      <p class="mb-3">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda tempora sunt iste quia officia illo obcaecati esse alias, nihil corrupti animi cupiditate adipisci temporibus aliquam quaerat vitae culpa, vel omnis.
+      </p>
+      <p class="mb-3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus rerum laborum facilis corrupti aliquam praesentium. Voluptate, provident! Esse culpa omnis nesciunt quo vitae excepturi alias reprehenderit, temporibus odio modi doloribus.
+      </p>
+      <hr>
+      <div class="">
 
-    <div class="stack">
-      <h2 class="mb-3">My stack</h2>
-      <div class="flex justify-between items-center">
-        <div>
-          <img src="/tech/solana.svg" />
-        </div>
-        <div>
-          <img src="/tech/ethereum.svg" />
-        </div>
-        <div>
-          <img src="/tech/javascript.png" />
-        </div>
-        <div>
-          <img src="/tech/typescript.svg" />
-        </div>
-        <div>
-          <img src="/tech/angular.svg" />
-        </div>
-        <div>
-          <img src="/tech/nodejs.png" />
-        </div>
-        <div>
-          <img src="/tech/rust.svg" />
-        </div>
       </div>
     </div>
+    <div class="order-first md:order-last">
+      <img src="/kevin.jpg" class="kevin-image rounded-full m-auto" alt="Kevin Fiorentino" />
+      <p class="uppercase dark:text-white text-center mt-3">I got amazing power of observation</p>
+    </div>
+  </section>
 
-  </div>
+  <section>
+    <div class="stack">
+      <h2 class="mb-4">
+        Currently working with
+      </h2>
+      <div role="list" class="flex justify-between items-center">
+
+        <div class="tech">
+          <img src="/tech/javascript.png" alt="Javascript logo" title="Javascript" />
+        </div>
+        <div class="tech">
+          <img src="/tech/typescript.svg" alt="TypeScript logo" title="TypeScript" />
+        </div>
+        <div class="tech">
+          <img src="/tech/angular.png" alt="Angular logo" title="Angular" />
+        </div>
+        <div class="tech">
+          <img src="/tech/nodejs.png" alt="NodeJS logo" title="NodeJS" />
+        </div>
+
+        <div class="tech">
+          <img src="/tech/rust.svg" alt="Rust logo" title="Rust" />
+        </div>
+        <div class="tech">
+          <img src="/tech/solana.svg" alt="Solana logo" title="Solana Blockchain" />
+        </div>
+
+        <div class="tech">
+          <img src="/tech/solidity.png" alt="Solidity logo" title="Solidity" />
+        </div>
+        <div class="tech">
+          <img src="/tech/ethereum.svg" alt="Ethereum logo" title="Ethereum Blockchain" />
+        </div>
+
+
+        <div class="tech">
+          <img src="/tech/docker.png" alt="Docker logo" title="Docker" />
+        </div>
+        <div class="tech">
+          <img src="/tech/nginx.png" alt="NGINX logo" title="NGINX" />
+        </div>
+
+        <div class="tech">
+          <img src="/tech/elastic.png" alt="Elasticsearch logo" title="Elasticsearch" />
+        </div>
+        <div class="tech">
+          <img src="/tech/mongodb.png" alt="MongoDB logo" title="MongoDB" />
+        </div>
+        <div class="tech">
+          <img src="/tech/mysql.png" alt="MySQL logo" title="MySQL" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
 </MainLayout>
 
 <style lang="scss">
-.stack img {
-  width: 100px;
-  box-shadow: none;
+.kevin-image {
+  max-height: 300px;
+}
+.stack {
+  .tech {
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 5px;
+
+    img {
+      max-height: 100px;
+      max-width: 100px;
+      box-shadow: none;
+    }
+  }
 }
 </style>

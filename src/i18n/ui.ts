@@ -21,9 +21,6 @@ export const ui = {
 
     'policy': 'Privacy policy ',
 
-    'who': 'Who I am?',
-    'who.description': 'Who is Kevin Fiorentino?',
-
   },
   es: {
     'contact': 'Contacto',
@@ -37,9 +34,6 @@ export const ui = {
     'footer.recommends': 'Puede interesarte',
 
     'policy': 'Politicas de privacidad',
-
-    'who': '¿Quién soy?',
-    'who.description': '¿Quién es Kevin Fiorentino?',
 
   },
 } as const;
