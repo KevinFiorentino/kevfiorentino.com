@@ -3,6 +3,7 @@ export interface Props {
 	title: string;
   description: string;
   image: string;
+  addWidth: boolean;
 }
 
 import { getLangFromUrl } from '@i18n/utils';
@@ -13,7 +14,7 @@ import LanguagePicker from '@components/LanguagePicker.astro';
 
 import '@styles/global.scss';
 
-const { title, description } = Astro.props;
+const { title, description, image, addWidth } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 ---
 
@@ -22,13 +23,13 @@ const lang = getLangFromUrl(Astro.url);
 	<Head
     title={title}
     description={description}
-    image=''
+    image={image}
   ></Head>
 	<body class="bg-gray-100 dark:bg-gray-800">
     <Header></Header>
     <LanguagePicker></LanguagePicker>
     <!-- <div class="bg-gradient flex justify-center"></div> -->
-    <main>
+    <main class={`${addWidth ? 'main-width' : ''}`}>
       <slot />
     </main>
     <Footer></Footer>
@@ -37,9 +38,11 @@ const lang = getLangFromUrl(Astro.url);
 
 <style is:global>
 :root {
-  --primary: #2596be;
-  --accent: #6d474a;
-  --alternative: #378d99;
+  --white: #FAFAFA;
+  --black: #1D1D1D;
+  --primary: #2596BE;
+  --accent: #6D474A;
+  --alternative: #378D99;
   --meddle-background: linear-gradient(45deg, var(--primary), var(--accent) 30%, var(--primary) 60%);
 }
 html {
@@ -53,11 +56,6 @@ body {
 code {
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
-}
-main {
-  margin: auto;
-  padding: 1.5rem;
-  max-width: 150ch;
 }
 /* .bg-gradient {
   position: absolute;

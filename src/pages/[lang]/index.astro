@@ -27,8 +27,9 @@ export async function getStaticPaths() {
   title="Home | Kevin Fiorentino"
   description={`Kevin Fiorentino's personal and professional website`}
   image=""
+  addWidth={false}
 >
-  <section class="grid grid-cols-1 gap-5 lg:grid-cols-3 lg:gap-8">
+  <section class="main-width grid grid-cols-1 gap-5 lg:grid-cols-3 lg:gap-8">
     <div class="lg:col-span-2">
       <h1 class="text-gradient">
         I'm Kev
@@ -50,58 +51,51 @@ export async function getStaticPaths() {
     </div>
   </section>
 
-  <section>
-    <div class="stack">
+  <section class="bg-techs"> <!-- bg-gray-200 dark:bg-gray-700 -->
+    <div class="techs-main-box main-width">
       <h2 class="mb-4">
         Currently working with
       </h2>
-      <div role="list" class="flex justify-between items-center">
+      <div role="list" class="flex flex-wrap justify-evenly items-center">
 
-        <div class="tech">
+        <div class="techs-group m-3">
           <img src="/tech/javascript.png" alt="Javascript logo" title="Javascript" />
-        </div>
-        <div class="tech">
           <img src="/tech/typescript.svg" alt="TypeScript logo" title="TypeScript" />
-        </div>
-        <div class="tech">
           <img src="/tech/angular.png" alt="Angular logo" title="Angular" />
         </div>
-        <div class="tech">
+
+        <div class="techs-group m-3">
           <img src="/tech/nodejs.png" alt="NodeJS logo" title="NodeJS" />
-        </div>
-
-        <div class="tech">
           <img src="/tech/rust.svg" alt="Rust logo" title="Rust" />
-        </div>
-        <div class="tech">
-          <img src="/tech/solana.svg" alt="Solana logo" title="Solana Blockchain" />
-        </div>
-
-        <div class="tech">
           <img src="/tech/solidity.png" alt="Solidity logo" title="Solidity" />
         </div>
-        <div class="tech">
+
+        <div class="techs-group m-3">
+          <img src="/tech/solana.svg" alt="Solana logo" title="Solana Blockchain" />
           <img src="/tech/ethereum.svg" alt="Ethereum logo" title="Ethereum Blockchain" />
         </div>
 
-
-        <div class="tech">
+        <div class="techs-group m-3">
           <img src="/tech/docker.png" alt="Docker logo" title="Docker" />
-        </div>
-        <div class="tech">
           <img src="/tech/nginx.png" alt="NGINX logo" title="NGINX" />
         </div>
 
-        <div class="tech">
+        <div class="techs-group m-3">
+          <img src="/tech/mongodb.png" alt="MongoDB logo" title="MongoDB" />
+          <img src="/tech/mysql.png" alt="MySQL logo" title="MySQL" />
           <img src="/tech/elastic.png" alt="Elasticsearch logo" title="Elasticsearch" />
         </div>
-        <div class="tech">
-          <img src="/tech/mongodb.png" alt="MongoDB logo" title="MongoDB" />
-        </div>
-        <div class="tech">
-          <img src="/tech/mysql.png" alt="MySQL logo" title="MySQL" />
-        </div>
 
+      </div>
+    </div>
+  </section>
+
+  <section class="main-width">
+    <div>
+      <h2 class="text-gradient">
+        Blog
+      </h2>
+      <div>
       </div>
     </div>
   </section>
@@ -112,20 +106,29 @@ export async function getStaticPaths() {
 .kevin-image {
   max-height: 300px;
 }
-.stack {
-  .tech {
-    background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
+.bg-techs {
+  background-color: var(--alternative);
+
+  h2 {
+    color: var(--white);
+  }
+}
+.techs-main-box {
+  .techs-group {
+    display: flex;
+    align-items: center;
+    background: rgba(255,255,255,0.25);
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    padding: 5px;
+    border: 1px solid rgba(255,255,255,0.18);
 
     img {
       max-height: 100px;
       max-width: 100px;
       box-shadow: none;
+      margin: 15px;
     }
   }
 }
