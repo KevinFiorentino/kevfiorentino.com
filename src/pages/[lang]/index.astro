@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { collectionMetadata } from '@content/config';
 import { languages } from '@i18n/ui';
 import { getLangFromUrl, useTranslations } from '@i18n/utils';
 import MainLayout from '@layouts/MainLayout.astro';
@@ -9,18 +10,36 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 export async function getStaticPaths() {
+
   const pages: any[] = [];
+  let allPosts: any[] = [];
+
+  for await (let c of collectionMetadata) {
+    const coll = await getCollection(c.name as any);
+    allPosts = allPosts.concat(coll);
+  }
+
+  allPosts = allPosts.sort((a, b) => {
+    if (new Date(a.data.pubDate) < new Date(b.data.pubDate))
+      return 1;
+    if (new Date(a.data.pubDate) > new Date(b.data.pubDate))
+      return -1;
+    return 0;
+  });
 
   Object.keys(languages).forEach((l: string) => {
     pages.push({
       params: { lang: l },
-      props: { },
+      props: {
+        posts: allPosts.filter(p => (p.slug.split('/')[0] == l)).slice(0,6)     // First six elements
+      },
     });
   });
 
   return pages;
 }
 
+const post = Astro.props;
 ---
 
 <MainLayout
@@ -51,10 +70,10 @@ export async function getStaticPaths() {
     </div>
   </section>
 
-  <section class="bg-techs"> <!-- bg-gray-200 dark:bg-gray-700 -->
+  <section class="bg-techs">
     <div class="techs-main-box main-width">
       <h2 class="text-center mb-4">
-        My six-year career knowledge
+        My six-year career knowledge carried me through
       </h2>
       <div role="list" class="flex flex-wrap justify-evenly items-center">
 
@@ -89,15 +108,33 @@ export async function getStaticPaths() {
         </div>
 
       </div>
+      <div class="text-center mt-5">
+        <a href={`/${lang}/work-experience`} title="Know my work experience" class="btn-know text-white font-bold py-2 px-4 rounded">
+          <span class="text-lg font-medium">Know my work experience </span>
+        </a>
+      </div>
     </div>
   </section>
 
   <section class="main-width">
     <div>
-      <h2 class="text-gradient">
+      <h2 class="text-gradient font-bold">
         Blog
       </h2>
-      <div>
+      <div role="list" class="cards-grid">
+        {
+          post.posts.map((item: any) => (
+            <BlogCard
+              slug={item.slug}
+              collection={item.collection}
+              title={item.data.title}
+              description={item.data.description}
+              image={item.data.image}
+              pubDate={item.data.pubDate}
+            >
+            </BlogCard>
+          ))
+        }
       </div>
     </div>
   </section>
@@ -116,6 +153,9 @@ export async function getStaticPaths() {
   }
 }
 .techs-main-box {
+  h2 {
+    line-height: 35px;
+  }
   .techs-group {
     display: flex;
     align-items: center;
@@ -139,6 +179,9 @@ export async function getStaticPaths() {
       transform: scale(1.1);
       transition: .5s;
     }
+  }
+  .btn-know {
+    background-color: var(--accent);
   }
 }
 </style>

@@ -31,7 +31,7 @@ const month = months[pubDate.getMonth()];
 const day = pubDate.getDate();
 ---
 
-<article class="blog-card-background hover:shadow-xl">
+<article class="blog-card card-background hover:shadow-xl">
   <a href={`/${lang}/blog/${collection}/${slug.slice(3)}`} title={ title } class="flex transition">
     <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
       <time datetime={ pubDate.toString() } class="flex items-center justify-between text-white text-xs font-bold uppercase gap-4">
@@ -42,11 +42,11 @@ const day = pubDate.getDate();
     </div>
 
     <div class="hidden sm:block sm:basis-56">
-      <img class="aspect-square h-full w-full object-cover" src={ image.url } alt={ image.alt }/>
+      <img class="aspect-square rounded-none h-full w-full object-cover" src={ image.url } alt={ image.alt }/>
     </div>
 
     <div class="flex flex-1 flex-col justify-between">
-      <div class="border-l border-gray-900/10 p-4 dark:border-white/10 sm:!border-l-transparent sm:p-6">
+      <div class="border-l border-gray-900/10 p-3 dark:border-white/10 sm:!border-l-transparent sm:p-4">
         <h3 class="font-bold uppercase text-white">
           { title }
         </h3>
@@ -56,7 +56,7 @@ const day = pubDate.getDate();
       </div>
 
       <div class="sm:flex sm:items-end sm:justify-end">
-        <div class="block px-5 py-3 text-center text-xs font-bold uppercase text-white transition">
+        <div class="btn-read px-5 py-3 text-center text-xs font-bold uppercase text-white transition">
           Read Article
         </div>
       </div>
@@ -64,11 +64,19 @@ const day = pubDate.getDate();
   </a>
 </article>
 
-<style>
-.blog-card-background {
-  background: var(--meddle-background);
+<style lang="scss">
+.blog-card {
+  h3 {
+    line-height: 30px;
+  }
+  &.card-background {
+    background: var(--meddle-background);
+  }
+  .btn-read {
+    background-color: var(--accent);
+  }
 }
-.block {
-  background-color: var(--accent);
+.blog-card a:hover, .blog-card a:focus {
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
 }
 </style>
