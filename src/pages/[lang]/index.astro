@@ -46,15 +46,15 @@ export async function getStaticPaths() {
       </div>
     </div>
     <div class="order-first md:order-last">
-      <img src="/kevin.jpg" class="kevin-image rounded-full m-auto" alt="Kevin Fiorentino" />
+      <img src="/kevin.png" class="kevin-image rounded-full m-auto" alt="Kevin Fiorentino" />
       <p class="uppercase dark:text-white text-center mt-3">I got amazing power of observation</p>
     </div>
   </section>
 
   <section class="bg-techs"> <!-- bg-gray-200 dark:bg-gray-700 -->
     <div class="techs-main-box main-width">
-      <h2 class="mb-4">
-        Currently working with
+      <h2 class="text-center mb-4">
+        My six-year career knowledge
       </h2>
       <div role="list" class="flex flex-wrap justify-evenly items-center">
 
@@ -62,9 +62,11 @@ export async function getStaticPaths() {
           <img src="/tech/javascript.png" alt="Javascript logo" title="Javascript" />
           <img src="/tech/typescript.svg" alt="TypeScript logo" title="TypeScript" />
           <img src="/tech/angular.png" alt="Angular logo" title="Angular" />
+          <img src="/tech/react.png" alt="React logo" title="React" />
         </div>
 
         <div class="techs-group m-3">
+          <img src="/tech/php.png" alt="PHP logo" title="PHP" />
           <img src="/tech/nodejs.png" alt="NodeJS logo" title="NodeJS" />
           <img src="/tech/rust.svg" alt="Rust logo" title="Rust" />
           <img src="/tech/solidity.png" alt="Solidity logo" title="Solidity" />
@@ -76,14 +78,14 @@ export async function getStaticPaths() {
         </div>
 
         <div class="techs-group m-3">
-          <img src="/tech/docker.png" alt="Docker logo" title="Docker" />
-          <img src="/tech/nginx.png" alt="NGINX logo" title="NGINX" />
-        </div>
-
-        <div class="techs-group m-3">
           <img src="/tech/mongodb.png" alt="MongoDB logo" title="MongoDB" />
           <img src="/tech/mysql.png" alt="MySQL logo" title="MySQL" />
           <img src="/tech/elastic.png" alt="Elasticsearch logo" title="Elasticsearch" />
+        </div>
+
+        <div class="techs-group m-3">
+          <img src="/tech/docker.png" alt="Docker logo" title="Docker" />
+          <img src="/tech/nginx.png" alt="NGINX logo" title="NGINX" />
         </div>
 
       </div>
@@ -123,12 +125,19 @@ export async function getStaticPaths() {
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
     border: 1px solid rgba(255,255,255,0.18);
+    min-height: 100px;
 
     img {
-      max-height: 100px;
-      max-width: 100px;
+      max-height: 75px;
+      max-width: 75px;
       box-shadow: none;
-      margin: 15px;
+      margin: 10px;
+      transform: scale(1);
+      transition: .5s;
+    }
+    img:hover {
+      transform: scale(1.1);
+      transition: .5s;
     }
   }
 }
