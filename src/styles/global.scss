@@ -66,6 +66,9 @@ hr {
         padding: 1rem;
     }
 }
-.fill-custom {
+.fill-primary {
     fill: var(--primary);
+}
+.fill-alternative {
+    fill: var(--alternative);
 }

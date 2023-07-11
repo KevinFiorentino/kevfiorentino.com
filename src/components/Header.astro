@@ -4,7 +4,7 @@ import { getLangFromUrl, useTranslations } from '@i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
-<header aria-label="Page Header" class="bg-gray-200 dark:bg-gray-900">
+<header aria-label="Page Header" class="bg-custom-blue dark:bg-gray-900">
   <div class="mx-auto max-w-screen-xl px-4 py-6 sm:py-10 sm:px-6 lg:px-8">
 
     <nav>
@@ -14,27 +14,26 @@ const t = useTranslations(lang);
           <div class="flex flex-1 items-center justify-center sm:items-center sm:justify-between">
 
             <div class="text-center sm:text-left">
-              <a href="/" class="text-2xl font-bold text-gray-900 lg:text-3xl dark:text-white">
+              <a href="/" class="text-2xl font-bold text-white">
                 Kevin Fiorentino —△🌈
               </a>
-              <p class="mt-1.5 text-sm text-gray-500 dark:text-white">
+              <p class="mt-1.5 text-sm text-white">
                 Javascript Engineer | Blockchain & Web3 | Graduate in Systems
               </p>
             </div>
 
             <div class="hidden sm:ml-6 md:block">
               <div class="flex space-x-4">
-                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href={`/${lang}`} title="Home" class="text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring px-4 py-1 dark:text-white">
+                <a href={`/${lang}`} title="Home" class="text-white transition focus:outline-none focus:ring px-4 py-1">
                   <span class="text-sm font-medium">Home</span>
                 </a>
-                <a href={`/${lang}/blog`} title="Blog" class="text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring px-4 py-1 dark:text-white">
+                <a href={`/${lang}/blog`} title="Blog" class="text-white transition focus:outline-none focus:ring px-4 py-1">
                   <span class="text-sm font-medium">Blog</span>
                 </a>
-                <a href={`/${lang}/work-experience`} title={t('experience')} class="text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring px-4 py-1 dark:text-white">
+                <a href={`/${lang}/work-experience`} title={t('experience')} class="text-white transition focus:outline-none focus:ring px-4 py-1">
                   <span class="text-sm font-medium">{t('experience')}</span>
                 </a>
-                <a href={`/${lang}/contact`} title={t('contact')} class="text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring px-4 py-1 dark:text-white">
+                <a href={`/${lang}/contact`} title={t('contact')} class="text-white transition focus:outline-none focus:ring px-4 py-1">
                   <span class="text-sm font-medium">{t('contact')}</span>
                 </a>
               </div>
@@ -47,8 +46,8 @@ const t = useTranslations(lang);
                   <svg id="moon-icon" fill="none" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path fill="white" stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"></path>
                   </svg>
-                  <svg id="sun-icon" class="hide-icon" stroke="black" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"></path>
+                  <svg id="sun-icon" class="hide-icon" stroke="#E1C546" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path class="fill-alternative" stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"></path>
                   </svg>
                 </button>
               </div>
@@ -57,11 +56,9 @@ const t = useTranslations(lang);
                 <!-- Mobile menu button -->
                 <button id="toggle-mobile-menu" type="button" class="inline-flex items-center justify-center rounded-md text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue p-2" aria-controls="mobile-menu" aria-expanded="false">
                   <span class="sr-only">Open main menu</span>
-                  <!-- Icon when menu is closed. Menu open: "hidden", Menu closed: "block" -->
                   <svg id="menu-open" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">            <!-- aria-hidden="true" -->
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                   </svg>
-                  <!-- Icon when menu is open. Menu open: "block", Menu closed: "hidden" -->
                   <svg id="menu-close" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                   </svg>
@@ -115,7 +112,6 @@ const t = useTranslations(lang);
       svgClose?.classList.toggle('hidden');
     });
 </script>
-
 
 <script>
   // Script Dark Mode
