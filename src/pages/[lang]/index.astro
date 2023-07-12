@@ -45,7 +45,7 @@ const post = Astro.props;
 <MainLayout
   title="Home | Kevin Fiorentino"
   description={`Kevin Fiorentino's personal and professional website`}
-  image=""
+  image="/kevin.png"
   addWidth={false}
 >
   <section class="main-width grid grid-cols-1 gap-5 lg:grid-cols-3 lg:gap-8">
@@ -70,6 +70,8 @@ const post = Astro.props;
     </div>
   </section>
 
+  <br><br><br>
+
   <section class="bg-techs">
     <div class="techs-main-box main-width">
       <h2 class="text-center mb-4">
@@ -77,32 +79,32 @@ const post = Astro.props;
       </h2>
       <div role="list" class="flex flex-wrap justify-evenly items-center">
 
-        <div class="techs-group m-3">
+        <div class="techs-group m-2 sm:m-3">
           <img src="/tech/javascript.png" alt="Javascript logo" title="Javascript" />
           <img src="/tech/typescript.svg" alt="TypeScript logo" title="TypeScript" />
           <img src="/tech/angular.png" alt="Angular logo" title="Angular" />
           <img src="/tech/react.png" alt="React logo" title="React" />
         </div>
 
-        <div class="techs-group m-3">
+        <div class="techs-group m-2 sm:m-3">
           <img src="/tech/php.png" alt="PHP logo" title="PHP" />
           <img src="/tech/nodejs.png" alt="NodeJS logo" title="NodeJS" />
           <img src="/tech/rust.svg" alt="Rust logo" title="Rust" />
           <img src="/tech/solidity.png" alt="Solidity logo" title="Solidity" />
         </div>
 
-        <div class="techs-group m-3">
+        <div class="techs-group m-2 sm:m-3">
           <img src="/tech/solana.svg" alt="Solana logo" title="Solana Blockchain" />
           <img src="/tech/ethereum.svg" alt="Ethereum logo" title="Ethereum Blockchain" />
         </div>
 
-        <div class="techs-group m-3">
+        <div class="techs-group m-2 sm:m-3">
           <img src="/tech/mongodb.png" alt="MongoDB logo" title="MongoDB" />
           <img src="/tech/mysql.png" alt="MySQL logo" title="MySQL" />
           <img src="/tech/elastic.png" alt="Elasticsearch logo" title="Elasticsearch" />
         </div>
 
-        <div class="techs-group m-3">
+        <div class="techs-group m-2 sm:m-3">
           <img src="/tech/docker.png" alt="Docker logo" title="Docker" />
           <img src="/tech/nginx.png" alt="NGINX logo" title="NGINX" />
         </div>
@@ -116,9 +118,11 @@ const post = Astro.props;
     </div>
   </section>
 
+  <br><br><br>
+
   <section class="main-width">
     <div>
-      <h2 class="text-gradient font-bold">
+      <h2 class="text-gradient font-bold mb-3">
         Blog
       </h2>
       <div role="list" class="cards-grid">
@@ -146,25 +150,49 @@ const post = Astro.props;
   max-height: 300px;
 }
 .bg-techs {
-  background: var(--bg-gradient);;
+  position: relative;
+  background: var(--primary);
 
   h2 {
     color: var(--white);
   }
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    background: var(--primary);
+    width: 100%;
+    height: 180px;
+    left: 0;
+    overflow: hidden;
+    backface-visibility: visible;
+  }
+  &::before {
+    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 100%, 0 100%);
+    top: -50px;
+  }
+  &::after {
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+    bottom: -50px;
+  }
 }
 .techs-main-box {
+  position: relative;
+  z-index: 1;
+
   h2 {
     line-height: 35px;
   }
   .techs-group {
     display: flex;
     align-items: center;
-    background: rgba(255,255,255,0.25);
-    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+    justify-content: center;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.18);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     min-height: 100px;
 
     img {
@@ -178,6 +206,17 @@ const post = Astro.props;
     img:hover {
       transform: scale(1.1);
       transition: .5s;
+    }
+  }
+  @media (max-width: 600px) {
+    .techs-group {
+      min-height: 80px;
+
+      img {
+        max-height: 60px;
+        max-width: 60px;
+        margin: 7px;
+      }
     }
   }
   .btn-know {

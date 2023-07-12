@@ -7,7 +7,7 @@ const t = useTranslations(lang);
 const year = new Date().getFullYear();
 ---
 
-<footer class="bg-custom-blue dark:bg-gray-900">
+<footer class="bg-gradient dark:bg-gray-900">
   <div class="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div>
@@ -56,22 +56,22 @@ const year = new Date().getFullYear();
           <nav aria-label="Website navigation" class="mt-6">
             <ul class="space-y-4 text-sm">
               <li>
-                <a href={`/${lang}`} title="Home" class="transition hover:opacity-75">
+                <a href={`/${lang}`} title="Home" class="text-white transition hover:opacity-75">
                   Home
                 </a>
               </li>
               <li>
-                <a href={`/${lang}/blog`} title="Blog" class="transition hover:opacity-75">
+                <a href={`/${lang}/blog`} title="Blog" class="text-white transition hover:opacity-75">
                   Blog
                 </a>
               </li>
               <li>
-                <a href={`/${lang}/work-experience`} title={t('experience')} class="transition hover:opacity-75">
+                <a href={`/${lang}/work-experience`} title={t('experience')} class="text-white transition hover:opacity-75">
                   {t('experience')}
                 </a>
               </li>
               <li>
-                <a href={`/${lang}/contact`} title={t('contact')} class="transition hover:opacity-75">
+                <a href={`/${lang}/contact`} title={t('contact')} class="text-white transition hover:opacity-75">
                   {t('contact')}
                 </a>
               </li>
@@ -86,17 +86,17 @@ const year = new Date().getFullYear();
           <nav aria-label={t('footer.recommends')} class="mt-6">
             <ul class="space-y-4 text-sm">
               <li>
-                <a href={`/${lang}/blog/javascript`} title="Blog Javascript" class="transition hover:opacity-75">
+                <a href={`/${lang}/blog/javascript`} title="Blog Javascript" class="text-white transition hover:opacity-75">
                   Javascript
                 </a>
               </li>
               <li>
-                <a href={`/${lang}/tags/solana`} title="Blog Solana" class="transition hover:opacity-75">
+                <a href={`/${lang}/tags/solana`} title="Blog Solana" class="text-white transition hover:opacity-75">
                   Solana
                 </a>
               </li>
               <li>
-                <a href={`/${lang}/tags/ipfs`} title="Blog IPFS" class="transition hover:opacity-75">
+                <a href={`/${lang}/tags/ipfs`} title="Blog IPFS" class="text-white transition hover:opacity-75">
                   IPFS
                 </a>
               </li>
@@ -130,15 +130,3 @@ const year = new Date().getFullYear();
 
   </div>
 </footer>
-
-<style lang="scss">
-footer {
-  nav {
-    ul {
-      li a {
-        color: var(--alternative);
-      }
-    }
-  }
-}
-</style>
