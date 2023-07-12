@@ -47,7 +47,7 @@ const year = new Date().getFullYear();
         </ul>
       </div>
 
-      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-2">
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3">
 
         <div>
           <p class="font-bold text-white">
@@ -86,6 +86,11 @@ const year = new Date().getFullYear();
           <nav aria-label={t('footer.recommends')} class="mt-6">
             <ul class="space-y-4 text-sm">
               <li>
+                <a href={`/${lang}/tags`} title="All tags" class="text-white transition hover:opacity-75">
+                  All tags
+                </a>
+              </li>
+              <li>
                 <a href={`/${lang}/blog/javascript`} title="Blog Javascript" class="text-white transition hover:opacity-75">
                   Javascript
                 </a>
@@ -104,20 +109,25 @@ const year = new Date().getFullYear();
           </nav>
         </div>
 
-        <!-- <div>
+        <div>
           <p class="font-bold text-white">
-            Legal
+            Resources
           </p>
           <nav aria-label="Legal" class="mt-6">
             <ul class="space-y-4 text-sm">
               <li>
+                <a href={`/rss.xml`} title="RSS" class="font-medium transition hover:opacity-75">
+                  RSS
+                </a>
+              </li>
+              <!-- <li>
                 <a href={`/${lang}/policy`} title={t('policy')} class="font-medium transition hover:opacity-75">
                   {t('policy')}
                 </a>
-              </li>
+              </li> -->
             </ul>
           </nav>
-        </div> -->
+        </div>
 
       </div>
     </div>

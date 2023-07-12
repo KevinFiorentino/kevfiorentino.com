@@ -31,7 +31,7 @@ export async function getStaticPaths() {
     pages.push({
       params: { lang: l },
       props: {
-        posts: allPosts.filter(p => (p.slug.split('/')[0] == l)).slice(0,6)     // First six elements
+        posts: allPosts.filter(p => (p.slug.split('/')[0] == l)).slice(0, 8)     // First eight elements
       },
     });
   });
@@ -74,7 +74,7 @@ const post = Astro.props;
 
   <section class="bg-techs">
     <div class="techs-main-box main-width">
-      <h2 class="text-center mb-4">
+      <h2 class="text-white text-center mb-4">
         My six-year career knowledge carried me through
       </h2>
       <div role="list" class="flex flex-wrap justify-evenly items-center">
@@ -154,7 +154,8 @@ const post = Astro.props;
   background: var(--primary);
 
   h2 {
-    color: var(--white);
+    // Override grandient color
+    -webkit-text-fill-color: white;
   }
   &::before, &::after {
     content: "";
@@ -221,6 +222,9 @@ const post = Astro.props;
   }
   .btn-know {
     background-color: var(--alternative);
+  }
+  .btn-know:hover, .btn-know:focus {
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   }
 }
 </style>

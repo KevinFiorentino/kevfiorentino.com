@@ -1,3 +1,11 @@
+h1, h2, h3, h4, h5, h5, h6 {
+    background-image: var(--bg-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+}
 h1 {
     font-size: 3rem;
     font-weight: 800;
@@ -15,7 +23,10 @@ h4 {
 h5, h6 {
     font-size: 1.2rem;
 }
-h2, h3, h4, h5, h5, h6 {
+h2, h3 {
+    font-weight: 600;
+}
+h4, h5, h5, h6 {
     font-weight: 500;
 }
 img {
@@ -29,15 +40,15 @@ strong {
     font-weight: 600;
 }
 hr {
-    border-color: #1D1D1D;
+    border-color: var(--black);
     margin-bottom: 15px;
 }
 .dark {
-    h2, h3, h4, h5, h5, h6, p, li {
-        color: white;
+    p, li {
+        color: var(--white);
     }
     hr {
-        border-color: #FAFAFA;
+        border-color: var(--white);
     }
 }
 .main-width {
@@ -47,6 +58,7 @@ hr {
 }
 .text-gradient {
     background-image: var(--bg-gradient);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 400%;

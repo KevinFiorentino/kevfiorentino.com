@@ -32,40 +32,40 @@ export async function getStaticPaths() {
     </h1>
     <div>
       <div class="flex justify-center">
-        <div class="contact-box bg-gray-200 dark:bg-gray-900 max-w-max p-6">
+        <div class="contact-box bg-gradient max-w-max p-6">
           <ul>
             <li class="flex justify-start items-center mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30" class="mr-2">
-                <path class="fill-primary" d="M256 0C156.456 0 76 80.456 76 180c0 67.771 43.782 157.217 130.19 273.682.387.557.824 1.047 1.314 1.449l12.496 10.247c8.03 6.592 18.655 10.184 29.96 10.184s21.931-3.592 29.96-10.184l12.496-10.247c.49-.402.927-.892 1.314-1.449C392.218 337.217 436 247.771 436 180 436 80.456 355.544 0 256 0zm0 208c-30.928 0-56-25.072-56-56s25.072-56 56-56 56 25.072 56 56-25.072 56-56 56z"/>
+                <path fill="#FAFAFA" d="M256 0C156.456 0 76 80.456 76 180c0 67.771 43.782 157.217 130.19 273.682.387.557.824 1.047 1.314 1.449l12.496 10.247c8.03 6.592 18.655 10.184 29.96 10.184s21.931-3.592 29.96-10.184l12.496-10.247c.49-.402.927-.892 1.314-1.449C392.218 337.217 436 247.771 436 180 436 80.456 355.544 0 256 0zm0 208c-30.928 0-56-25.072-56-56s25.072-56 56-56 56 25.072 56 56-25.072 56-56 56z"/>
               </svg>
-              <p class="text-lg">Buenos Aires, Argentina</p>
+              <p class="text-white text-lg">Buenos Aires, Argentina</p>
             </li>
             <hr>
             <li class="flex justify-start items-center mb-4">
-              <p class="text-lg text-center">
+              <p class="text-white text-lg text-center">
                 {t('contact.means1')} <br>
                 <small class="">{t('contact.means2')}</small>
               </p>
               <a href="https://www.linkedin.com/in/kevinfiorentino/" title="LinkedIn" target="_blank" rel="noreferrer" class="transition hover:opacity-75 ml-3">
                 <span class="sr-only">LinkedIn</span>
                 <svg viewBox="0 0 19 18" width="30" height="30" xmlns="http://www.w3.org/2000/svg">
-                  <path class="fill-primary" d="M3.94 2A2 2 0 1 1 2 0a2 2 0 0 1 1.94 2zM4 5.48H0V18h4zm6.32 0H6.34V18h3.94v-6.57c0-3.66 4.77-4 4.77 0V18H19v-7.93c0-6.17-7.06-5.94-8.72-2.91z"></path>
+                  <path fill="#FAFAFA" d="M3.94 2A2 2 0 1 1 2 0a2 2 0 0 1 1.94 2zM4 5.48H0V18h4zm6.32 0H6.34V18h3.94v-6.57c0-3.66 4.77-4 4.77 0V18H19v-7.93c0-6.17-7.06-5.94-8.72-2.91z"></path>
                 </svg>
               </a>
             </li>
             <hr>
             <li class="flex justify-center items-center">
-              <p class="text-lg">Social:</p>
+              <p class="text-white text-lg">Social:</p>
               <a href="https://github.com/KevinFiorentino" title="GitHub" target="_blank" rel="noreferrer" class="transition hover:opacity-75 ml-3">
                 <span class="sr-only">GitHub</span>
                 <svg viewBox="0 0 16 16" width="30" height="30" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-                  <path class="fill-primary" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                  <path fill="#FAFAFA" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
                 </svg>
               </a>
               <a href="https://twitter.com/Kevfiorentino" title="Twitter" target="_blank" rel="noreferrer" class="transition hover:opacity-75 ml-3">
                 <span class="sr-only">Twitter</span>
                 <svg viewBox="0 0 273.5 222.3" width="30" height="30" xmlns="http://www.w3.org/2000/svg">
-                  <path class="fill-primary" d="M273.5 26.3a109.77 109.77 0 0 1-32.2 8.8 56.07 56.07 0 0 0 24.7-31 113.39 113.39 0 0 1-35.7 13.6 56.1 56.1 0 0 0-97 38.4 54 54 0 0 0 1.5 12.8A159.68 159.68 0 0 1 19.1 10.3a56.12 56.12 0 0 0 17.4 74.9 56.06 56.06 0 0 1-25.4-7v.7a56.11 56.11 0 0 0 45 55 55.65 55.65 0 0 1-14.8 2 62.39 62.39 0 0 1-10.6-1 56.24 56.24 0 0 0 52.4 39 112.87 112.87 0 0 1-69.7 24 119 119 0 0 1-13.4-.8 158.83 158.83 0 0 0 86 25.2c103.2 0 159.6-85.5 159.6-159.6 0-2.4-.1-4.9-.2-7.3a114.25 114.25 0 0 0 28.1-29.1"></path>
+                  <path fill="#FAFAFA" d="M273.5 26.3a109.77 109.77 0 0 1-32.2 8.8 56.07 56.07 0 0 0 24.7-31 113.39 113.39 0 0 1-35.7 13.6 56.1 56.1 0 0 0-97 38.4 54 54 0 0 0 1.5 12.8A159.68 159.68 0 0 1 19.1 10.3a56.12 56.12 0 0 0 17.4 74.9 56.06 56.06 0 0 1-25.4-7v.7a56.11 56.11 0 0 0 45 55 55.65 55.65 0 0 1-14.8 2 62.39 62.39 0 0 1-10.6-1 56.24 56.24 0 0 0 52.4 39 112.87 112.87 0 0 1-69.7 24 119 119 0 0 1-13.4-.8 158.83 158.83 0 0 0 86 25.2c103.2 0 159.6-85.5 159.6-159.6 0-2.4-.1-4.9-.2-7.3a114.25 114.25 0 0 0 28.1-29.1"></path>
                 </svg>
               </a>
             </li>
@@ -90,6 +90,7 @@ export async function getStaticPaths() {
   }
 }
 hr {
+  border-color: var(--white) !important;
   opacity: .5;
 }
 </style>

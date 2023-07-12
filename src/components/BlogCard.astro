@@ -47,7 +47,7 @@ const day = pubDate.getDate();
 
     <div class="flex flex-1 flex-col justify-between">
       <div class="border-l border-gray-900/10 p-3 dark:border-white/10 sm:!border-l-transparent sm:p-4">
-        <h3 class="font-bold uppercase text-white">
+        <h3 class="text-white font-bold uppercase">
           { title }
         </h3>
         <p class="mt-2 text-sm leading-relaxed text-white line-clamp-3">
@@ -56,7 +56,7 @@ const day = pubDate.getDate();
       </div>
 
       <div class="sm:flex sm:items-end sm:justify-end">
-        <div class="btn-read px-5 py-3 text-center text-xs font-bold uppercase text-white transition">
+        <div class="text-white btn-read px-5 py-3 text-center text-xs font-bold uppercase transition">
           Read Article
         </div>
       </div>
@@ -67,6 +67,8 @@ const day = pubDate.getDate();
 <style lang="scss">
 .blog-card {
   h3 {
+    // Override grandient color
+    -webkit-text-fill-color: white;
     line-height: 30px;
   }
   &.card-background {
