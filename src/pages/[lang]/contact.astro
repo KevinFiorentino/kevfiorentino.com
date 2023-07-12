@@ -24,13 +24,14 @@ export async function getStaticPaths() {
   title={`${t('contact')} | Kevin Fiorentino`}
   description={t('contact.description')}
   image="/kevin.png"
-  addWidth={true}
+  addWidth={false}
 >
-  <section>
-    <h1 class="text-gradient">
-      {t('contact')}
-    </h1>
-    <div>
+  <br><br>
+  <section class="contact-page bg-polygon" style="position: relative; background: var(--primary);">
+    <div class="main-width">
+      <h1 class="text-gradient">
+        {t('contact')}
+      </h1>
       <div class="flex justify-center">
         <div class="contact-box bg-gradient max-w-max p-6">
           <ul>
@@ -71,26 +72,38 @@ export async function getStaticPaths() {
             </li>
           </ul>
         </div>
-
       </div>
     </div>
   </section>
+  <br><br>
 </MainLayout>
 
 <style lang="scss">
-.contact-box {
-  position: relative;
-  border: 2px solid var(--primary);
-  border-radius: 25px;
-  box-shadow: 0 8px 32px 0 rgba(20, 20, 100, 0.2);
-  margin: 15px 0;
-
-  p {
-    font-weight: 400;
+.contact-page {
+  .main-width {
+    padding-top: 0;
+    padding-bottom: 0;
   }
-}
-hr {
-  border-color: var(--white) !important;
-  opacity: .5;
+  h1 {
+    position: relative;
+    -webkit-text-fill-color: white;
+    z-index: 1;
+  }
+  .contact-box {
+    position: relative;
+    border: 2px solid var(--primary);
+    border-radius: 25px;
+    box-shadow: 0 8px 32px 0 rgba(20, 20, 100, 0.2);
+    margin: 15px 0;
+    z-index: 1;
+
+    p {
+      font-weight: 400;
+    }
+  }
+  hr {
+    border-color: var(--white) !important;
+    opacity: .5;
+  }
 }
 </style>

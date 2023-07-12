@@ -78,3 +78,22 @@ hr {
         padding: 1rem;
     }
 }
+
+.bg-polygon::before, .bg-polygon::after {
+    content: "";
+    position: absolute;
+    background: var(--primary);
+    width: 100%;
+    height: 180px;
+    left: 0;
+    overflow: hidden;
+    backface-visibility: visible;
+  }
+.bg-polygon::before {
+    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 100%, 0 100%);
+    top: -50px;
+}
+.bg-polygon::after {
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+    bottom: -50px;
+}
