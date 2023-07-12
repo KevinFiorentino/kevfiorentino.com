@@ -75,7 +75,7 @@ const post = Astro.props;
   <section class="bg-techs bg-polygon">
     <div class="techs-main-box main-width">
       <h2 class="text-white text-center mb-4">
-        My six-year career knowledge carried me through
+        {t('home.tech')}
       </h2>
       <div role="list" class="flex flex-wrap justify-evenly items-center">
 
@@ -111,8 +111,8 @@ const post = Astro.props;
 
       </div>
       <div class="text-center mt-5">
-        <a href={`/${lang}/work-experience`} title="Know my work experience" class="btn-know text-white font-bold py-2 px-4 rounded">
-          <span class="text-lg font-medium">Know my work experience </span>
+        <a href={`/${lang}/work-experience`} title={t('home.tech.btn')} class="btn-know text-white font-bold py-2 px-4 rounded">
+          <span class="text-lg font-medium">{t('home.tech.btn')}</span>
         </a>
       </div>
     </div>

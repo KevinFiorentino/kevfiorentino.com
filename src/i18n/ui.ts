@@ -9,6 +9,9 @@ export const defaultLang = 'en';
 
 export const ui = {
   en: {
+    'home.tech': 'My six-year career knowledge carried me through',
+    'home.tech.btn': 'Know my work experience',
+
     'contact': 'Contact',
     'contact.description': 'Means of contact with Kevin Fiorentino',
     'contact.means1': 'Please, contact me through:',
@@ -20,9 +23,12 @@ export const ui = {
     'footer.recommends': 'Might interest you',
 
     'policy': 'Privacy policy ',
-
+    'all-tags': 'All tags',
   },
   es: {
+    'home.tech': 'Mi conocimiento en seis años de carrera',
+    'home.tech.btn': 'Conoce mi experiencia laboral',
+
     'contact': 'Contacto',
     'contact.description': 'Medios de contacto con Kevin Fiorentino',
     'contact.means1': 'Por favor, contáctame por:',
@@ -34,6 +40,6 @@ export const ui = {
     'footer.recommends': 'Puede interesarte',
 
     'policy': 'Politicas de privacidad',
-
+    'all-tags': 'Ver tags',
   },
 } as const;
