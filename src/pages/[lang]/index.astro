@@ -62,7 +62,9 @@ const post = Astro.props;
       <hr>
     </div>
     <div class="order-first md:order-last">
-      <img src="/kevin.png" class="kevin-image m-auto" alt="Kevin Fiorentino" />
+      <div class="polygon-shadow">
+        <img src="/kevin.png" class="kev-image m-auto" alt="Kevin Fiorentino" />
+      </div>
       <p class="uppercase dark:text-white text-center mt-3">I got amazing power of observation</p>
     </div>
   </section>
@@ -122,20 +124,23 @@ const post = Astro.props;
       <h2 class="text-gradient font-bold mb-3">
         Blog
       </h2>
-      <div role="list" class="cards-grid">
-        {
-          post.posts.map((item: any) => (
-            <BlogCard
-              slug={item.slug}
-              collection={item.collection}
-              title={item.data.title}
-              description={item.data.description}
-              image={item.data.image}
-              pubDate={item.data.pubDate}
-            >
-            </BlogCard>
-          ))
-        }
+
+        <div role="list" class="cards-grid">
+          {
+            post.posts.map((item: any) => (
+              <div class="polygon-shadow-hover">
+                <BlogCard
+                  slug={item.slug}
+                  collection={item.collection}
+                  title={item.data.title}
+                  description={item.data.description}
+                  image={item.data.image}
+                  pubDate={item.data.pubDate}
+                >
+                </BlogCard>
+              </div>
+            ))
+          }
       </div>
     </div>
   </section>
@@ -143,7 +148,7 @@ const post = Astro.props;
 </MainLayout>
 
 <style lang="scss">
-.kevin-image {
+.kev-image {
   max-height: 300px;
   clip-path: polygon(15% 10%, 100% 0, 100% 25%, 100% 100%, 0 85%);
 }

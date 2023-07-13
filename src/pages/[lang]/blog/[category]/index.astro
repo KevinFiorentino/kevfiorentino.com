@@ -49,15 +49,17 @@ const post = Astro.props;
   <div role="list" class="cards-grid">
     {
       post.posts.map((item: any) => (
-        <BlogCard
-          slug={item.slug}
-          collection={item.collection}
-          title={item.data.title}
-          description={item.data.description}
-          image={item.data.image}
-          pubDate={item.data.pubDate}
-        >
-        </BlogCard>
+        <div class="polygon-shadow-hover">
+          <BlogCard
+            slug={item.slug}
+            collection={item.collection}
+            title={item.data.title}
+            description={item.data.description}
+            image={item.data.image}
+            pubDate={item.data.pubDate}
+          >
+          </BlogCard>
+        </div>
       ))
     }
   </div>

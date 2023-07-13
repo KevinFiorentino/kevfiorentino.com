@@ -30,7 +30,7 @@ h4, h5, h5, h6 {
     font-weight: 500;
 }
 img {
-    box-shadow: 0 3px 6px #00000029;
+    box-shadow: 0 3px 6px var(--shadow);
 }
 p {
     font-weight: 300;
@@ -95,4 +95,15 @@ hr {
 .bg-polygon::after {
     clip-path: polygon(0 0, 100% 0, 100% 75%, 25% 100%, 0 75%);
     bottom: -50px;
+}
+.polygon-shadow {
+    filter: drop-shadow(0px 4px 2px var(--black));
+}
+.polygon-shadow-hover {
+    filter: drop-shadow(0px 3px 6px var(--shadow));
+    transition: .3s;
+}
+.polygon-shadow-hover:hover {
+    filter: drop-shadow(0px 4px 2px var(--black));
+    transition: .3s;
 }

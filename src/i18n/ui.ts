@@ -9,7 +9,7 @@ export const defaultLang = 'en';
 
 export const ui = {
   en: {
-    'home.tech': 'My six-year career knowledge carried me through',
+    'home.tech': 'My six-year career knowledge',
     'home.tech.btn': 'Know my work experience',
 
     'contact': 'Contact',
