@@ -31,7 +31,7 @@ const month = months[pubDate.getMonth()];
 const day = pubDate.getDate();
 ---
 
-<article class="blog-card card-background">
+<article class="blog-card card-background" role="listitem">
   <a href={`/${lang}/blog/${collection}/${slug.slice(3)}`} title={ title } class="flex transition">
     <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
       <time datetime={ pubDate.toString() } class="flex items-center justify-between text-white text-xs font-bold uppercase gap-4">

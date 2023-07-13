@@ -52,13 +52,15 @@ const tags = Astro.props.tags;
       <h1 class="text-gradient relative z-10">
         Tags
       </h1>
-      <div class="tags relative">
+      <ul class="tags relative z-10" role="list">
         {tags.map((tag: string) => (
-          <p class="tag">
-            <a href={`/${lang}/tags/${tag}`}>{tag}</a>
-          </p>
+          <li class="tag-box">
+            <a class="tag capitalize" href={`/${lang}/tags/${tag}`} title={`Tag: ${tag}`} role="listitem">
+              {tag}
+            </a>
+          </li>
         ))}
-      </div>
+      </ul>
 
       <br>
 
@@ -79,29 +81,28 @@ const tags = Astro.props.tags;
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    z-index: 1;
-    filter: drop-shadow(0px 4px 2px var(--black));
 
-    .tag {
-      margin: 0.6em;
-      border: dotted 1px ar(--white);
-      font-size: 1.15em;
-      background-color: var(--white);
+    .tag-box {
+      filter: drop-shadow(0px 3px 6px #00000029);
 
-      a {
+      .tag {
         display: block;
+        font-size: 1.15em;
         color: var(--primary);
+        border: dotted 1px var(--white);
+        background-color: var(--white);
         padding: .8rem 1rem;
+        margin: 0.6em;
+        clip-path: polygon(15% 10%, 100% 0, 100% 25%, 100% 100%, 0 85%);
+        transition: .5s;
+      }
+      .tag:hover, .tag:focus {
+        clip-path: polygon(0% 0%,100% 10%,100% 25%,100% 100%,0% 90%);
+        transition: .5s;
       }
     }
-    .tag:nth-child(1n) {
-      clip-path: polygon(15% 10%,100% 0,100% 25%,100% 100%,0 85%);
-    }
-    .tag:nth-child(2n) {
-      clip-path: polygon(10% 15%,90% 0%,100% 30%,100% 100%,0% 85%);
-    }
-    .tag:nth-child(3n) {
-      clip-path: polygon(10% 15%,85% 0%,85% 35%,100% 95%,14% 80%);
+    .tag-box:hover, .tag-box:focus {
+      filter: drop-shadow(0px 4px 2px var(--black));
     }
 
   }
