@@ -65,12 +65,12 @@ const post = Astro.props;
       </div>
     </div>
     <div class="order-first md:order-last">
-      <img src="/kevin.png" class="kevin-image rounded-full m-auto" alt="Kevin Fiorentino" />
+      <img src="/kevin.png" class="kevin-image m-auto" alt="Kevin Fiorentino" />
       <p class="uppercase dark:text-white text-center mt-3">I got amazing power of observation</p>
     </div>
   </section>
 
-  <br><br><br>
+  <br><br>
 
   <section class="bg-techs bg-polygon">
     <div class="techs-main-box main-width">
@@ -111,14 +111,14 @@ const post = Astro.props;
 
       </div>
       <div class="text-center mt-5">
-        <a href={`/${lang}/work-experience`} title={t('home.tech.btn')} class="btn-know text-white font-bold py-2 px-4 rounded">
+        <a href={`/${lang}/work-experience`} title={t('home.tech.btn')} class="btn-know text-white font-bold py-2 px-4">
           <span class="text-lg font-medium">{t('home.tech.btn')}</span>
         </a>
       </div>
     </div>
   </section>
 
-  <br><br><br>
+  <br><br>
 
   <section class="main-width">
     <div>
@@ -148,13 +148,13 @@ const post = Astro.props;
 <style lang="scss">
 .kevin-image {
   max-height: 300px;
+  clip-path: polygon(15% 10%, 100% 0, 100% 25%, 100% 100%, 0 85%);
 }
 .bg-techs {
   position: relative;
   background: var(--primary);
 
   h2 {
-    // Override grandient color
     -webkit-text-fill-color: white;
   }
 }
@@ -174,7 +174,6 @@ const post = Astro.props;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     min-height: 100px;
 

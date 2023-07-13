@@ -31,7 +31,7 @@ const month = months[pubDate.getMonth()];
 const day = pubDate.getDate();
 ---
 
-<article class="blog-card card-background hover:shadow-xl">
+<article class="blog-card card-background">
   <a href={`/${lang}/blog/${collection}/${slug.slice(3)}`} title={ title } class="flex transition">
     <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
       <time datetime={ pubDate.toString() } class="flex items-center justify-between text-white text-xs font-bold uppercase gap-4">
@@ -42,7 +42,7 @@ const day = pubDate.getDate();
     </div>
 
     <div class="hidden sm:block sm:basis-56">
-      <img class="aspect-square rounded-none h-full w-full object-cover" src={ image.url } alt={ image.alt }/>
+      <img class="asd aspect-square rounded-none h-full w-full object-cover" src={ image.url } alt={ image.alt }/>
     </div>
 
     <div class="flex flex-1 flex-col justify-between">
@@ -66,8 +66,13 @@ const day = pubDate.getDate();
 
 <style lang="scss">
 .blog-card {
+  position: relative;
+
+  a {
+    position: relative;
+    z-index: 1;
+  }
   h3 {
-    // Override grandient color
     -webkit-text-fill-color: white;
     line-height: 30px;
   }
@@ -76,9 +81,39 @@ const day = pubDate.getDate();
   }
   .btn-read {
     background-color: var(--alternative);
+    height: 50px;
+    margin-bottom: -13px;
+    clip-path: polygon(0 0,100% 0,100% 75%,0% 100%,0 75%);
+  }
+
+}
+/* .blog-card a:hover, .blog-card a:focus {
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+} */
+
+.blog-card::before, .blog-card::after {
+  content: "";
+  position: absolute;
+  background: var(--primary);
+  width: 100%;
+  height: 200px;
+  left: 0;
+  overflow: hidden;
+  backface-visibility: visible;
+}
+.blog-card::before {
+  clip-path: polygon(0 25%, 75% 0, 100% 25%, 100% 100%, 0 100%);
+  top: -50px;
+}
+.blog-card::after {
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 25% 100%, 0 75%);
+  bottom: -50px;
+}
+
+@media (max-width: 640px) {
+  .blog-card::before, .blog-card::after {
+    height: 170px;
   }
 }
-.blog-card a:hover, .blog-card a:focus {
-  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
-}
+
 </style>
