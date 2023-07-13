@@ -107,3 +107,8 @@ hr {
     filter: drop-shadow(0px 4px 2px var(--black));
     transition: .3s;
 }
+.dark {
+    .polygon-shadow-hover:hover {
+        filter: drop-shadow(0px 4px 2px var(--white));
+    }
+}

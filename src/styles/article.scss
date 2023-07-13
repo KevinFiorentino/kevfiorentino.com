@@ -17,6 +17,9 @@
             box-shadow: 0 3px 6px var(--shadow);
         }
     }
+    img {
+        clip-path: polygon(5% 5%,100% -5%,95% 50%,100% 100%,0 90%);
+    }
     ul {
         list-style: none;
         padding: revert;
@@ -24,6 +27,10 @@
 
         li {
             font-weight: 300;
+
+            strong {
+                color: var(--primary);
+            }
         }
     }
     ul li::before {
@@ -35,14 +42,95 @@
         margin-left: -1em;
     }
     pre {
-        padding: 15px;
+        padding: 10px;
         margin-bottom: 15px;
         box-shadow: 0 3px 6px var(--shadow);
+        line-height: normal;
     }
     blockquote {
         font-style: italic;
         border-left: 3px solid var(--primary);
         padding: 5px 0 1px 15px;
         margin-bottom: 15px;
+    }
+    table {
+        width: 100%;
+        margin-bottom: 15px;
+
+        thead {
+            color: var(--white);
+            background: var(--accent);
+
+            tr {
+                th {
+                    border: 1px solid var(--accent);
+                    border-right-color: var(--white);
+                    padding: 5px;
+                }
+                th:first-child {
+                    border-left: 1px solid var(--accent);
+                }
+                th:last-child {
+                    border-right: 1px solid var(--accent);
+                }
+            }
+        }
+        tbody {
+            font-weight: 300;
+
+            tr {
+                td {
+                    padding: 5px;
+                }
+            }
+            tr:nth-child(odd) {
+                td {
+                    border: 1px solid var(--primary);
+                }
+            }
+            tr:nth-child(even) {
+                color: var(--white);
+                background: var(--primary);
+                td {
+                    border: 1px solid var(--white);
+                    border-bottom-color: var(--primary);
+                }
+                td:first-child {
+                    border-left: 1px solid var(--primary);
+                }
+                td:last-child {
+                    border-right: 1px solid var(--primary);
+                }
+            }
+        }
+    }
+    @media (max-width: 600px) {
+        table {
+            thead {
+                tr {
+                    th {
+                        font-size: .9rem;
+                        padding: 3px;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        font-size: .9rem;
+                        padding: 3px;
+                    }
+                }
+            }
+        }
+    }
+}
+.dark {
+    table {
+        tbody {
+            tr:nth-child(odd) {
+                color: var(--white);
+            }
+        }
     }
 }

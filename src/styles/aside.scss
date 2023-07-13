@@ -15,16 +15,9 @@
         color: var(--primary);
         border: 1px solid var(--primary);
         padding: 5px 10px;
-        border-radius: 15px;
     }
     .badge:hover, .badge:focus {
         color: white;
         background: var(--bg-gradient);
     }
 }
-
-/* .dark .main-aside-content {
-    h4, p, small {
-        color: white;
-    }
-} */
