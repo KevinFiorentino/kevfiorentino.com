@@ -56,11 +56,9 @@
     table {
         width: 100%;
         margin-bottom: 15px;
-
         thead {
             color: var(--white);
             background: var(--accent);
-
             tr {
                 th {
                     border: 1px solid var(--accent);
@@ -77,7 +75,6 @@
         }
         tbody {
             font-weight: 300;
-
             tr {
                 td {
                     padding: 5px;
@@ -127,10 +124,23 @@
 }
 .dark {
     table {
+        thead {
+            tr {
+                th {
+                    border-right-color: #1F2937;
+                }
+            }
+        }
         tbody {
             tr:nth-child(odd) {
                 color: var(--white);
             }
+            tr:nth-child(even) {
+                td {
+                    border: 1px solid #1F2937;
+                }
+            }
         }
+
     }
 }

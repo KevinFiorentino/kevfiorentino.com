@@ -87,7 +87,7 @@ hr {
     left: 0;
     overflow: hidden;
     backface-visibility: visible;
-  }
+}
 .bg-polygon::before {
     clip-path: polygon(0 25%, 75% 0, 100% 25%, 100% 100%, 0 100%);
     top: -50px;
@@ -110,5 +110,9 @@ hr {
 .dark {
     .polygon-shadow-hover:hover {
         filter: drop-shadow(0px 4px 2px var(--white));
+    }
+    // I can't write this in the footer component
+    footer::before {
+        background: rgb(17 24 39);
     }
 }
