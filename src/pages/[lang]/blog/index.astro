@@ -4,15 +4,32 @@ import { getLangFromUrl, useTranslations } from '@i18n/utils';
 import { getCollection } from 'astro:content';
 import { CollectionMetadata, collectionMetadata } from '@content/config';
 import MainLayout from '@layouts/MainLayout.astro';
+import BlogCard from '@components/BlogCard.astro';
 
 export async function getStaticPaths() {
   const pages: any[] = [];
+
+  let allPosts: any[] = [];
+
+  for await (let c of collectionMetadata) {
+    const coll = await getCollection(c.name as any);
+    allPosts = allPosts.concat(coll);
+  }
+
+  allPosts = allPosts.sort((a, b) => {
+    if (new Date(a.data.pubDate) < new Date(b.data.pubDate))
+      return 1;
+    if (new Date(a.data.pubDate) > new Date(b.data.pubDate))
+      return -1;
+    return 0;
+  });
 
   Object.keys(languages).map((l: string) => {
     pages.push({
       params: { lang: l },
       props: {
-        collections: collectionMetadata
+        recents: allPosts.filter(p => (p.slug.split('/')[0] == l)).slice(0, 6)  ,   // First six elements
+        collections: collectionMetadata,
       },
     });
   });
@@ -22,33 +39,74 @@ export async function getStaticPaths() {
 
 const lang = getLangFromUrl(Astro.url);
 
-const { collections } = Astro.props;
+const { recents, collections } = Astro.props;
 ---
 
 <MainLayout
   title={`Blog | Kevin Fiorentino`}
   description={`Kevin Fiorentino's personal blog`}
   image="/kevin.png"
-  addWidth={true}
+  addWidth={false}
 >
-  <h1 class="text-gradient">
-    Blog
-  </h1>
-  <section>
-    <ul>
+  <section class="main-width">
+    <h1 class="text-gradient mb-3">
+      Blog
+    </h1>
+
+    <hr class="mb-0">
+    <h2>
+      Latest articles
+    </h2>
+    <br><br>
+    <div role="list" class="cards-grid">
       {
-        collections.map((c: CollectionMetadata) => (
-          <li>
-            <a href={`/${lang}/blog/${c.name}`} class="dark:text-white" title={`Blog ${c.name}`}>
-              {c.name}
-            </a>
-          </li>
+        recents.map((item: any) => (
+          <BlogCard
+            slug={item.slug}
+            collection={item.collection}
+            title={item.data.title}
+            description={item.data.description}
+            image={item.data.image}
+            pubDate={item.data.pubDate}
+          >
+          </BlogCard>
         ))
       }
-    </ul>
+    </div>
+
   </section>
+
+  <br><br><br><br>
+
+  <section class="categories bg-polygon relative">
+    <div class="relative main-width z-10">
+      <h2>
+        All categories
+      </h2>
+      <ul class="">
+        {
+          collections.map((c: CollectionMetadata) => (
+            <li>
+              <a href={`/${lang}/blog/${c.name}`} class="dark:text-white" title={`Blog ${c.name}`}>
+                {c.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <br><br><br><br>
+
 </MainLayout>
 
-<style>
+<style lang="scss">
+.categories {
+  h2 {
+    -webkit-text-fill-color: white;
+  }
+}
+
 
 </style>

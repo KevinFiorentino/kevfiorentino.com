@@ -31,7 +31,7 @@ export async function getStaticPaths() {
     pages.push({
       params: { lang: l },
       props: {
-        posts: allPosts.filter(p => (p.slug.split('/')[0] == l)).slice(0, 8)     // First eight elements
+        posts: allPosts.filter(p => (p.slug.split('/')[0] == l)).slice(0, 6)     // First six elements
       },
     });
   });
@@ -60,9 +60,6 @@ const post = Astro.props;
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus rerum laborum facilis corrupti aliquam praesentium. Voluptate, provident! Esse culpa omnis nesciunt quo vitae excepturi alias reprehenderit, temporibus odio modi doloribus.
       </p>
       <hr>
-      <div class="">
-
-      </div>
     </div>
     <div class="order-first md:order-last">
       <img src="/kevin.png" class="kevin-image m-auto" alt="Kevin Fiorentino" />

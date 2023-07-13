@@ -42,37 +42,69 @@ const tags = Astro.props.tags;
   title={`Tags | Kevin Fiorentino`}
   description={`Kevin Fiorentino's tags`}
   image="/kevin.png"
-  addWidth={true}
+  addWidth={false}
 >
-  <h1 class="text-gradient">
-    Tags
-  </h1>
-  <div class="tags">
-    {tags.map((tag: string) => (
-      <p class="tag">
-        <a href={`/${lang}/tags/${tag}`}>{tag}</a>
-      </p>
-    ))}
-  </div>
+  <br><br>
+
+  <section class="tags-page bg-polygon relative" style="background: var(--primary);">
+    <div class="main-width">
+
+      <h1 class="text-gradient relative z-10">
+        Tags
+      </h1>
+      <div class="tags relative">
+        {tags.map((tag: string) => (
+          <p class="tag">
+            <a href={`/${lang}/tags/${tag}`}>{tag}</a>
+          </p>
+        ))}
+      </div>
+
+      <br>
+
+    </div>
+  </section>
+
+  <br><br><br>
+
 </MainLayout>
 
 <style lang="scss">
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
+.tags-page {
 
-  .tag {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: .5em;
-    padding: .5em 1em;
-    font-size: 1.15em;
-    background-color: #F8FCFD;
+  h1 {
+    -webkit-text-fill-color: white;
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    z-index: 1;
+    filter: drop-shadow(0px 4px 2px var(--black));
 
-    a {
-      color: #00539F;
+    .tag {
+      margin: 0.6em;
+      border: dotted 1px ar(--white);
+      font-size: 1.15em;
+      background-color: var(--white);
+
+      a {
+        display: block;
+        color: var(--primary);
+        padding: .8rem 1rem;
+      }
     }
+    .tag:nth-child(1n) {
+      clip-path: polygon(15% 10%,100% 0,100% 25%,100% 100%,0 85%);
+    }
+    .tag:nth-child(2n) {
+      clip-path: polygon(10% 15%,90% 0%,100% 30%,100% 100%,0% 85%);
+    }
+    .tag:nth-child(3n) {
+      clip-path: polygon(10% 15%,85% 0%,85% 35%,100% 95%,14% 80%);
+    }
+
   }
 }
+
 </style>

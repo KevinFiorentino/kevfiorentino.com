@@ -27,9 +27,9 @@ export async function getStaticPaths() {
   addWidth={false}
 >
   <br><br>
-  <section class="contact-page bg-polygon" style="position: relative; background: var(--primary);">
+  <section class="contact-page bg-polygon relative" style="background: var(--primary);">
     <div class="main-width">
-      <h1 class="text-gradient">
+      <h1 class="text-gradient relative z-10">
         {t('contact')}
       </h1>
       <div class="flex justify-center">
@@ -85,14 +85,11 @@ export async function getStaticPaths() {
     padding-bottom: 0;
   }
   h1 {
-    position: relative;
     -webkit-text-fill-color: white;
-    z-index: 1;
   }
   .contact-box {
     position: relative;
     border: 1px solid var(--white);
-    border-radius: 25px;
     box-shadow: 0 8px 32px 0 rgba(20, 20, 100, 0.2);
     margin: 15px 0;
     z-index: 1;
