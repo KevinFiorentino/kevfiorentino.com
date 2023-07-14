@@ -55,7 +55,7 @@ const { recents, collections } = Astro.props;
 
     <hr class="mb-0">
     <h2>
-      Latest articles
+      Latest posts
     </h2>
     <br><br>
     <div role="list" class="cards-grid">
@@ -85,11 +85,11 @@ const { recents, collections } = Astro.props;
       <h2>
         All categories
       </h2>
-      <ul class="">
+      <ul class="badges" role="list">
         {
           collections.map((c: CollectionMetadata) => (
-            <li>
-              <a href={`/${lang}/blog/${c.name}`} class="dark:text-white" title={`Blog ${c.name}`}>
+            <li class="badge-box" role="listitem">
+              <a href={`/${lang}/blog/${c.name}`} class="badge capitalize" title={`Blog ${c.name}`} >
                 {c.name}
               </a>
             </li>
@@ -109,6 +109,4 @@ const { recents, collections } = Astro.props;
     -webkit-text-fill-color: white;
   }
 }
-
-
 </style>

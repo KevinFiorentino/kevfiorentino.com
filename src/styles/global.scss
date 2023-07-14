@@ -97,22 +97,51 @@ hr {
     bottom: -50px;
 }
 .polygon-shadow {
-    filter: drop-shadow(0px 4px 2px var(--black));
+    filter: drop-shadow(0px 3px 2px var(--black));
 }
 .polygon-shadow-hover {
     filter: drop-shadow(0px 3px 6px var(--shadow));
     transition: .3s;
 }
 .polygon-shadow-hover:hover {
-    filter: drop-shadow(0px 4px 2px var(--black));
+    filter: drop-shadow(0px 3px 2px var(--black));
     transition: .3s;
 }
 .dark {
     .polygon-shadow-hover:hover {
-        filter: drop-shadow(0px 4px 2px var(--white));
+        filter: drop-shadow(0px 3px 2px var(--white));
     }
     // I can't write this in the footer component
     footer::before {
         background: rgb(17 24 39);
     }
 }
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    .badge-box {
+        filter: drop-shadow(0px 3px 6px var(--shadow));
+        margin: 0.3em 0.6em;
+
+        .badge {
+            display: block;
+            font-size: 1.15em;
+            color: var(--primary);
+            border: dotted 1px var(--white);
+            background-color: var(--white);
+            padding: .8rem 1rem;
+            clip-path: polygon(10% 10%, 100% 0, 100% 25%, 100% 100%, 0 85%);
+            transition: .5s;
+        }
+        .badge:hover, .badge:focus {
+            clip-path: polygon(0% 0%,100% 10%,100% 25%,100% 100%,0% 90%);
+            transition: .5s;
+        }
+    }
+    .badge-box:hover, .badge-box:focus {
+        filter: drop-shadow(0px 3px 2px var(--black));
+    }
+  }

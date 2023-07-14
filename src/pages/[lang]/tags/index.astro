@@ -52,17 +52,17 @@ const tags = Astro.props.tags;
       <h1 class="text-gradient relative z-10">
         Tags
       </h1>
-      <ul class="tags relative z-10" role="list">
+      <ul class="badges relative z-10" role="list">
         {tags.map((tag: string) => (
-          <li class="tag-box">
-            <a class="tag capitalize" href={`/${lang}/tags/${tag}`} title={`Tag: ${tag}`} role="listitem">
+          <li class="badge-box">
+            <a class="badge capitalize" href={`/${lang}/tags/${tag}`} title={`Tag: ${tag}`} role="listitem">
               {tag}
             </a>
           </li>
         ))}
       </ul>
 
-      <br>
+      <br><br>
 
     </div>
   </section>
@@ -73,39 +73,8 @@ const tags = Astro.props.tags;
 
 <style lang="scss">
 .tags-page {
-
   h1 {
     -webkit-text-fill-color: white;
   }
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-
-    .tag-box {
-      filter: drop-shadow(0px 3px 6px var(--shadow));
-
-      .tag {
-        display: block;
-        font-size: 1.15em;
-        color: var(--primary);
-        border: dotted 1px var(--white);
-        background-color: var(--white);
-        padding: .8rem 1rem;
-        margin: 0.6em;
-        clip-path: polygon(15% 10%, 100% 0, 100% 25%, 100% 100%, 0 85%);
-        transition: .5s;
-      }
-      .tag:hover, .tag:focus {
-        clip-path: polygon(0% 0%,100% 10%,100% 25%,100% 100%,0% 90%);
-        transition: .5s;
-      }
-    }
-    .tag-box:hover, .tag-box:focus {
-      filter: drop-shadow(0px 4px 2px var(--black));
-    }
-
-  }
 }
-
 </style>

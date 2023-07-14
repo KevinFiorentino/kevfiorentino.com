@@ -14,7 +14,7 @@
     small {
         color: var(--primary);
     }
-    .badge {
+    /* .badge {
         color: var(--primary);
         border: 1px solid var(--primary);
         padding: 5px 10px;
@@ -22,7 +22,7 @@
     .badge:hover, .badge:focus {
         color: white;
         background: var(--bg-gradient);
-    }
+    } */
 }
 .dark .main-aside-content {
     .bg-polygon::before, .bg-polygon::after {
