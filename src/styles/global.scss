@@ -63,6 +63,8 @@ hr {
     background-size: 400%;
     background-position: 0%;
 }
+
+
 .cards-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -77,6 +79,7 @@ hr {
         padding: 1rem;
     }
 }
+
 
 .bg-polygon::before, .bg-polygon::after {
     content: "";
@@ -117,6 +120,7 @@ hr {
     }
 }
 
+
 .badges {
     display: flex;
     flex-wrap: wrap;
@@ -144,4 +148,4 @@ hr {
     .badge-box:hover, .badge-box:focus {
         filter: drop-shadow(0px 3px 2px var(--black));
     }
-  }
+}

@@ -28,12 +28,12 @@ export async function getStaticPaths() {
 >
   <br><br>
   <section class="contact-page bg-polygon relative" style="background: var(--primary);">
-    <div class="main-width">
+    <div class="main-width pt-0 pb-0">
       <h1 class="text-gradient relative z-10">
         {t('contact')}
       </h1>
       <div class="flex justify-center">
-        <div class="contact-box bg-gradient max-w-max p-6">
+        <div class="contact-box bg-gradient max-w-max relative p-6 z-10">
           <ul>
             <li class="flex justify-start items-center mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30" class="mr-2">
@@ -81,24 +81,18 @@ export async function getStaticPaths() {
       </div>
     </div>
   </section>
-  <br><br>
+  <br>
 </MainLayout>
 
 <style lang="scss">
 .contact-page {
-  .main-width {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
   h1 {
     -webkit-text-fill-color: white;
   }
   .contact-box {
-    position: relative;
     border: 1px solid var(--white);
     box-shadow: 0 8px 32px 0 rgba(20, 20, 100, 0.2);
     margin: 15px 0;
-    z-index: 1;
 
     p {
       font-weight: 400;

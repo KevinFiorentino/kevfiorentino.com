@@ -71,9 +71,9 @@ const post = Astro.props;
 
   <br><br>
 
-  <section class="bg-techs bg-polygon">
-    <div class="techs-main-box main-width">
-      <h2 class="text-white text-center mb-4">
+  <section class="bg-techs bg-polygon relative">
+    <div class="techs-main-box main-width relative z-10">
+      <h2 class="text-white text-center mb-5">
         {t('home.tech')}
       </h2>
       <div role="list" class="flex flex-wrap justify-evenly items-center">
@@ -109,13 +109,16 @@ const post = Astro.props;
         </div>
 
       </div>
-      <div class="text-center mt-5">
-        <a href={`/${lang}/work-experience`} title={t('home.tech.btn')} class="btn-know text-white font-bold py-2 px-4">
-          <span class="text-lg font-medium">{t('home.tech.btn')}</span>
-        </a>
+      <div class="flex justify-center mt-5">
+        <div class="btn-know-box" style="max-width: max-content;">
+          <a href={`/${lang}/work-experience`} title={t('home.tech.btn')} class="btn-know text-white font-bold py-2 px-4">
+            <span class="text-lg font-medium">{t('home.tech.btn')}</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
+
 
   <br><br>
 
@@ -153,7 +156,6 @@ const post = Astro.props;
   clip-path: polygon(15% 10%, 100% 0, 100% 25%, 100% 100%, 0 85%);
 }
 .bg-techs {
-  position: relative;
   background: var(--primary);
 
   h2 {
@@ -161,9 +163,6 @@ const post = Astro.props;
   }
 }
 .techs-main-box {
-  position: relative;
-  z-index: 1;
-
   h2 {
     line-height: 35px;
   }
@@ -172,25 +171,41 @@ const post = Astro.props;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    min-height: 100px;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    min-height: 100px;
 
     img {
-      max-height: 75px;
-      max-width: 75px;
+      max-height: 70px;
+      max-width: 70px;
       box-shadow: none;
       margin: 10px;
       transform: scale(1);
       transition: .5s;
+      z-index: 1;
     }
     img:hover {
       transform: scale(1.1);
       transition: .5s;
     }
+  }
+  .techs-group:before, .techs-group:after {
+    content: "";
+    position: absolute;
+    background: rgba(255, 255, 255, 0.25);
+    width: 100%;
+    height: 115px;
+    left: 0;
+    overflow: hidden;
+    backface-visibility: visible;
+  }
+  .techs-group:before {
+    clip-path: polygon(0 25%, 100% 0, 100% 25%, 100% 100%, 0 100%);
+    top: -20px;
+  }
+  .techs-group:after {
+    clip-path: polygon(0 25%, 100% 0, 100% 25%, 100% 100%, 0 100%);
+    top: -20px;
   }
   @media (max-width: 600px) {
     .techs-group {
@@ -202,15 +217,25 @@ const post = Astro.props;
         margin: 7px;
       }
     }
+    .techs-group:before, .techs-group:after {
+      height: 97px;
+    }
   }
-  .btn-know {
-    display: inline-block;
-    background-color: var(--alternative);
-    height: 55px;
-    clip-path: polygon(0 0,100% 0,100% 75%,0% 100%,0 75%);
+  .btn-know-box {
+    .btn-know {
+      display: inline-block;
+      background-color: var(--alternative);
+      height: 55px;
+      clip-path: polygon(0 0,100% 0,100% 75%,0% 100%,0 75%);
+      transition: .3s;
+    }
+    .btn-know:hover, .btn-know:focus {
+      clip-path: polygon(0% 0%,100% 0%,100% 100%,0% 75%,0 75%);
+      transition: .3s;
+    }
   }
-  .btn-know:hover, .btn-know:focus {
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  .btn-know-box:hover, .btn-know-box:focus {
+    filter: drop-shadow(0px 3px 2px var(--black));
   }
 }
 </style>

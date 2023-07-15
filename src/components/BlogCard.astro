@@ -31,8 +31,8 @@ const month = months[pubDate.getMonth()];
 const day = pubDate.getDate();
 ---
 
-<article class="blog-card card-background" role="listitem">
-  <a href={`/${lang}/blog/${collection}/${slug.slice(3)}`} title={ title } class="flex transition">
+<article class="blog-card card-background relative" role="listitem">
+  <a href={`/${lang}/blog/${collection}/${slug.slice(3)}`} title={ title } class="flex relative z-10">
     <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
       <time datetime={ pubDate.toString() } class="flex items-center justify-between text-white text-xs font-bold uppercase gap-4">
         <span>{ year }</span>
@@ -57,7 +57,7 @@ const day = pubDate.getDate();
 
       <div class="sm:flex sm:items-end sm:justify-end">
         <div class="text-white btn-read px-5 py-3 text-center text-xs font-bold uppercase transition">
-          Read Article
+          Read post
         </div>
       </div>
     </div>
@@ -66,12 +66,6 @@ const day = pubDate.getDate();
 
 <style lang="scss">
 .blog-card {
-  position: relative;
-
-  a {
-    position: relative;
-    z-index: 1;
-  }
   h3 {
     -webkit-text-fill-color: white;
     line-height: 30px;
@@ -85,12 +79,7 @@ const day = pubDate.getDate();
     margin-bottom: -13px;
     clip-path: polygon(0 0,100% 0,100% 75%,0% 100%,0 75%);
   }
-
 }
-/* .blog-card a:hover, .blog-card a:focus {
-  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
-} */
-
 .blog-card::before, .blog-card::after {
   content: "";
   position: absolute;
@@ -109,11 +98,9 @@ const day = pubDate.getDate();
   clip-path: polygon(0 0, 100% 0, 100% 75%, 25% 100%, 0 75%);
   bottom: -50px;
 }
-
 @media (max-width: 640px) {
   .blog-card::before, .blog-card::after {
     height: 170px;
   }
 }
-
 </style>
