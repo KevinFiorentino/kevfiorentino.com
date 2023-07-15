@@ -1,0 +1,36 @@
+---
+export interface Props {
+  posts: any;
+}
+
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+import BlogCard from '@components/BlogCard.astro';
+
+const lang = getLangFromUrl(Astro.url);
+
+const { posts } = Astro.props;
+---
+<section class="main-width">
+  <div>
+    <h2 class="text-gradient font-bold mb-3">
+      Blog
+    </h2>
+      <div role="list" class="cards-grid">
+        {
+          posts.map((item: any) => (
+            <div class="polygon-shadow-hover">
+              <BlogCard
+                slug={item.slug}
+                collection={item.collection}
+                title={item.data.title}
+                description={item.data.description}
+                image={item.data.image}
+                pubDate={item.data.pubDate}
+              >
+              </BlogCard>
+            </div>
+          ))
+        }
+    </div>
+  </div>
+</section>
