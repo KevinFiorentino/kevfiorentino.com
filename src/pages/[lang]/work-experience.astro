@@ -36,39 +36,32 @@ export async function getStaticPaths() {
 
     <br>
 
-    <div class="bg-polygon relative">
+    <div class="experience-box bg-polygon relative">
       <div class="main-width relative pt-0 pb-0 z-10">
 
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti molestiae at necessitatibus modi deserunt omnis, sit fuga aperiam suscipit perferendis magnam itaque fugit maiores, consectetur aut reiciendis enim quibusdam!
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. In nostrum quo quia sint blanditiis aspernatur placeat pariatur ullam iste. Optio, possimus voluptates dicta officiis magni repellat explicabo similique tempora. Officiis!
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. In nostrum quo quia sint blanditiis aspernatur placeat pariatur ullam iste. Optio, possimus voluptates dicta officiis magni repellat explicabo similique tempora. Officiis!
+        <div class="block sm:flex items-center">
+          <a href="#" target="_blank" title="" class="text-center mr-4 mb-2">
+            <img src="/tech/solana.svg" alt="Solana logo" title="Solana Blockchain" />
+            <small>Platzi</small>
+          </a>
+          <div>
+            <h2>Writing Contributor</h2>
+            <small>Mar 2022 - Present</small>
+            <p>
+              Content creator to contribute to Platzi’s community about technologies such as Angular, NodeJS, Solidity, Rust, Blockchain (Bitcoin, Ethereum, Solana), and Web3. <br>
+              Lead contributor to the internal team as editor and content moderator.
+            </p>
+            <span><strong>Skills:</strong> Copywriting · Communication · SEO</span>
+          </div>
+        </div>
 
       </div>
     </div>
 
     <br><br><br><br>
 
-    <div class="bg-polygon relative">
-      <div class="main-width relative pt-0 pb-0 z-10">
 
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti molestiae at necessitatibus modi deserunt omnis, sit fuga aperiam suscipit perferendis magnam itaque fugit maiores, consectetur aut reiciendis enim quibusdam!
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. In nostrum quo quia sint blanditiis aspernatur placeat pariatur ullam iste. Optio, possimus voluptates dicta officiis magni repellat explicabo similique tempora. Officiis!
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. In nostrum quo quia sint blanditiis aspernatur placeat pariatur ullam iste. Optio, possimus voluptates dicta officiis magni repellat explicabo similique tempora. Officiis!
 
-      </div>
-    </div>
-
-    <br><br><br><br>
-
-    <div class="bg-polygon relative">
-      <div class="main-width relative pt-0 pb-0 z-10">
-
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt deleniti molestiae at necessitatibus modi deserunt omnis, sit fuga aperiam suscipit perferendis magnam itaque fugit maiores, consectetur aut reiciendis enim quibusdam!
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. In nostrum quo quia sint blanditiis aspernatur placeat pariatur ullam iste. Optio, possimus voluptates dicta officiis magni repellat explicabo similique tempora. Officiis!
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. In nostrum quo quia sint blanditiis aspernatur placeat pariatur ullam iste. Optio, possimus voluptates dicta officiis magni repellat explicabo similique tempora. Officiis!
-
-      </div>
-    </div>
 
   </section>
 
@@ -76,8 +69,25 @@ export async function getStaticPaths() {
 
 </MainLayout>
 
-<style>
+<style lang="scss">
 .experience-page {
+  .experience-box {
+    background: var(--primary);
 
+    img {
+      background: var(--white);
+      padding: 10px;
+      max-width: 100px;
+      box-shadow: 0 3px 6px var(--shadow);
+      clip-path: polygon(2% 2%, 100% -2%, 98% 100%, 100% 100%, 0 98%);
+    }
+    h2 {
+      -webkit-text-fill-color: white;
+      line-height: 40px;
+    }
+    small, span {
+      color: var(--white);
+    }
+  }
 }
 </style>

@@ -27,7 +27,6 @@ const lang = getLangFromUrl(Astro.url);
   ></Head>
 	<body class="bg-gray-100 dark:bg-gray-800">
     <Header></Header>
-    <br>
     <LanguagePicker></LanguagePicker>
     <main class={`${addWidth ? 'main-width' : ''}`}>
       <slot />
