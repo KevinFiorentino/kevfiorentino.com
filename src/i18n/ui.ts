@@ -15,7 +15,7 @@ export const ui = {
     'blog.latest': 'Latest posts',
     'blog.all-categories': 'All categories',
 
-    'home.tech': 'My six-year career knowledge',
+    'home.tech': 'My six-year career knowledge went through',
     'home.tech.btn': 'Know my work experience',
     'home.kev': 'Hi, I\'m Kev!',
     'home.presentation1': 'Years working on Web2 projects as a full-stack PHP and Javascript developer. Carrying that knowledge to team leadership and decentralizing apps in Web3 and crypto projects.',
@@ -43,7 +43,7 @@ export const ui = {
     'blog.latest': 'Últimos posts',
     'blog.all-categories': 'Todas las categorías',
 
-    'home.tech': 'Mi conocimiento en seis años de carrera',
+    'home.tech': 'Mi conocimiento en seis años de carrera pasó por',
     'home.tech.btn': 'Conoce mi experiencia laboral',
     'home.kev': '¡Hola, soy Kev!',
     'home.presentation1': 'Años trabajando en Web2 como full-stack PHP y Javascript developer. Llevando ese conocimiento al liderazgo de equipos y descentralizando aplicaciones en proyectos Web3 y crypto.',

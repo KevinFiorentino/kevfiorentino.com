@@ -11,7 +11,7 @@ const t = useTranslations(lang);
       {t('home.tech')}
     </h2>
     <br>
-    <div role="list" class="flex flex-wrap justify-evenly items-center">
+    <div role="list" class="flex flex-wrap justify-center items-center">
 
       <div class="techs-group m-3">
         <img src="/tech/javascript.png" alt="Javascript logo" title="Javascript" />
@@ -34,14 +34,19 @@ const t = useTranslations(lang);
       </div>
 
       <div class="techs-group m-3">
-        <img src="/tech/mongodb.png" alt="MongoDB logo" title="MongoDB" />
-        <img src="/tech/mysql.png" alt="MySQL logo" title="MySQL" />
-        <img src="/tech/elastic.png" alt="Elasticsearch logo" title="Elasticsearch" />
+        <img src="/tech/docker.png" alt="Docker logo" title="Docker" />
+        <img src="/tech/apache.png" alt="Apache logo" title="Apache" />
+        <img src="/tech/nginx.png" alt="NGINX logo" title="NGINX" />
+        <img src="/tech/heroku.png" alt="Heroku logo" title="Heroku" />
+        <img src="/tech/ibm-cloud.png" alt="IBM Cloud logo" title="IBM Cloud" />
+        <img src="/tech/firebase.png" alt="Firebase logo" title="Firebase" />
+        <img src="/tech/linode.png" alt="Linode logo" title="Linode" />
       </div>
 
       <div class="techs-group m-3">
-        <img src="/tech/docker.png" alt="Docker logo" title="Docker" />
-        <img src="/tech/nginx.png" alt="NGINX logo" title="NGINX" />
+        <img src="/tech/mongodb.png" alt="MongoDB logo" title="MongoDB" />
+        <img src="/tech/mysql.png" alt="MySQL logo" title="MySQL" />
+        <img src="/tech/elastic.png" alt="Elasticsearch logo" title="Elasticsearch" />
       </div>
 
     </div>
@@ -77,8 +82,8 @@ const t = useTranslations(lang);
     -webkit-backdrop-filter: blur(4px);
 
     img {
-      max-height: 70px;
-      max-width: 70px;
+      max-height: 65px;
+      max-width: 65px;
       box-shadow: none;
       margin: 10px;
       transform: scale(1);
@@ -134,9 +139,6 @@ const t = useTranslations(lang);
       clip-path: polygon(0% 0%,100% 0%,100% 100%,0% 75%,0 75%);
       transition: .3s;
     }
-  }
-  .btn-know-box:hover, .btn-know-box:focus {
-    filter: drop-shadow(0px 3px 2px var(--black));
   }
 }
 </style>
