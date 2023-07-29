@@ -12,6 +12,9 @@ export const ui = {
     'go-blog': 'Go to blog',
     'go-tags': 'Go to tags',
 
+    'blog.latest': 'Latest posts',
+    'blog.all-categories': 'All categories',
+
     'home.tech': 'My six-year career knowledge',
     'home.tech.btn': 'Know my work experience',
 
@@ -32,6 +35,9 @@ export const ui = {
   es: {
     'go-blog': 'Ir al blog',
     'go-tags': 'It a tags',
+
+    'blog.latest': 'Últimos posts',
+    'blog.all-categories': 'Todas las categorías',
 
     'home.tech': 'Mi conocimiento en seis años de carrera',
     'home.tech.btn': 'Conoce mi experiencia laboral',

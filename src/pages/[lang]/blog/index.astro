@@ -6,6 +6,9 @@ import { CollectionMetadata, collectionMetadata } from '@content/config';
 import MainLayout from '@layouts/MainLayout.astro';
 import BlogCard from '@components/BlogCard.astro';
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 export async function getStaticPaths() {
   const pages: any[] = [];
 
@@ -37,8 +40,6 @@ export async function getStaticPaths() {
   return pages;
 }
 
-const lang = getLangFromUrl(Astro.url);
-
 const { recents, collections } = Astro.props;
 ---
 
@@ -54,7 +55,7 @@ const { recents, collections } = Astro.props;
     </h1>
     <hr class="mb-0">
     <h2>
-      Latest posts
+      {t('blog.latest')}
     </h2>
     <br><br>
     <div role="list" class="cards-grid">
@@ -82,7 +83,7 @@ const { recents, collections } = Astro.props;
   <section class="categories bg-polygon relative">
     <div class="relative main-width z-10">
       <h2>
-        All categories
+        {t('blog.all-categories')}
       </h2>
       <ul class="badges" role="list">
         {
