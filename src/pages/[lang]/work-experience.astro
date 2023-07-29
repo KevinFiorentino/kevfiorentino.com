@@ -32,6 +32,7 @@ export async function getStaticPaths() {
       <h1 class="text-gradient relative z-10">
         {t('experience')}
       </h1>
+      <hr><br>
     </div>
 
     <br>
@@ -199,6 +200,12 @@ export async function getStaticPaths() {
     p, small, span {
       color: var(--white);
     }
+  }
+  .experience-box:nth-child(odd) {
+    background: var(--accent);
+  }
+  .bg-polygon:nth-child(odd)::after, .bg-polygon:nth-child(odd)::before {
+    background: var(--accent);
   }
 }
 </style>

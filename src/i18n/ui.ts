@@ -9,6 +9,9 @@ export const defaultLang = 'en';
 
 export const ui = {
   en: {
+    'go-blog': 'Go to blog',
+    'go-tags': 'Go to tags',
+
     'home.tech': 'My six-year career knowledge',
     'home.tech.btn': 'Know my work experience',
 
@@ -26,6 +29,9 @@ export const ui = {
     'all-tags': 'All tags',
   },
   es: {
+    'go-blog': 'Ir al blog',
+    'go-tags': 'It a tags',
+
     'home.tech': 'Mi conocimiento en seis años de carrera',
     'home.tech.btn': 'Conoce mi experiencia laboral',
 

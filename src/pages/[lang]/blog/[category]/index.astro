@@ -2,8 +2,12 @@
 import { getCollection } from 'astro:content';
 import { collectionMetadata } from '@content/config';
 import { languages } from '@i18n/ui';
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
 import MainLayout from '@layouts/MainLayout.astro';
 import BlogCard from '@components/BlogCard.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 export async function getStaticPaths() {
 
@@ -41,10 +45,13 @@ const post = Astro.props;
   addWidth={true}
 >
   <div>
-    <p class="dark:text-white">Blog</p>
+    <a href={`/${lang}/blog`} title={t('go-blog')} class="dark:text-white hover:underline">
+      Blog
+    </a>
     <h1 class="text-gradient capitalize">
       {param.category}
     </h1>
+    <hr><br>
   </div>
   <br><br>
   <div role="list" class="cards-grid">
