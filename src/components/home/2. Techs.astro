@@ -7,43 +7,45 @@ const t = useTranslations(lang);
 ---
 <section class="bg-techs bg-polygon relative">
   <div class="techs-main-box main-width relative z-10">
-    <h2 class="text-white text-center mb-5">
+    <h2 class="text-white text-center">
       {t('home.tech')}
     </h2>
+    <br>
     <div role="list" class="flex flex-wrap justify-evenly items-center">
 
-      <div class="techs-group m-2 sm:m-3">
+      <div class="techs-group m-3">
         <img src="/tech/javascript.png" alt="Javascript logo" title="Javascript" />
         <img src="/tech/typescript.svg" alt="TypeScript logo" title="TypeScript" />
         <img src="/tech/angular.png" alt="Angular logo" title="Angular" />
         <img src="/tech/react.png" alt="React logo" title="React" />
       </div>
 
-      <div class="techs-group m-2 sm:m-3">
+      <div class="techs-group m-3">
         <img src="/tech/php.png" alt="PHP logo" title="PHP" />
         <img src="/tech/nodejs.png" alt="NodeJS logo" title="NodeJS" />
         <img src="/tech/rust.svg" alt="Rust logo" title="Rust" />
         <img src="/tech/solidity.png" alt="Solidity logo" title="Solidity" />
       </div>
 
-      <div class="techs-group m-2 sm:m-3">
+      <div class="techs-group m-3">
         <img src="/tech/solana.svg" alt="Solana logo" title="Solana Blockchain" />
         <img src="/tech/ethereum.svg" alt="Ethereum logo" title="Ethereum Blockchain" />
+        <img src="/tech/ipfs.png" alt="IPFS logo" title="Interplanetary File System" />
       </div>
 
-      <div class="techs-group m-2 sm:m-3">
+      <div class="techs-group m-3">
         <img src="/tech/mongodb.png" alt="MongoDB logo" title="MongoDB" />
         <img src="/tech/mysql.png" alt="MySQL logo" title="MySQL" />
         <img src="/tech/elastic.png" alt="Elasticsearch logo" title="Elasticsearch" />
       </div>
 
-      <div class="techs-group m-2 sm:m-3">
+      <div class="techs-group m-3">
         <img src="/tech/docker.png" alt="Docker logo" title="Docker" />
         <img src="/tech/nginx.png" alt="NGINX logo" title="NGINX" />
       </div>
 
     </div>
-    <div class="flex justify-center mt-5">
+    <div class="flex justify-center mt-3">
       <div class="btn-know-box" style="max-width: max-content;">
         <a href={`/${lang}/work-experience`} title={t('home.tech.btn')} class="btn-know text-white font-bold py-2 px-4">
           <span class="text-lg font-medium">{t('home.tech.btn')}</span>

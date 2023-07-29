@@ -17,6 +17,10 @@ export const ui = {
 
     'home.tech': 'My six-year career knowledge',
     'home.tech.btn': 'Know my work experience',
+    'home.kev': 'Hi, I\'m Kev!',
+    'home.presentation1': 'Years working on Web2 projects as a full-stack PHP and Javascript developer. Carrying that knowledge to team leadership and decentralizing apps in Web3 and crypto projects.',
+    'home.presentation2': 'Writer, and content creator for Platzi\'s community. I have a degree in information systems BTW.',
+    'home.presentation3': 'Taking my first steps as an entrepreneur.',
 
     'contact': 'Contact',
     'contact.description': 'Means of contact with Kevin Fiorentino',
@@ -41,6 +45,10 @@ export const ui = {
 
     'home.tech': 'Mi conocimiento en seis años de carrera',
     'home.tech.btn': 'Conoce mi experiencia laboral',
+    'home.kev': '¡Hola, soy Kev!',
+    'home.presentation1': 'Años trabajando en Web2 como full-stack PHP y Javascript developer. Llevando ese conocimiento al liderazgo de equipos y descentralizando aplicaciones en proyectos Web3 y crypto.',
+    'home.presentation2': 'Escritor y creador de contenido para la comunidad de Platzi. Además, tengo un título de grado como Licenciado en Sistemas.',
+    'home.presentation3': 'Dando mis primeros pasos como emprendedor.',
 
     'contact': 'Contacto',
     'contact.description': 'Medios de contacto con Kevin Fiorentino',

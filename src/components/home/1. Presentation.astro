@@ -1,14 +1,19 @@
+---
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
 <section class="main-width grid grid-cols-1 gap-5 lg:grid-cols-3 lg:gap-8">
   <div class="lg:col-span-2">
-    <h1 class="text-gradient">
-      I'm Kev
+    <h1 class="text-gradient mt-0">
+      {t('home.kev')}
     </h1>
     <p class="mb-3">
-      Years working on Web2 projects as a full-stack PHP and Javascript developer. Carrying that knowledge to Web3 to decentralize applications and leading teams. <br>
-      Writer, content creator for Platzi's community, and I have a degree in information systems BTW. <br>
-      Taking my first steps as an entrepreneur.
+      {t('home.presentation1')} <br>
+      {t('home.presentation2')} <br>
+      {t('home.presentation3')}
     </p>
-    <hr>
   </div>
   <div class="order-first md:order-last">
     <div class="polygon-shadow">
@@ -20,7 +25,7 @@
 
 <style lang="scss">
 .kev-image {
-  max-height: 300px;
+  max-height: 280px;
   clip-path: polygon(15% 10%, 100% 0, 100% 25%, 100% 100%, 0 85%);
 }
 </style>
