@@ -20,8 +20,9 @@ export const ui = {
     'contact.means1': 'Please, contact me through:',
     'contact.means2': '(I\'m always there)',
 
-    'experience': 'Work experience',
-    'experience.description': 'Kevin Fiorentino\'s work experience',
+    'projects': 'Projects',
+    'projects.description': 'Kevin Fiorentino\'s work experience',
+    'projects.experience': 'Work experience',
 
     'footer.recommends': 'Might interest you',
 
@@ -40,8 +41,9 @@ export const ui = {
     'contact.means1': 'Por favor, contáctame por:',
     'contact.means2': '(Siempre estoy ahí)',
 
-    'experience': 'Experiencia laboral',
-    'experience.description': 'Experiencia laboral de Kevin Fiorentino',
+    'projects': 'Proyectos',
+    'projects.description': 'Experiencia laboral de Kevin Fiorentino',
+    'projects.experience': 'Experiencia laboral',
 
     'footer.recommends': 'Puede interesarte',
 

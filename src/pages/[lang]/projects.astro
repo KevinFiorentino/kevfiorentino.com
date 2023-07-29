@@ -21,8 +21,8 @@ export async function getStaticPaths() {
 ---
 
 <MainLayout
-  title={`${t('experience')} | Kevin Fiorentino`}
-  description={t('experience.description')}
+  title={`${t('projects')} | Kevin Fiorentino`}
+  description={t('projects.description')}
   image="/kevin.png"
   addWidth={false}
 >
@@ -30,9 +30,12 @@ export async function getStaticPaths() {
 
     <div class="main-width">
       <h1 class="text-gradient relative z-10">
-        {t('experience')}
+        {t('projects')}
       </h1>
-      <hr><br>
+      <hr class="mb-0">
+      <h2 class="mb-3 sm:mb-0">
+        {t('projects.experience')}
+      </h2>
     </div>
 
     <br>
