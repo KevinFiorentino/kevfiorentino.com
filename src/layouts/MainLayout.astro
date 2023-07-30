@@ -25,7 +25,7 @@ const lang = getLangFromUrl(Astro.url);
     description={description}
     image={image}
   ></Head>
-	<body class="bg-gray-100 dark:bg-gray-800">
+	<body class="bg-gray-100 bg-dark">
     <Header></Header>
     <LanguagePicker></LanguagePicker>
     <main class={`${addWidth ? 'main-width' : ''}`}>
@@ -36,13 +36,14 @@ const lang = getLangFromUrl(Astro.url);
 	</body>
 </html>
 
-<style is:global>
+<style lang="scss" is:global>
 :root {
   --white: #FAFAFA;
   --black: #1D1D1D;
   --primary: #2596BE;
   --accent: #2A72B2;
   --alternative: #E1C546;
+  --bg-dark: #13161C;
   --bg-gradient: linear-gradient(0deg, var(--primary) 0%, var(--accent) 100%);
   --shadow: #00000029;
 }
@@ -58,6 +59,11 @@ code {
   font-size: .9rem;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
+}
+.dark {
+  .bg-dark {
+    background-color: var(--bg-dark);
+  }
 }
 .bg-gradient {
   background-image: var(--bg-gradient);

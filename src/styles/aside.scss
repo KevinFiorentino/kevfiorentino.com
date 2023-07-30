@@ -1,6 +1,6 @@
 .main-aside-content {
     .bg-polygon::before, .bg-polygon::after {
-        background: #E4E4E7;
+        background: var(--white);
     }
     h3 {
         font-size: 1.7rem;
@@ -59,8 +59,14 @@
         }
     }
 }
+aside {
+    background: var(--white);
+}
 .dark .main-aside-content {
+    aside {
+        background: #000000;
+    }
     .bg-polygon::before, .bg-polygon::after {
-        background: #374151;
+        background: #000000;
     }
 }

@@ -16,10 +16,9 @@ const lang = getLangFromUrl(Astro.url);
 
 const { relatedPosts } = Astro.props;
 const relateds = relatedPosts ? await getEntries(relatedPosts as any) : null;
-
 ---
 
-<aside class="bg-polygon relative bg-gray-200 dark:bg-gray-700 p-3 sm:p-4">
+<aside class="bg-polygon relative p-3 sm:p-4">
   <div class="relative z-10">
     <div class="flex flex-col">
       <h3>{ relateds ? 'Related content' : '' }</h3>
