@@ -7,12 +7,13 @@ export interface Props {
 }
 
 import { getEntries } from 'astro:content';
-import { getLangFromUrl } from '@i18n/utils';
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
 import { collectionMetadata } from '@content/config';
 
 import '@styles/aside.scss';
 
 const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const { relatedPosts } = Astro.props;
 const relateds = relatedPosts ? await getEntries(relatedPosts as any) : null;
@@ -28,7 +29,7 @@ const relateds = relatedPosts ? await getEntries(relatedPosts as any) : null;
             <h4 class="text-gradient">{ post.data.title }</h4>
             <p class="">{ post.data.description }</p>
             <small class="block text-right w-full">
-              Read post
+              {t('read-post')}
             </small>
             <hr class="my-4" />
           </a> : null
@@ -36,12 +37,12 @@ const relateds = relatedPosts ? await getEntries(relatedPosts as any) : null;
       }
     </div>
     <div>
-      <h3>Might interest you</h3>
+      <h3>{t('aside.recommends')}</h3>
       <ul class="colls-box flex flex-wrap" role="list">
         {
           collectionMetadata?.map((coll: any) => (
             <li class="coll" role="listitem">
-              <a href={`/${lang}/blog/${coll.name}`} class="capitalize" title={`Collection: ${coll.name}`}>
+              <a href={`/${lang}/blog/${coll.name}`} class="capitalize" title={`${t('collection')}: ${coll.name}`}>
                 { coll.name }
               </a>
             </li>

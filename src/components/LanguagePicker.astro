@@ -10,7 +10,7 @@ const urlWithoutLang = currentUrl.slice(4);   // Remove /{lang}/
   <ul>
     {Object.entries(languages).map(([lang, label]) => (
       <li class={`lang-pointer ${currentLang == lang ? 'active' : ''}`}>
-        <a href={`/${lang}/${urlWithoutLang}`} class={`grid justify-center items-center capitalize`} title={`Change language to ${label}`}>
+        <a href={`/${lang}/${urlWithoutLang}`} class={`grid justify-center items-center capitalize`} title={`${label}`}>
           {lang}
         </a>
       </li>

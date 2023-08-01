@@ -13,6 +13,9 @@ export interface Props {
 
 import { getLangFromUrl, useTranslations } from '@i18n/utils';
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const {
   slug,
   collection,
@@ -21,9 +24,6 @@ const {
   image,
   pubDate,
 } = Astro.props;
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 
 const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 const year = pubDate.getFullYear();
@@ -57,7 +57,7 @@ const day = pubDate.getDate();
 
       <div class="sm:flex sm:items-end sm:justify-end">
         <div class="text-white btn-read px-5 py-3 text-center text-xs font-bold uppercase transition">
-          Read post
+          {t('read-post')}
         </div>
       </div>
     </div>
@@ -79,8 +79,8 @@ const day = pubDate.getDate();
   .btn-read {
     background-color: var(--alternative);
     height: 50px;
-    margin-bottom: -13px;
-    clip-path: polygon(0 0,100% 0,100% 75%,0% 100%,0 75%);
+    margin-bottom: -11px;
+    clip-path: polygon(0 0,100% 0,100% 77%,0% 100%,0 75%);
   }
 }
 .blog-card::before, .blog-card::after {

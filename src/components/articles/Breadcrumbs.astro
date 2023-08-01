@@ -3,9 +3,10 @@ export interface Props {
   collection: string;
 }
 
-import { getLangFromUrl } from '@i18n/utils';
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const { collection } = Astro.props;
 ---
@@ -26,7 +27,7 @@ const { collection } = Astro.props;
     </li>
     <li class="dark:text-white mr-2">/</li>
     <li class="dark:text-white mr-2">
-      <a href=`/${lang}/blog/${collection}` class="capitalize mr-2" title={`Collection: ${collection}`}>{collection}</a>
+      <a href=`/${lang}/blog/${collection}` class="capitalize mr-2" title={`${t('collection')}: ${collection}`}>{collection}</a>
     </li>
   </ul>
 </div>
