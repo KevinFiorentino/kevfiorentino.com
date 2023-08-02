@@ -1,7 +1,4 @@
 .main-aside-content {
-    .bg-polygon::before, .bg-polygon::after {
-        background: var(--white);
-    }
     h3 {
         font-size: 1.7rem;
         color: var(--primary);
@@ -13,6 +10,9 @@
     }
     small {
         color: var(--primary);
+    }
+    hr {
+        border-color: var(--accent);
     }
     .colls-box {
         li {
@@ -60,13 +60,5 @@
     }
 }
 aside {
-    background: var(--white);
-}
-.dark .main-aside-content {
-    aside {
-        background: #000000;
-    }
-    .bg-polygon::before, .bg-polygon::after {
-        background: #000000;
-    }
+    border-left: 1px solid var(--accent);
 }

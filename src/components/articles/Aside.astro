@@ -19,7 +19,7 @@ const { relatedPosts } = Astro.props;
 const relateds = relatedPosts ? await getEntries(relatedPosts as any) : null;
 ---
 
-<aside class="bg-polygon relative p-3 sm:p-4">
+<aside class="relative p-3 sm:p-4">
   <div class="relative z-10">
     <div class="flex flex-col">
       <h3>{ relateds ? 'Related content' : '' }</h3>
@@ -31,8 +31,7 @@ const relateds = relatedPosts ? await getEntries(relatedPosts as any) : null;
             <small class="block text-right w-full">
               {t('read-post')}
             </small>
-            <hr class="my-4" />
-          </a> : null
+          </a> <hr class="my-4" /> : null
         ))
       }
     </div>
