@@ -6,7 +6,7 @@ const currentLang = currentUrl.split('/')[1];
 const urlWithoutLang = currentUrl.slice(4);   // Remove /{lang}/
 ---
 
-<div id="language-picker" class="bg-gray-200 dark:bg-gray-500">
+<div id="language-picker" class="bg-gray-300 dark:bg-gray-500">
   <ul>
     {Object.entries(languages).map(([lang, label]) => (
       <li class={`lang-pointer ${currentLang == lang ? 'active' : ''}`}>

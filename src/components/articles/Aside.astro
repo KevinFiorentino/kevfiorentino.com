@@ -1,5 +1,7 @@
 ---
 export interface Props {
+  title: string,
+  description: string,
   relatedPosts?: {
     collection: string,
     slug: string
@@ -9,13 +11,14 @@ export interface Props {
 import { getEntries } from 'astro:content';
 import { getLangFromUrl, useTranslations } from '@i18n/utils';
 import { collectionMetadata } from '@content/config';
+import ShareSocialMedia from '@components/articles/ShareSocialMedia.astro';
 
 import '@styles/aside.scss';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const { relatedPosts } = Astro.props;
+const { title, description, relatedPosts } = Astro.props;
 const relateds = relatedPosts ? await getEntries(relatedPosts as any) : null;
 ---
 
@@ -31,9 +34,10 @@ const relateds = relatedPosts ? await getEntries(relatedPosts as any) : null;
             <small class="block text-right w-full">
               {t('read-post')}
             </small>
-          </a> <hr class="my-4" /> : null
+          </a> : null
         ))
       }
+      { relateds ? <hr class="my-4" /> : '' }
     </div>
     <div>
       <h3>{t('aside.recommends')}</h3>
@@ -48,6 +52,14 @@ const relateds = relatedPosts ? await getEntries(relatedPosts as any) : null;
           ))
         }
       </ul>
+      <hr class="my-4" />
+    </div>
+    <div>
+      <h3>{t('share')}</h3>
+      <ShareSocialMedia
+        title={title}
+        description={description}
+      ></ShareSocialMedia>
     </div>
   </div>
 </aside>
