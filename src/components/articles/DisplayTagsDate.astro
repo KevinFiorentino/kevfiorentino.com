@@ -6,11 +6,15 @@ export interface Props {
 
 import { getLangFromUrl } from '@i18n/utils';
 
-const { tags, pubDate } = Astro.props;
-
 const lang = getLangFromUrl(Astro.url);
 
-const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const { tags, pubDate } = Astro.props;
+
+let months = ['January','February','March','April','May','Jun','July','August','September','October','November','December'];
+if (lang == 'es') {
+  months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','September','Octubre','Noviembre','Diciembre'];
+}
+
 const year = pubDate.getFullYear();
 const month = months[pubDate.getMonth()];
 const day = pubDate.getDate();

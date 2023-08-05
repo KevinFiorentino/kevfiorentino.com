@@ -29,6 +29,7 @@ export const ui = {
     'projects': 'Projects',
     'projects.description': 'Kevin Fiorentino\'s work experience',
     'projects.experience': 'Work experience',
+    'present': 'Present',
 
     'astrea.text1': 'Development of a digital library for reading legal books.',
     'astrea.text2': 'Get to know it!',
@@ -53,7 +54,7 @@ export const ui = {
     'aside.recommends': 'Might interest you',
 
     'collection': 'Colección',
-    'read-post': 'Read post'
+    'read-post': 'Read post',
   },
   es: {
     'go-blog': 'Ir al blog',
@@ -76,6 +77,7 @@ export const ui = {
     'projects': 'Proyectos',
     'projects.description': 'Experiencia laboral de Kevin Fiorentino',
     'projects.experience': 'Experiencia laboral',
+    'present': 'Presente',
 
     'astrea.text1': 'Desarrollo de una biblioteca digital para la lectura de libros jurídicos.',
     'astrea.text2': '¡Conocé la plataforma!',

@@ -25,7 +25,11 @@ const {
   pubDate,
 } = Astro.props;
 
-const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+if (lang == 'es') {
+  months = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+}
+
 const year = pubDate.getFullYear();
 const month = months[pubDate.getMonth()];
 const day = pubDate.getDate();
