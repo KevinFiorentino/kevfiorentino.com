@@ -53,11 +53,11 @@ const { recents, collections } = Astro.props;
     <h1 class="text-gradient mb-3 mt-0">
       Blog
     </h1>
-    <hr class="mb-0">
     <h2>
       {t('blog.latest')}
     </h2>
-    <br><br>
+    <hr class="mb-0">
+    <br><br><br>
     <div role="list" class="cards-grid">
       {
         recents.map((item: any) => (
