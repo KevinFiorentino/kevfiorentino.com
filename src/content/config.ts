@@ -1,6 +1,5 @@
 import { defineCollection, z } from 'astro:content';
 
-
 /* ******************************
          ASTRO CONFIGS
 ****************************** */
@@ -22,14 +21,10 @@ const mainSchema = z.object({
   relatedPosts: z.array(relatedSchema).optional().nullable(),
 });
 
-const blockchainColl = defineCollection({ schema: mainSchema });
 const decentralizationColl = defineCollection({ schema: mainSchema });
-const javascriptColl = defineCollection({ schema: mainSchema });
 
 export const collections = {
-  'blockchain': blockchainColl,
   'decentralization': decentralizationColl,
-  'javascript': javascriptColl,
 };
 
 
@@ -45,24 +40,8 @@ export interface CollectionMetadata {
 
 export const collectionMetadata: CollectionMetadata[] = [
   {
-    name: 'blockchain',
-    logo: '',
-    background: ''
-  },
-  {
     name: 'decentralization',
     logo: '',
     background: ''
   },
-  {
-    name: 'javascript',
-    logo: '',
-    background: ''
-  },
 ];
-
-/* export const tagsList: string[] = [
-  'decentralization',
-  'phamtom-wallet',
-  ''
-] */
