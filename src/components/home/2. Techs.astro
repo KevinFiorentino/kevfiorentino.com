@@ -92,11 +92,12 @@ const t = useTranslations(lang);
     img {
       max-height: 70px;
       max-width: 70px;
-      box-shadow: none;
       margin: 7px;
       transform: scale(1);
       transition: .5s;
       z-index: 1;
+      box-shadow: none;
+      filter: drop-shadow(0 3px 6px var(--shadow));
     }
     img:hover {
       transform: scale(1.1);
