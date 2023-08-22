@@ -6,14 +6,16 @@ image: {
   alt: 'Web2 vs. Web3'
 }
 pubDate: '08/01/2023'
-tags: ['ipfs']
+tags: ['web3']
 ---
 
 # Web2 vs. Web3
-Web3 cambia casi por completo la manera en la que desarrollamos software en relación con la ingeniería de software tradicional, o Web2. Web3 se trata de un nuevo paradigma para el desarrollo de aplicaciones. Exploraremos a continuación los cambios en el stack de tecnologías entre ambos mundos.
+Web3 cambia casi por completo la manera en la que desarrollamos software en relación con la ingeniería de software tradicional, o Web2. Web3 se trata de un
+nuevo paradigma para el desarrollo de aplicaciones. Exploraremos a continuación los cambios en el stack de tecnologías entre ambos mundos.
 
 ## Arquitectura de Aplicaciones Descentralizadas
-Las aplicaciones descentralizadas van más allá de Blockchain. Existe todo un esquema de tecnologías que se usan y que podemos comparar con el desarrollo de software tradicional para entender el gran cambio y conocimiento que debemos tener para desarrollar este tipo de apps.
+Las aplicaciones descentralizadas van más allá de Blockchain. Existe todo un esquema de tecnologías que se usan y que podemos comparar con el desarrollo
+de software tradicional para entender el gran cambio y conocimiento que debemos tener para desarrollar este tipo de apps.
 
 |  | Web2 (apps) | Web3 (dapps) |
 | --- | --- | --- |
@@ -28,47 +30,73 @@ Las aplicaciones descentralizadas van más allá de Blockchain. Existe todo un e
 
 Analicemos uno a uno los cambios en el stack tecnológico:
 
-**Front-end:** Probablemente, el único factor que podemos observar que no ha cambiado son las tecnologías front-end que se utilizan. **Continúa vigente Angular, React, Vue** o cualquier otra tecnología basada en Javascript para el desarrollo de interfaces gráficas. React tiene un amplio predominio en el desarrollo de dapps. Angular y Vue se utilizan en menor medida, pero no dejan de ser buenas opciones.
+**Front-end:** Probablemente, el único factor que podemos observar que no ha cambiado son las tecnologías front-end que se utilizan. **Continúa vigente
+Angular, React, Vue** o cualquier otra tecnología basada en Javascript para el desarrollo de interfaces gráficas. React tiene un amplio predominio en el
+desarrollo de dapps. Angular y Vue se utilizan en menor medida, pero no dejan de ser buenas opciones.
 
-**Backend:** En el backend comienzan los cambios. Las típicas API Rest que conocemos y que solemos desarrollar en Python, NodeJS, Java u otro lenguaje, se convierten en **contratos inteligentes desarrollados en Rust, Solidity, C/C++**, dependiendo la Blockchain en la que se trabaje.
+**Backend:** En el backend comienzan los cambios. Las típicas API Rest que conocemos y que solemos desarrollar en Python, NodeJS, Java u otro lenguaje, se
+convierten en **contratos inteligentes desarrollados en Rust, Solidity, C/C++**, dependiendo la Blockchain en la que se trabaje.
 
-**Protocolos y Clientes:** El protocolo para comunicar el backend y el front-end también cambia transcendentalmente. Ya no utilizamos HTTP, **utilizamos JSON RPC**. Las librerías o clientes que utilizamos también difieren. En el paradigma Web2, usamos cualquier tipo de Cliente HTTP, ahora usamos **clientes JSON RPC**. No deja de ser transparente para el desarrollador, dado que las librerías hacen todo el trabajo y continua siendo procesos asíncronos y eventos a los cuales responder.
+**Protocolos y Clientes:** El protocolo para comunicar el backend y el front-end también cambia transcendentalmente. Ya no utilizamos HTTP, **utilizamos
+JSON RPC**. Las librerías o clientes que utilizamos también difieren. En el paradigma Web2, usamos cualquier tipo de Cliente HTTP, ahora usamos **clientes
+JSON RPC**. No deja de ser transparente para el desarrollador, dado que las librerías hacen todo el trabajo y continua siendo procesos asíncronos y eventos a los cuales responder.
 
-Es importante saber que por detrás los protocolos de comunicación son distintos. Al no tratarse de HTTP, no tenemos el mismo estándar de códigos 2xx, 3xx, 4xx, 5xx. Cada blockchain entrega respuestas positivas o negativas al cliente con su propio estándar.
+Es importante saber que por detrás los protocolos de comunicación son distintos. Al no tratarse de HTTP, no tenemos el mismo estándar de códigos 2xx, 3xx,
+4xx, 5xx. Cada blockchain entrega respuestas positivas o negativas al cliente con su propio estándar.
 
-**Cloud:** Los servidores donde desplegamos nuestras aplicaciones, como AWS, Google Cloud Platform, Azure o cualquier otro de preferencia, ya no existen. **Los contratos inteligentes son desplegados directamente en la blockchain** de forma descentralizada.
+**Cloud:** Los servidores donde desplegamos nuestras aplicaciones, como AWS, Google Cloud Platform, Azure o cualquier otro de preferencia, ya no existen.
+**Los contratos inteligentes son desplegados directamente en la blockchain** de forma descentralizada.
 
-**BBDD:** **La persistencia de información también es tarea de la blockchain** en cuestión que estemos utilizando. Es posible usar otros servicios descentralizados como IPFS para desplegar aplicaciones front-end o como sistema de archivos para alojar un banco de imágenes.
+**BBDD:** **La persistencia de información también es tarea de la blockchain** en cuestión que estemos utilizando. Es posible usar otros servicios
+descentralizados como IPFS para desplegar aplicaciones front-end o como sistema de archivos para alojar un banco de imágenes.
 
-**Auth:** Finalmente, los métodos de autenticación. Con un usuario y contraseña ingresamos a cualquier aplicación que necesitemos usar. O es posible implementar otros protocolos como OAuth 2.0 para autenticarnos con nuestra cuenta de Google o GitHub. **Las wallets pasan a ser nuestro único y principal mecanismo de identificación** y seguridad de los datos.
+**Auth:** Finalmente, los métodos de autenticación. Con un usuario y contraseña ingresamos a cualquier aplicación que necesitemos usar. O es posible
+implementar otros protocolos como OAuth 2.0 para autenticarnos con nuestra cuenta de Google o GitHub. **Las wallets pasan a ser nuestro único y principal
+mecanismo de identificación** y seguridad de los datos.
 
-**Repositorios:** Que el código fuente de una aplicación descentralizada se encuentre en un repositorio OpenSource, también es un factor más que importante para **descentralizar y generar confianza en un proyecto**. Un contrato inteligente, cuyo repositorio sea privado, podría no ser bien visto.
+**Repositorios:** Que el código fuente de una aplicación descentralizada se encuentre en un repositorio OpenSource, también es un factor más que importante
+para **descentralizar y generar confianza en un proyecto**. Un contrato inteligente, cuyo repositorio sea privado, podría no ser bien visto.
 
 ## Medir el grado de descentralización de un proyecto
-El stack descrito anteriormente posee una orientación 100% descentralizada. Pero en pocos casos necesitamos realmente este enfoque. Un front-end puede estar comunicándose con una blockchain, pero aun así este estar desplegado en Vercel de forma centralizada. O consumir parte de información desde un contrato inteligente, y otra parte desde una API desarrollada con NodeJS,  que utiliza una base de datos MongoDB y desplegada en AWS.
+El stack descrito anteriormente posee una orientación 100% descentralizada. Pero en pocos casos necesitamos realmente este enfoque. Un front-end puede estar
+comunicándose con una blockchain, pero aun así este estar desplegado en Vercel de forma centralizada. O consumir parte de información desde un contrato
+inteligente, y otra parte desde una API desarrollada con NodeJS,  que utiliza una base de datos MongoDB y desplegada en AWS.
 
-Un modelo como este es correcto. No todas las aplicaciones descentralizadas, lo son al 100%. El trabajo de un ingeniero Web3, es el de **tomar las decisiones sobre qué cosas descentralizar y cuáles no**. Comprender estas nuevas tecnologías te dará las herramientas para lograrlo.
+Un modelo como este es correcto. No todas las aplicaciones descentralizadas, lo son al 100%. El trabajo de un ingeniero Web3, es el de **tomar las decisiones
+sobre qué cosas descentralizar y cuáles no**. Comprender estas nuevas tecnologías te dará las herramientas para lograrlo.
 
-Un ejemplo de un proyecto que requiere estar descentralizado por completo podría ser una plataforma DeFi o similar caso de uso con responsabilidades relacionadas al flujo y cuidado del dinero.
+Un ejemplo de un proyecto que requiere estar descentralizado por completo podría ser una plataforma DeFi o similar caso de uso con responsabilidades
+relacionadas al flujo y cuidado del dinero.
 
 ## Razones para ser un desarrollador Web3
-Blockchain es un nuevo paradigma de desarrollo de software. Agrega una nueva capa de tecnologías por encima de las existentes en Web2. Es fundamental tener conocimiento y experiencia en desarrollo de software tradicional para desarrollar en blockchain.
+Blockchain es un nuevo paradigma de desarrollo de software. Agrega una nueva capa de tecnologías por encima de las existentes en Web2. Es fundamental tener
+conocimiento y experiencia en desarrollo de software tradicional para desarrollar en blockchain.
 
-El gran cambio de Web3, es **permitir a los usuarios ser dueños de sus propios datos**. Algo totalmente controversial cuando se trata de Web2 en donde no controlamos quién accede a los datos que nos pertenecen en las diferentes redes sociales o aplicaciones que usamos.
+El gran cambio de Web3, es **permitir a los usuarios ser dueños de sus propios datos**. Algo totalmente controversial cuando se trata de Web2 en donde no
+controlamos quién accede a los datos que nos pertenecen en las diferentes redes sociales o aplicaciones que usamos.
 
-**Aprender estas tecnologías, te convierte en otro tipo de profesional en desarrollo de software**. Altamente demandado en la industria y con la capacidad de resolver casos de uso que solo este paradigma permiten como lo es DeFi, Tokenización, NFTs, etc.
+**Aprender estas tecnologías, te convierte en otro tipo de profesional en desarrollo de software**. Altamente demandado en la industria y con la capacidad
+de resolver casos de uso que solo este paradigma permiten como lo es DeFi, Tokenización, NFTs, etc.
 
-Blockchain ha absorbido una parte del talento y de los desarrolladores senior. Muchos han “migrado” y reorientado su perfil profesional hacia estas tecnologías. No es una decisión fácil, **es un camino que requiere de un mayor nivel de tolerancia a la frustración**, a no entender por qué las cosas no funcionan. Con tecnologías más tradicionales, está todo documentado y todos los errores son “googleables”. En blockchain, no suele ser tan fácil.
+Blockchain ha absorbido una parte del talento y de los desarrolladores senior. Muchos han “migrado” y reorientado su perfil profesional hacia estas
+tecnologías. No es una decisión fácil, **es un camino que requiere de un mayor nivel de tolerancia a la frustración**, a no entender por qué las cosas no
+funcionan. Con tecnologías más tradicionales, está todo documentado y todos los errores son “googleables”. En blockchain, no suele ser tan fácil.
 
-Si bien el mundo blockchain tiene algo más de una década, aún nos encontramos en una etapa temprana de adopción y aprendizaje de estas tecnologías. Como si de internet a finales de los ‘90 se tratara.
+Si bien el mundo blockchain tiene algo más de una década, aún nos encontramos en una etapa temprana de adopción y aprendizaje de estas tecnologías. Como
+si de internet a finales de los ‘90 se tratara.
 
-Muchas personas cada día comienzan a adentrarse en el mundo blockchain, por lo general, con intereses económicos dado el valor de las cripto. Como devs tenemos la posibilidad, no solo de ser usuarios crypto, también de ser los creadores de esos servicios descentralizados del mañana.
+Muchas personas cada día comienzan a adentrarse en el mundo blockchain, por lo general, con intereses económicos dado el valor de las cripto. Como devs
+tenemos la posibilidad, no solo de ser usuarios crypto, también de ser los creadores de esos servicios descentralizados del mañana.
 
 ## Conclusión
-Ahora ya posees una visión general de las diferencias entre Web2 y Web3, así como una comprensión más profunda de la descentralización y qué es lo que hace un desarrollador Web3.
+Ahora ya posees una visión general de las diferencias entre Web2 y Web3, así como una comprensión más profunda de la descentralización y qué es lo que
+hace un desarrollador Web3.
 
-Ser un desarrollador de este tipo es un desafío emocionante y gratificante. Te unirás a un selecto grupo de profesionales capacitados en el uso de estas tecnologías revolucionarias. Solo un pequeño porcentaje de programadores en el mundo, alrededor del 1 o 2%, poseen un conocimiento técnico de blockchain y son capaces de construir portales de NFT, wallets o sistemas de acceso descentralizado.
+Ser un desarrollador de este tipo es un desafío emocionante y gratificante. Te unirás a un selecto grupo de profesionales capacitados en el uso de estas
+tecnologías revolucionarias. Solo un pequeño porcentaje de programadores en el mundo, alrededor del 1 o 2%, poseen un conocimiento técnico de blockchain y son capaces de construir portales de NFT, wallets o sistemas de acceso descentralizado.
 
-Después de explorar los conceptos clave y comprender en qué te estás convirtiendo, la pregunta que debes hacerte es ¿estoy preparado para llevar mi carrera profesional a la industria Web3?
+Después de explorar los conceptos clave y comprender en qué te estás convirtiendo, la pregunta que debes hacerte es ¿estoy preparado para llevar mi carrera
+profesional a la industria Web3?
 
-El mundo Web3 ofrece oportunidades sin precedentes para innovar y construir aplicaciones que desafíen los límites de la web tradicional. Como desarrollador Web3, tendrás la capacidad de crear soluciones descentralizadas, abriendo nuevos caminos en el horizonte tecnológico.
+El mundo Web3 ofrece oportunidades sin precedentes para innovar y construir aplicaciones que desafíen los límites de la web tradicional. Como desarrollador
+Web3, tendrás la capacidad de crear soluciones descentralizadas, abriendo nuevos caminos en el horizonte tecnológico.
