@@ -1,4 +1,4 @@
-# kevfiorentino.com
+# [kevfiorentino.com](https://www.kevfiorentino.com/)
 
 ## Setup project
 
@@ -9,4 +9,5 @@
 
 ---
 
-Made with [Astro](https://astro.build/)
+Made with [Astro](https://astro.build/) <br>
+Hosted on [Vercel](https://vercel.com/)

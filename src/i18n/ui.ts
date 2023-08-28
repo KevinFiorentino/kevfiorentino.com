@@ -50,6 +50,7 @@ export const ui = {
 
     'footer.recommends': 'Might interest you',
     'footer.resources': 'Resources',
+    'footer.source': 'Source code',
 
     'policy': 'Privacy policy ',
     'all-tags': 'All tags',
@@ -102,6 +103,7 @@ export const ui = {
 
     'footer.recommends': 'Puede interesarte',
     'footer.resources': 'Recursos',
+    'footer.source': 'Código fuente',
 
     'policy': 'Politicas de privacidad',
     'all-tags': 'Ver tags',
