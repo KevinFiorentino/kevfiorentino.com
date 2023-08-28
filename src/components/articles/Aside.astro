@@ -25,7 +25,7 @@ const relateds = relatedPosts ? await getEntries(relatedPosts as any) : null;
 <aside class="relative p-3 sm:p-4">
   <div class="relative z-10">
     <div class="flex flex-col">
-      <h3>{ relateds ? 'Related content' : '' }</h3>
+      <h3>{ relateds ? t('aside.related') : '' }</h3>
       {
         relateds?.map((post: any) => (
           post ? <a href={`/${lang}/blog/${post.collection}/${post.slug.slice(3)}`} class="hover:opacity-80" title={ post.data.title }>
@@ -40,7 +40,9 @@ const relateds = relatedPosts ? await getEntries(relatedPosts as any) : null;
       { relateds ? <hr class="my-4" /> : '' }
     </div>
     <div>
-      <h3>{t('aside.recommends')}</h3>
+      <h3 class="mb-3">
+        {t('aside.recommends')}
+      </h3>
       <ul class="colls-box flex flex-wrap" role="list">
         {
           collectionMetadata?.map((coll: any) => (

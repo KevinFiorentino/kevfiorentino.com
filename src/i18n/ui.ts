@@ -54,6 +54,7 @@ export const ui = {
     'policy': 'Privacy policy ',
     'all-tags': 'All tags',
 
+    'aside.related': 'Related content',
     'aside.recommends': 'Might interest you',
 
     'collection': 'Colección',
@@ -105,6 +106,7 @@ export const ui = {
     'policy': 'Politicas de privacidad',
     'all-tags': 'Ver tags',
 
+    'aside.related': 'Contenido relacionado',
     'aside.recommends': 'Puede interesarte',
 
     'collection': 'Collection',
