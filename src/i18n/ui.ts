@@ -11,7 +11,7 @@ export const ui = {
   en: {
     'go-blog': 'Go to blog',
     'go-tags': 'Go to tags',
-    'share': 'Share',
+    'share': 'Share this article',
     'share-on': 'Share through',
     'share-by': 'Share through',
 
@@ -64,7 +64,7 @@ export const ui = {
   es: {
     'go-blog': 'Ir al blog',
     'go-tags': 'It a tags',
-    'share': 'Compartir',
+    'share': 'Compartir este artículo',
     'share-on': 'Compartir en',
     'share-by': 'Compartir por',
 
