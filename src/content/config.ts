@@ -21,9 +21,11 @@ const mainSchema = z.object({
   relatedPosts: z.array(relatedSchema).optional().nullable(),
 });
 
+const blockchainColl = defineCollection({ schema: mainSchema });
 const decentralizationColl = defineCollection({ schema: mainSchema });
 
 export const collections = {
+  'blockchain': blockchainColl,
   'decentralization': decentralizationColl,
 };
 
@@ -39,6 +41,11 @@ export interface CollectionMetadata {
 }
 
 export const collectionMetadata: CollectionMetadata[] = [
+  {
+    name: 'blockchain',
+    logo: '',
+    background: ''
+  },
   {
     name: 'decentralization',
     logo: '',

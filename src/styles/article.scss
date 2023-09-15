@@ -1,11 +1,11 @@
 .main-article-content {
     a {
-        font-weight: 500;
+        font-weight: 400;
         color: var(--primary);
+        text-decoration: underline;
     }
     a:hover, a:focus {
         opacity: .8;
-        text-decoration: underline;
     }
     p {
         margin-bottom: 15px;

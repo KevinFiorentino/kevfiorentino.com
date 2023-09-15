@@ -1,0 +1,84 @@
+---
+title: 'Ecosistema Solana'
+description: 'Explorando Solana, primeros pasos para convertirte en un desarrollador bajo esta cadena de bloques.'
+image: {
+  url: '/images/solana.webp',
+  alt: 'Ecosistema Solana'
+}
+pubDate: '08/15/2023'
+tags: ['solana']
+---
+
+# Ecosistema Solana
+La red de una blockchain es un gran conjunto de computadoras, corriendo un software y funcionando bajo determinados requisitos de hardware, que interactúan
+entre sí mediante un protocolo de intercambio de mensajes.
+
+Para el caso de Ethereum, tal vez hayas escuchado nombrar a la EVM (Ethereum Virtual Machine). Todas las blockchains basadas en la EVM son compatibles entre
+sí (Ethereum, Polygon, Optimism, Arbitrum, entre otras).
+
+Solana es especial, no es compatible nativamente con EVM, en su lugar utiliza la SVM (Solana Virtual Machine). Una obra de ingeniería de software magnífica,
+bastante complicada de explicar y que se encuentra compuesta por conceptos de redes, telecomunicaciones, hardware, software, múltiples protocolos, y demás.
+
+Veremos a continuación algunas características más generales que tenemos que conocer para empezar a adentrarnos en el ecosistema de Solana.
+
+## Clusters o ambientes
+Cualquier software requiere de múltiples ambientes, tanto productivos como de testeo o desarrollo. Solana no es la excepción y a estos ambientes se los conoce
+como “clusters”. Veamos a continuación los tres entornos que Solana posee y para qué utilizar cada uno:
+
+- **Solana Devnet:** el entorno de desarrollo de Solana denomina ”*Devnet”*, podemos usarlo para dar nuestros primeros pasos. **Ideal para desarrollar proyectos
+donde sus transacciones tienen costos ficticios**. A lo igual que otras blockchains la red utiliza el token que no tienen valor.
+- **Solana Testnet:** también utiliza token de prueba sin valor, pero se considera a este ambiente más estable y similar a la red principal. La “Testnet” de
+Solana es **ideal para hacer pruebas reales de proyectos próximos a salir a producción**.
+- **Solana Mainnet Beta:** La **red principal de Solana** denominada *Mainnet* donde se origina la criptomoneda
+[SOL](https://external.ink?to=https://coinmarketcap.com/es/currencies/solana/). No hay que dejarse engañar porque se haga referencia a la versión “beta” en su nombre. Esto se debe
+a que Solana es una blockchan en constante desarrollo y mejora, pero ya es toda una blockchain confiable para desplegar nuestros contratos inteligentes.
+
+Dependiendo la instancia de un proyecto o la necesidad, interactuaremos con un cluster u otro. Cualquier wallet permite fácilmente cambiar la red en la que
+nos encontramos para conectarnos a una dapp en un ambiente de pruebas.
+
+## La criptomoneda de Solana
+Seguramente ya sabes que el [SOL](https://external.ink?to=https://coinmarketcap.com/es/currencies/solana/) es la criptomoneda nativa de Solana. La misma se utiliza para el pago de
+las transacciones y las comisiones de la red. Lo que tal vez no sepas es que se denomina “Lamport” (como un reconocimiento a [Leslie Lamport](https://external.ink?to=https://es.wikipedia.org/wiki/Leslie_Lamport)) a la unidad mínima en decimales de cada SOL. A lo igual que los *Satoshis* de Bitcoin o los *Wei* de Ethereum.
+
+Un Lamport, equivale a 0.000000001 SOL. En una blockchain todo funciona en decimales, el pago de las transacciones se realiza con Lamports realmente, y no
+directamente con SOL.
+
+Si necesitas obtener SOL en la mainnet de esta blockchain, tendrás que comprarlo en algún exchange a precio dólar dependiendo la cotización del día. Si
+necesitas SOL para hacer pruebas, ya sea en la devnet o en la testnet, puedes hacer uso de un [faucet de Solana](https://external.ink?to=https://solfaucet.com/). Ingresas tu clave
+pública y en cuestión de segundos recibirás algo de SOL.
+
+Los faucet en Solana están limitados a poder ser utilizados un par de veces al día. Tal vez tengas que insistir para recibir SOL. O también puedes lograrlo
+con el comando `solana airdrop 1 <address>` si posees el CLI de Solana instalado en tu computador. ¡Súper fácil de utilizar!
+
+## Explorando Solana
+Los exploradores son una de las principales herramientas de cualquier desarrollador Web3. Los mismos nos permiten inspeccionar al detalle lo que está ocurriendo
+en cualquier red de una blockchain. Para el caso de Solana, podemos utilizar su [Explorer](https://external.ink?to=https://explorer.solana.com/) oficial o también encontraremos otros
+muy buenos como [Solscan](https://external.ink?to=https://solscan.io/) con mínimas diferencias en la información que muestran.
+
+Con un explorador, podrás visualizar el estado actual de una transacción, obtener información sobre un token, un NFT, una cuenta en particular, la cantidad
+de SOL en una wallet, etc. Recuerda que todo lo que sucede en una blockchain es información pública y a través de una simple clave pública podrás obtener
+mucha información relevante.
+
+## Métodos RPC
+RPC son las siglas de *Remote Procedure Call* (Llamada a Procedimiento Remoto). Toda la comunicación con una blockchain funciona a través de este protocolo
+de comunicación. Así como la web tradicional funciona mediante HTTP, las comunicaciones con una blockchains se realizan mediante JSON RPC, una variante del
+protocolo que utiliza el formato JSON para enviar y recibir mensajes.
+
+Solana posee [una larga lista de métodos JSON RPC vía HTTP](https://external.ink?to=https://docs.solana.com/es/api/http) que podemos utilizar para comunicarnos con la blockchain. Ante
+cualquier necesidad, obtener una determinada cuenta, enviar una transacción, obtener el balance de una wallet, etc., existe un método para eso.
+
+Si bien no es importante en este punto saber utilizar estos métodos, sí lo es conocer su existencia y saber que cualquier aplicación basada en Solana funciona
+a través de ellos.
+
+## Solana y NPM
+Por lo general, no haremos uso directo de los métodos RPC. Si bien podríamos desarrollar nuestra propia librería a través de ellos que cumpla con la necesidad
+del proyecto que estamos programando, mayormente haremos uso de librerías ya estandarizadas, seguras y homologadas por la comunidad. Conozcamos cuáles son estas:
+
+- [@solana/web3.js](https://external.ink?to=https://www.npmjs.com/package/@solana/web3.js): librería principal que integra los métodos RPC para comunicarnos con Solana.
+- [@project-serum/anchor](https://external.ink?to=https://www.npmjs.com/package/@project-serum/anchor): cliente para contratos inteligentes desarrollados con Anchor. [Anchor](https://external.ink?to=https://www.anchor-lang.com/) es un framework de Rust para el desarrollo de contratos en Solana.
+- [@solana/spl-token](https://external.ink?to=https://www.npmjs.com/package/@solana/spl-token): librería para la interacción de cualquier lógica relacionada con tokens y NFTs
+- [@metaplex-foundation/js](https://external.ink?to=https://www.npmjs.com/package/@metaplex-foundation/js): otra librería que será importante en la interacción con tokens en el mundo Solana
+
+## Conclusión
+En esta artículo hemos visto conceptos independientes sobre Solana que son importante conocer para adentrarnos en su ecosistema. Poco a poco, los conceptos
+se irán uniendo y relacionando para lograr comprender y tener éxito desarrollando proyectos en esta blockchain.
