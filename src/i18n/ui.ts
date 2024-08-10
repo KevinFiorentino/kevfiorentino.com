@@ -18,7 +18,7 @@ export const ui = {
     'blog.latest': 'Latest posts',
     'blog.all-categories': 'All categories',
 
-    'home.tech': 'My six-year career knowledge went through',
+    'home.tech': 'My seven-year career knowledge went through',
     'home.kev': 'Hi, I\'m Kev!',
     'home.presentation1': 'Years working on Web2 projects as a full-stack PHP and Javascript developer. Carrying that knowledge to team leadership and decentralizing apps in Web3 and crypto projects.',
     'home.presentation2': 'Writer, and content creator for Platzi\'s community. I have a degree in information systems BTW.',
