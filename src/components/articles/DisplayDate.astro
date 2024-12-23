@@ -1,6 +1,5 @@
 ---
 export interface Props {
-  tags: string[];
   pubDate: Date;
 }
 
@@ -8,7 +7,7 @@ import { getLangFromUrl } from '@i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 
-const { tags, pubDate } = Astro.props;
+const { pubDate } = Astro.props;
 
 let months = ['January','February','March','April','May','Jun','July','August','September','October','November','December'];
 if (lang == 'es') {
@@ -22,26 +21,8 @@ const day = pubDate.getDate();
 
 <div class="flex items-center justify-between">
   <div>
-    {
-      tags?.map((t: string) => (
-        <a href={`/${lang}/tags/${t}`} class="tag text-gradient mr-2" title={`Tag: ${t}`}>{t.charAt(0).toUpperCase() + t.slice(1)}</a>
-      ))
-    }
-  </div>
-  <div>
-    <span class="text-gray-300 dark:text-gray-300 mr-2">|</span>
     <time datetime={ pubDate.toString() } class="text-gray-500 dark:text-gray-300">
       { month } { day }, { year }
     </time>
   </div>
 </div>
-
-<style>
-.tag {
-  font-weight: 800;
-}
-.tag:hover, .tag:focus {
-  text-decoration: underline;
-  text-decoration-color: var(--primary);
-}
-</style>
