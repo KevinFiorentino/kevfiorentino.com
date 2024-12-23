@@ -10,7 +10,6 @@ import { getLangFromUrl } from '@i18n/utils';
 import Head from '@components/Head.astro';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
-import LanguagePicker from '@components/LanguagePicker.astro';
 
 import '@styles/global.scss';
 
@@ -27,7 +26,6 @@ const lang = getLangFromUrl(Astro.url);
   ></Head>
 	<body class="bg-gray-200 bg-dark">
     <Header></Header>
-    <LanguagePicker></LanguagePicker>
     <main class={`${addWidth ? 'main-width' : ''}`}>
       <slot />
     </main>
