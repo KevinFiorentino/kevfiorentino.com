@@ -51,6 +51,11 @@ hr {
     hr {
         border-color: var(--white);
     }
+    .lang-icon, .media-icon {
+        path {
+            fill: var(--white);
+        }
+    }
 }
 .main-width {
     margin: auto;
