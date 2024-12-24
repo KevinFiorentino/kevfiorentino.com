@@ -2,7 +2,6 @@
 import { getCollection } from 'astro:content';
 import { collectionMetadata } from '@content/config';
 import MainLayout from '@layouts/MainLayout.astro';
-import Aside from '@components/articles/Aside.astro';
 import Breadcrumbs from '@components/articles/Breadcrumbs.astro';
 import DisplayDate from '@components/articles/DisplayDate.astro';
 
@@ -47,9 +46,9 @@ const { Content } = await post.render();
   image={image}
   addWidth={true}
 >
-  <section class="grid grid-cols-3 gap-5">
+  <section class="grid grid-cols-4">
 
-    <section class="col-span-3 sm:col-span-2">
+    <section class="col-span-4 md:col-span-3 sm:col-span-4 xs:col-span-4">
       <section class="header-article-content">
         <Breadcrumbs
           collection={collection}
@@ -61,14 +60,6 @@ const { Content } = await post.render();
       <article class="main-article-content" >
         <Content />
       </article>
-    </section>
-
-    <section class="main-aside-content col-span-3 sm:col-span-1">
-      <Aside
-        title={title}
-        description={description}
-        relatedPosts={relatedPosts}
-      ></Aside>
     </section>
 
   </section>

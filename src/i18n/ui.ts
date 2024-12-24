@@ -10,7 +10,6 @@ export const defaultLang = 'en';
 export const ui = {
   en: {
     'go-blog': 'Go to blog',
-    'share': 'Share this article',
     'share-on': 'Share through',
     'share-by': 'Share through',
 
@@ -53,15 +52,11 @@ export const ui = {
 
     'policy': 'Privacy policy ',
 
-    'aside.related': 'Related content',
-    'aside.recommends': 'Might interest you',
-
     'collection': 'Colección',
     'read-post': 'Read post',
   },
   es: {
     'go-blog': 'Ir al blog',
-    'share': 'Compartir este artículo',
     'share-on': 'Compartir en',
     'share-by': 'Compartir por',
 
@@ -103,9 +98,6 @@ export const ui = {
     'footer.source': 'Código fuente',
 
     'policy': 'Politicas de privacidad',
-
-    'aside.related': 'Contenido relacionado',
-    'aside.recommends': 'Puede interesarte',
 
     'collection': 'Collection',
     'read-post': 'Leer post'
