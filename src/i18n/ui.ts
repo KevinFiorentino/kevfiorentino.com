@@ -22,11 +22,6 @@ export const ui = {
     'home.presentation2': 'Writer, and content creator for Platzi\'s community. I have a degree in information systems BTW.',
     'home.presentation3': 'Taking my first steps as an entrepreneur.',
 
-    'contact': 'Contact',
-    'contact.description': 'Means of contact with Kevin Fiorentino',
-    'contact.means1': 'Please, contact me through:',
-    'contact.means2': 'I (almost) always answer!',
-
     'projects': 'Projects',
     'projects.description': 'Kevin Fiorentino\'s work experience',
     'projects.experience': 'Work experience',
@@ -68,11 +63,6 @@ export const ui = {
     'home.presentation1': 'Años trabajando en Web2 como full-stack PHP y Javascript developer. Llevando ese conocimiento al liderazgo de equipos y descentralizando aplicaciones en proyectos Web3 y crypto.',
     'home.presentation2': 'Escritor y creador de contenido para la comunidad de Platzi. Además, tengo un título de grado como Licenciado en Sistemas.',
     'home.presentation3': 'Dando mis primeros pasos como emprendedor.',
-
-    'contact': 'Contacto',
-    'contact.description': 'Medios de contacto con Kevin Fiorentino',
-    'contact.means1': 'Por favor, contáctame por:',
-    'contact.means2': '(Casi) siempre respondo!',
 
     'projects': 'Proyectos',
     'projects.description': 'Experiencia laboral de Kevin Fiorentino',
