@@ -1,146 +1,171 @@
 .main-article-content {
-    a {
-        font-weight: 400;
+  a {
+    font-weight: 400;
+    color: var(--primary);
+    text-decoration: underline;
+  }
+
+  a:hover,
+  a:focus {
+    opacity: .8;
+  }
+
+  p {
+    margin-bottom: 15px;
+
+    code {
+      color: white;
+      background-color: var(--primary);
+      padding: 2px;
+      box-shadow: 0 3px 6px var(--shadow);
+    }
+  }
+
+  img {
+    clip-path: polygon(2% 2%, 100% -2%, 98% 100%, 100% 100%, 0 98%);
+  }
+
+  ul {
+    list-style: none;
+    padding: revert;
+    margin-bottom: 15px;
+
+    li {
+      font-weight: 300;
+
+      strong {
         color: var(--primary);
-        text-decoration: underline;
+      }
     }
-    a:hover, a:focus {
-        opacity: .8;
-    }
-    p {
-        margin-bottom: 15px;
+  }
 
-        code {
-            color: white;
-            background-color: var(--primary);
-            padding: 2px;
-            box-shadow: 0 3px 6px var(--shadow);
+  ul li::before {
+    color: var(--primary);
+    content: "\2022";
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+
+  pre {
+    padding: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 6px var(--shadow);
+    line-height: normal;
+  }
+
+  blockquote {
+    font-style: italic;
+    border-left: 3px solid var(--primary);
+    padding: 5px 0 1px 15px;
+    margin-bottom: 15px;
+  }
+
+  table {
+    width: 100%;
+    margin-bottom: 15px;
+
+    thead {
+      color: var(--white);
+      background: var(--accent);
+
+      tr {
+        th {
+          border: 1px solid var(--accent);
+          border-right-color: var(--white);
+          padding: 5px;
         }
-    }
-    img {
-        clip-path: polygon(2% 2%, 100% -2%, 98% 100%, 100% 100%, 0 98%);
-    }
-    ul {
-        list-style: none;
-        padding: revert;
-        margin-bottom: 15px;
 
-        li {
-            font-weight: 300;
-
-            strong {
-                color: var(--primary);
-            }
+        th:first-child {
+          border-left: 1px solid var(--accent);
         }
+
+        th:last-child {
+          border-right: 1px solid var(--accent);
+        }
+      }
     }
-    ul li::before {
-        color: var(--primary);
-        content: "\2022";
-        font-weight: bold;
-        display: inline-block;
-        width: 1em;
-        margin-left: -1em;
+
+    tbody {
+      font-weight: 300;
+
+      tr {
+        td {
+          padding: 5px;
+        }
+      }
+
+      tr:nth-child(odd) {
+        td {
+          border: 1px solid var(--primary);
+        }
+      }
+
+      tr:nth-child(even) {
+        color: var(--white);
+        background: var(--primary);
+
+        td {
+          border: 1px solid var(--white);
+          border-bottom-color: var(--primary);
+        }
+
+        td:first-child {
+          border-left: 1px solid var(--primary);
+        }
+
+        td:last-child {
+          border-right: 1px solid var(--primary);
+        }
+      }
     }
-    pre {
-        padding: 10px;
-        margin-bottom: 15px;
-        box-shadow: 0 3px 6px var(--shadow);
-        line-height: normal;
-    }
-    blockquote {
-        font-style: italic;
-        border-left: 3px solid var(--primary);
-        padding: 5px 0 1px 15px;
-        margin-bottom: 15px;
-    }
+  }
+
+  @media (max-width: 600px) {
     table {
-        width: 100%;
-        margin-bottom: 15px;
-        thead {
-            color: var(--white);
-            background: var(--accent);
-            tr {
-                th {
-                    border: 1px solid var(--accent);
-                    border-right-color: var(--white);
-                    padding: 5px;
-                }
-                th:first-child {
-                    border-left: 1px solid var(--accent);
-                }
-                th:last-child {
-                    border-right: 1px solid var(--accent);
-                }
-            }
+      thead {
+        tr {
+          th {
+            font-size: .9rem;
+            padding: 3px;
+          }
         }
-        tbody {
-            font-weight: 300;
-            tr {
-                td {
-                    padding: 5px;
-                }
-            }
-            tr:nth-child(odd) {
-                td {
-                    border: 1px solid var(--primary);
-                }
-            }
-            tr:nth-child(even) {
-                color: var(--white);
-                background: var(--primary);
-                td {
-                    border: 1px solid var(--white);
-                    border-bottom-color: var(--primary);
-                }
-                td:first-child {
-                    border-left: 1px solid var(--primary);
-                }
-                td:last-child {
-                    border-right: 1px solid var(--primary);
-                }
-            }
+      }
+
+      tbody {
+        tr {
+          td {
+            font-size: .9rem;
+            padding: 3px;
+          }
         }
+      }
     }
-    @media (max-width: 600px) {
-        table {
-            thead {
-                tr {
-                    th {
-                        font-size: .9rem;
-                        padding: 3px;
-                    }
-                }
-            }
-            tbody {
-                tr {
-                    td {
-                        font-size: .9rem;
-                        padding: 3px;
-                    }
-                }
-            }
-        }
-    }
+  }
 }
-.dark {
-    table {
-        thead {
-            tr {
-                th {
-                    border-right-color: #1F2937;
-                }
-            }
-        }
-        tbody {
-            tr:nth-child(odd) {
-                color: var(--white);
-            }
-            tr:nth-child(even) {
-                td {
-                    border: 1px solid #1F2937;
-                }
-            }
-        }
 
+.dark {
+  table {
+    thead {
+      tr {
+        th {
+          border-right-color: #1F2937;
+        }
+      }
     }
+
+    tbody {
+      tr:nth-child(odd) {
+        color: var(--white);
+      }
+
+      tr:nth-child(even) {
+        td {
+          border: 1px solid #1F2937;
+        }
+      }
+    }
+
+  }
 }

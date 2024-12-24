@@ -1,158 +1,187 @@
 h1, h2, h3, h4, h5, h5, h6 {
-    background-image: var(--bg-gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-    line-height: normal;
+  background-image: var(--bg-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400%;
+  background-position: 0%;
+  line-height: normal;
 }
+
 h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 10px 0;
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 10px 0;
 }
+
 h2 {
-    font-size: 2.3rem;
+  font-size: 2.3rem;
 }
+
 h3 {
-    font-size: 1.7rem;
+  font-size: 1.7rem;
 }
+
 h4 {
-    font-size: 1.4rem;
+  font-size: 1.4rem;
 }
+
 h5, h6 {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
+
 h2, h3 {
-    font-weight: 600;
-    margin-bottom: 5px;
+  font-weight: 600;
+  margin-bottom: 5px;
 }
+
 h4, h5, h5, h6 {
-    font-weight: 500;
+  font-weight: 500;
 }
+
 img {
-    box-shadow: 0 3px 6px var(--shadow);
+  box-shadow: 0 3px 6px var(--shadow);
 }
+
 p {
-    font-weight: 300;
+  font-weight: 300;
 }
+
 strong {
-    font-weight: 600;
+  font-weight: 600;
 }
+
 hr {
-    border-color: var(--black);
-    margin-bottom: 15px;
+  border-color: var(--black);
+  margin-bottom: 15px;
 }
+
 .dark {
-    p, li {
-        color: var(--white);
+
+  p,
+  li {
+    color: var(--white);
+  }
+
+  hr {
+    border-color: var(--white);
+  }
+
+  .lang-icon, .media-icon {
+    path {
+      fill: var(--white);
     }
-    hr {
-        border-color: var(--white);
-    }
-    .lang-icon, .media-icon {
-        path {
-            fill: var(--white);
-        }
-    }
+  }
 }
+
 .main-width {
-    margin: auto;
-    padding: 1.5rem;
-    max-width: 150ch;
+  margin: auto;
+  padding: 1.5rem;
+  max-width: 150ch;
 }
+
 .text-gradient {
-    background-image: var(--bg-gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
+  background-image: var(--bg-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400%;
+  background-position: 0%;
 }
 
 
 .cards-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem 1rem;
-    padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem 1rem;
+  padding: 0;
 }
+
 @media (max-width: 768px) {
-    .cards-grid {
-        grid-template-columns: 1fr;
-    }
-    .main-width {
-        padding: 1rem;
-    }
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-width {
+    padding: 1rem;
+  }
 }
 
 
 .bg-polygon::before, .bg-polygon::after {
-    content: "";
-    position: absolute;
-    background: var(--primary);
-    width: 100%;
-    height: 180px;
-    left: 0;
-    overflow: hidden;
-    backface-visibility: visible;
+  content: "";
+  position: absolute;
+  background: var(--primary);
+  width: 100%;
+  height: 180px;
+  left: 0;
+  overflow: hidden;
+  backface-visibility: visible;
 }
+
 .bg-polygon::before {
-    clip-path: polygon(0 25%, 75% 0, 100% 25%, 100% 100%, 0 100%);
-    top: -50px;
+  clip-path: polygon(0 25%, 75% 0, 100% 25%, 100% 100%, 0 100%);
+  top: -50px;
 }
+
 .bg-polygon::after {
-    clip-path: polygon(0 0, 100% 0, 100% 75%, 25% 100%, 0 75%);
-    bottom: -50px;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 25% 100%, 0 75%);
+  bottom: -50px;
 }
+
 .polygon-shadow {
-    filter: drop-shadow(0px 2px 2px var(--black));
+  filter: drop-shadow(0px 2px 2px var(--black));
 }
+
 .polygon-shadow-hover {
-    filter: drop-shadow(0px 3px 6px var(--shadow));
-    transition: .3s;
+  filter: drop-shadow(0px 3px 6px var(--shadow));
+  transition: .3s;
 }
+
 .polygon-shadow-hover:hover {
-    filter: drop-shadow(0px 2px 2px var(--black));
-    transition: .3s;
+  filter: drop-shadow(0px 2px 2px var(--black));
+  transition: .3s;
 }
+
 .dark {
-    .polygon-shadow-hover:hover {
-        filter: drop-shadow(0px 2px 2px var(--white));
-    }
-    // I can't write this in the footer component
-    footer, footer::before {
-        background: #000000;
-    }
+  .polygon-shadow-hover:hover {
+    filter: drop-shadow(0px 2px 2px var(--white));
+  }
+
+  // I can't write this in the footer component
+  footer, footer::before {
+    background: #000000;
+  }
 }
 
 
 .badges {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
 
-    .badge-box {
-        filter: drop-shadow(0px 3px 6px var(--shadow));
-        margin: 0.3em 0.6em;
+  .badge-box {
+    filter: drop-shadow(0px 3px 6px var(--shadow));
+    margin: 0.3em 0.6em;
 
-        .badge {
-            display: block;
-            font-size: 1.15em;
-            color: var(--primary);
-            border: dotted 1px var(--white);
-            background-color: var(--white);
-            padding: .8rem 1rem;
-            clip-path: polygon(10% 10%, 100% 0, 100% 25%, 100% 100%, 0 85%);
-            transition: .5s;
-        }
-        .badge:hover, .badge:focus {
-            clip-path: polygon(0% 0%,100% 10%,100% 25%,100% 100%,0% 90%);
-            transition: .5s;
-        }
+    .badge {
+      display: block;
+      font-size: 1.15em;
+      color: var(--primary);
+      border: dotted 1px var(--white);
+      background-color: var(--white);
+      padding: .8rem 1rem;
+      clip-path: polygon(10% 10%, 100% 0, 100% 25%, 100% 100%, 0 85%);
+      transition: .5s;
     }
-    .badge-box:hover, .badge-box:focus {
-        filter: drop-shadow(0px 2px 2px var(--black));
+
+    .badge:hover, .badge:focus {
+      clip-path: polygon(0% 0%, 100% 10%, 100% 25%, 100% 100%, 0% 90%);
+      transition: .5s;
     }
+  }
+
+  .badge-box:hover, .badge-box:focus {
+    filter: drop-shadow(0px 2px 2px var(--black));
+  }
 }
