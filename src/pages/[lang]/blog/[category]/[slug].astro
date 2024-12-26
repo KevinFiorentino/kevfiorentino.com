@@ -36,14 +36,14 @@ const param = Astro.params;
 const post = Astro.props.post;
 
 const { collection } = post;
-const { title, description, image, pubDate, relatedPosts } = post.data;
+const { title, description, pubDate } = post.data;
 const { Content } = await post.render();
 ---
 
 <MainLayout
   title={`${title} | Kevin Fiorentino`}
   description={`${description}`}
-  image={image}
+  image='/kevin.webp'
   addWidth={true}
 >
   <section class="grid grid-cols-4">

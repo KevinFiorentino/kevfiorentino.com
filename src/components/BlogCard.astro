@@ -4,10 +4,6 @@ export interface Props {
   collection: string;
 	title: string;
   description: string;
-  image: {
-    url: string,
-    alt: string
-  };
   pubDate: Date;
 }
 
@@ -21,33 +17,12 @@ const {
   collection,
   title,
   description,
-  image,
   pubDate,
 } = Astro.props;
-
-let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-if (lang == 'es') {
-  months = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
-}
-
-const year = pubDate.getFullYear();
-const month = months[pubDate.getMonth()];
-const day = pubDate.getDate();
 ---
 
 <article class="blog-card card-background relative" role="listitem">
   <a href={`/${lang}/blog/${collection}/${slug.slice(3)}`} title={ title } class="flex relative z-10">
-    <div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
-      <time datetime={ pubDate.toString() } class="flex items-center justify-between text-white text-xs font-bold uppercase gap-4">
-        <span>{ year }</span>
-        <span class="w-px flex-1"></span>
-        <span>{ month } { day }</span>
-      </time>
-    </div>
-
-    <div class="hidden sm:block sm:basis-56">
-      <img class="asd aspect-square rounded-none h-full w-full object-cover" src={ image.url } alt={ image.alt }/>
-    </div>
 
     <div class="flex flex-1 flex-col justify-between">
       <div class="border-l border-gray-900/10 p-3 dark:border-white/10 sm:!border-l-transparent sm:p-4">
@@ -74,40 +49,12 @@ const day = pubDate.getDate();
     -webkit-text-fill-color: white;
     line-height: 30px;
   }
-  /* img {
-    clip-path: polygon(2% 2%,100% -2%,98% 100%,100% 100%,0 98%);
-  } */
   &.card-background {
     background: var(--bg-gradient);
   }
   .btn-read {
     background-color: var(--alternative);
-    height: 50px;
     margin-bottom: -9px;
-    clip-path: polygon(0 0,100% 0,100% 82%,0% 100%,0 75%);
-  }
-}
-.blog-card::before, .blog-card::after {
-  content: "";
-  position: absolute;
-  background: var(--primary);
-  width: 100%;
-  height: 200px;
-  left: 0;
-  overflow: hidden;
-  backface-visibility: visible;
-}
-.blog-card::before {
-  clip-path: polygon(0 20%,75% 0,100% 20%,100% 100%,0 100%);
-  top: -40px;
-}
-.blog-card::after {
-  clip-path: polygon(0 0,100% 0,100% 80%,25% 100%,0 80%);
-  bottom: -40px;
-}
-@media (max-width: 640px) {
-  .blog-card::before, .blog-card::after {
-    height: 170px;
   }
 }
 </style>

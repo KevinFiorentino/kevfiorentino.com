@@ -12,12 +12,7 @@ const relatedSchema = z.object({
 const mainSchema = z.object({
   title: z.string(),
   description: z.string(),
-  image: z.object({
-    url: z.string(),
-    alt: z.string()
-  }),
   pubDate: z.string().transform((str) => new Date(str)),
-  relatedPosts: z.array(relatedSchema).optional().nullable(),
 });
 
 const blockchainColl = defineCollection({ schema: mainSchema });
