@@ -1,8 +1,17 @@
 ---
 import { getLangFromUrl, useTranslations } from '@i18n/utils';
 
+/* import type TechBox from '@utils/interfaces/tech-box.interface';
+import { frontend } from '@utils/tech/1-front-end'; */
+
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+/* const techs: TechBox[] = [
+  frontend
+];
+
+console.log(techs); */
 
 /**
  * TOOLS:
@@ -129,18 +138,5 @@ const t = useTranslations(lang);
       height: 90px;
     }
   }
-  /* .btn-know-box {
-    .btn-know {
-      display: inline-block;
-      background-color: var(--alternative);
-      height: 55px;
-      clip-path: polygon(0 0,100% 0,100% 75%,0% 100%,0 75%);
-      transition: .3s;
-    }
-    .btn-know:hover, .btn-know:focus {
-      clip-path: polygon(0% 0%,100% 0%,100% 100%,0% 75%,0 75%);
-      transition: .3s;
-    }
-  } */
 }
 </style>
