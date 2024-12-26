@@ -21,21 +21,23 @@ const {
 } = Astro.props;
 ---
 
-<article class="blog-card card-background relative" role="listitem">
-  <a href={`/${lang}/blog/${collection}/${slug.slice(3)}`} title={ title } class="flex relative z-10">
+<article class="blog-card relative" role="listitem">
+  <a href={`/${lang}/blog/${collection}/${slug.slice(3)}`} title={ title } class="flex relative">
 
-    <div class="flex flex-1 flex-col justify-between">
-      <div class="border-l border-gray-900/10 p-3 dark:border-white/10 sm:!border-l-transparent sm:p-4">
+    <div class="flex flex-1 flex-col justify-between p-3">
+      <div class="mb-3">
         <h3 class="text-white font-bold uppercase">
           { title }
         </h3>
-        <p class="mt-2 text-sm leading-relaxed text-white line-clamp-3">
+        <p class="mt-2 text-sm leading-relaxed dark:text-white">
           { description }
         </p>
       </div>
-
-      <div class="sm:flex sm:items-end sm:justify-end">
-        <div class="text-white btn-read px-5 py-3 text-center text-xs font-bold uppercase transition">
+      <div class="flex items-end justify-between">
+        <span class="post-collection capitalize">
+          { collection }
+        </span>
+        <div class="btn-read dark:text-white text-center font-bold uppercase">
           {t('read-post')}
         </div>
       </div>
@@ -45,16 +47,24 @@ const {
 
 <style lang="scss">
 .blog-card {
+  border-left: 2px solid var(--primary);
+
   h3 {
-    -webkit-text-fill-color: white;
+    color: var(--black);
     line-height: 30px;
   }
-  &.card-background {
-    background: var(--bg-gradient);
+  .post-collection {
+    color: var(--white);
+    background-color: var(--primary);
+    font-size: 14px;
+    padding: 0 5px;
   }
   .btn-read {
-    background-color: var(--alternative);
-    margin-bottom: -9px;
+    font-size: 14px;
+    padding: 0 5px;
+  }
+  &:hover {
+    box-shadow: 0 3px 6px #2596BE29;
   }
 }
 </style>
