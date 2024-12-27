@@ -61,7 +61,7 @@ const { recents, collections } = Astro.props;
     <div role="list" class="cards-grid">
       {
         recents.map((item: any) => (
-          <div class="polygon-shadow-hover">
+          <div>
             <BlogCard
               slug={item.slug}
               collection={item.collection}
