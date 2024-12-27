@@ -4,6 +4,10 @@ import { getLangFromUrl } from '@i18n/utils';
 const { title, description, image } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const lang = getLangFromUrl(Astro.url);
+
+const urlWithoutLang = Astro.url.pathname.slice(3);
+const alternateES = new URL(`es${urlWithoutLang}`, Astro.site);
+const alternateEN = new URL(`en${urlWithoutLang}`, Astro.site);
 ---
 
 <head>
@@ -17,7 +21,10 @@ const lang = getLangFromUrl(Astro.url);
 	<meta name="description" content={description} />
   <meta name="generator" content={Astro.generator} />
   <meta name="author" content="Kevin Fiorentino" />
+
 	<link rel="canonical" href={canonicalURL} />
+  <link rel="alternate" hreflang="es" href={alternateES} />
+  <link rel="alternate" hreflang="en" href={alternateEN} />
 
 	<!-- Global Metadata -->
 	<link href="/favicon.ico" type="image/x-icon" rel="icon" />

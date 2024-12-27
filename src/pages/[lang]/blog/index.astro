@@ -31,7 +31,7 @@ export async function getStaticPaths() {
     pages.push({
       params: { lang: l },
       props: {
-        recents: allPosts.filter(p => (p.slug.split('/')[0] == l)).slice(0, 6)  ,   // First six elements
+        recents: allPosts.filter(p => (p.slug.split('/')[0] == l)).slice(0, 6),   // First six elements
         collections: collectionMetadata,
       },
     });
