@@ -31,7 +31,7 @@ export async function getStaticPaths() {
     pages.push({
       params: { lang: l },
       props: {
-        recents: allPosts.filter(p => (p.slug.split('/')[0] == l)).slice(0, 6),   // First six elements
+        recents: allPosts.slice(0, 6),   // First six elements
         collections: collectionMetadata,
       },
     });
@@ -40,6 +40,7 @@ export async function getStaticPaths() {
   return pages;
 }
 
+const param = Astro.params;
 const { recents, collections } = Astro.props;
 ---
 
@@ -65,8 +66,9 @@ const { recents, collections } = Astro.props;
             <BlogCard
               slug={item.slug}
               collection={item.collection}
-              title={item.data.title}
-              description={item.data.description}
+              title={param.lang == 'es' ? item.data.title : item.data.englishMetadata.title}
+              description={param.lang == 'es' ? item.data.description : item.data.englishMetadata.description}
+              image={item.data.image}
               pubDate={item.data.pubDate}
             >
             </BlogCard>

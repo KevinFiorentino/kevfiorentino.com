@@ -25,7 +25,7 @@ export async function getStaticPaths() {
         },
         props: {
           category: c.name,
-          posts: posts.filter(p => (p.slug.split('/')[0] == l))
+          posts: posts
         },
       });
     });
@@ -40,7 +40,7 @@ const post = Astro.props;
 
 <MainLayout
   title={`Blog ${param.category} | Kevin Fiorentino`}
-  description={`Kevin Fiorentino's blog about ${post.category}`}
+  description={`Blog category: ${post.category}`}
   image='/kevin.webp'
   addWidth={true}
 >
@@ -61,8 +61,8 @@ const post = Astro.props;
           <BlogCard
             slug={item.slug}
             collection={item.collection}
-            title={item.data.title}
-            description={item.data.description}
+            title={param.lang == 'es' ? item.data.title : item.data.englishMetadata.title}
+            description={param.lang == 'es' ? item.data.description : item.data.englishMetadata.description}
             image={item.data.image}
             pubDate={item.data.pubDate}
           >

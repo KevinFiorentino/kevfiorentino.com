@@ -17,15 +17,28 @@ export async function getStaticPaths() {
     coll.map((post) => {
       pages.push({
         params: {
-          lang: post.slug.split('/')[0],
+          lang: 'es',
           category: c.name,
-          slug: post.slug.slice(3),
+          slug: post.slug,
         },
         props: {
           category: c.name,
           post: post,
         },
       });
+      if (post.data.englishMetadata) {
+        pages.push({
+          params: {
+            lang: 'en',
+            category: c.name,
+            slug: post.slug,
+          },
+          props: {
+            category: c.name,
+            post: post,
+          },
+        });
+      }
     });
   }
 
@@ -36,13 +49,17 @@ const param = Astro.params;
 const post = Astro.props.post;
 
 const { collection } = post;
-const { title, description, pubDate } = post.data;
+const { title, description, pubDate, englishMetadata } = post.data;
+
+const enTitle = englishMetadata.title;
+const enDescription = englishMetadata.description;
+
 const { Content } = await post.render();
 ---
 
 <MainLayout
-  title={`${title} | Kevin Fiorentino`}
-  description={`${description}`}
+  title={`${param.lang == 'es' ? title : enTitle} | Kevin Fiorentino`}
+  description={`${param.lang == 'es' ? description : enDescription}`}
   image='/kevin.webp'
   addWidth={true}
 >

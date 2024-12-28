@@ -11,7 +11,7 @@ export async function get(context) {
     coll.map((post) => {
       posts.push({
         ...post.data,
-        link: `/${post.slug.split('/')[0]}/blog/${c.name}/${post.slug.slice(3)}`,
+        link: `/${post.slug.split('/')[0]}/blog/${c.name}/${post.slug}`,
       });
     });
   }

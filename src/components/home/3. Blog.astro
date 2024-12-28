@@ -5,6 +5,7 @@ export interface Props {
 
 import BlogCard from '@components/BlogCard.astro';
 
+const param = Astro.params;
 const { posts } = Astro.props;
 ---
 
@@ -22,8 +23,8 @@ const { posts } = Astro.props;
             <BlogCard
               slug={item.slug}
               collection={item.collection}
-              title={item.data.title}
-              description={item.data.description}
+              title={param.lang == 'es' ? item.data.title : item.data.englishMetadata.title}
+              description={param.lang == 'es' ? item.data.description : item.data.englishMetadata.description}
               image={item.data.image}
               pubDate={item.data.pubDate}
             >
