@@ -3,7 +3,6 @@ import { getCollection } from 'astro:content';
 import { collectionMetadata } from '@content/config';
 import MainLayout from '@layouts/MainLayout.astro';
 import Breadcrumbs from '@components/articles/Breadcrumbs.astro';
-import DisplayDate from '@components/articles/DisplayDate.astro';
 
 import '@styles/article.scss';
 
@@ -69,10 +68,8 @@ const { Content } = await post.render();
       <section class="header-article-content">
         <Breadcrumbs
           collection={collection}
-        ></Breadcrumbs>
-        <DisplayDate
           pubDate={pubDate}
-        ></DisplayDate>
+        ></Breadcrumbs>
       </section>
       <article class="main-article-content" >
         <Content />
