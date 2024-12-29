@@ -137,6 +137,16 @@ const langToSwith = currentLang === 'es' ? 'en' : 'es';
     });
 </script>
 
+<style is:global lang="scss">
+.dark {
+  .lang-icon {
+    path {
+      fill: var(--white);
+    }
+  }
+}
+</style>
+
 <style lang="scss">
 #moon-icon, #sun-icon {
   width: 24px;

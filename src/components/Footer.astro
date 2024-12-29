@@ -109,6 +109,14 @@ const year = new Date().getFullYear();
   </div>
 </footer>
 
+<style is:global lang="scss">
+.dark {
+  footer, footer::before {
+    background: #000000;
+  }
+}
+</style>
+
 <style lang="scss">
 footer {
   .sign {
@@ -138,3 +146,5 @@ footer::before {
 }
 // footer::before dark mode estiled on global.scss
 </style>
+
+
