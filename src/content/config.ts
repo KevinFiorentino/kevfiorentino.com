@@ -7,6 +7,7 @@ import { defineCollection, z } from 'astro:content';
 const mainSchema = z.object({
   title: z.string(),
   description: z.string(),
+  image: z.string(),
   pubDate: z.string().transform((str: string | number | Date) => new Date(str)),
   englishMetadata: z.object({
     title: z.string(),
