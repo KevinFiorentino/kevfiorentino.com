@@ -31,7 +31,7 @@ export async function getStaticPaths() {
     pages.push({
       params: { lang: l },
       props: {
-        recents: allPosts.slice(0, 6),   // First six elements
+        recents: allPosts.slice(0, 10),   // First ten elements
         collections: collectionMetadata,
       },
     });
@@ -58,7 +58,7 @@ const { recents, collections } = Astro.props;
       {t('blog.latest')}
     </h2>
     <hr class="mt-2 mb-0">
-    <br><br><br>
+    <br><br>
     <div role="list" class="cards-grid">
       {
         recents.map((item: any) => (

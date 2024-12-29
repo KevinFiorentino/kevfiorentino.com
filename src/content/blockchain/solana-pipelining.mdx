@@ -1,0 +1,54 @@
+---
+title: 'Solana: Pipelining'
+description: 'Que la red de Solana pueda procesar miles y miles de transacciones por segundo tiene una explicación. La optimización de esta Blockchain también contempla la validación de transacciones y la utilización de una técnica especial creada por los ingenieros detrás de esta red.'
+image: '/tech/solana.webp'
+pubDate: '08/23/2023'
+englishMetadata: {
+  title: 'Solana: Pipelining',
+  description: 'That the Solana network can process thousands and thousands of transactions per second has an explanation. The optimization of this Blockchain also includes the validation of transactions and the use of a special technique created by the engineers behind this network.'
+}
+---
+
+# Solana: Pipelining
+
+Que la red de Solana pueda procesar miles y miles de transacciones por segundo, tiene una explicación. No se trata de una característica que los desarrolladores de Solana hayan dejado de lado, todo lo contrario, **la optimización de esta Blockchain también contempla la validación de transacciones** y la utilización de una técnica especial creada por los ingenieros detrás de esta red.
+
+## ¿Qué es un Pipeline?
+
+Antes de comprender cómo Solana válida las transacciones, entendamos brevemente qué es un Pipeline en el mundo de la informática.
+
+Tal vez ya estés familiarizado con el término Pipeline, muchas tecnologías lo utilizan y por lo general hace referencia a una **cadena de procesos conectados donde la salida de cada etapa del proceso es la entrada del siguiente**. Tiene un orden predefinido por donde los datos pasarán para ser procesados, verificados, modificados, etc. Los Pipelines permiten comunicar procesos y mantenerlos sincronizados.
+
+- Muchos ejemplos de Pipelines podrás encontrar en el mundo de la tecnología. La disciplina DevOps lo utiliza para crear Pipelines de despliegue de aplicaciones utilizando CI/CD.
+- Bases de datos como MongoDB utilizan el concepto de Pipelines para consultar y modificar la estructura de datos.
+- Lenguajes de programación como Javascript también implementan operadores lógicos denominados Pipeline para la transformación de datos.
+
+*Pipelines everywhere!*
+
+Pero ¿Cómo se relaciona este concepto con Solana?
+
+### Unidad de Procesamiento de Transacciones (TPU)
+
+Solana implementa un Pipelining o Canalización denominada TPU (Transaction Processing Unit). El mismo consta de **cuatro etapas para la validación de transacciones** y cuyo proceso se realiza a nivel de hardware.
+
+![Etapas de validación de una transacción](images/solana-pipelining.png)
+
+1. Fetch: Proceso inicial donde se toma la transacción en el Kernel (núcleo).
+2. Sign verify: La verificación de firma se realiza en la GPU.
+3. Banking: Almacenamiento de la transacción en CPU previo a la escritura.
+4. Write: Confirmación y guardado de los datos de la transacción.
+
+La principal característica del este proceso es que a todo momento cada una de estas cuatro etapas se encuentra ocupada con una transacción. El Pipeline no espera a terminar con una transacción para tomar otra. Luego de que una transacción pase a la etapa 2, inmediatamente hay otra en la etapa 1. Continuamente cada etapa se encuentra procesando una transacción distinta. De esta manera, se optimiza aún más el rendimiento de la red.
+
+Podríamos hacer una analogía de este proceso con una línea de montaje vehicular de una empresa automotriz donde en cada etapa construye una parte diferente del automóvil y no hay máquinas ociosas.
+
+## Conclusión
+
+Entender el procesamiento de transacciones en Solana nos hace entender **un motivo más de la optimización al detalle que esta Blockchain implementa**. Sin duda los estándares de desarrollo en este proyecto exigen perfeccionar el funcionamiento de cada componente.
+
+El funcionamiento de la red gracias a TDMA, sumado a PoH para una mejor sincronización de la información. Protocolos como Turbine y Gulf Stream que trabajan juntos para la propagación de la información por la red y el procesamiento en paralelo de muchas transacciones con Sealevel y el pipeline TPU.
+
+Solana es todo un sistema y aún restan algunas piezas de este rompecabezas para terminar de armarlo.
+
+---
+Post creado en colaboración con el **Curso de Solana** de **Platzi**.
