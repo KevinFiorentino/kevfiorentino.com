@@ -62,16 +62,16 @@ const { Content } = await post.render();
   image='/kevin.webp'
   addWidth={true}
 >
-  <section class="grid grid-cols-4">
+  <section class="grid grid-cols-5">
 
-    <section class="col-span-4 md:col-span-3 sm:col-span-4 xs:col-span-4">
+    <section class="col-span-5 md:col-span-3 sm:col-span-5 xs:col-span-5">
       <section class="header-article-content">
         <Breadcrumbs
           collection={collection}
           pubDate={pubDate}
         ></Breadcrumbs>
       </section>
-      <article class="main-article-content" >
+      <article class="main-article-content">
         <Content />
       </article>
     </section>
