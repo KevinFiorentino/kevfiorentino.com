@@ -13,8 +13,9 @@ export const ui = {
     'share-on': 'Share through',
     'share-by': 'Share through',
 
-    'blog.latest': 'Latest posts',
     'blog.all-categories': 'All categories',
+    'blog.latest': 'Latest posts',
+    'blog.toc': 'Table of Contents',
 
     'home.tech': 'My seven-year career knowledge went through',
     'home.kev': 'Hi, I\'m Kev!',
@@ -34,8 +35,9 @@ export const ui = {
     'share-on': 'Compartir en',
     'share-by': 'Compartir por',
 
-    'blog.latest': 'Últimos posts',
     'blog.all-categories': 'Todas las categorías',
+    'blog.latest': 'Últimos posts',
+    'blog.toc': 'Tabla de Contenidos',
 
     'home.tech': 'Mi conocimiento en seis años de carrera pasó por',
     'home.kev': '¡Hola, soy Kev!',

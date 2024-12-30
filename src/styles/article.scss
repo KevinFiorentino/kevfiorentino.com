@@ -5,8 +5,7 @@
     text-decoration: underline;
   }
 
-  a:hover,
-  a:focus {
+  a:hover, a:focus {
     opacity: .8;
   }
 
@@ -19,6 +18,10 @@
       padding: 2px;
       box-shadow: 0 3px 6px var(--shadow);
     }
+  }
+
+  strong {
+    color: var(--primary);
   }
 
   img {

@@ -1,0 +1,164 @@
+---
+/* import ArrowIcon from "./icons/ArrowIcon.astro"; */
+import type { MarkdownHeading } from "astro";
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+import generateToc from "@utils/generateToc";
+
+interface Props {
+  headings: MarkdownHeading[];
+}
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const { headings } = Astro.props;
+const toc = generateToc(headings);
+---
+
+<div class="sticky top-16 w-full border-b p-3 xl:block xl:p-02">
+  <button id="toc-button" class="rounded-md border px-2 py-1 text-sm font-medium xl:hidden">
+    {t('blog.toc')}
+    <!-- <ArrowIcon class="inline h-4 w-4 fill-zinc-400 transition-all" /> -->
+  </button>
+  <span id="toc-title" class="ml-2 text-sm font-medium text-zinc-500 xl:hidden">
+    Title
+  </span>
+  <div id="toc-toggle" class="toc-toggle sticky top-16 max-h-0 overflow-hidden xl:min-h-screen xl:overflow-visible">
+    <nav class="h-full px-8 py-5 pr-4 xl:block xl:px-0 xl:pb-5 xl:pt-10">
+      <h4>
+        {t('blog.toc')}
+      </h4>
+      <ul class="mt-2 pr-2 flex flex-col gap-1 text-sm font-normal text-zinc-400">
+        {
+          toc.map((heading) => (
+            <li>
+              <a
+                href={`#${heading.slug}`}
+                title={heading.text}
+                class="toc-item relative block pl-7 hover:text-[#2A72B2]"
+              >
+                {heading.text.split("#")[0]}
+                {
+                  (heading.children.length > 0) &&
+                    <ul class="flex flex-col gap-1 text-sm font-normal pr-2 text-zinc-400">
+                      {
+                        heading.children.map((h3) => (
+                          <li>
+                            <a
+                              href={`#${h3.slug}`}
+                              title={h3.text}
+                              class="toc-item toc-sub-item relative block pl-10 hover:text-[#2A72B2]"
+                            >
+                              {h3.text.split("#")[0]}
+                          </a>
+                        </li>
+                        ))
+                      }
+                    </ul>
+                }
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const tocButton = document.getElementById("toc-button");
+  const toggleToc = document.getElementById("toc-toggle");
+  const icon = tocButton?.querySelector("svg");
+  tocButton?.addEventListener("click", () => {
+    toggleToc?.classList.toggle("toc-toggle-open");
+    icon?.classList.toggle("toc-icon-rotate");
+  });
+  const tocTitle = document.getElementById("toc-title");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        const headingFragment = `#${entry.target.id}`;
+        const tocItem = document.querySelector(`a[href="${headingFragment}"]`);
+        entry.target.lastChild?.addEventListener("click", () => {
+          navigator.clipboard.writeText(
+            window.location.href.split("#")[0] + headingFragment,
+          );
+        });
+        if (entry.isIntersecting) {
+          tocTitle!.innerText = entry.target.textContent!.split("#")[0];
+          const previouslyActivatedItem =
+            document.querySelector(".active-toc-item");
+          previouslyActivatedItem?.classList.remove("active-toc-item");
+          tocItem?.classList.add("active-toc-item");
+        } else {
+          const isAnyOtherEntryIntersecting = entries.some(
+            (e) => e.target.id !== entry.target.id && e.isIntersecting,
+          );
+          if (isAnyOtherEntryIntersecting) {
+            tocItem?.classList.remove("active-toc-item");
+          }
+        }
+      }
+    },
+    { root: null, rootMargin: "0px", threshold: [1] },
+  );
+  const sectionHeadings = document.querySelectorAll("article > h2, article > h3");
+  for (const heading of sectionHeadings) {
+    observer.observe(heading);
+  }
+</script>
+
+<style is:global lang="scss">
+.dark {
+  .active-toc-item, .toc-sub-item.active-toc-item {
+    @apply text-white;
+  }
+  .toc-item::before, .toc-sub-item.toc-item::before {
+    background: linear-gradient(90deg, #ff562200, #ffece700),
+      linear-gradient(90deg, rgba(37, 150, 190, 0.25) 0%, rgb(19, 22, 28, 1) 100%);
+  }
+}
+</style>
+
+<style lang="scss">
+.toc-icon-rotate {
+  transform: rotate(180deg);
+}
+.toc-toggle {
+  transition: all 0.3s linear;
+}
+.toc-toggle-open {
+  max-height: 600px;
+}
+.toc-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 100%;
+  z-index: -10;
+  background: linear-gradient(90deg, #ff562200, #ffece700),
+    linear-gradient(90deg, rgba(37, 150, 190, 0.25) 0%, rgb(229, 231, 235, 1) 100%);
+  transition: all 0.3s;
+}
+.active-toc-item {
+  @apply text-[#2A72B2];
+}
+.active-toc-item::before {
+  transition:
+    width 0.3s ease-in-out,
+    border-left 0.1s ease-in-out;
+  border-left: 2px solid var(--primary);
+  width: 100%;
+}
+.toc-sub-item.toc-item::before {
+  background: linear-gradient(90deg, #ff562200, #ffece700),
+    linear-gradient(90deg, rgba(37, 150, 190, 0.25) 0%, rgb(229, 231, 235, 1) 100%);
+}
+.toc-sub-item.active-toc-item {
+  @apply text-[#2A72B2];
+}
+.toc-sub-item.active-toc-item::before {
+  border-left: 2px solid var(--accent);
+}
+</style>

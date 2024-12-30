@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import { collectionMetadata } from '@content/config';
 import MainLayout from '@layouts/MainLayout.astro';
 import Breadcrumbs from '@components/articles/Breadcrumbs.astro';
+import ToC from '@components/articles/ToC.astro';
 
 import '@styles/article.scss';
 
@@ -53,7 +54,7 @@ const { title, description, pubDate, englishMetadata } = post.data;
 const enTitle = englishMetadata.title;
 const enDescription = englishMetadata.description;
 
-const { Content } = await post.render();
+const { Content, headings } = await post.render();
 ---
 
 <MainLayout
@@ -75,6 +76,9 @@ const { Content } = await post.render();
         <Content />
       </article>
     </section>
+    <aside class="md:col-span-2 hidden md:inline mx-5">
+      <ToC headings={headings}></ToC>
+    </aside>
 
   </section>
 </MainLayout>
