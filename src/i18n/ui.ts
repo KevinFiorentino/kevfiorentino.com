@@ -12,6 +12,8 @@ export const ui = {
     'go-blog': 'Go to blog',
     'share-on': 'Share through',
     'share-by': 'Share through',
+    'prev': 'Previous',
+    'next': 'Next',
 
     'blog.all-categories': 'All categories',
     'blog.latest': 'Latest posts',
@@ -34,6 +36,8 @@ export const ui = {
     'go-blog': 'Ir al blog',
     'share-on': 'Compartir en',
     'share-by': 'Compartir por',
+    'prev': 'Anterior',
+    'next': 'Siguiente',
 
     'blog.all-categories': 'Todas las categorías',
     'blog.latest': 'Últimos posts',

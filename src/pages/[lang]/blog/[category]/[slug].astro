@@ -4,6 +4,7 @@ import { collectionMetadata } from '@content/config';
 import MainLayout from '@layouts/MainLayout.astro';
 import Breadcrumbs from '@components/articles/Breadcrumbs.astro';
 import ToC from '@components/articles/ToC.astro';
+import PrevNext from '@components/articles/PrevNext.astro';
 
 import '@styles/article.scss';
 
@@ -49,7 +50,7 @@ const param = Astro.params;
 const post = Astro.props.post;
 
 const { collection } = post;
-const { title, description, pubDate, englishMetadata } = post.data;
+const { title, description, pubDate, englishMetadata, prev, next } = post.data;
 
 const enTitle = englishMetadata.title;
 const enDescription = englishMetadata.description;
@@ -64,7 +65,6 @@ const { Content, headings } = await post.render();
   addWidth={true}
 >
   <section class="grid grid-cols-5">
-
     <section class="col-span-5 md:col-span-3 sm:col-span-5 xs:col-span-5">
       <section class="header-article-content">
         <Breadcrumbs
@@ -75,10 +75,14 @@ const { Content, headings } = await post.render();
       <article class="main-article-content">
         <Content />
       </article>
+      <PrevNext
+        category={collection}
+        prev={prev}
+        next={next}
+      ></PrevNext>
     </section>
     <aside class="md:col-span-2 hidden md:inline mx-5">
       <ToC headings={headings}></ToC>
     </aside>
-
   </section>
 </MainLayout>

@@ -13,6 +13,8 @@ const mainSchema = z.object({
     title: z.string(),
     description: z.string()
   }).optional(),
+  prev: z.string().optional(),
+  next: z.string().optional(),
 });
 
 const blockchainColl = defineCollection({ schema: mainSchema });

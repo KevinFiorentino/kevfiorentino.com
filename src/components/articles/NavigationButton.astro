@@ -1,0 +1,34 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import ArrowIcon from "./ArrowIcon.astro";
+
+interface Props extends HTMLAttributes<"a"> {
+  icon?: boolean;
+  prev?: boolean;
+  label?: string;
+  title?: string;
+}
+const { icon = false, prev = false, label, title } = Astro.props;
+---
+
+<a
+  {...Astro.props}
+  class={`card-shadow not-prose block flex-[1_0_40%] hover:border-zinc-400 rounded-xl border border-zinc-200 px-4 py-2 transition-all hover:scale-[102%] ${
+    !prev && "text-end"
+  }`}
+  title={title}
+>
+  <span class={`flex items-center gap-2 ${!prev && "flex-row-reverse"}`}>
+    {
+      icon && (
+        <ArrowIcon
+          class={`${
+            prev ? "rotate-90" : "-rotate-90"
+          } inline h-5 fill-zinc-900`}
+        />
+      )
+    }
+    <span class="mb-0.5 text-lg font-semibold text-zinc-900">{label}</span>
+  </span>
+  <slot />
+</a>
