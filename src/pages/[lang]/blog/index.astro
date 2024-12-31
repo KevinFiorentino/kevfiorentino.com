@@ -31,7 +31,8 @@ export async function getStaticPaths() {
     pages.push({
       params: { lang: l },
       props: {
-        recents: allPosts.slice(0, 10),   // First ten elements
+        recents: allPosts.slice(0, 8),
+        others: allPosts.slice(-6),
         collections: collectionMetadata,
       },
     });
@@ -41,7 +42,7 @@ export async function getStaticPaths() {
 }
 
 const param = Astro.params;
-const { recents, collections } = Astro.props;
+const { recents, others, collections } = Astro.props;
 ---
 
 <MainLayout
@@ -79,7 +80,7 @@ const { recents, collections } = Astro.props;
 
   </section>
 
-  <br><br><br><br>
+  <br><br><br>
 
   <section class="categories bg-polygon relative">
     <div class="relative main-width z-10">
@@ -100,7 +101,33 @@ const { recents, collections } = Astro.props;
     </div>
   </section>
 
-  <br><br><br><br>
+  <br><br><br>
+
+  <section class="main-width">
+    <h2>
+      {t('blog.others')}
+    </h2>
+    <hr class="mt-2 mb-0">
+    <br><br>
+    <div role="list" class="cards-grid">
+      {
+        others.map((item: any) => (
+          <div>
+            <BlogCard
+              slug={item.slug}
+              collection={item.collection}
+              title={param.lang == 'es' ? item.data.title : item.data.englishMetadata.title}
+              description={param.lang == 'es' ? item.data.description : item.data.englishMetadata.description}
+              image={item.data.image}
+              pubDate={item.data.pubDate}
+            >
+            </BlogCard>
+          </div>
+        ))
+      }
+    </div>
+
+  </section>
 
 </MainLayout>
 

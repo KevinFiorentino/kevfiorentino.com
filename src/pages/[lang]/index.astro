@@ -33,7 +33,7 @@ export async function getStaticPaths() {
     pages.push({
       params: { lang: l },
       props: {
-        posts: allPosts.slice(0, 6)     // First six elements
+        posts: allPosts.slice(0, 6),
       },
     });
   });

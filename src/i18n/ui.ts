@@ -17,6 +17,7 @@ export const ui = {
 
     'blog.all-categories': 'All categories',
     'blog.latest': 'Latest posts',
+    'blog.others': 'More posts',
     'blog.toc': 'Table of Content',
 
     'home.tech': 'My seven-year career knowledge went through',
@@ -41,6 +42,7 @@ export const ui = {
 
     'blog.all-categories': 'Todas las categorías',
     'blog.latest': 'Últimos posts',
+    'blog.others': 'Más posts',
     'blog.toc': 'Tabla de Contenido',
 
     'home.tech': 'Mi conocimiento en seis años de carrera pasó por',
