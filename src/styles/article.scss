@@ -28,7 +28,7 @@
     box-shadow: none;
   }
 
-  ul {
+  ul, ol {
     list-style: none;
     padding: revert;
     margin-bottom: 15px;
@@ -41,14 +41,20 @@
       }
     }
   }
+  ol {
+    list-style: decimal;
+  }
 
-  ul li::before {
+  ol li::before, ul li::before {
     color: var(--primary);
     content: "\2022";
     font-weight: bold;
     display: inline-block;
     width: 1em;
     margin-left: -1em;
+  }
+  ol li::before {
+    content: "";
   }
 
   pre {

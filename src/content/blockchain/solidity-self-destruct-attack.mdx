@@ -7,6 +7,7 @@ englishMetadata: {
   title: 'Solidity: Self-Destruct Attack',
   description: 'Transfers and sending ETH can be detrimental to a contract. Many attacks not only seek to steal funds, they may also seek to cause damage and millions of dollars in loss.'
 }
+prev: 'solidity-cross-reentrancy-attack'
 ---
 
 # Solidity: Ataque Por Autodestrucción
@@ -105,10 +106,10 @@ contract Attack {
 
 ### Procedimiento para vulnerar el contrato
 
-* 1. Desplegar el contrato `EtherGame`.
-* 2. Depositar 1 ETH con dos cuentas. Hasta este punto, el contrato tendría 2/7 ETH.
-* 3. Desplegar el contrato `Attack` que recibe en el constructor la dirección de `EtherGame`.
-* 4. Hacer el llamado a `Attack.attack` enviando a la vez 5 ETH.
+1. Desplegar el contrato `EtherGame`.
+2. Depositar 1 ETH con dos cuentas. Hasta este punto, el contrato tendría 2/7 ETH.
+3. Desplegar el contrato `Attack` que recibe en el constructor la dirección de `EtherGame`.
+4. Hacer el llamado a `Attack.attack` enviando a la vez 5 ETH.
 
 ### ¿Qué sucedió aquí?
 

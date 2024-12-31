@@ -7,6 +7,8 @@ englishMetadata: {
   title: 'Solidity: Reetrancy Attack',
   description: 'One of the most common security problems is called Reetrancy, which causes recursive calls to the same function of a contract until the funds are emptied.'
 }
+prev: 'solidity-dos-attack'
+next: 'solidity-cross-reentrancy-attack'
 ---
 
 # Solidity: Ataque Reentrancy
@@ -93,10 +95,10 @@ contract Attack {
 
 ### Procedimiento para vulnerar el contrato
 
-* 1. Desplegar el contrato `EtherStore`.
-* 2. Depositar 1 ETH con dos cuentas. Hasta este punto, el contrato tendría 2 ETH.
-* 3. Desplegar contrato `Attack` que recibe en el constructor la dirección de `EtherStore`.
-* 4. Hacer el llamado a `Attack.attack` enviando 1 ETH con una tercera cuenta para tener acceso a realizar una extracción. El contrato atacante recibirá los 3 ETH.
+1. Desplegar el contrato `EtherStore`.
+2. Depositar 1 ETH con dos cuentas. Hasta este punto, el contrato tendría 2 ETH.
+3. Desplegar contrato `Attack` que recibe en el constructor la dirección de `EtherStore`.
+4. Hacer el llamado a `Attack.attack` enviando 1 ETH con una tercera cuenta para tener acceso a realizar una extracción. El contrato atacante recibirá los 3 ETH.
 
 ### ¿Qué sucedió aquí?
 

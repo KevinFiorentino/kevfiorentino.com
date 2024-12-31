@@ -7,6 +7,8 @@ englishMetadata: {
   title: 'Solidity: Cross Reentrancy Attack',
   description: 'The vulnerability known as Reetrancy allows the same function to be called over and over again. There is a variant that causes a second function to be called. It is known by the name of Reetraccy Cruzado.'
 }
+prev: 'solidity-reentrancy-attack'
+next: 'solidity-self-destruct-attack'
 ---
 
 # Solidity: Ataque Reentrancy Cruzado
@@ -104,10 +106,10 @@ contract Ataque {
 
 ### Procedimiento para vulnerar el contrato
 
-* 1. Desplegar el contrato `ReentrancyCross`.
-* 2. Depositar 1 ETH con dos cuentas. Hasta este punto, el contrato tendría 2 ETH.
-* 3. Desplegar contrato `Attack` que recibe en el constructor la dirección de `ReentrancyCross`.
-* 4. Hacer el llamado a `Attack.attack` enviando 1 ETH con una tercera cuenta para tener acceso a realizar una extracción. El contrato atacante recuperará inmediatamente ese ETH mientras que también provocará que el balance se duplique en otra dirección para que esta pueda retirar un ETH que no le pertenece.
+1. Desplegar el contrato `ReentrancyCross`.
+2. Depositar 1 ETH con dos cuentas. Hasta este punto, el contrato tendría 2 ETH.
+3. Desplegar contrato `Attack` que recibe en el constructor la dirección de `ReentrancyCross`.
+4. Hacer el llamado a `Attack.attack` enviando 1 ETH con una tercera cuenta para tener acceso a realizar una extracción. El contrato atacante recuperará inmediatamente ese ETH mientras que también provocará que el balance se duplique en otra dirección para que esta pueda retirar un ETH que no le pertenece.
 
 ### ¿Qué sucedió aquí?
 

@@ -7,6 +7,8 @@ englishMetadata: {
   title: 'Solana: Pipelining',
   description: 'That the Solana network can process thousands and thousands of transactions per second has an explanation. The optimization of this Blockchain also includes the validation of transactions and the use of a special technique created by the engineers behind this network.'
 }
+prev: 'solana-sealevel'
+next: 'solana-cloudbreak'
 ---
 
 # Solana: Pipelining
@@ -31,12 +33,12 @@ Pero ¿Cómo se relaciona este concepto con Solana?
 
 Solana implementa un Pipelining o Canalización denominada TPU (Transaction Processing Unit). El mismo consta de **cuatro etapas para la validación de transacciones** y cuyo proceso se realiza a nivel de hardware.
 
-![Etapas de validación de una transacción](images/solana-pipelining.png)
+![Etapas de validación de una transacción](/images/solana-pipelining.png)
 
-1. Fetch: Proceso inicial donde se toma la transacción en el Kernel (núcleo).
-2. Sign verify: La verificación de firma se realiza en la GPU.
-3. Banking: Almacenamiento de la transacción en CPU previo a la escritura.
-4. Write: Confirmación y guardado de los datos de la transacción.
+1. **Fetch:** Proceso inicial donde se toma la transacción en el Kernel (núcleo).
+2. **Sign verify:** La verificación de firma se realiza en la GPU.
+3. **Banking:** Almacenamiento de la transacción en CPU previo a la escritura.
+4. **Write:** Confirmación y guardado de los datos de la transacción.
 
 La principal característica del este proceso es que a todo momento cada una de estas cuatro etapas se encuentra ocupada con una transacción. El Pipeline no espera a terminar con una transacción para tomar otra. Luego de que una transacción pase a la etapa 2, inmediatamente hay otra en la etapa 1. Continuamente cada etapa se encuentra procesando una transacción distinta. De esta manera, se optimiza aún más el rendimiento de la red.
 
