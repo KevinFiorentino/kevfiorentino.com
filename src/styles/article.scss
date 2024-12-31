@@ -55,6 +55,10 @@
   ol li::before {
     content: "";
   }
+  ol li::marker {
+    font-weight: 500;
+    color: var(--primary);
+  }
 
   pre {
     padding: 10px;
