@@ -1,5 +1,5 @@
 ---
-// import ArrowIcon from "./ArrowIcon.astro";
+import ArrowIcon from "./ArrowIcon.astro";
 import type { MarkdownHeading } from "astro";
 import { getLangFromUrl, useTranslations } from '@i18n/utils';
 import generateToc from "@utils/generateToc";
@@ -16,13 +16,13 @@ const toc = generateToc(headings);
 ---
 
 <div class="sticky top-16 w-full p-3 xl:block xl:p-02">
-  <!-- <button id="toc-button" class="rounded-md border px-2 py-1 text-sm font-medium xl:hidden">
+  <button id="toc-button" class="rounded-md border px-2 py-1 text-sm font-medium xl:hidden">
     {t('blog.toc')}
     <ArrowIcon class="inline h-4 w-4 fill-zinc-400 transition-all" />
   </button>
   <span id="toc-title" class="ml-2 text-sm font-medium text-zinc-500 xl:hidden">
     Title
-  </span> -->
+  </span>
   <div id="toc-toggle" class="toc-toggle sticky top-16 max-h-0 overflow-hidden xl:min-h-screen xl:overflow-visible">
     <nav class="h-full px-8 py-5 pr-4 xl:block xl:px-0 xl:pb-5 xl:pt-10">
       <h4>
