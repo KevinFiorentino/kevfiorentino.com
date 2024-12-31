@@ -15,7 +15,7 @@ const { headings } = Astro.props;
 const toc = generateToc(headings);
 ---
 
-<div class="sticky top-16 w-full border-b p-3 xl:block xl:p-02">
+<div class="sticky top-16 w-full p-3 xl:block xl:p-02">
   <button id="toc-button" class="rounded-md border px-2 py-1 text-sm font-medium xl:hidden">
     {t('blog.toc')}
     <ArrowIcon class="inline h-4 w-4 fill-zinc-400 transition-all" />
@@ -29,37 +29,32 @@ const toc = generateToc(headings);
         {t('blog.toc')}
       </h4>
       <ul class="mt-2 pr-2 flex flex-col gap-1 text-sm font-normal text-zinc-400">
-        {
-          toc.map((heading) => (
-            <li>
-              <a
-                href={`#${heading.slug}`}
-                title={heading.text}
-                class="toc-item relative block pl-7 hover:text-[#2A72B2]"
-              >
-                {heading.text.split("#")[0]}
-                {
-                  (heading.children.length > 0) &&
-                    <ul class="flex flex-col gap-1 text-sm font-normal pr-2 text-zinc-400">
-                      {
-                        heading.children.map((h3) => (
-                          <li>
-                            <a
-                              href={`#${h3.slug}`}
-                              title={h3.text}
-                              class="toc-item toc-sub-item relative block pl-10 hover:text-[#2A72B2]"
-                            >
-                              {h3.text.split("#")[0]}
-                          </a>
-                        </li>
-                        ))
-                      }
-                    </ul>
-                }
-              </a>
-            </li>
-          ))
-        }
+        {toc.map((heading) => (
+          <li>
+            <a
+              href={`#${heading.slug}`}
+              title={heading.text}
+              class="toc-item relative block pl-7 hover:text-[#2A72B2]"
+            >
+              {heading.text.split("#")[0]}
+            </a>
+            {heading.children.length > 0 && (
+              <ul class="flex flex-col gap-1 text-sm font-normal pr-2 text-zinc-400">
+                {heading.children.map((h3) => (
+                  <li>
+                    <a
+                      href={`#${h3.slug}`}
+                      title={h3.text}
+                      class="toc-item toc-sub-item relative block pl-12 hover:text-[#2A72B2]"
+                    >
+                      {h3.text.split("#")[0]}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
       </ul>
     </nav>
   </div>
@@ -129,6 +124,11 @@ const toc = generateToc(headings);
 }
 .toc-toggle-open {
   max-height: 600px;
+}
+.toc-item {
+  height: 100%;
+  font-size: 16px;
+  line-height: 32px;
 }
 .toc-item::before {
   content: "";
