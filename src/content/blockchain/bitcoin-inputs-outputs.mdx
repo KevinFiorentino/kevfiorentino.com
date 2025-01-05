@@ -1,0 +1,65 @@
+---
+title: 'Bitcoin: Transacciones, Entradas y Salidas'
+description: 'El funcionamiento técnico y la lógica de las transacciones en la Blockchain de Bitcoin explican por qué se trata de un excelente sistema de pagos mundial y descentralizado al lograr evitar problemas como el doble gasto.'
+image: '/tech/solana.webp'
+pubDate: '08/15/2023'
+englishMetadata: {
+  title: 'Bitcoin: Transactions, Inputs & Outputs',
+  description: 'The technical operation and logic of transactions in the Bitcoin Blockchain explain why it is an excellent global and decentralized payment system by avoiding problems such as double spending.'
+}
+---
+
+# Bitcoin: Transacciones, Entradas y Salidas
+
+**El funcionamiento técnico y la lógica de las transacciones en la Blockchain de Bitcoin** explican por qué se trata de un excelente sistema de pagos mundial y descentralizado al lograr evitar problemas como el doble gasto.
+
+## Composición de una transacción en Bitcoin
+
+Las transacciones son la parte más importante de todo el sistema que **permiten la transferencia de valor de forma encriptada entre partes**. Una transacción está compuesta por:
+
+- **Entradas (inputs):** referencias a salidas de transacciones anteriores. Contienen la dirección de donde provienen los BTC.
+- **Salídas (outputs):** contienen la dirección a donde se enviarán los BTC, además de la dirección a donde se enviará el cambio o retorno. Una transacción puede contener más de una salida.
+- **TXid:** identificador único e irrepetible de la transacción en toda la red.
+- **Comisión:** comisión para el minero que validará el bloque. Como no se conoce de antemano quién será, no está asociado a ninguna cuenta.
+
+El concepto de inputs y outputs es esencial para comprender el funcionamiento de una transacción.
+
+- **Outputs:**
+  - También denominados UTXO
+  - Fragmentos de BTC representado en Satoshis
+
+- **Inputs:**
+  - Identifican qué UTXO utilizarán para una transacción y proveen una prueba de propiedad para el uso del mismo.
+
+> UTXO o *Unspent Transaction Output* (transacción de salida no gastada) es otro término para los outputs y hacen referencia a fracciones de BTC que solo pueden ser utilizadas una vez y evitar así el problema del doble gasto.
+
+## Construcción de una transacción
+
+Las transacciones se preparan y se construyen a partir de las salidas que una wallet posee para formar entradas a otras direcciones.
+
+Alice puede tener en su wallet 1 BTC completo. Para sus ojos, se trata de una sola unidad de bitcoin pero, por dentro, el mismo podría estar compuesto por el 20% de un BTC, el 30% de otro y el restante 50% de un tercer BTC (3 salidas). Las wallets escanean la Blockchain de Bitcoin en búsqueda de salidas no gastadas o no utilizadas para determinar el saldo de una billetera.
+
+Cuando queremos enviar BTC a otra cuenta, utilizamos las salidas de nuestra billetera como entrada para la transacción. **Estas entradas se convierte en salida para la billetera receptora de los BTC**.
+
+### Fragmentos de bitcoins
+
+Los BTC puede fragmentarse en Satoshis. Un BTC representa 100.000.000 Satoshis.
+
+Si Alice desea enviar 0.6 BTC a Bob, al disponer de tres salidas de 0.2, 0.3 y 0.5, debe agrupar N cantidad de salidas que le permitan igualar o superar el objetivo de transferir 0.6 BTC a Bob. Como no es posible igualar, utilizará las salidas de 0.2 y 0.5, formando 0.7 BTC.
+
+Dichos BTC se dividen en tres partes, 0.6 para la wallet receptora de Bob y concretar el pago, un 0.09 como el vuelto o el retorno a la billetera de Alice y podemos considerar un 0.01 como comisión para el minero.
+
+El vuelto o retorno se convierte en una nueva salida para la wallet de Alice, quedando en ella dos salidas de 0.09 y la de 0.3 (que no fue utilizada) y un saldo total de 0.39 BTC. El restante 0.01 se enviará al minero del bloque convirtiéndose en una salida para su cuenta.
+
+![Flujo de transacciones Input/Output en Bitcoin](/images/bitcoin-inputs-outputs.png)
+
+En este ejemplo, el output de Alice tiene como destino a Bob, mientras que el input de Bob tiene como emisor a Alice.
+
+**Las entradas y salidas dependen del punto de vista de la dirección**. Para la dirección de Alice, una transacción puede considerarse output, ya que está enviando valor a la cuenta de Bob, que interpreta como input la misma transacción. Cuando Bob utilice esos BTC como salida, será la entrada de alguien más.
+
+Los inputs y outputs utilizan mecanismos de encriptación y comprobación de las claves para su utilización. Es así como **una wallet guarda las claves privadas para la utilización de un UTXO** (de una salida) y la misma es capaz de demostrar ser el owner de fracciones de bitcoin. Todo este complejo mecanismo es posible gracias al lenguaje de programación llamado Bitcoin Script.
+
+## Conclusión
+La transferencia de valor en Bitcoin es un mecanismo complejo, que seguramente tengas que leer varias veces y apoyarte de otras fuentes para entender en profundidad sobre cómo se construye las transacciones a partir de entradas y salidas.
+
+Es posiblemente la gran innovación de Satoshi Nakamoto para la construcción de este gran sistema de pagos e intercambio de valor, como lo es la Blockchain de Bitcoin.
