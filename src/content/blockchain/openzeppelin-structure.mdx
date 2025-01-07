@@ -1,0 +1,55 @@
+---
+title: 'OpenZeppelin: Estructuras De Datos'
+description: 'Manipular grandes cantidades de datos en un contrato inteligente puede volverse un problema si debemos realizar operaciones complejas con los mismos. Tanto los Array como los Mapping de Solidity nos serán muy útiles, pero sus funcionalidades pueden quedar algo limitadas en casos de uso complejos.'
+image: '/tech/openzeppelin.png'
+pubDate: '07/01/2023'
+englishMetadata: {
+  title: 'OpenZeppelin: Data Structures',
+  description: 'Manipulating large amounts of data in a smart contract can become a problem if we must perform complex operations with it. Both Solidity Array and Mapping will be very useful to us, but their functionalities may be somewhat limited in complex use cases.'
+}
+prev: 'openzeppelin-inspect'
+next: 'openzeppelin-math'
+---
+
+# OpenZeppelin: Estructuras De Datos
+
+Manipular grandes cantidades de datos en un contrato inteligente puede volverse un problema si debemos realizar operaciones complejas con los mismos. Tanto los Array como los Mapping de Solidity nos serán muy útiles, pero sus funcionalidades pueden quedar algo limitadas en casos de uso complejos.
+
+## Extención de Arrays y Mappings
+
+[OpenZeppelin nos ofrece dos utilidades](https://external.ink?to=https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/utils/structs) para **extender el funcionamiento de los Array y de los Mappings**.
+
+Se trata de dos contratos inteligentes que nos permitirán recorrer estas estructuras de datos con más rapidez, localizar datos de forma más eficiente, borrarlos o incluso obtener la cantidad de los mismos.
+
+Estos son [EnumerableSet.sol](https://external.ink?to=https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableSet.sol) y [EnumerableMap.sol](https://external.ink?to=https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/structs/EnumerableMap.sol), tanto para Arrays como para Mappings respectivamente.
+
+Ambos se declaran de forma muy sencilla haciendo la importación correspondiente de la librería.
+
+```js
+contract ExampleEnumerableSet {
+  // Importamos la librería
+  using EnumerableSet for EnumerableSet.AddressSet;
+
+  // Declaramos un Set de datos
+  EnumerableSet.AddressSet private mySet;
+}
+```
+
+```js
+contract ExampleEnumerableMap {
+  // Importamos la librería
+  using EnumerableMap for EnumerableMap.UintToAddressMap;
+
+  // Declaramos un Map de datos
+  EnumerableMap.UintToAddressMap private myMap;
+}
+```
+
+Al implementar estas librerías, ya no necesitaremos utilizar Array y Mapping. En su lugar, implementaremos estas estructuras de datos que nos aportan grandes funcionalidades adicionales para resolver casos de uso complejos.
+
+Tal vez no sea recomendable utilizar este tipo de librerías si tenemos que resolver casos de uso sencillos como llevar el balance de una cuenta en un Mapping o guardar datos de los usuarios del contrato.
+
+Si al momento de estar desarrollando el contrato detectas que necesitarás realizar operaciones complejas con este tipo de estructuras de datos, es momento de que entre en juego estas utilidades para simplificar nuestro trabajo.
+
+---
+Post creado en colaboración con el [Curso de OpenZeppelin](https://external.ink?to=https://platzi.com/cursos/openzeppelin/) de **Platzi**.

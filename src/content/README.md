@@ -27,3 +27,12 @@
 - solana-accounts-archivers
 - solana-wrap-up
 
+**OpenZeppelin content order:**
+- openzeppelin-users
+- openzeppelin-timelock
+- openzeppelin-inspect
+- openzeppelin-structure
+- openzeppelin-math
+- openzeppelin-escrow
+- openzeppelin-upgradeable
+- openzeppelin-governance

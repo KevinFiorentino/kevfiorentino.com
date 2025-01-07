@@ -1,0 +1,49 @@
+---
+title: 'OpenZeppelin: Matemática y Criptografía'
+description: 'Dentro del repositorio de OpenZeppelin encontrarás una serie de contratos útiles para resolver problemas frecuentes, como la resolución de operaciones matemáticas o mecanismos criptográficos.'
+image: '/tech/openzeppelin.png'
+pubDate: '07/01/2023'
+englishMetadata: {
+  title: 'OpenZeppelin: Mathematics and Cryptography',
+  description: 'Within the OpenZeppelin repository you will find a series of contracts useful for solving common problems, such as solving mathematical operations or cryptographic mechanisms.'
+}
+prev: 'openzeppelin-structure'
+next: 'openzeppelin-escrow'
+---
+
+# OpenZeppelin: Matemática y Criptografía
+
+Dentro del repositorio de OpenZeppelin encontrarás una serie de **contratos útiles para resolver problemas frecuentes**. Uno de ellos, es la **resolución de operaciones matemáticas** y evitar problemas con estas.
+
+## Resolución de problemas matemáticos
+
+Las variables numéricas, tanto con signo como sin signo, solían tener un problema denominado **Overflow** y **Underflow**.
+
+Cuando una variable entera llega a su límite máximo que puede representar, y se le suma uno, se reinicia a cero. Caso contrario, lo mismo ocurre cuando se encuentra en su límite mínimo y se le resta uno, pasa al valor máximo que puede representar.
+
+Por ejemplo, si una variable puede almacenar como máximo el valor `999`, al sumarle uno pasará a `000` y si le restamos uno a este vuelve a `999`.
+
+Afortunadamente, **el problema ha sido resuelto** a partir de la versión `0.8.0` del compilador de Solidity. Si ocurriese uno de estos tipos de errores, se lanzará un error y se revierte la operación
+
+Es muy importante tener en cuenta la compatibilidad hacia atrás. Contratos inteligentes que fueron desarrollados con versiones anteriores a la `0.8.0` aún tienen este problema que puede ser resulto con librerías que hagan las respectivas validaciones como [Math de OpenZeppelin](https://external.ink?to=https://docs.openzeppelin.com/contracts/2.x/api/math).
+
+Si te encuentras realizando mantenimiento a contratos inteligentes desarrollados hace algunos años, es posible que te encuentres con librerías como [SafeMath](https://external.ink?to=https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/utils/math) de OpenZeppelin para resolver estos problemas.
+
+Como desarrollador de contratos inteligentes, será muy importante que estudies este tipo de vulnerabilidades.
+
+## Encriptación de información
+
+Si algo caracteriza a Blockchain es la criptografía. Mucha información se encripta de forma simétrica o asimétrica para realizar transferencias y tener privacidad en la información. OpenZeppelin implementa una librería para trabajar con información encriptada.
+
+La librería ECDSA de OpenZeppelin te servirá para **hacer validaciones de hashes y verificar información encriptada**.
+
+No se trata de un caso de uso frecuente, pero podemos encontrarnos con escenarios donde una función reciba información encriptada y debamos **validar el emisor de la misma haciendo alguna comparación de hashes**.
+
+Caso contrario, podemos tener la necesidad de encriptar la información dentro del contrato para enviarla a algún receptor o almacenarla en este formato.
+
+> **Nota:** Cuando trabajes con hashes en Solidity, tal vez te llame la atención la palabra [Keccak](https://external.ink?to=https://www.cyberseguridad.net/keccak-es-el-algoritmo-elegido-como-sha-3). Keccak se trata de un poderoso algoritmo de encriptación asimétrico. Ideal para encriptar contraseñas o realizar validaciones de datos.
+
+Más allá de la necesidad que tengamos en nuestro contrato de manipular información encriptada. Recuerda que todo en Blockchain es público, de alguna u otra manera, tanto los datos como el código fuente del contrato. Te aconsejo estudiar bien la situación y tal vez trabajar con procesamiento off-chain cuando debas manipular información sensible.
+
+---
+Post creado en colaboración con el [Curso de OpenZeppelin](https://external.ink?to=https://platzi.com/cursos/openzeppelin/) de **Platzi**.

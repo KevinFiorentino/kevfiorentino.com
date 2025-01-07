@@ -1,0 +1,158 @@
+---
+title: 'OpenZeppelin: Manejo De Usuarios'
+description: 'Una necesidad muy frecuente en un contrato inteligente es poder controlar usuarios. El acceso al contrato y restringir el mismo al dueño del contrato.'
+image: '/tech/openzeppelin.png'
+pubDate: '07/01/2023'
+englishMetadata: {
+  title: 'OpenZeppelin: User Management',
+  description: 'A very common need in a smart contract is to be able to control users. Access to the contract and restrict it to the owner of the contract.'
+}
+next: 'openzeppelin-timelock'
+---
+
+# OpenZeppelin: Manejo De Usuarios
+
+Una necesidad muy frecuente en un contrato inteligente es poder controlar usuarios. El acceso al contrato y restringir el mismo al dueño del contrato.
+
+## Propiedad de un contrato
+
+Por lo general, la dirección que despliega el contrato se convierte en el owner del mismo. Puedes obtener la dirección de quién realice el despliegue con `msg.sender`, asignárselo a una variable y, con la misma, hacer la validación del dueño del contrato.
+
+```js
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >=0.7.0 <0.9.0;
+
+contract MiContrato {
+  address private owner;
+
+  constructor() {
+    owner = msg.sender;
+  }
+
+  modifier onlyOwner() {
+    require(msg.sender == owner, "Debes ser el owner del contrato para continuar");
+    _;
+  }
+
+  function functionParaElOwner() public onlyOwner {}
+}
+```
+
+### Propiedad del contrato con OpenZeppelin
+
+Al tratarse de un caso de uso muy trivial e importante, puedes utilizar una librería de OpenZeppelin para solucionarlo en menos líneas de código.
+
+```js
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >=0.7.0 <0.9.0;
+
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+contract MiContrato is Ownable {
+  function functionParaElOwner() public onlyOwner {}
+}
+```
+
+Tu contrato hereda de [Ownable](https://external.ink?to=https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol) para disponer del modificador `onlyOwner`. De esta forma, **aseguras tu contrato a no cometer ningún error** con respecto a la manipulación de su dueño.
+
+### Cambiar el dueño de un contrato
+
+El contrato Ownable de OpenZeppelin trae consigo **dos características más que pueden serte de utilidad** en la lógica que tengas que desarrollar en tu propio contrato.
+
+La primera es la posibilidad de **cambiar el dueño del contrato**. La función `transferOwnership(address)` recibe por parámetro una dirección y asignará la misma como nuevo owner del contrato.
+
+Cabe destacar que solo el actual dueño del contrato puede llamar a esta función y ceder la propiedad del contrato.
+
+La segunda característica es la posibilidad de que **el dueño actual del contrato renuncie a este**. La función `renounceOwnership()` le asignará un 0 a la variable que guarda la dirección del dueño del contrato, haciendo imposible su recuperación.
+
+> ¡Ten cuidado!
+> Es importante tener cuidado con esta función, ya que el contrato podría quedar inutilizable si nadie es el owner del mismo.
+
+## Contratos con múltiples roles
+
+En determinados contratos, **a veces no es suficiente disponer solo de un owner** del mismo. **Podemos necesitar tener dos, tres o N cantidad de roles diferentes**. Cada uno con sus respectivas responsabilidades.
+
+Podemos **definir la cantidad de roles que vamos a necesitar en nuestro contrato**. Sin embargo, aún requerimos que exista un único dueño que asigne posteriormente los roles a otras cuentas.
+
+Importa y hereda [AccessControl](https://external.ink?to=https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/AccessControl.sol) desde OpenZeppelin para comenzar a definir tus propios roles.
+
+```js
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >=0.7.0 <0.9.0;
+
+import "@openzeppelin/contracts/access/AccessControl.sol";
+
+contract ContratoConRoles is AccessControl {
+
+  bytes32 public constant ROL_ADMIN = keccak256("ROL_ADMIN");
+  bytes32 public constant ROL_USUARIO = keccak256("ROL_USUARIO");
+
+  constructor() {
+    _grantRole(ROL_ADMIN, msg.sender);
+  }
+
+  function soloAdmin() public  {
+    require(hasRole(ROL_ADMIN, msg.sender), "Esta funcion solo puede ser utilizada por el ADMIN");
+  }
+
+  function soloUsuario() public  {
+    require(hasRole(ROL_USUARIO, msg.sender), "Esta funcion solo puede ser utilizada por un USUARIO");
+  }
+
+  function agregarRol(bytes32 role, address account) public {
+    require(hasRole(ROL_ADMIN, msg.sender), "Esta funcion solo puede ser utilizada por el ADMIN");
+
+    _grantRole(role, account);
+  }
+}
+```
+
+La cuenta que despliega el contrato, será la dueña del mismo por defecto, asignando este en el constructor del contrato. Luego de esto, puede utilizar la función `agregarRol()` para asignar roles a otras cuentas.
+
+La creación de roles se realiza de la forma:
+
+```js
+bytes32 public constant ROL_ADMIN = keccak256("ROL_ADMIN");
+```
+
+La función `keccak256()` encripta y convierte en `bytes32` el nombre del rol para poder asignarlo a las cuentas posteriormente de forma segura.
+
+La misma crea una función pública para que puedas obtener el hash del rol y poder utilizarlo.
+
+```js
+ROL_ADMIN = 0x7e5b835f8ef15bb117d49cb6d0658113bc08d41d8a6edf12d3d1feb5c5875330
+ROL_USUARIO = 0x575582185c1302752a00c2a38ce472577737eb5e4ab29b34daf1ccaa4c9fe08a
+```
+
+La asignación de los roles debe hacerse en bytes32 y no con el String con el que fue definido:
+
+### Manipulación de roles
+
+Es importante destacar que, así como el owner del contrato puede asignar roles, **también puede quitar roles** con la función `revokeRole(address)`.
+
+Las propias cuentas pueden **renunciar a un rol** si consideran que ya no lo necesita o no lo quieren con la función `renounceRole(bytes32,address)`.
+
+Puede no ser necesario crear un `ROL_ADMIN`, ya que el contrato `AccessControl` ya dispone de este rol por defecto.
+
+```js
+bytes32 public constant DEFAULT_ADMIN_ROLE = 0x00;
+```
+
+A partir de todas estas características que necesitas para el manejo de roles, puedes desarrollar tus contratos de la forma más conveniente.
+
+## Conclusión
+
+Tener la posibilidad de **que una sola cuenta ejecute determinadas acciones en un contrato puede llevar a centralizar el mismo**. Impleméntalo en casos de uso donde verdaderamente una sola persona deba poder gestionarlo y tener un buen motivo para que así sea.
+
+Sin embargo, administrar correctamente el owner de un contrato es crucial para evitar robos de fondos o identidades en un proyecto y utilizar contratos ya probados y auditados como lo es Ownable de OpenZeppelin es más que aconsejable hacerlo.
+
+Sabemos que la principal filosofía de Blockchain es la descentralización, pero **en determinados casos de uso se puede requerir tareas centralizadas** en pocos usuarios.
+
+No necesariamente un contrato va a manipular grandes fondos de dinero, y si es el caso, pueden existir razonables motivos para utilizar roles y privilegios para administrar estos. Lo importante es que los usuarios del contrato sepan que esto es así y estén de acuerdo.
+
+Por ejemplo, un contrato que guarda información de estudiantes y sus notas. Los propios estudiantes no deben ser capaz de modificar sus datos, solo un profesor debe poder hacerlo.
+
+Implementa la administración de roles de forma inteligente para crear tus contratos y que cada tipo de cuenta tenga sus responsabilidades. El caso de uso que tengas que resolver determinará cómo debes desarrollar tu contrato.
+
+---
+Post creado en colaboración con el [Curso de OpenZeppelin](https://external.ink?to=https://platzi.com/cursos/openzeppelin/) de **Platzi**.
