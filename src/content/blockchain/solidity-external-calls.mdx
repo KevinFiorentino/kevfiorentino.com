@@ -1,0 +1,73 @@
+---
+title: 'Solidity: Vulnerabilidades Con Llamadas Externas'
+description: 'Un contrato inteligente no solo puede recibir transacciones de un usuario, también puede ser otro contrato inteligente el que realice el llamado. Veamos vulnerabilidades que puede ser explotada si se hace mal uso de los llamados entre contratos.'
+image: '/tech/solidity.webp'
+pubDate: '06/01/2023'
+englishMetadata: {
+  title: 'Solidity: Vulnerabilities With External Calls',
+  description: "A smart contract can not only receive transactions from a user, it can also be another smart contract that makes the call. Let's look at vulnerabilities that can be exploited if calls between contracts are misused."
+}
+prev: 'solidity-storage'
+next: 'solidity-dos-attack'
+---
+
+# Solidity: Vulnerabilidades Con Llamadas Externas
+
+Un contrato inteligente no solo puede recibir transacciones de un usuario, también **puede ser otro contrato inteligente el que realice el llamado**. Veamos vulnerabilidades que puede ser explotada si se hace mal uso de los llamados entre contratos.
+
+## Diferencias entre las funciones Call y DelegateCall
+
+La función `call` es utilizada para hacer llamadas a otro contrato inteligente a través de su address y enviar ETH o configurar el uso del gas.
+
+```JS
+addressToSend.call{value: msg.value, gas: 10000}("");
+```
+
+Otra función similar es `delegatecall`, pero solo puede hacer llamados y no enviar ETH.
+
+```JS
+addressToSend.delegatecall("");
+```
+
+Además de que `call` sea `payable` y `delegatecall` no lo es, tienen otra importante diferencia que es el contexto en donde se ejecutan. Cuando utilizas `call` para llamar a otro contrato, el código que ejecutará pertenece a otro contexto. Es el comportamiento más lógico que uno quiere y puede esperar, ya que es otro contrato, posiblemente desarrollado por otra persona y no nos interesa lo que haga. Esto no es así con `delegatecall`.
+
+`delegatecall` **no posee contexto de ejecución propio**. Al usar esta función, la lógica y los cambios de estado se realizan en el contrato principal que originó la llamada con `call`. En otras palabras, el Contrato A sede su estado, valores de variables y demás, a un Contrato B y este tendrá acceso total al primer contrato y su contexto.
+
+No es recomendable la utilización de `delegatecall` salvo escasas excepciones como llamar a una librería externa o solo utilizarlo para funciones puras que no modifique el estado del contrato.
+
+## Validación de llamadas a contratos externos
+
+A veces el comportamiento de nuestro contrato **depende del resultado de una llamada externa a otro contrato**. Esto lo debemos verificar correctamente y no confiarnos de que las cosas en el otro contrato fueron exitosas.
+
+Si realizas una llamada a otro contrato, con excepción de que realmente no nos interese el resultado, haz la validación necesaria para saber qué sucedió en la llamada.
+
+```JS
+uint llamadasExitosas;
+function incrementarLlamadas(address direccion) public {
+  direccion.call(abi.encodedPacked("algunaFuncion()"));
+  // Si la llamada tuvo un problema, no se está realizando la verificación y estamos incrementando la variable de todos modos
+  llamadasExitosas++;
+}
+```
+
+Es una buena práctica utilizar la función `revert()` para revertir las operaciones realizadas en caso de un error.
+
+```JS
+uint llamadasExitosas;
+function incrementarLlamadas(address direccion) public {
+  (bool resultado) = direccion.call(abi.encodedPacked("algunaFuncion()"));
+  if (!resultado) revert();
+  if (resultado) llamadasExitosas++;
+}
+```
+
+El otro contrato puede haberse quedado sin gas o haber algún tipo de problema en la llamada como para que la misma no se haya concretado correctamente. **Asegura el código de tu contrato antes de continuar luego de llamados externos** y evitar gastos innecesarios.
+
+Hacer una llamada a otro contrato inteligente no deja de ser similar al consumo de una API de un tercero. Debemos actuar de una manera u otra dependiendo el resultado satisfactorio o no de la misma.
+
+## Conclusión
+
+Las llamadas externas en Solidity presentan riesgos importantes si no se manejan con cuidado. Es fundamental validar los resultados de las interacciones con otros contratos y evitar el uso innecesario de funciones como `delegatecall`, que puede comprometer el estado del contrato llamante. Implementar buenas prácticas de seguridad minimiza errores y protege la lógica de los contratos inteligentes.
+
+---
+Post creado en colaboración con el [Curso de Seguridad de Smart Contracts](https://external.ink?to=https://platzi.com/cursos/seguridad-smart-contracts/) de **Platzi**.

@@ -13,6 +13,16 @@
 - bitcoin-script
 - bitcoin-cli
 
+**OpenZeppelin content order:**
+- openzeppelin-users
+- openzeppelin-timelock
+- openzeppelin-inspect
+- openzeppelin-structure
+- openzeppelin-math
+- openzeppelin-escrow
+- openzeppelin-upgradeable
+- openzeppelin-governance
+
 **Solana content order:**
 - solana-architecture
 - solana-vs-ethereum
@@ -27,12 +37,13 @@
 - solana-accounts-archivers
 - solana-wrap-up
 
-**OpenZeppelin content order:**
-- openzeppelin-users
-- openzeppelin-timelock
-- openzeppelin-inspect
-- openzeppelin-structure
-- openzeppelin-math
-- openzeppelin-escrow
-- openzeppelin-upgradeable
-- openzeppelin-governance
+**Solidity content order:**
+- solidity-good-practices
+- solidity-global-variables
+- solidity-storage
+- solidity-external-calls
+- solidity-dos-attack
+- solidity-dos-gas
+- solidity-reentrancy-attack
+- solidity-cross-reentrancy-attack
+- solidity-self-destruct-attack
