@@ -1,0 +1,107 @@
+---
+title: 'Bitcoin CLI'
+description: 'Un CLI es una interfaz de línea de texto que nos ayuda a interactuar con un proyecto, obtener información, ejecutar tareas, etc. El CLI de Bitcoin es muy similar a otros que tal vez ya conozcas y nos permite interactuar con la blockchain.'
+image: '/tech/bitcoin.png'
+pubDate: '05/01/2023'
+englishMetadata: {
+  title: 'Bitcoin CLI',
+  description: 'A CLI is a text-line interface that helps us interact with a project, obtain information, execute tasks, etc. The Bitcoin CLI is very similar to others that you may already know and allows us to interact with the blockchain.'
+}
+prev: 'script'
+---
+
+Un CLI (command-line interface) es una interfaz de línea de texto que nos ayuda a interactuar con un proyecto, obtener información, ejecutar tareas, etc. **El CLI de Bitcoin es muy similar a otros que tal vez ya conozcas**.
+
+## Primeros comandos con bitcoin-cli
+
+Si tienes un nodo de Bitcoin corriendo, eso significa que el dominio de Bitcoin denominado `bitcoind` está haciendo su trabajo y **tienes disponible el CLI de Bitcoin para interactuar con la Blockchain**.
+
+Bitcoin-cli es una interfaz de texto que funciona por RPC sobre HTTP y nos permitirá lanzar comandos de todo tipo para interactuar con la información de la Blockchain de Bitcoin, crear transacciones, crear billeteras, entre muchas otras acciones.
+
+Puedes comenzar lanzando el comando `bitcoin-cli getblockcount` para realizar un contenido de bloques de la cadena y evaluar en qué altura se encuentra la ledger de tu nodo, si está actualizada o aún debe actualizarse.
+
+![Altura de la cadena de la Blockchain de Bitcoin](/images/bitcoin-cli1.png)
+
+Muchos CLI suelen tener un comando para solicitar ayuda y visualizar qué comandos hay disponible en la interfaz. Bitcoin-cli no es la excepción, puedes utilizar el comando bitcoin-cli help para ver una lista de todos los comandos que existen y cómo se utilizan estos.
+
+Cualquier comando que llame tu atención y desees utilizar, puedes obtener más información sobre el mismo pasándole como parámetro la palabra `help` y lograr visualizar cómo se utiliza este comando particularmente. Por ejemplo, si quieres enviar BTC, puedes explorar el comando `bitcoin-cli send help`, o si quieres visualizar las billeteras creadas en tu nodo, puedes utilizar el comando `bitcoin-cli listwallets help`.
+
+Existen realmente muchos comandos que conocerás poco a poco. El Profesor Marulanda se ha tomado el trabajo de dejarnos una interesante [guía con los comandos más importantes](https://external.ink?to=https://github.com/js-ms/platzi-bitcoin-core/blob/main/bitcoin-cli.md) y es un buen punto para comenzar a interactuar con la Blockchain de Bitcoin.
+
+Luego de correr un nodo con éxito, explorar el bitcoin-cli es el segundo paso. Te animo a que continúes dando tus primeros pasos con Bitcoin Core por este camino.
+
+## Utilizando Bitcoin CLI
+
+Bitcoin-cli te permite hacer todo lo que seguramente ya conoces sobre Bitcoin y el mundo Blockchain. Explorar transacciones, crear billeteras, enviar y recibir BTC por medio de una transacción, entre otras funcionalidades.
+
+Un buen primer paso para jugar con bitcoin-cli es la **creación de una wallet y lograr recibir o enviar valor con ella**. Veamos paso a paso y conozcamos más sobre cómo utilizar el CLI de Bitcoin.
+
+### Paso 1: creación de la billetera
+
+Para crear tu primera billetera basta con ejecutar el comando `bitcoin-cli createwallet ""`. Considera que el comando puede fallar si ya tienes una wallet creada en tu computador.
+
+Para verificar la existencia de la billetera, utiliza el comando `ls /.bitcoin/data/testnet3/wallets/`.
+
+![Creación de billetera con bitcoin-cli](/images/bitcoin-cli-step1.webp)
+
+Recuerda que Bitcoin guarda todo tipo de información serializada en archivos `.dat`.
+
+### Paso 2: crear nueva dirección
+
+Posterior a la creación de la wallet, tienes que crear una dirección dentro de la misma para poder recibir o enviar fondos. El simple comando `bitcoin-cli getnewaddress -addresstype legacy` te permitirá realizar esta acción y verás por consola la dirección creada.
+
+![Creación de dirección con bitcoin-cli](/images/bitcoin-cli-step2.webp)
+
+### Paso 3: obtención de fondos
+
+Si ya dispones de tu dirección, necesitarás de una faucet de Bitcoin para obtener BTC de prueba. Para eso, es necesario que tu nodo esté corriendo en la tesnet. Si decidiste correrlo en la mainnet, tendrás que utilizar BTC de verdad.
+
+Existen varios faucets de Bitcoin que puedes utilizar para obtener un poco de BTC, puedes explorar algunos de ellos:
+
+- Bitcoin Testnet Faucet
+- Testnet Faucet Mempool
+
+> **Nota:** algunos faucets no son estables y dejan de funcionar con el tiempo o tienes problemas momentáneos. Intenta reiteradas veces hasta lograr encontrar uno que pueda entregarte algo de BTC para continuar con tus pruebas.
+
+Una vez hayas localizado un faucet, copia la dirección obtenida en el paso anterior, ingrésala y en cuestión de minutos obtendrás algunos Satoshis.
+
+Verifica el saldo de tu billetera con el comando `bitcoin-cli getbalance`.
+
+![Verificación del balance de una wallet con bitcoin-cli](/images/bitcoin-cli-step3.webp)
+
+### Paso 4: confirmación de transacciones
+
+También puedes confirmar tu transacción verificando cuántos bloques hay por encima del bloque que contiene tu transacción. Muchas empresas esperan, por ejemplo, 5 o 10 bloques para tener seguridad de que sus transacciones fueron confirmadas correctamente.
+
+Para eso, utiliza el comando `bitcoin-cli getbalance "*" N`, donde `N` es la cantidad de bloques que deseas verificar para confirmar tu transacción.
+
+![Confirmación de transacciones con bitcoin-cli](/images/bitcoin-cli-step4.webp)
+
+### Paso 5: listado de transacciones
+
+Visualiza todas las transacciones relacionadas a tu billetera con el comando `bitcoin-cli listtransactions`. Verás toda la información asociada a cada una de ellas.
+
+Para inspeccionar una transacción en particular, copia el `txid` y utiliza el comando `bitcoin-cli gettransaction <txid>`.
+
+Obtén aún más información de una transacción con el comando `bitcoin-cli gettransaction <txid> false true` como los scripts de entrada y de salida.
+
+### Paso 6: envío de BTC
+
+Teniendo lista tu billetera, una dirección y luego de haber solicitado fondos de prueba, puedes crear una transacción para enviar BTC a otra dirección.
+
+El comando `bitcoin-cli sendtoaddress <address> 0.0001` te permitirá enviar valor a otra billetera. Solo asegúrate de tener los fondos suficientes y de ingresar correctamente la dirección destino.
+
+
+
+![Envío de BTC a través de bitcoin-cli](/images/bitcoin-cli-step6.webp)
+
+Este comando te devolverá el `txid` de la transacción que puedes inspeccionar como has hecho en el paso anterior.
+
+## Conclusión
+
+Has visto lo fácil que es utilizar el bitcoin-cli para crear una wallet, direcciones, obtener y enviar bitcoins a través de una interfaz de texto.
+
+Recuerda que estos comandos funcionan a través de RPC sobre HTTP, por lo que son las bases para construir cualquier aplicación web o móvil como un explorador de bitcoin, una wallet u otro tipo de app para el intercambio de valor entre usuarios.
+
+---
+Post creado en colaboración con el [Curso de Bitcoin](https://external.ink?to=https://platzi.com/cursos/bitcoin-developers/) de **Platzi**.

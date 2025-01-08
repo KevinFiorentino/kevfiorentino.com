@@ -1,0 +1,63 @@
+---
+title: 'Solana: Cloudbreak'
+description: 'Solana se diferencia de otras Blockchains al no utilizar una base de datos. En su lugar, implementa una lógica de guardado de la información utilizando tanto de memoria RAM como la SSD para diferentes propósitos, el cual se denominó como Cloudbreak.'
+image: '/tech/solana.webp'
+pubDate: '08/22/2023'
+englishMetadata: {
+  title: 'Solana: Cloudbreak',
+  description: 'Solana differs from other Blockchains by not using a database. Instead, it implements information saving logic using both RAM and SSD for different purposes, which was called Cloudbreak.'
+}
+prev: 'pipelining'
+next: 'accounts-archivers'
+---
+
+# Solana: Cloudbreak
+
+Tal vez te hayas preguntado en **dónde almacena una Blockchain su información**. A medida que se validan transacciones, a cada segundo el peso de toda esa información aumenta.
+
+## Bases de datos en una Blockchain
+
+En la actualidad, tanto la Blockchain de Bitcoin como la de Ethereum rondan los 350 GB de información almacenada. Un número que sin dudas continuará creciendo con el tiempo.
+
+Toda esta información tiene que estar siendo escrita y leída continuamente, por lo que se necesita de un proceso rápido que permita esto.
+
+La Blockchain de Bitcoin y Ethereum utilizan una base de datos NoSQL clave/valor llamada LevelDB para almacenar la información. Se trata de un popular sistema para el guardado y acceso rápido a la información que es desarrollado y mantenido por Google y otras importantes bases de datos como IndexedDB lo utilizan.
+
+Pero LevelDB, a pesar de sus interesantes prestaciones, no es lo suficientemente óptima para el propósito de una Blockchain. Permite aproximadamente 5000 transacciones por segundo (TPS), no permite hacer escrituras y lecturas en simultáneo.
+
+Otra opción podría ser almacenar la información en memoria RAM, pero no es lo más óptimo tratándose de muchos gigas de información.
+
+Tal vez una buena opción sería guardar la información en una memoria SSD, si bien es más lenta que una RAM, pero SSD modernos pueden alcanzar los 32 subprocesos simultáneos, lo que significa 370.000 lecturas por segundo o 185.000 TPS.
+
+Si bien tanto GPU como SSD son rápidas, el problema siempre se encuentra en la CPU que suele ser más lenta formando así un cuello de botella.
+
+## Manejo de información en Solana
+
+Solana se diferencia de otras Blockchains al **no utilizar una base de datos** como LevelDB. En su lugar, **implementa una lógica de guardado de la información utilizando tanto de memoria RAM como la SSD para diferentes propósitos**, el cual se denominó como Cloudbreak.
+
+La información se registra utilizando dos técnicas:
+
+- Archivos mapeados en memoria.
+- Operaciones secuenciales en vez de aleatorias.
+  - El índice de cuentas y bifurcaciones se almacena en la RAM.
+  - Las cuentas se almacenan en archivos en memoria de hasta 4 MB de tamaño.
+  - Cada mapa de memoria solo almacena cuentas de una única bifurcación propuesta.
+  - Los mapas se destruyen aleatoriamente en tantos SSD como estén disponibles.
+  - Se utiliza semántica de copy on writes.
+  - Las escrituras se agregan a un mapa de memoria aleatorio para la misma bifurcación.
+  - El índice se actualiza después de que se completa cada escritura.
+
+Todos estos procesos permiten que las actualizaciones de la cuenta se copien en la escritura y se agreguen a un SSD aleatoria, escalando tanto serialmente como horizontalmente.
+
+Otra optimización que implementa Solana es un Garbage Collector o recolector de basura que **libera los espacios en memoria de las bifurcaciones que no fueron confirmadas** y llevan mucho tiempo de retraso con respecto al estado actual de la red.
+
+Entiéndase por bifurcación a la cadena de transacciones que continuamente los nodos crean al validar nuevas transacciones y proponen a la red para alcanzar el consenso sobre cuál de todas ellas es la correcta. La gran mayoría de las bifurcaciones se descartan y ese espacio en memoria debe liberarse para no consumir recursos de la red.
+
+## Conclusión
+
+Tal vez uno de los temas más complicados de comprender sobre el funcionamiento de Solana. Su base de datos y persistencia de los mismos. En síntesis, Solana hace uso de todos los recursos disponibles en el sistema entre todos los nodos de la red para poder registrar la información.
+
+La misma se encuentra en todo momento replicada en las memorias RAM o SSD de los nodos de la red y se busca optimizar la lectura a esta información mapeando la misma y de manera secuencial.
+
+---
+Post creado en colaboración con el **Curso de Solana** de **Platzi**.

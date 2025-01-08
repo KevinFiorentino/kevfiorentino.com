@@ -1,0 +1,46 @@
+---
+title: 'Solana: Resumen Funcionamiento Arquitectura'
+description: 'Resumen del funcionamiento de los componentes de Solana que la hacen tan especial en comparación con otras Blockchains como Ethereum o Bitcoin.'
+image: '/tech/solana.webp'
+pubDate: '08/20/2023'
+englishMetadata: {
+  title: 'Solana: Summary of Operation Architecture',
+  description: 'Summary of the operation of Solana components that make it so special compared to other Blockchains such as Ethereum or Bitcoin.'
+}
+prev: 'accounts-archivers'
+---
+
+# Solana: Resumen Funcionamiento Arquitectura
+
+Ahora ya entiendes qué hace tan especial a Solana en comparación con otras Blockchains como Ethereum o Bitcoin y también comprendes el por qué de sus grandes prestaciones.
+
+## Repaso del funcionamiento de Solana
+
+A lo largo de este conjunto de artículos, hemos visto cada uno de los componentes que construyen a Solana. Hagamos un breve repaso de cada uno de ellos y de cómo interactúan entre sí:
+
+![Componentes de Solana](/images/solana-components.jpg)
+
+Comprendimos cómo la red de Solana utiliza una arquitectura **TDMA (Acceso Múltiple por División de Tiempo)** para el envío en paralelo de miles de transacciones. También sabes que Solana utiliza el protocolo de consenso Proof of Stacke y lo complementa con **Proof of History** para ordenar las transacciones y sincronizar los nodos sin necesidad de que estos tengan que comunicarse. Ambos motivos optimizan el ancho de banda de la red y nos dan una primera explicación de la alta velocidad de esta Blockchain.
+
+En términos de seguridad, el protocolo **Tower BFT** (Bizantine Fault Tolerance) es la propuesta de Solana para enfrentar la tolerancia a fallos que una Blockchain debe tener y que la red resista ataques o intentos de bifurcación en la cadena de transacciones de PoH.
+
+El envío de información constante que se produce en la red se optimiza gracias a **Turbine** donde los mensajes se envía bajo el protocolo UDP y los mismos se dividen en pequeños paquetes que se envían a los nodos más cercanos en la red o “nodos vecinos”. Cada nodo es responsable de reconstruir los bloques y ordenarlos y PoH, una vez más, tiene mucho que ver en eso.
+
+**Gulf Stream** también interviene de la mano de Turbine para el envío y propagación de la información por la red de manera determinista, evitando que un mismo nodo reciba un mismo paquete de información más de una vez y optimizando aún más el ancho de banda de la red junto con TDMA y PoH.
+
+Cuando hablamos ya concretamente de correr programas y lógica de un negocio, aparece **Sealevel** que permite la ejecución paralela de miles de transacciones gracias a la arquitectura CUDA (Compute Unified Device Architecture) de Nvidia.
+
+El **Pipelining** que Solana implementa también tiene mucho que ver con la ejecución paralela y rápida de contratos inteligentes cuando se trata de optimizar el rendimiento de cada paso que una transacción debe atravesar para ser confirmada.
+
+Con respecto al almacenamiento de la información, sabemos que Solana en su máxima capacidad puede generar varios petabytes por año y almacenar esa información requiere de muchos recursos. Para resolver esto, Solana implementa nodos **Archivers** que ejecutan una prueba de replicación cada determinado tiempo y aseguran que la ledger de Solana se encuentre persistida en múltiples nodos y ninguna porción de información se pierda. Así, los nodos no tienen necesidad de guardar tanta cantidad de información y son recompensados por guardar al menos una parte.
+
+Además de los Archivadores y el cómo se guarda la información en el tiempo y entre todos los nodos de la red, recuerda que todo en Solana es una **Account** o una cuenta, tanto la información como los programas. A lo igual que muchos sistemas operativos donde los datos se persisten en formato de archivos.
+
+Finalmente, la propia infraestructura de software de Solana implementa múltiples redes para diferentes propósitos como la **Devnet**, **Testnet** y la **Mainnet**, y del lado del desarrollo de software podrás encontrar varias opciones para conectarte a estas redes desde un front-end siendo Solana-Web3.js la más popular.
+
+Solana es un largo camino súper técnico y complicado para entender cómo funciona Solana por dentro. Espero que tantos conceptos sobre redes de computadoras, arquitectura de software, microchips, hardware, tantas herramientas y tecnologías que tal vez sean nuevas para ti, haya sido ameno el aprendizaje y entendimiento de este ecosistema denominado Solana.
+
+**Sin duda, Solana es una magnifica obra de ingeniería de software.**
+
+---
+Post creado en colaboración con el **Curso de Solana** de **Platzi**.

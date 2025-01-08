@@ -1,0 +1,86 @@
+---
+title: 'Bitcoin: Arquitectura P2P'
+description: 'La infraestructura que está por detrás de cualquier Blockchain tiene características únicas para lograr la descentralización de un servicio y que todos sus nodos sean iguales.'
+image: '/tech/bitcoin.png'
+pubDate: '05/01/2023'
+englishMetadata: {
+  title: 'Bitcoin: P2P Architecture',
+  description: 'The infrastructure behind any Blockchain has unique characteristics to achieve the decentralization of a service and make all its nodes equal.'
+}
+prev: 'overview'
+next: 'blocks'
+---
+
+## Bitcoin: Arquitectura P2P
+
+La infraestructura que está por detrás de cualquier Blockchain tiene **características únicas para lograr la descentralización de un servicio** y que todos sus nodos sean iguales.
+
+## Topología, nodos y flujos de transacción en la red Bitcoin
+
+Las redes entre pares o redes *Peer-to-Peer* (P2P), refieren a una distribución de datos homogénea, que se constituye de nodos que comparten el mismo nivel de importancia y funcionalidad. Todos los nodos son pares entre sí. Esta red **otorga la posibilidad de descentralización** que es conocida en Bitcoin, aunque ya se ha usado antes por otros servicios antes de Blockchain.
+
+Su topología se puede describir como “plana”. No hay servidores ni servicios centralizados. Los nodos proveen y reciben servicio recíprocamente, siendo esto el incentivo y el factor principal para la participación dentro de la red. Solamente así es como Bitcoin o cualquier Blockchain logra y mantiene un control descentralizado de los activos.
+
+## Qué es Bitcoin Network
+
+La red de Bitcoin es una colección de nodos corriendo en su protocolo P2P y utilizando proof-of-work para mantener el consenso. Además de esto, existen otros protocolos que están “encima” de la red Bitcoin. Tales como Stratum que fue lanzado hace pocos años para mejorar el rendimiento y la eficiencia del minado.
+
+Estos protocolos adicionales son dados por servidores que se conectan a la red Bitcoin a través de su protocolo y la extienden por sus nodos.
+
+A esto se le conoce como la red extendida de Bitcoin (Extended Bitcoin Network), que engloba el total de la red que incluye todos los protocolos conectados a los componentes del sistema Bitcoin.
+
+## Tipos de nodos Bitcoin
+
+Aunque los nodos de Bitcoin son iguales, estos pueden adoptar roles diferentes dependiendo de la funcionalidad que deban soportar. Un nodo de este sistema es una colección de funciones:
+
+### Network routing node
+
+Esta función permite la conexión y participación dentro de la red. Con ella también validan y propagan transacciones y bloques; descubren y mantienen conexiones en pares.
+
+### Full node o SPV node
+
+Se refiere a la función que permite que dentro de un nodo se almacene una copia total o parcial de la cadena de bloques de Bitcoin, respectivamente. Aquellos que poseen una copia completa, pueden actuar con autonomía para verificar cualquier transacción, además de otras capacidades.
+
+### Pruning node
+Descarga y procesa la menor cantidad de información para validar bloques y transacciones, como un nodo completo, solo que prescindiendo de los bloques antiguos para ahorrar espacio.
+
+### Archive node
+Actualizan la información de nodos nuevos que se agregan o reingresan a la red.
+
+### Mining node
+Estos nodos compiten para crear nuevos bloques haciendo uso de hardware especializado para resolver el algoritmo PoW.
+
+### Wallet
+Esto se refiere a la capacidad de hacer operaciones y transacciones con Bitcoin dentro del software adecuado, dependiendo del dispositivo.
+
+### Network discovery
+
+El proceso en el que un nuevo nodo se conecta a la red, se divide en tres fases. Hay que tomar en cuenta antes, que **la localización geográfica de un nodo no es relevante** para el protocolo:
+
+- **Handshake version message:** entre nodos, aquel que ya estaba en la red entrega información de la versión, fecha, dirección IP y se verifica que ambos nodos estén en el mismo protocolo, para entonces volverse pares.
+- **DNS Seeds:** se solicitan direcciones IP desde este nuevo nodo para nueva conexiones. Estas conexiones son efímeras, por lo que es importante conservar el mayor número lo más posible.
+- **Sync:** la obtención de la base de datos a través de los pares para actualizar y llegar a la altura actual en la cadena de bloques.
+
+## Otras características de la Blockchain de Bitcoin
+
+El funcionamiento completo de Bitcoin es complejo, aquí van algunos conceptos más que tienes que conocer:
+
+- **Descarga de bloque inicial (IBD):** estado temporal en el que, al agregar un nuevo nodo o uno se tiene que actualizar, este debe empezar a descargar los bloques y las transacciones que se están añadiendo al Libro Mayor.
+- **Bitcoin Core:** se refiere a la implementación del protocolo Bitcoin a través del proyecto de código libre de Satoshi Nakamoto. No necesariamente se debe usar - Bitcoin Core para correr el protocolo Bitcoin, aunque este es el más conocido y el estándar actual.
+- **Nodo como servicio:** un nodo que permite que otros componentes puedan comunicarse con él y brindarles información para crear nuevos servicios.
+- **Mempool:** estructura en memoria que contiene todas las transacciones pendientes a minar y agregar a un nuevo bloque. Los nodos validadores toman transacciones de aquí para proponer nuevos bloques.
+
+## Antecedentes y predecesores
+
+**No todo el funcionamiento de Bitcoin es revolucionario y nuevo**. Su creador, Satoshi Nakamoto, se ha inspirado en varios conceptos y conocimientos que surgieron desde la década de los 80´s en adelante.
+
+Desde el mismo árbol de Merkle hasta las pruebas de trabajo del procolo proof-of-work. Bitcoin no fue la primera moneda digital, uno de los primeros intentos, sin éxito, de descentralizar la economía fue b-money. Nakamoto, unió muchas partes y propuso otras para formar el sistema que hoy conocemos como Bitcoin.
+
+Por supuesto, también ha favorecido a la creación de implementaciones similares y en algunos sentidos, mejores, como Ethereum y los Smart Contracts. Y este a su vez se intenta superar con otras Blockchains que llegaron posteriormente como Solana. La tecnología avanza y se supera con cada nueva implementación y proyecto.
+
+## Conclusiones
+
+El funcionamiento de toda la red de Bitcoin es grande y complejo de resumir. Siempre es aconsejable leer el [libro blanco de Bitcoin](https://external.ink?to=https://bitcoin.org/files/bitcoin-paper/bitcoin_es.pdf) si es de tu interés técnico comprender más en profundidad su funcionamiento técnico.
+
+---
+Post creado en colaboración con el [Curso de Bitcoin](https://external.ink?to=https://platzi.com/cursos/bitcoin-developers/) de **Platzi**.

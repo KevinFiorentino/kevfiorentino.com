@@ -1,0 +1,59 @@
+---
+title: 'Solana: Proof Of History (PoH)'
+description: 'Proof of History es la primera gran pieza que compone a Solana. Es un complemento al protocolo de consenso Proof of Stake que permite sincronizar los nodos sin necesidad de que se comuniquen entre ellos.'
+image: '/tech/solana.webp'
+pubDate: '08/28/2023'
+englishMetadata: {
+  title: 'Solana: Proof Of History (PoH)',
+  description: 'Proof of History is Solana first major piece. It is a complement to the Proof of Stake consensus protocol that allows nodes to synchronize without the need for them to communicate with each other.'
+}
+prev: 'ecosystem'
+next: 'tower-bft'
+---
+
+# Solana: Proof Of History (PoH)
+
+Los grandes avances tecnológicos que Solana implementa en la **comunicación entre sus nodos en la red** es el primer motivo que debemos analizar para entender cómo funciona esta Blockchain.
+
+## TDMA: Acceso Múltiple por División de Tiempo
+
+En la era de las telecomunicaciones que nos rodea, nos encontramos en constante intercambio de información con nuestros computadores o celulares conectados a internet.
+
+Los canales por donde se envía la información necesitan estar preparados para recibir datos de miles y miles de fuentes distintas al mismo tiempo y direccionarlos a sus destinos a través de un único medio de transmisión. Este concepto es denominado Multiplexación, permitir más de dos señales de forma simultánea.
+
+Una de las técnicas de multiplexación más difundidas es conocida como TDMA (Time Division Multiple Access). La transmisión de datos se realiza dividiendo el canal de comunicación en “slots” y asignándolos a distintos usuarios que requieren utilizar el mismo.
+
+![Ejemplo transmición de mensajes con TDMA](/images/solana-multiplexacion.png)
+
+Observa la imagen anterior: dos usuarios quieren enviarle un mensaje de texto a otros dos. El primero envía la palabra “Hi” mientras que el segundo envía la palabra “Go”. El canal de transmisión se encuentra dividido en cuatro paquetes en ese instante del tiempo, uno para cada letra de los dos mensajes.
+
+Así es como se envía primero la letra “G”, luego una “H”, luego la “O” para completar la palabra “Go” y luego la “I” que restaba para completar el mensaje “Hi” del primer usuario.
+
+Múltiples transmisiones pueden ocupar un único canal dividido en partes y **entrelazando los paquetes de información de manera tal que no se desperdicie tiempo y la red pueda aprovecharse al máximo**.
+
+TDMA puede utilizarse en cualquier tipo de protocolo de comunicación, ya sea telefonía, televisión por cable o **comunicar nodos de una Blockchain**.
+
+## ¿Qué es Proof of History?
+
+Proof of History es la primera gran pieza que compone a Solana. Es un complemento al protocolo de consenso Proof of Stake que permite sincronizar los nodos sin necesidad de que se comuniquen entre ellos.
+
+**PoH crea una exacta marca de tiempo en cada transacción que ocurre dentro de la red**, haciendo que pueda comprobarse que una transacción ocurrió antes o después que otra.
+
+Al poder comprobar el momento exacto en que ocurrió un mensaje o un evento en la red, **los validadores no necesitan comunicarse entre ellos** para verificarlo. El hash de cada transacción permite verificar criptográficamente el momento y el orden de ocurrencia de cada una de ellas.
+
+### Encadenamiento de datos
+
+Blockchain recibe dicho nombre debido al encadenamiento de bloques utilizando criptografía. Cada nodo contiene el hash del nodo anterior y eso lo convierte en una cadena.
+
+Solana y PoH usan el mismo concepto para **encadenar las transacciones**. Cada una de ellas contiene el hash de la anterior y así se garantiza el orden.
+
+**Dicho hash es la etiqueta de tiempo exacto de ocurrencia de la transacción** y se codifica mediante una función verificable de retardo de alta frecuencia o simplemente VDF (Verifiable Delay Function).
+
+Evitar la comunicación para una más rápida sincronización y que **cada nodo validador pueda reconstruir el encadenamiento de datos por si solo**, es el primer gran factor que convierte a Solana en una Blockchain especial con un optimizado protocolo de consenso mejorando el ya conocido Proof of Stake.
+
+## Conclusión
+
+TDMA para optimizar el uso del ancho de banda y PoH para evitar el envió de mensajes de sincronización y congestionar la red. Ambos mecanismos son solo el puntapié inicial que explica la alta velocidad y performance que la red de Solana puede alcanzar.
+
+---
+Post creado en colaboración con el **Curso de Solana** de **Platzi**.

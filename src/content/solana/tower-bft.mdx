@@ -1,0 +1,91 @@
+---
+title: 'Solana: Tower BFT'
+description: 'Los protocolos de consenso como PoW o PoS tienen como principal objetivo evitar la corrupción de los datos y deben tolerar un determinado porcentaje de nodos fallidos o maliciosos.'
+image: '/tech/solana.webp'
+pubDate: '08/27/2023'
+englishMetadata: {
+  title: 'Solana: Tower BFT',
+  description: 'Consensus protocols such as PoW or PoS have the main objective of avoiding data corruption and must tolerate a certain percentage of failed or malicious nodes.'
+}
+prev: 'proof-of-history'
+next: 'turbine'
+---
+
+# Solana: Tower BFT
+
+¿Qué hace que una Blockchain sea extremadamente poco probable de hackear o corromper? Los protocolos de consenso como PoW o PoS tienen como principal objetivo evitar la corrupción de los datos y **deben tolerar un determinado porcentaje de nodos fallidos o maliciosos**.
+
+## Problema de los generales bizantinos
+
+El problema de los generales bizantinos es una **analogía para plantear un problema común que puede tener cualquier sistema distribuido** cuyos nodos deben ponerse de acuerdo y consensuar una determinada acción.
+
+Imagínalo de la siguiente manera: un gran ejército bizantino dividido en cuatro grupos, cada uno comandado por un general, rodeando un castillo que está siendo defendido por otro ejército.
+
+Personalmente, me gusta representarlo con imágenes del Age of Empires para estimular la imaginación:
+
+![Generales Bizantinos - Age of Empire II](/images/solana-generales-bizantinos.png)
+
+Dichos sub-ejércitos se encuentran posicionados al norte, sur, este y oeste del castillo con el objetivo de conquistar al mismo.
+
+Este gran ejército tiene un problema ¿Cómo coordinar el ataque al castillo? ¿Cómo lograr que los cuatro ejércitos ataquen, o se retiren, al mismo tiempo? Necesitan juntar sus fuerzas para lograr conquistar el castillo.
+
+El problema de los generales bizantinos radica en que **uno o más de ellos puede tener intenciones maliciosas**. Si el ejército tal vez se comunica con señales de humo, ¿Cómo garantizar que la señal de humo de un general no es falsa o no tiene una intención de ir en contra del ejército completo?
+
+Tal vez lo mejor para el ejército es dar un paso atrás y retirarse, pero un general con malas intenciones puede dar la orden de atacar para que el ejército completo fracase en su intento de conquistar el castillo y sabotear el plan.
+
+**Con esta analogía, podemos entender el problema que tiene toda Blockchain**. Los generales bizantinos representan a cada nodo de la red y la coordinación entre los mismos para conquistar el castillo es el protocolo de consenso que garantiza que las transacciones de una Blockchain no sean maliciosas y no se corrompan los datos en la cadena.
+
+### Tolerancia a fallos
+
+Proof of Work y Proof of Stake son dos de los principales protocolos de consenso que Blockchain utiliza. PoW es una prueba de trabajo que requiere de un procesamiento computacional para encontrar aleatoriamente un número y validar una transacción. PoS consiste en validar las transacciones de forma aleatoria a partir de la participación de un nodo en la misma.
+
+Ambos protocolos no son 100% seguros, tienen mínimas probabilidades de ser falseados y corromper la red.
+
+PoW puede verse afectado por el famoso “Ataque del 51%” donde si atacantes maliciosos se apoderan de al menos el 51% de la red (de los nodos), el ataque se verá concretado y podrán modificar los datos de la Blockchain a su antojo, robar fondos y falsificar datos.
+
+PoS pone en riesgo el consenso de la red si los atacantes poseen un determinado porcentaje mayor de criptomonedas en “stake” para tener más posibilidades de validar transacciones.
+
+Ambos protocolos tienen una más que aceptable tolerancia a fallos y dicha tolerancia puede demostrarse mediante formular matemáticas.
+
+## Tolerancia a fallas bizantinas o BFT
+
+El concepto de BFT (Byzantine Fault Tolerance) se deriva de la analogía de los generales bizantinos y propone diversos protocolos y algoritmos para enfrentar la tolerancia a fallos en un sistema. Dicho sistema puede ser una Blockchain, otro tipo de sistema distribuido o incluso un sistema embebido como el de un avión.
+
+### Tolerancia a fallos de un avión
+Imagina que un componente de un avión comienza a fallar. Esto no puede provocar que todo el avión deje de funcionar, debe tener una tolerancia a N cantidad de componentes defectuosos para que finalmente deje de operar correctamente.
+
+Un solo nodo de una Blockchain no basta para corromper toda la red. No necesariamente un nodo puede ser malicioso, puede simplemente haberse quedado sin internet o sin electricidad y desconectarse de la misma.
+
+Solana utiliza un algoritmo denominado **Tower BFT que se combina con Proof of History para mantener seguro el consenso de la red** junto con PoS y PoH.
+
+Este tipo de algoritmos pueden representarse con la fórmula `3m + 1` donde `m` es la cantidad de nodos maliciosos o defectuosos. A partir de este tipo de fórmulas, se determina la tolerancia de la red.
+
+Tolerancia de los ejércitos bizantinos
+Sí nos remontamos a la analogía de los generales bizantinos. De cuatro ejércitos, tal vez solo uno sea suficiente para sabotear el plan, en este caso la tolerancia es cero. O tal vez sea necesario que dos de los cuatro generales tengan malas intenciones, en este caso la tolerancia es de uno.
+
+De esta manera, se garantiza un porcentaje alto de tolerancia a fallos para que el sistema o la red siga funcionando correctamente.
+
+Existen diversas aproximaciones para garantizar tolerancia en un sistema distribuido. **Tower BFT es la implementación que los desarrolladores de Solana han creado** y optimizado para que la Blockchain cumpla con BFT y es otro punto más, junto a PoH, que explican las grandes prestaciones de esta red.
+
+### El libro mayor de Solana
+
+El libro mayor, o ledger, de toda Blockchain, **es esa gran base de datos donde se registran cada una de las transacciones**. Es una pieza fundamental para garantizar seguridad, transparencia y privacidad en cualquier Blockchain, además de ser información pública y accesible por cualquiera.
+
+Solana construye su libro mayor a gran velocidad gracias a técnicas como TDMA para la transmisión de datos, Proof of History para garantizar el orden y tiempo en que cada transacción ocurre y reducir la comunicación entre nodos, y Tower BFT para la seguridad de la red.
+
+Gracias a esta sumatoria de protocolos, algoritmos y tecnologías, **un solo nodo puede reconstruir todo el libro mayor de la red y calcular el estado** para reconstruir la misma, sin necesidad de tener que comunicarse con otros nodos y ocupar el ancho de banda de la red con estos mensajes.
+
+Como cada nodo de la red obtendrá el mismo resultado al reconstruir el ledger gracias a PoH, los mismos votarán por el libro mayor válido y **la tolerancia a fallos del algoritmo Tower BFT evita que se genera un fork malintencionado**.
+
+Los votos por el ledger se realizan sobre los hashes. PoH garantiza que ningún nodo vote por un hash anterior en el tiempo, ya que como ya sabemos, PoH garantiza el momento exacto con etiquetas de tiempo.
+
+Si un nodo no emite votos luego de una determinada cantidad de hashes, el mismo puede ser considerarse fallido.
+
+## Conclusión
+
+Hemos sumado una pieza más a este gran sistema que es Solana. Tower BFT es un poderoso algoritmo que no solo le da seguridad y tolerancia a la red, también trabaja en conjunto con PoH y TDMA para que la performance de esta Blockchain se optimice.
+
+Y gracias a la capacidad de fácil reconstrucción del estado que tiene Solana, cada nodo puede recuperarse de eventos inesperados, desastres, reiniciarse y volver a estar operable en poco tiempo sin interrumpir el resto de la red.
+
+---
+Post creado en colaboración con el **Curso de Solana** de **Platzi**.

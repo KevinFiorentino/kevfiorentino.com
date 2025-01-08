@@ -1,0 +1,53 @@
+---
+title: 'Bitcoin: Árboles de Merkle'
+description: 'Los árboles de Merkle son utilizados para resumir y verificar grandes conjuntos de datos. Sin este, toda la información en la Blockchain sería mucho más pesada, haciéndola más difícil de computar.'
+image: '/tech/bitcoin.png'
+pubDate: '0/01/2023'
+englishMetadata: {
+  title: 'Bitcoin: Merkle Trees',
+  description: 'Merkle trees are used to summarize and verify large data sets. Without it, all the information on the Blockchain would be much heavier, making it more difficult to compute.'
+}
+prev: 'forks'
+next: 'core'
+---
+
+# Bitcoin: Árboles de Merkle
+
+Una Blockchain almacena gran cantidad de información que crece cada segundo. Sin un buen **mecanismo de compactación de todas los datos de un bloque**, sería imposible de escalar y poco portable tener un nodo, ya que pocos computadores tendrían los recursos de hardware necesarios para mantener uno.
+
+## Qué es el Árbol de Merkle
+
+El Merkle Tree es una **estructura jerárquica de datos interconectada con hashes criptográficos**, usada para resumir y verificar grandes conjuntos de datos. Sin este, toda la información en la Blockchain sería mucho más pesada, haciéndola más difícil de computar.
+
+Con este recurso matemático, se implementa el uso de un algoritmo doble SHA256, **con el que se obtiene una “huella digital” del total de las transacciones** dentro de un bloque.
+
+En el encabezado de los bloques, se asigna un campo que contiene el valor obtenido por el árbol de Merkle. Este árbol es binario y solo **contiene los datos de las transacciones que pertenecen a un bloque**. Se construye desde sus hojas nodo (leaf nodes) hasta su raíz o el valor final (Merkle Root).
+
+Cada hoja del árbol es una transacción. Como **los árboles son binarios**, se dividen en grupos de dos y si la cantidad de transacciones es impar, se duplica la última para mantener la paridad de dos en cada rama.
+
+Las transacciones, en pares de dos, son encriptadas utilizando un algoritmo SHA256 y este valor es concatenado con la rama “hermana” del árbol para formar otro hash. Las transacciones continúan concatenándose y encriptándose de dos en dos hasta llegar a la raíz y obtener el Merkle root.
+
+![Ejemplo árbol de Merkle](/images/bitcoin-merkle-tree.webp)
+
+## Qué son las pruebas de Merkle
+
+Para comprobar que una transacción efectivamente corresponde a cierto bloque y asegurar su integridad, puede realizarse con las conocidas pruebas de Merkle, o *Merkle proofs*.
+
+Por ejemplo, suponiendo que queremos verificar `hK` (en verde) en el siguiente árbol Merkle:
+
+![Ejemplo árbol de Merkle corrupto](/images/bitcoin-merkle-tree-corrupted.webp)
+
+Comenzamos verificando `hABCDEFGH` y `hIJKLMNOP`, las dos primeras hojas del árbol. Podemos comprobar que `hABCDEFGH` es correcto (en azul), por lo tanto lo descartamos. Sin embargo, `hIJKLMNOP` no lo es así que continuamos profundizando por esa rama.
+
+Solicitamos `hIJKL` y `hMNOP` para su validación y el algoritmo detecta que `hMNOP` es correcto para descartarlo y continuar profundizando por `hIJKL` ya que no logramos verificarlo.
+
+Nuevamente, solicitamos las hojas `hIJ` y `hKL` desde este punto para realizar la verificación, descartar `hIJ` y darnos cuenta de que el problema viene desde `hKL`. Al obtener las transacciones `hK` y `hL`, comprobamos que los datos de `hK` son incorrectos y podemos reparar el árbol completo.
+
+## Conclusión
+
+El algoritmo para encriptar y desencriptar un árbol de Merkle puede ser un reto más que interesante para ti si te propones desarrollar tu propia implementación con el lenguaje que más te guste.
+
+Esta es la manera en que la Blockchain de Bitcoin asegura la integridad de la información y vuelve a esta gran base de datos inmutable. Cualquier alteración malintencionada en una transacción, simplemente el resto de los nodos, lo detectaría y no llegarían a un consenso.
+
+---
+Post creado en colaboración con el [Curso de Bitcoin](https://external.ink?to=https://platzi.com/cursos/bitcoin-developers/) de **Platzi**.

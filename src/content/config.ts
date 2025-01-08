@@ -17,10 +17,14 @@ const mainSchema = z.object({
   next: z.string().optional(),
 });
 
-const blockchainColl = defineCollection({ schema: mainSchema });
 
 export const collections = {
-  'blockchain': blockchainColl,
+  'bitcoin': defineCollection({ schema: mainSchema }),
+  'blockchain': defineCollection({ schema: mainSchema }),
+  'ethereum': defineCollection({ schema: mainSchema }),
+  'openzeppelin': defineCollection({ schema: mainSchema }),
+  'solana': defineCollection({ schema: mainSchema }),
+  'solidity': defineCollection({ schema: mainSchema }),
 };
 
 
@@ -34,6 +38,21 @@ export interface CollectionMetadata {
 
 export const collectionMetadata: CollectionMetadata[] = [
   {
+    name: 'bitcoin',
+  },
+  {
     name: 'blockchain',
+  },
+  {
+    name: 'ethereum',
+  },
+  {
+    name: 'openzeppelin',
+  },
+  {
+    name: 'solana',
+  },
+  {
+    name: 'solidity',
   },
 ];

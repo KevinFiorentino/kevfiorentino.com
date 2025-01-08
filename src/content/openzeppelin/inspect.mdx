@@ -1,0 +1,88 @@
+---
+title: 'OpenZeppelin: Inspeccionar Contratos'
+description: 'Cuando interactuamos con otro contrato dentro de nuestro propio contrato, a veces es necesario verificar si el contrato ajeno al nuestro posee determinadas características antes de realizar una acción.'
+image: '/tech/openzeppelin.png'
+pubDate: '07/01/2023'
+englishMetadata: {
+  title: 'OpenZeppelin: Inspect Contracts',
+  description: 'When we interact with another contract within our own contract, it is sometimes necessary to check whether the contract outside our own has certain characteristics before taking an action.'
+}
+prev: 'timelock'
+next: 'structure'
+---
+
+# OpenZeppelin: Inspeccionar Contratos
+
+Cuando interactuamos con otro contrato dentro de nuestro propio contrato, a veces es necesario **verificar si el contrato ajeno al nuestro posee determinadas características** antes de realizar una acción.
+
+## Inspeccionando contratos
+
+Si necesitamos enviar tokens a otro contrato, pero por precaución queremos verificar antes que dicho contrato pueda manipular esos tokens correctamente y evitar su perdida, podemos hacer una verificación de ese contrato previamente.
+
+El estándar [ERC165](https://external.ink?to=https://docs.openzeppelin.com/contracts/4.x/utilities#introspection), especificado en el [EIP165](https://eips.ethereum.org/EIPS/eip-165) y denominado **Estándar de Detección de Interfaces**, permite **verificar si un contrato implementa o no una determinada interfaz** antes de interactuar con él. De esta forma, validar si el otro contrato está preparado para recibir tokens o ejecutar determinada acción.
+
+## Implementación del estándar ERC165
+
+OpenZeppelin [implementa una serie de contratos ERC165](https://external.ink?to=https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/utils/introspection) para detectar interfaces en otros contratos.
+
+* **ERC165.sol:** Contrato base para la comprobación de la interfaz IERC165.
+* **ERC165Checker.sol:** Contrato que permite detectar cualquier otra interfaz que necesitemos.
+
+> Nota: Otro estándar interesante para la validación de interfaces es el [ERC1820](https://external.ink?to=https://eips.ethereum.org/EIPS/eip-1820). El mismo es una extensión de ERC165 que permite la declaración y validación de interfaces en direcciones que no necesariamente contengan un contrato.
+
+Si necesitas verificar que un contrato implementa, por ejemplo, la interfaz IERC20, el mismo debe implementar ERC165 para poder realizar esta comprobación.
+
+```js
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >=0.7.0 <0.9.0;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
+import "@openzeppelin/contracts/utils/introspection/ERC165.sol";
+import "@openzeppelin/contracts/utils/introspection/IERC165.sol";
+import "@openzeppelin/contracts/utils/introspection/ERC165Checker.sol";
+
+contract VerifyInterfaces {
+
+  // Verificamos si el contrato cumple con IERC20
+  function isERC20(address addr) public view returns (bool) {
+    return ERC165Checker.supportsInterface(addr, type(IERC20).interfaceId);
+  }
+
+  // Verificamos si el contrato cumple con IERC721
+  function isERC721(address addr) public view returns (bool) {
+    return ERC165Checker.supportsInterface(addr, type(IERC721).interfaceId);
+  }
+
+  // Verificamos si el contrato cumple con IERC165
+  function isERC165(address addr) public view returns (bool) {
+    return ERC165Checker.supportsInterface(addr, type(IERC165).interfaceId);
+  }
+}
+
+contract MyTokenERC20 is ERC20, ERC165 {
+
+  constructor() ERC20("Mi Token ERC20", "MTF") {
+    _mint(msg.sender, 1000);
+  }
+
+  // Sobreescribimos supportsInterface() para que otro contrato pueda validar la interface IERC20
+  function supportsInterface(bytes4 interfaceId) public view virtual override(ERC165) returns (bool) {
+    return
+      interfaceId == type(IERC20).interfaceId ||
+      super.supportsInterface(interfaceId);
+  }
+}
+```
+
+Te animo a que despliegues los contratos anteriores en entornos como [Remix](https://external.ink?to=https://remix.ethereum.org/) y compruebes que el contrato **MyTokenERC20** implementa tanto la interfaz IERC20 como IERC165, pero no la interfaz IERC721. Esto puedes corroborarlo gracias a las funciones del contrato **VerifyInterfaces** que hace las comprobaciones a cada interfaz.
+
+El contrato **MyTokenERC20** debe implementar el estándar ERC165 y sobreescribir la función `supportsInterface(bytes4)` para que un contrato externo valide la interfaz IERC20.
+
+Cada contrato inteligente es responsable de implementar ERC165 para permitir la verificación de una interfaz.
+
+Corroborar la implementación de una interfaz entre contratos te ahorrará más de un dolor de cabeza cuando tengas que comunicar contratos y evitar problemas cuando el contrato ajeno al nuestro no implementa determinadas funcionalidades que esperamos.
+
+---
+Post creado en colaboración con el [Curso de OpenZeppelin](https://external.ink?to=https://platzi.com/cursos/openzeppelin/) de **Platzi**.

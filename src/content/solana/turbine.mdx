@@ -1,0 +1,57 @@
+---
+title: 'Solana: Turbine'
+description: 'El componente de la Blockchain de Solana denominado Turbine es el responsable de la transmisión rápida y efectiva de la información en la red.'
+image: '/tech/solana.webp'
+pubDate: '08/26/2023'
+englishMetadata: {
+  title: 'Solana: Turbine',
+  description: 'The Solana Blockchain component called Turbine is responsible for the rapid and effective transmission of information on the network.'
+}
+prev: 'tower-bft'
+next: 'gulf-stream'
+---
+
+# Solana: Turbine
+
+Sabemos que Solana puede validar miles y miles de transacciones por segundo. Y que la red genera un nuevo bloque en la cadena en menos de medio segundo. Esto implica que la información de **muchas transacciones deben propagarse por la red a muchos nodos más rápido que la propia generación de bloques**.
+
+## Protocolo de propagación de bloques
+
+El componente de la Blockchain de Solana denominado Turbine es el **responsable de la transmisión rápida y efectiva de la información en la red**.
+
+Con cada bloque que se genera, el mismo estará compuesto por miles de transacciones y su peso en MB será más que importante. Transmitir esos MB a cada nodo es una tarea compleja que puede acaparar el ancho de banda de la red.
+
+Turbine, divide la información de cada bloque que se genera en múltiples y pequeños paquetes que se envía a diferentes validadores de la red utilizando el protocolo UDP para la transmisión de los datos.
+
+## TCP vs. UDP
+
+Protocolos de transmisión de datos:
+- **TCP (Transmission Control Protocol):** Orientado a la conexión, Mantiene la conexión estable, asegura no se pierda la información y válida que la misma llegue a destino.
+- **UDP (User Datagram Protocol):** No está orientado a la conexión, solo envía información constantemente sin verificar que esta llegue a destino.
+
+El envío de esta información entre los nodos se realiza de forma que los nodos se dividen en “vecindarios” y cada uno de estos le envía la información al vecindario más cercano, y así sucesivamente. De esta forma, se optimiza el envío de información y el ancho de banda.
+
+![Jerarquía de vecindarios en Solana](/images/solana-nodos.png)
+
+La información se comparte entre nodos cercanos y en pequeños paquetes. **Cada nodo es responsable de reconstruir la información** y mantener actualizado su ledger. De faltar algún paquete para reconstruir el bloque, el nodo puede solicitar al resto de la red la información, pero sin entorpecer el flujo de la red que continúa validando transacciones y generando más bloques.
+
+## Potenciales ataques a la red
+
+Toda esta información que se envía constantemente entre nodos puede ser falsa, puede tratarse de un ataque intentando engañar a un grupo de nodos para que propaguen información malintencionada.
+
+A esto se lo conoce con el nombre de **Ataque Eclipse y consiste en el intento de aislar a un grupo de nodos** y bombardearlos con información falsa. Es un ataque que no solo busca adueñarse de la red, también puede permitir abrir una brecha para otro tipo de ataques.
+
+Es aquí donde protocolos como Tower BFT entran en juego para determinar la tolerancia a fallos que la Blockchan puede soportar. Un reducido grupo de nodos que sean eclipsados puede no ser suficiente para provocarle un problema a la red.
+
+![Ataque de eclipse](/images/solana-eclipse-attack.png)
+
+Para evitar este tipo de ataques sucedan, el protocolo Turbine encripta la información sobre a qué “vecindario” se le enviará la información. De esta manera, **no puede preverse hacia dónde van los datos** y es necesario atacar a toda la red para controlar la misma.
+
+## Conclusión
+
+Turbine se suma a la lista de los componentes que hacen a Solana una gran Blockchain. El mismo está relacionado con optimizar el ancho de banda de la red con ayuda de TDMA para la transmisión de información y PoH para ordenar tanta cantidad de transacciones que se generan por segundo.
+
+Es así como estas piezas de Solana se unen para componer al mismo y trabajan en conjunto para que el sistema fluya.
+
+---
+Post creado en colaboración con el **Curso de Solana** de **Platzi**.

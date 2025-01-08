@@ -1,0 +1,63 @@
+---
+title: 'Solana: Accounts & Archivers'
+description: 'La información en la red de Solana se persiste, no solo de manera distribuida y descentralizada entre sus nodos, sino que todos los datos son persistidos en formato de archivos.'
+image: '/tech/solana.webp'
+pubDate: '08/21/2023'
+englishMetadata: {
+  title: 'Solana: Accounts & Archivers',
+  description: 'The information in the Solana network is persisted, not only in a distributed and decentralized manner among its nodes, but all data is persisted in file format.'
+}
+prev: 'cloudbreak'
+next: 'wrap-up'
+---
+
+# Solana: Accounts & Archivers
+
+La información en la red de Solana se persiste, no solo de manera distribuida y descentralizada entre sus nodos, sino que **todos los datos son persistidos en formato de archivos**.
+
+## Estructura de información en Solana
+
+Solana persiste su información en Accounts o Cuentas. Los programas son cuentas, la información también son cuentas. **Todo es una cuenta**.
+
+Puedes imaginarte como Solana preserva la información haciendo una analogía con los sistemas operativos Linux y su sistema de archivos. Cuando ejecutas un programa en Linux, el mismo suele ser un archivo binario. La información que un programa necesita también se persiste en formato de archivos.
+
+Las cuentas en Solana tienen las siguientes propiedades:
+
+- Signers: Conjunto de firmas digitales a las cuales hace referencia la cuenta en una transacción.
+- Solo lectura: Si la cuenta guarda información, al marcarla como solo lectura mejorará la velocidad de lectura de los datos.
+- Ejecutable: Si la cuenta se trata de un programa, el mismo debe marcarse como ejecutable.
+- Propiedad: Propietario de la cuenta, será el único que puede acceder a ella.
+- Alquiler: El único concepto novedoso, las cuentas deben pagar una comisión por el uso de los recursos de la red.
+
+Como te habrás dado cuenta, **los datos en la Blockchain de Solana se almacenan como todo un sistema de archivos de un sistema operativo**, a lo igual que su funcionamiento, donde los archivos tienen un owner y una serie de permisos.
+
+Solana no utiliza una base de datos, utiliza Cloudbreak para dividir y persistir la información entre la memoria RAM y la SSD dependiendo el propósito. También posee nodos validadores de replicación de la información denominados Archivers para asegurar su existencia y persistencia en toda la red.
+
+Las cuentas son otra característica de cómo Solana manipula y almacena la información de la red.
+
+## Almacenamiento persistente en una Blockchain
+
+Gigas y Gigas de información genera una Blockchain con el paso del tiempo. Solana, en su máxima capacidad, podría generar 4 petabytes (4000 teras) por año. Una más que importante cantidad de **información que la red debe asegurar que no se pierda**.
+
+Generar tanta cantidad de información puede derivar en centralización producto de que pocos nodos en el mundo tendrán los recursos de hardware para almacenar tantos datos.
+
+Por un lado, asegurar la persistencia de tanta información. Por otro, asegurar que la misma se encuentre replicada cierta cantidad de veces para asegurar descentralización y que nunca se perderá.
+
+Solana hace uso de una nueva prueba denominada Proof of Replication o PoReps. El mismo fue creado por Protocol Labs en el 2017. Una importante empresa que revoluciona el mundo del desarrollo Web3 con tecnologías como Filecoin e IPFS.
+
+**La prueba de replicación se ejecuta cada determinado tiempo y asegura que la ledger completa de Solana se encuentre persistida en múltiples nodos**. La información se divide de tal manera que no hay necesidad de que todos los nodos almacenen toda la información.
+
+La comunicación entre los nodos para asegurar que toda la información se encuentre disponible se realiza por medio de criptografía y gracias a Proof of History es posible asegurar la existencia de una porción aleatoria de todo el libro mayor de Solana.
+
+De estar en riesgo un determinado porcentaje de la ledger, **el protocolo automáticamente replicaría esta información en otros nodos** para asegurar la persistencia en el tiempo.
+
+Los propios nodos validadores de transacciones en la red de Solana, también pueden ejercer como validadores de replicación, los cuales son denominados Archiver o Archivadores. **Solana entrega recompensa en su moneda nativa, Sol, a los nodos que ayuden a persistir la información**.
+
+## Conclusión
+
+Solana ha sabido mejorar aspectos en su Blockchain, donde Bitcoin y Ethereum tienen problemas como la red, la transmisión de información y la validación de transacciones. También ha sabido apoyarse de novedosos protocolos creados por un tercero como PoReps para asegurar la persistencia en el tiempo de tanta cantidad de información.
+
+Los ingenieros de Solana se han asegurado de pulir cada aspecto del funcionamiento de este sistema, pensando a futuro, que sea veloz, escalable y que la información perdure en el tiempo.
+
+---
+Post creado en colaboración con el **Curso de Solana** de **Platzi**.

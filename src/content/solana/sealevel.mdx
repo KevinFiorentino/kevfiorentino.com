@@ -1,0 +1,63 @@
+---
+title: 'Solana: Sealevel'
+description: 'Solana es una Blockckain optimizada en varios sentidos, ya sea en el uso de la red y la transferencia de información, en su forma de llegar a un consenso y mantener segura la red y también en la ejecución paralela de programas.'
+image: '/tech/solana.webp'
+pubDate: '08/24/2023'
+englishMetadata: {
+  title: 'Solana: Sealevel',
+  description: 'Solana is an optimized Blockckain in several ways, whether in the use of the network and the transfer of information, in its way of reaching a consensus and keeping the network secure and also in the parallel execution of programs.'
+}
+prev: 'gulf-stream'
+next: 'pipelining'
+---
+
+# Solana: Sealevel
+
+Solana es una Blockckain optimizada en varios sentidos, ya sea en el uso de la red y la transferencia de información, en su forma de llegar a un consenso y mantener segura la red y también en la **ejecución paralela de programas**.
+
+## Contratos inteligentes en Solana
+
+Para establecer un punto de comparación, siempre utilizando las grandes Blockchain de Bitcoin y Ethereum, ambas solo puede procesar una acción a la vez, solo pueden ejecutar un programa y modificar un estado.
+
+En este punto encontraremos grandes diferencias en la Blockchain de Solana, ya que su runtime denominado Sealevel permite la **ejecución paralela de miles de programas a la vez**, puede leer, escribir y ejecutar el estado de varios programas al mismo tiempo.
+
+## Runtime
+
+Muchos lenguajes de programación utilizan el término Runtime para referirse al un software maestro que habilita los recursos necesarios de un computador para ejecutar nuestros propios programas. Por ejemplo: NodeJS es un runtime para ejecutar código Javascript del lado del servidor.
+
+### Cuentas en Solana
+
+Para entender cómo funciona la ejecución de programas en Solana, debemos hablar de las “cuentas” en esta Blockchain.
+
+En Solana, todo es una cuenta. Podemos imaginarlo como un archivo ejecutable como en sistemas operativos Linux donde se almacenan ficheros binarios para ejecutar diversas acciones. Los datos se almacenan en cuenta, los programas también son cuentas y los mismos son propietarios de las cuentas que guardan su información.
+
+Las cuentas son públicas y tienen un dueño. Por defecto, el owner de las cuentas es el System Program de Solana (podríamos verlo como el “sudo” de Linux) y **solo es posible cambiar el dueño de la cuenta una vez**.
+
+En síntesis, podemos resumir el sistema de cuentas y programas de Solana en:
+- Los programas solo pueden cambiar los datos de las cuentas que poseen.
+- Solo pueden debitar cuentas de su propiedad.
+- Cualquier programa puede acreditar cualquier cuenta.
+- Cualquier programa puede leer cualquier cuenta.
+- El System Program es el único programa que puede asignar la propiedad de la cuenta.
+- El System Program es el único programa que puede asignar datos inicializados en cero.
+
+Entendamos un ejemplo en el uso de las cuentas: si desarrollamos un contrato inteligente para crear tokens NFT, podemos utilizar aplicaciones como Phamtom que permiten visualizar nuestros NFT.
+
+Por defecto, Phantom no reconocerá nuestros tokens debido a que desconoce la dirección pública de las cuentas de nuestro programa. Debemos ser nosotros mismos quien le indiquemos dicha dirección para la correcta lectura y visualización de los NFT. De aquí entendemos el principio “Cualquier programa puede leer cualquier cuenta”.
+
+## Arquitectura detrás de Solana
+
+Detrás de esta lógica interna para el funcionamiento de Solana existen arquitecturas avanzadas. Más concretamente la Arquitectura CUDA (Compute Unified Device Architecture) de Nvidia.
+
+En pocas palabras y sin necesidad de entrar en detalles técnicos, CUDA utiliza procesamiento de GPU (que es más rápido que la CPU) y múltiples núcleos para permitir la ejecución en paralelo de instrucciones.
+
+## Conclusión
+
+Dos motivos más para explicar la alta performance que esta Blockchain puede alcanzar. La posibilidad de ejecutar miles de programas en paralelo gracias a Sealevel y a la arquitectura CUDA. Esto permite que miles de transacciones puedan dirigirse al mismo contrato, sin riesgo de colapsar la red.
+
+A diferencia con lo sucedido en el 2017 cuando CryptoKitties cuando hizo que la Blockchain de Ethereum colapsara de transacciones.
+
+La velocidad de Solana no solo está relacionada con la optimización y uso del ancho de banda de la red, también a la ejecución de programas y a la arquitectura por detrás de sus nodos.
+
+---
+Post creado en colaboración con el **Curso de Solana** de **Platzi**.

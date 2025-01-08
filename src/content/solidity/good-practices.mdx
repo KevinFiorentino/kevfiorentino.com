@@ -1,0 +1,63 @@
+---
+title: 'Solidity: Buenas Prácticas'
+description: 'Hay algunas medidas que puedes aplicar para evitar problemas de seguridad en los contratos y no exponer vulnerabilidades al desarrollarlos.'
+image: '/tech/solidity.webp'
+pubDate: '06/01/2023'
+englishMetadata: {
+  title: 'Solidity: Good Practices',
+  description: 'There are some measures you can apply to avoid security problems in contracts and not expose vulnerabilities when developing them.'
+}
+next: 'global-variables'
+---
+
+# Solidity: Buenas Prácticas
+
+Hay algunas medidas que puedes aplicar para evitar problemas de seguridad en los contratos y no exponer vulnerabilidades al desarrollarlos.
+
+## Qué medidas tomar al desarrollar contratos inteligentes
+Comencemos viendo una serie de **puntos a tener en cuenta para convertirnos en los mejores desarrolladores Web3**.
+
+### 1. Controlar el uso del gas
+
+Una correcta utilización del gas hace que nuestro contrato sea aprovechado al máximo, que sea muy eficiente y reduzcamos costos a nivel financiero, evitando usos incorrectos.
+
+Si exponemos una llamada externa en nuestros contratos, **evitamos que puedan hacer excesivas operaciones con el control correcto del gas**. Así que siempre en una llamada externa, hay que configurar un límite de gas para que el contrato o el código que se vaya a utilizar luego de esta llamada no aproveche esta utilización del gas para una acción malintencionada.
+
+### 2. Uso de librerías
+
+No debemos reinventar la rueda. En otras palabras, al comenzar el desarrollo de un contrato **podemos resolver determinadas operaciones recurrentes con ayuda de contratos ya desarrollados y auditados**. Es una gran medida de seguridad que ofrece garantías y ganamos tiempo en el desarrollo.
+
+Muchas de estas librerías como las de OpenZeppelin están desarrolladas por verdaderos expertos.
+
+### 3. Control de acceso
+
+El control de acceso va a limitar que un usuario que no tenga permisos, pueda ejecutar funciones en nuestros contratos.
+
+Podemos prevenir, por ejemplo, que de repente un usuario emita tokens sin ser administrador/owner. Por lo tanto, tomar estas medidas y **controlar el correcto uso del contrato a nivel de roles y permisos es una gran medida de seguridad** para prevenir que estos usuarios accedan y ejecuten acciones que no queremos que hagan.
+
+### 4. Bloquear un contrato
+
+Imaginemos que ocurre algún problema o detectamos alguna falla o comportamiento indebido en el uso del contrato. Automáticamente, **podemos bloquearlo y dejarlo en pausa** para tomar alguna medida al respecto.
+
+Una buena práctica que puedes hacer es la actualización de la versión del contrato, si el protocolo lo permite, arreglar el error dentro de las posibilidades o simplemente evitar que una falla o vulnerabilidad siga siendo atacada.
+
+**Control = Centralización: ¿buena práctica?**
+
+Si aplicamos gestión de permisos, de roles o simplemente bloqueamos el contrato, **podemos atentar contra la descentralización** del mismo. Debemos ser muy cuidadosos con que nuestro proyecto no se convierta en algo centralizado, si no deseamos que así sea, lo mejor para los escenarios descentralizados es justamente que la misma red o participantes gestionen que todo funcione de forma correcta, pero en algunos casos el control de acceso nos puede ser útil.
+
+**Que un contrato sea centralizado no tiene nada de malo**. Si bien la filosofía Blockchain tiene como concepto principal la descentralización, nuestro negocio puede tener puntos centralizados si tenemos un buen motivo y nuestros usuarios están de acuerdo.
+
+**¿Por qué conocer los fundamentos de Blockchain?**
+
+Un tema fundamental a la hora de interactuar con los distintos contratos en la red son las transferencias y las funciones que reciben transferencias de parte de los contratos.
+
+Estos son conceptos que tenemos que entender bien en profundidad, pues **muchos de los ataques se dan por no conocer a fondo el funcionamiento**, por no saber cómo se realizan estas transacciones correctamente o cómo se realizan a nivel de seguridad.
+
+Entendiendo muy bien el flujo de transferencias y de recepción de **ETH** en la red, **evita que nuestros contratos tengan puntos de ataque** que pueden ser explotados. Ten en cuenta que entendiendo bien cada concepto del funcionamiento de Ethereum o de cualquier Blockchain podemos prevenir posibles ataques.
+
+## Conclusión
+
+Desarrollar contratos inteligentes es muy exigente y estricto. Ethereum ofrece una gran guía para desarrolladores que te será de utilidad leerla como a tu libro favorito.
+
+---
+Post creado en colaboración con el [Curso de Seguridad de Smart Contracts](https://external.ink?to=https://platzi.com/cursos/seguridad-smart-contracts/) de **Platzi**.

@@ -1,0 +1,59 @@
+---
+title: 'Ethereum: Estándar de Tokens ERC721'
+description: 'Los tokens provenientes del estándar ERC721 son los tan conocidos NFT. Piezas únicas que pueden representar colecciones, obras de arte u otro tipo de activo digital único.'
+image: '/tech/ethereum.webp'
+pubDate: '07/02/2023'
+englishMetadata: {
+  title: 'Ethereum: ERC721 Token Standard',
+  description: 'The tokens coming from the ERC721 standard are the well-known NFTs. One-of-a-kind pieces that may represent collections, works of art, or another type of unique digital asset.'
+}
+prev: 'erc20-token'
+next: 'erc1155-token'
+---
+
+# Ethereum: Estándar de Tokens ERC721
+
+Los tokens provenientes del estándar ERC721 son los tan conocidos NFT. **Piezas únicas que pueden representar colecciones**, obras de arte u otro tipo de activo digital único.
+
+## Características de los tokens ERC721
+
+Encontrarás muchas similitudes entre el estándar [ERC721](https://external.ink?to=https://ethereum.org/es/developers/docs/standards/tokens/erc-721/) y el ERC20. La principal diferencia entre ellos está dada en que los tokens emitidos bajo el estándar ERC721 poseen un `tokenId` para identificar de manera única al mismo.
+
+Esta característica convierte a los tokens en no fungibles, de ahí el término NFT o Non-Fungible Token. Piezas digitales no intercambiables entre sí, ya que pueden tener diferentes valores económicos o características.
+
+Otra importante diferencia entre ambos tipos de tokens es que los ERC721 no son divisibles. No puedes obtener el 10% o el 50% de uno. Solo son transferibles de manera completa.
+
+## Implementación de tokens ERC721
+
+Los tokens NFT fueron especificados en la propuesta [EIP721](https://external.ink?to=https://eips.ethereum.org/EIPS/eip-721) que derivó en el estándar ERC721 y que define una interfaz y características de cómo deben ser los tokens no-fungibles que viven en la Blockchain de Ethereum.
+
+A lo igual que con el estándar ERC20, OpenZeppelin tiene [su propia implementación del estándar ERC721](https://external.ink?to=https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol).
+
+La implementación de dicho estándar es muy similar a la del ERC20:
+
+```js
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >=0.7.0 <0.9.0;
+
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+
+contract MiTokenNoFungible is ERC721("Mi Token No Fungible", "MTNF") {
+
+  constructor() {
+    _mint(msg.sender, 1);
+  }
+}
+```
+
+Se define un nombre y un símbolo para la colección. La principal diferencia está en que la función `_mint()`, en lugar de recibir la cantidad de tokens que queremos emitir, recibe el `tokenId` y solo podemos emitir uno a la vez.
+
+## ID de los tokens
+
+El tokenId debe ser único, en caso de ya estar utilizado el ID, el contrato emitirá un error. Es recomendable que el ID de los tokens sea un número autoincrementable.
+
+Si tu contrato implementa de manera correcta el estándar ERC721, el mismo será **compatible con la red de Ethereum** y podrás ver tus NFT en plataformas como OpenSea que es una de las más populares del mundo para la transferencia de los mismos.
+
+El estándar ERC721 para la creación de NFT es, tal vez, uno de los casos de uso que más gente atrae al mundo crypto. Estudiarlo te permitirá ser competitivo en el mercado laboral y estarás listo para ser un gran desarrollador Web3.
+
+---
+Post creado en colaboración con el [Curso de OpenZeppelin](https://external.ink?to=https://platzi.com/cursos/openzeppelin/) de **Platzi**.
