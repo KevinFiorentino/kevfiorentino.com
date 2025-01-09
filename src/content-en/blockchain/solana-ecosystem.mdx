@@ -32,14 +32,14 @@ Depending on the stage of our project or the need, we can interact with a cluste
 connect it to a dapp in a test environment.
 
 ## The cryptocurrency of Solana
-Probably you know that [SOL](https://external.ink?to=https://coinmarketcap.com/es/currencies/solana/) is the native token in this blockchain. SOL is using to pay the transactions and
-taxes in the network. But probably you do not know that is called Lamport (as recognition to [Leslie Lamport](https://external.ink?to=https://es.wikipedia.org/wiki/Leslie_Lamport)) to
+Probably you know that [SOL](https://coinmarketcap.com/es/currencies/solana/) is the native token in this blockchain. SOL is using to pay the transactions and
+taxes in the network. But probably you do not know that is called Lamport (as recognition to [Leslie Lamport](https://es.wikipedia.org/wiki/Leslie_Lamport)) to
 the minimum unity in decimals of each SOL. Just like the Satoshi on Bitcoin or Wei on Ethereum.
 
 A Lamport, equals to 0.000000001 SOL. In a blockchain everything works through decimals, transaction payments are made in Lamports, and not directly with SOL.
 
 If you need to obtain some of SOL in the Solana mainnet, you will have to buy it in any exchange at dollar price, depending on the price of the day. Instead, if
-you need SOL to develop or test any smart contract, either on devnet or testnet, you can use a [Solana faucet](https://external.ink?to=https://solfaucet.com/).
+you need SOL to develop or test any smart contract, either on devnet or testnet, you can use a [Solana faucet](https://solfaucet.com/).
 Enter the public key of your wallet and in a few seconds you will receive some of SOL.
 
 The faucets are limited to being used a few times a day. You may have to insist on receiving a SOL. Or you can try it with the Solana CLI through the
@@ -47,7 +47,7 @@ command `solana airdrop 1 <address>`, if you have installed it. Very easy to use
 
 ## Exploring Solana
 Explorers are one of the main tools of any Web3 developer. It allows us to inspect in detail what happened in the blockchain network. In Solana, we can use
-its official [Explorer](https://external.ink?to=https://explorer.solana.com/), or also we can find another one like [Solscan](https://external.ink?to=https://solscan.io/) with few differences in the information that shows us.
+its official [Explorer](https://explorer.solana.com/), or also we can find another one like [Solscan](https://solscan.io/) with few differences in the information that shows us.
 
 With an explorer, you will be able to observe the current status of a transaction, get information about a token, an NFT, or a particular account, the amount
 of SOL on a wallet, etc. Remember, all happen in a blockchain is public and transparent and through a simple public key it is possible to get a lot of relevant
@@ -57,7 +57,7 @@ information.
 RPC is the acronym for Remote Procedure Call. Like HTTP in the traditional web, all communication in a blockchain works through the JSON RPC protocol. A variant
 that uses the format JSON to send and receive messages.
 
-Solana has [a long list of RPC methods](https://external.ink?to=https://docs.solana.com/es/api/http) we can use to communicate with the blockchain, to get a wallet balance, send a
+Solana has [a long list of RPC methods](https://docs.solana.com/es/api/http) we can use to communicate with the blockchain, to get a wallet balance, send a
 transaction get an account, there is a method for that.
 
 Although it is not important to know these methods at this point of our Solana journey, yes it is important to know its existence and that any dapp is based
@@ -67,10 +67,10 @@ on this protocol.
 In general, RPC methods are not used directly. Despite we could build our own project through these methods to communicate with the blockchain, mostly we
 will use some dependencies built by the Solana community. Let's know what these are:
 
-- [@solana/web3.js](https://external.ink?to=https://www.npmjs.com/package/@solana/web3.js): main dependency that integrates all RPC methods to communicate with Solana.
-- [@project-serum/anchor](https://external.ink?to=https://www.npmjs.com/package/@project-serum/anchor): client to communicate with smart contract developed with Anchor. [Anchor](https://external.ink?to=https://www.anchor-lang.com/) is a Rust-based framework to build contracts in Solana.
-- [@solana/spl-token](https://external.ink?to=https://www.npmjs.com/package/@solana/spl-token): dependency to interact with tokens and NFTs.
-- [@metaplex-foundation/js](https://external.ink?to=https://www.npmjs.com/package/@metaplex-foundation/js): another dependency that will be important to work with tokens in Solana.
+- [@solana/web3.js](https://www.npmjs.com/package/@solana/web3.js): main dependency that integrates all RPC methods to communicate with Solana.
+- [@project-serum/anchor](https://www.npmjs.com/package/@project-serum/anchor): client to communicate with smart contract developed with Anchor. [Anchor](https://www.anchor-lang.com/) is a Rust-based framework to build contracts in Solana.
+- [@solana/spl-token](https://www.npmjs.com/package/@solana/spl-token): dependency to interact with tokens and NFTs.
+- [@metaplex-foundation/js](https://www.npmjs.com/package/@metaplex-foundation/js): another dependency that will be important to work with tokens in Solana.
 
 ## Conclusion
 We have seen in this article several concepts about Solana that are important to know to start to delve into its ecosystem. Bit by bit, these concepts will

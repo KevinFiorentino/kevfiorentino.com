@@ -17,7 +17,7 @@ Sin duda, uno de los casos de uso más frecuentes en un contrato inteligente es 
 
 ## Depositos en garantía
 
-El término [Escrow](https://external.ink?to=https://docs.openzeppelin.com/contracts/2.x/api/payment#Escrow) seguramente es poco conocido. En pocas palabras, se trata de un **intermediario entre dos partes para la transferencia de un bien o valor de forma segura**.
+El término [Escrow](https://docs.openzeppelin.com/contracts/2.x/api/payment#Escrow) seguramente es poco conocido. En pocas palabras, se trata de un **intermediario entre dos partes para la transferencia de un bien o valor de forma segura**.
 
 No se trata de algo nuevo de Blockchain. En las finanzas tradicionales y el mundo legal, los agentes Escrow son profesionales que actúan para dar garantías de intercambio de una propiedad, un automóvil o dinero entre dos partes.
 
@@ -33,7 +33,7 @@ OpenZeppelin implementa tres contratos para resolver de forma rápida y segura e
 
 `Escrow.sol` es el contrato base para implementar la lógica de intercambio de criptomonedas o tokens entre dos partes. El contrato en sí tiene poca utilidad en el mundo real, ya que por lo general habrá algún tipo de condición y confirmación previa a la entrega del valor a cada parte involucrada.
 
-Importante mencionar que `Escrow.sol` hereda de [Ownable.sol](https://external.ink?to=https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol). Por lo tanto, el mismo tendrá un dueño. Aunque siempre puedes desarrollar tu propio contrato con su propia lógica si no deseas que el mismo tenga un owner y este sea diferente.
+Importante mencionar que `Escrow.sol` hereda de [Ownable.sol](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol). Por lo tanto, el mismo tendrá un dueño. Aunque siempre puedes desarrollar tu propio contrato con su propia lógica si no deseas que el mismo tenga un owner y este sea diferente.
 
 ### ConditionalEscrow
 
@@ -56,4 +56,4 @@ Un buen ejemplo de la vida real de Escrow es el P2P de Binance. Si has realizado
 Escrow es un sencillo y muy utilizado caso de uso que te invito a explorar para el intercambio de valor de forma segura entre dos partes. Lo maravilloso de Blockchain está en eliminar esos intermediarios tan molestos.
 
 ---
-Post creado en colaboración con el [Curso de OpenZeppelin](https://external.ink?to=https://platzi.com/cursos/openzeppelin/) de **Platzi**.
+Post creado en colaboración con el [Curso de OpenZeppelin](https://platzi.com/cursos/openzeppelin/) de **Platzi**.

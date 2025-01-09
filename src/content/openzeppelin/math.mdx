@@ -25,9 +25,9 @@ Por ejemplo, si una variable puede almacenar como máximo el valor `999`, al sum
 
 Afortunadamente, **el problema ha sido resuelto** a partir de la versión `0.8.0` del compilador de Solidity. Si ocurriese uno de estos tipos de errores, se lanzará un error y se revierte la operación
 
-Es muy importante tener en cuenta la compatibilidad hacia atrás. Contratos inteligentes que fueron desarrollados con versiones anteriores a la `0.8.0` aún tienen este problema que puede ser resulto con librerías que hagan las respectivas validaciones como [Math de OpenZeppelin](https://external.ink?to=https://docs.openzeppelin.com/contracts/2.x/api/math).
+Es muy importante tener en cuenta la compatibilidad hacia atrás. Contratos inteligentes que fueron desarrollados con versiones anteriores a la `0.8.0` aún tienen este problema que puede ser resulto con librerías que hagan las respectivas validaciones como [Math de OpenZeppelin](https://docs.openzeppelin.com/contracts/2.x/api/math).
 
-Si te encuentras realizando mantenimiento a contratos inteligentes desarrollados hace algunos años, es posible que te encuentres con librerías como [SafeMath](https://external.ink?to=https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/utils/math) de OpenZeppelin para resolver estos problemas.
+Si te encuentras realizando mantenimiento a contratos inteligentes desarrollados hace algunos años, es posible que te encuentres con librerías como [SafeMath](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/utils/math) de OpenZeppelin para resolver estos problemas.
 
 Como desarrollador de contratos inteligentes, será muy importante que estudies este tipo de vulnerabilidades.
 
@@ -41,9 +41,9 @@ No se trata de un caso de uso frecuente, pero podemos encontrarnos con escenario
 
 Caso contrario, podemos tener la necesidad de encriptar la información dentro del contrato para enviarla a algún receptor o almacenarla en este formato.
 
-> **Nota:** Cuando trabajes con hashes en Solidity, tal vez te llame la atención la palabra [Keccak](https://external.ink?to=https://www.cyberseguridad.net/keccak-es-el-algoritmo-elegido-como-sha-3). Keccak se trata de un poderoso algoritmo de encriptación asimétrico. Ideal para encriptar contraseñas o realizar validaciones de datos.
+> **Nota:** Cuando trabajes con hashes en Solidity, tal vez te llame la atención la palabra [Keccak](https://www.cyberseguridad.net/keccak-es-el-algoritmo-elegido-como-sha-3). Keccak se trata de un poderoso algoritmo de encriptación asimétrico. Ideal para encriptar contraseñas o realizar validaciones de datos.
 
 Más allá de la necesidad que tengamos en nuestro contrato de manipular información encriptada. Recuerda que todo en Blockchain es público, de alguna u otra manera, tanto los datos como el código fuente del contrato. Te aconsejo estudiar bien la situación y tal vez trabajar con procesamiento off-chain cuando debas manipular información sensible.
 
 ---
-Post creado en colaboración con el [Curso de OpenZeppelin](https://external.ink?to=https://platzi.com/cursos/openzeppelin/) de **Platzi**.
+Post creado en colaboración con el [Curso de OpenZeppelin](https://platzi.com/cursos/openzeppelin/) de **Platzi**.

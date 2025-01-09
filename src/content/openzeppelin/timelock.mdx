@@ -17,13 +17,13 @@ Al darle la responsabilidad de ejecutar ciertas tareas en un contrato inteligent
 
 ## Demoras en la ejecución de una tarea
 
-OpenZeppelin implementa un contrato inteligente llamado [TimelockController](https://external.ink?to=https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/governance/TimelockController.sol) que permite **establecer una demora antes de la ejecución de una tarea**.
+OpenZeppelin implementa un contrato inteligente llamado [TimelockController](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/governance/TimelockController.sol) que permite **establecer una demora antes de la ejecución de una tarea**.
 
 Supongamos que en un contrato inteligente que emite tokens, sus administradores deciden aumentar la emisión de los mismos. Esto podría llevar a que el precio de los tokens baje considerablemente. Sería oportuno darles 48 o 72 horas a sus usuarios para que decidan retirar sus fondos o continuar participando del proyecto.
 
 ## Implementación de TimelockController
 
-[TimelockController](https://external.ink?to=https://docs.openzeppelin.com/contracts/4.x/api/governance#TimelockController), a su vez, hereda del contrato [AccessControl](https://external.ink?to=https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/AccessControl.sol) para que el mismo sea administrado por diferentes roles de usuarios.
+[TimelockController](https://docs.openzeppelin.com/contracts/4.x/api/governance#TimelockController), a su vez, hereda del contrato [AccessControl](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/AccessControl.sol) para que el mismo sea administrado por diferentes roles de usuarios.
 
 ```js
 bytes32 public constant TIMELOCK_ADMIN_ROLE = keccak256("TIMELOCK_ADMIN_ROLE");
@@ -73,4 +73,4 @@ Este tipo de contratos pueden caer fácilmente en problemas de centralización. 
 Es importante conocer conceptualmente todo lo que pude desarrollarse en un contrato inteligente para proponerlo y/o implementarlo llegada la necesidad en un proyecto.
 
 ---
-Post creado en colaboración con el [Curso de OpenZeppelin](https://external.ink?to=https://platzi.com/cursos/openzeppelin/) de **Platzi**.
+Post creado en colaboración con el [Curso de OpenZeppelin](https://platzi.com/cursos/openzeppelin/) de **Platzi**.
