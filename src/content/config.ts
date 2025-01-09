@@ -34,26 +34,33 @@ export const collections = {
 
 export interface CollectionMetadata {
   name: string;
+  image: string;
 }
 
 export const collectionMetadata: CollectionMetadata[] = [
   {
     name: 'bitcoin',
+    image: '/tech/bitcoin.png'
   },
   {
     name: 'blockchain',
+    image: '/tech/blockchain.png'
   },
   {
     name: 'ethereum',
+    image: '/tech/ethereum.webp'
   },
   {
     name: 'openzeppelin',
+    image: '/tech/openzeppelin.png'
   },
   {
     name: 'solana',
+    image: '/tech/solana.webp'
   },
   {
     name: 'solidity',
+    image: '/tech/solidity.webp'
   },
 ];
 

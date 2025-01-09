@@ -5,6 +5,7 @@ import { languages } from '@i18n/ui';
 import { getLangFromUrl, useTranslations } from '@i18n/utils';
 import MainLayout from '@layouts/MainLayout.astro';
 import BlogCard from '@components/BlogCard.astro';
+import CollectionsList from '@components/CollectionsList.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -41,9 +42,9 @@ const post = Astro.props;
   title={`Blog ${collectionNameMapping(param.collection)} | Kevin Fiorentino`}
   description={`Blog collection: ${collectionNameMapping(param.collection)}`}
   image='/kevin.webp'
-  addWidth={true}
+  addWidth={false}
 >
-  <div>
+  <div class="main-width">
     <a href={`/${lang}/blog`} title={t('go-blog')} class="dark:text-white hover:underline">
       Blog
     </a>
@@ -52,7 +53,7 @@ const post = Astro.props;
     </h1>
     <hr><br>
   </div>
-  <div role="list" class="cards-grid">
+  <div role="list" class="main-width cards-grid">
     {
       post.posts.map((item: any) => (
         <div>
@@ -69,4 +70,11 @@ const post = Astro.props;
       ))
     }
   </div>
+
+  <br><br><br>
+
+  <CollectionsList></CollectionsList>
+
+  <br><br><br>
+
 </MainLayout>
