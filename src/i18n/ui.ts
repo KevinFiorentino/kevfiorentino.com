@@ -15,7 +15,7 @@ export const ui = {
     'prev': 'Previous',
     'next': 'Next',
 
-    'blog.all-categories': 'All categories',
+    'blog.all-collections': 'All collections',
     'blog.latest': 'Latest posts',
     'blog.others': 'More posts',
     'blog.toc': 'Table of Content',
@@ -41,7 +41,7 @@ export const ui = {
     'prev': 'Anterior',
     'next': 'Siguiente',
 
-    'blog.all-categories': 'Todas las categorías',
+    'blog.all-collections': 'Todas las categorías',
     'blog.latest': 'Últimos posts',
     'blog.others': 'Más posts',
     'blog.toc': 'Tabla de Contenido',

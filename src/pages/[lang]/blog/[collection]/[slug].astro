@@ -19,7 +19,7 @@ export async function getStaticPaths() {
       pages.push({
         params: {
           lang: 'es',
-          category: c.name,
+          collection: c.name,
           slug: post.slug,
         },
         props: {
@@ -30,7 +30,7 @@ export async function getStaticPaths() {
         pages.push({
           params: {
             lang: 'en',
-            category: c.name,
+            collection: c.name,
             slug: post.slug,
           },
           props: {
@@ -74,7 +74,7 @@ const { Content, headings } = await post.render();
         <Content />
       </article>
       <PrevNext
-        category={collection}
+        collection={collection}
         prev={prev}
         next={next}
       ></PrevNext>

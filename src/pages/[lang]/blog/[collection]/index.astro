@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 
   const pages: any[] = [];
 
-  // Build category pages
+  // Build collection pages
   for await (let c of collectionMetadata) {
     const posts = await getCollection(c.name as any);
 
@@ -21,7 +21,7 @@ export async function getStaticPaths() {
       pages.push({
         params: {
           lang: l,
-          category: c.name
+          collection: c.name
         },
         props: {
           posts: posts
@@ -38,8 +38,8 @@ const post = Astro.props;
 ---
 
 <MainLayout
-  title={`Blog ${collectionNameMapping(param.category)} | Kevin Fiorentino`}
-  description={`Blog category: ${collectionNameMapping(param.category)}`}
+  title={`Blog ${collectionNameMapping(param.collection)} | Kevin Fiorentino`}
+  description={`Blog collection: ${collectionNameMapping(param.collection)}`}
   image='/kevin.webp'
   addWidth={true}
 >
@@ -48,7 +48,7 @@ const post = Astro.props;
       Blog
     </a>
     <h1 class="text-gradient mt-0">
-      { collectionNameMapping(param.category) }
+      { collectionNameMapping(param.collection) }
     </h1>
     <hr><br>
   </div>

@@ -4,7 +4,7 @@ import { getLangFromUrl, useTranslations } from '@i18n/utils';
 import NavigationButton from './NavigationButton.astro';
 
 interface Props {
-  category?: string;
+  collection?: string;
   prev?: string;
   next?: string;
 }
@@ -12,23 +12,23 @@ interface Props {
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const { category, prev, next } = Astro.props;
+const { collection, prev, next } = Astro.props;
 
-const prevArticle = prev ? await getEntry(category, prev) : undefined;
-const nextArticle = next ? await getEntry(category, next) : undefined;
+const prevArticle = prev ? await getEntry(collection, prev) : undefined;
+const nextArticle = next ? await getEntry(collection, next) : undefined;
 ---
 
 <aside class="mt-10 flex flex-col flex-wrap gap-3 md:flex-row">
   {
     prev && (
-      <NavigationButton href={`/${lang}/blog/${category}/${prev}`} label={t('prev')} title={prevArticle?.data.title} icon prev>
+      <NavigationButton href={`/${lang}/blog/${collection}/${prev}`} label={t('prev')} title={prevArticle?.data.title} icon prev>
         <span class="prev-next-link">{prevArticle?.data.title}</span>
       </NavigationButton>
     )
   }
   {
     next && (
-      <NavigationButton href={`/${lang}/blog/${category}/${next}`} label={t('next')} title={nextArticle?.data.title} icon>
+      <NavigationButton href={`/${lang}/blog/${collection}/${next}`} label={t('next')} title={nextArticle?.data.title} icon>
         <span class="prev-next-link">{nextArticle?.data.title}</span>
       </NavigationButton>
     )
