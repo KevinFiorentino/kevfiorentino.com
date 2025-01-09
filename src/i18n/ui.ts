@@ -22,9 +22,10 @@ export const ui = {
 
     'home.tech': 'My seven-year career knowledge went through',
     'home.kev': 'Hi, I\'m Kev!',
-    'home.presentation1': 'Years working on Web2 projects as a full-stack PHP and Javascript developer. Carrying that knowledge to team leadership and decentralizing apps in Web3 and crypto projects.',
-    'home.presentation2': 'Writer, and content creator for Platzi\'s community. I have a degree in information systems BTW.',
-    'home.presentation3': 'Taking my first steps as an entrepreneur.',
+    'home.presentation1': 'Software engineer with more than 8 years of experience.',
+    'home.presentation2': 'I consider myself agnostic to the technology, with a generalist perspective. I am full-stack developer, specialized in Javascript, with a slight inclination towards front-end. I love Docker (DevOps is not my passion). I am good at using Figma... but not a good designer. Where I perform best is having an holistic vision of the software we are building, coordinating people, technology, and business.',
+    'home.presentation3': 'Throughout my career, I have worked with several own clients as a freelance. I worked for the public sector, on blockchain and IA projects, and in some startups. I founded and led my own startup, where I assumed the role of CTO and Team Manager, designing the architecture of a complex software and leading a full staff of developers for 2 years.',
+    'home.presentation4': 'At this stage of my career, my priority is to meet people, belong and work on multidisciplinary teams, regardless of technology or project. I am looking to contribute my experience and continue developing professionally and personally.',
 
     'footer.recommends': 'Might interest you',
     'footer.resources': 'Resources',
@@ -47,9 +48,10 @@ export const ui = {
 
     'home.tech': 'Mi conocimiento en seis años de carrera pasó por',
     'home.kev': '¡Hola, soy Kev!',
-    'home.presentation1': 'Años trabajando en Web2 como full-stack PHP y Javascript developer. Llevando ese conocimiento al liderazgo de equipos y descentralizando aplicaciones en proyectos Web3 y crypto.',
-    'home.presentation2': 'Escritor y creador de contenido para la comunidad de Platzi. Además, tengo un título de grado como Licenciado en Sistemas.',
-    'home.presentation3': 'Dando mis primeros pasos como emprendedor.',
+    'home.presentation1': 'Ingeniero de software con más de 8 años de experiencia profesional.',
+    'home.presentation2': 'Me considero agnóstico a la tecnología, con una perspectiva generalista. Soy desarrollador full-stack, especializado en Javascript, con una leve inclinación hacia el front-end. Amo Docker (DevOps no es mi pasión). Soy bueno usando Figma... pero no buen diseñador. Donde mejor me desempeño es teniendo una visión holistica del software que estamos desarrollando, coordinando personas, tecnología y negocio.',
+    'home.presentation3': 'A lo largo de mi carrera, He trabajado con varios clientes propios como freelance. Trabajé para el sector público, en proyectos blockchain e IA, y en algunas startups. Fundé y lideré mi propia startup, donde asumí el rol de CTO y Team Manager, diseñando la arquitectura de un complejo software y dirigiendo a un completo staff de desarrolladores durante 2 años.',
+    'home.presentation4': 'En esta etapa de mi carrera, mi prioridad es conocer nuevas personas, pertenecer y trabajar en equipos multidisciplinarios, independientemente de la tecnología o el proyecto. Busco aportar mi experiencia y seguir desarrollándome profesional y personalmente.',
 
     'footer.recommends': 'Puede interesarte',
     'footer.resources': 'Recursos',
