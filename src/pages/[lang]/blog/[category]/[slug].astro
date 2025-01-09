@@ -23,7 +23,6 @@ export async function getStaticPaths() {
           slug: post.slug,
         },
         props: {
-          category: c.name,
           post: post,
         },
       });
@@ -35,7 +34,6 @@ export async function getStaticPaths() {
             slug: post.slug,
           },
           props: {
-            category: c.name,
             post: post,
           },
         });
