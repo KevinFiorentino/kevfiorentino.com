@@ -69,6 +69,11 @@ const year = new Date().getFullYear();
                 </a>
               </li>
               <li>
+                <a href={`/${lang}`} title={t('contact')} class="text-white transition hover:underline">
+                  {t('contact')}
+                </a>
+              </li>
+              <li>
                 <a href={`/${lang}/blog`} title="Blog" class="text-white transition hover:underline">
                   Blog
                 </a>
@@ -86,11 +91,6 @@ const year = new Date().getFullYear();
               <li>
                 <a href={`https://github.com/KevinFiorentino/kevfiorentino.com`} target="_blank" title={t('footer.source')} class="text-white transition hover:underline">
                   {t('footer.source')}
-                </a>
-              </li>
-              <li>
-                <a href={`/rss.xml`} target="_blank" title="RSS" class="text-white transition hover:underline">
-                  RSS
                 </a>
               </li>
             </ul>

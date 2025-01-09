@@ -9,6 +9,7 @@ export const defaultLang = 'en';
 
 export const ui = {
   en: {
+    'contact': 'Contact',
     'go-blog': 'Go to blog',
     'share-on': 'Share through',
     'share-by': 'Share through',
@@ -35,6 +36,7 @@ export const ui = {
     'read-post': 'Read post',
   },
   es: {
+    'contact': 'Contacto',
     'go-blog': 'Ir al blog',
     'share-on': 'Compartir en',
     'share-by': 'Compartir por',
