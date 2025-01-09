@@ -13,7 +13,7 @@ const t = useTranslations(lang);
 export async function getStaticPaths() {
 
   const pages: any[] = [];
-  let allPosts: any[] = [];
+  const posts: any[] = [];
 
   const p1 = await getEntry('blockchain', 'web2-vs-web3');
   const p2 = await getEntry('solana', 'behind-solana');
@@ -22,13 +22,13 @@ export async function getStaticPaths() {
   const p5 = await getEntry('openzeppelin', 'escrow');
   const p6 = await getEntry('bitcoin', 'architecture');
 
-  allPosts.push(p1, p2, p3, p4, p5, p6);
+  posts.push(p1, p2, p3, p4, p5, p6);
 
   Object.keys(languages).forEach((l: string) => {
     pages.push({
       params: { lang: l },
       props: {
-        posts: allPosts,
+        posts: posts,
       },
     });
   });

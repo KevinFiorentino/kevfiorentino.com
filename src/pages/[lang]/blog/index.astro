@@ -1,8 +1,7 @@
 ---
 import { languages } from '@i18n/ui';
 import { getLangFromUrl, useTranslations } from '@i18n/utils';
-import { getCollection } from 'astro:content';
-import { collectionMetadata } from '@content/config';
+import { getEntry } from 'astro:content';
 import MainLayout from '@layouts/MainLayout.astro';
 import BlogCard from '@components/BlogCard.astro';
 import CollectionsList from '@components/CollectionsList.astro';
@@ -13,27 +12,34 @@ const t = useTranslations(lang);
 export async function getStaticPaths() {
   const pages: any[] = [];
 
-  let allPosts: any[] = [];
+  const main: any[] = [];
+  const p1 = await getEntry('blockchain', 'web2-vs-web3');
+  const p2 = await getEntry('solana', 'behind-solana');
+  const p3 = await getEntry('solana', 'proof-of-history');
+  const p4 = await getEntry('ethereum', 'erc20-token');
+  const p5 = await getEntry('solidity', 'reentrancy-attack');
+  const p6 = await getEntry('openzeppelin', 'escrow');
+  const p7 = await getEntry('openzeppelin', 'governance');
+  const p8 = await getEntry('bitcoin', 'architecture');
+  main.push(p1, p2, p3, p4, p5, p6, p7, p8);
 
-  for await (let c of collectionMetadata) {
-    const coll = await getCollection(c.name as any);
-    allPosts = allPosts.concat(coll);
-  }
-
-  allPosts = allPosts.sort((a, b) => {
-    if (new Date(a.data.pubDate) < new Date(b.data.pubDate))
-      return 1;
-    if (new Date(a.data.pubDate) > new Date(b.data.pubDate))
-      return -1;
-    return 0;
-  });
+  const others: any[] = [];
+  const p9 = await getEntry('openzeppelin', 'upgradeable');
+  const p10 = await getEntry('ethereum', 'erc721-token');
+  const p11 = await getEntry('bitcoin', 'merkle-trees');
+  const p12 = await getEntry('bitcoin', 'inputs-outputs');
+  const p13 = await getEntry('solidity', 'good-practices');
+  const p14 = await getEntry('solidity', 'dos-attack');
+  const p15 = await getEntry('solana', 'tower-bft');
+  const p16 = await getEntry('solana', 'wrap-up');
+  others.push(p9, p10, p11, p12, p13, p14, p15, p16);
 
   Object.keys(languages).map((l: string) => {
     pages.push({
       params: { lang: l },
       props: {
-        recents: allPosts.slice(0, 8),
-        others: allPosts.slice(-6),
+        main: main,
+        others: others,
       },
     });
   });
@@ -42,7 +48,7 @@ export async function getStaticPaths() {
 }
 
 const param = Astro.params;
-const { recents, others } = Astro.props;
+const { main, others } = Astro.props;
 ---
 
 <MainLayout
@@ -55,14 +61,11 @@ const { recents, others } = Astro.props;
     <h1 class="text-gradient mb-3 mt-0">
       Blog
     </h1>
-    <h2>
-      {t('blog.latest')}
-    </h2>
     <hr class="mt-2 mb-0">
     <br><br>
     <div role="list" class="cards-grid">
       {
-        recents.map((item: any) => (
+        main.map((item: any) => (
           <div>
             <BlogCard
               slug={item.slug}

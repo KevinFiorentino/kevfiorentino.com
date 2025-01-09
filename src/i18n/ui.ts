@@ -17,7 +17,6 @@ export const ui = {
     'next': 'Next',
 
     'blog.all-collections': 'All collections',
-    'blog.latest': 'Latest posts',
     'blog.others': 'More posts',
     'blog.toc': 'Table of Content',
 
@@ -44,7 +43,6 @@ export const ui = {
     'next': 'Siguiente',
 
     'blog.all-collections': 'Todas las categorías',
-    'blog.latest': 'Últimos posts',
     'blog.others': 'Más posts',
     'blog.toc': 'Tabla de Contenido',
 
