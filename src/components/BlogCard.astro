@@ -9,6 +9,7 @@ export interface Props {
 }
 
 import { getLangFromUrl, useTranslations } from '@i18n/utils';
+import { collectionNameMapping } from '@content/config';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -39,8 +40,8 @@ const {
         </p>
       </div>
       <div class="flex items-end justify-between">
-        <span class="post-collection capitalize">
-          { collection }
+        <span class="post-collection">
+          { collectionNameMapping(collection) }
         </span>
         <div class="btn-read text-gray-400 dark:text-white text-center font-bold">
           {t('read-post')}

@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import { collectionMetadata } from '@content/config';
+import { collectionMetadata, collectionNameMapping } from '@content/config';
 import { languages } from '@i18n/ui';
 import { getLangFromUrl, useTranslations } from '@i18n/utils';
 import MainLayout from '@layouts/MainLayout.astro';
@@ -39,8 +39,8 @@ const post = Astro.props;
 ---
 
 <MainLayout
-  title={`Blog ${param.category} | Kevin Fiorentino`}
-  description={`Blog category: ${post.category}`}
+  title={`Blog ${collectionNameMapping(param.category)} | Kevin Fiorentino`}
+  description={`Blog category: ${collectionNameMapping(param.category)}`}
   image='/kevin.webp'
   addWidth={true}
 >
@@ -48,8 +48,8 @@ const post = Astro.props;
     <a href={`/${lang}/blog`} title={t('go-blog')} class="dark:text-white hover:underline">
       Blog
     </a>
-    <h1 class="text-gradient capitalize mt-0">
-      {param.category}
+    <h1 class="text-gradient mt-0">
+      { collectionNameMapping(param.category) }
     </h1>
     <hr><br>
   </div>

@@ -56,3 +56,15 @@ export const collectionMetadata: CollectionMetadata[] = [
     name: 'solidity',
   },
 ];
+
+export function collectionNameMapping(name: string): string {
+  switch (name) {
+    case 'bitcoin' : { return 'Bitcoin'; }
+    case 'blockchain' : { return 'Blockchain'; }
+    case 'ethereum' : { return 'Ethereum'; }
+    case 'openzeppelin' : { return 'OpenZeppelin'; }
+    case 'solana' : { return 'Solana'; }
+    case 'solidity' : { return 'Solidity'; }
+    default : { return ''; }
+  }
+}

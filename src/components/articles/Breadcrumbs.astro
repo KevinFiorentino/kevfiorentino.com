@@ -5,6 +5,7 @@ export interface Props {
 }
 
 import { getLangFromUrl, useTranslations } from '@i18n/utils';
+import { collectionNameMapping } from '@content/config';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -37,7 +38,9 @@ const month = months[pubDate.getMonth()];
       </li>
       <li class="dark:text-white mr-2">/</li>
       <li class="dark:text-white mr-2">
-        <a href=`/${lang}/blog/${collection}` class="capitalize mr-2" title={`${t('collection')}: ${collection}`}>{collection}</a>
+        <a href=`/${lang}/blog/${collection}` class="mr-2" title={`${t('collection')}: ${collectionNameMapping(collection)}`}>
+          { collectionNameMapping(collection) }
+        </a>
       </li>
     </ul>
     <time datetime={ pubDate.toString() } class="text-gray-500 dark:text-gray-300">
