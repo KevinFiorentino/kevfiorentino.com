@@ -5,7 +5,7 @@ export const frontend: TechBox = {
   techs: [
     {
       tech: 'Angular',
-      image: '...',
+      image: '/tech/1-front-end/angular.webp',
       years: [2020, 2021],
       tier: 1
     }
