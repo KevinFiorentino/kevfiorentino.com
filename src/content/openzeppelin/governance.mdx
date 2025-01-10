@@ -16,27 +16,27 @@ Un concepto avanzado en el mundo de Blockchain y de los contratos inteligentes e
 
 ## Problemas de control de acceso
 
-El principal problema de un contrato inteligente para la toma de decisiones es la centralización cuando trabajamos con [diferentes mecanismos de control de acceso](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/access).
+El principal problema de un contrato inteligente para la toma de decisiones es la centralización cuando trabajamos con [diferentes mecanismos de control de acceso](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/access "Diferentes mecanismos de control de acceso").
 
 Que unas pocas personas administren el contrato es un problema para proyectos donde intervengan grandes sumas de dinero. Los usuarios simplemente no participarán de proyectos así y no pondrán su dinero en el contrato.
 
 ## Gobierno en un contrato inteligente
 
-El concepto de [Gobernanza](https://ethereum.org/es/governance/) **soluciona de forma transparente la toma de decisiones en un contrato inteligente**.
+El concepto de [Gobernanza](https://ethereum.org/es/governance/ "Gobernanza") **soluciona de forma transparente la toma de decisiones en un contrato inteligente**.
 
 El mismo implica que **los propios usuarios del proyecto tengan voz y voto** para determinar el rumbo del mismo y que no sea decisión de unos pocos.
 
-OpenZeppelin posee sus [propias implementaciones](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/governance) de estos contratos para el desarrollo de contratos que permitan realizar votaciones.
+OpenZeppelin posee sus [propias implementaciones](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/governance "Implementaciones contratos gobernanza") de estos contratos para el desarrollo de contratos que permitan realizar votaciones.
 
 Por lo general, el concepto de Gobernanza viene acompañado por “Token de Gobernanza”. El contrato inteligente otorga este tipo de tokens de forma proporcional a la cantidad de dinero que cada usuario tenga depositado en el contrato. De esta forma, los votos de los usuarios con más tokens valen más que los que menos tengan.
 
 Es una manera de incentivar la participación en este tipo de proyectos. También es posible que cada voto de cada usuario valga lo mismo sin hacer diferencia.
 
-Es muy frecuente la combinación de esta característica en los contratos con [TimelockController.sol](/es/blog/openzeppelin/timelock) para que un sistema de votos dure N cantidad de horas o días y tomar decisiones con base en esa votación que tuvo una duración predefinida.
+Es muy frecuente la combinación de esta característica en los contratos con [TimelockController.sol](/es/blog/openzeppelin/timelock "TimelockController.sol") para que un sistema de votos dure N cantidad de horas o días y tomar decisiones con base en esa votación que tuvo una duración predefinida.
 
 ## Conclusión
 
-Sin duda, un concepto avanzado como el de Gobernanza requiere de bastante experiencia para el desarrollo de un contrato con esta funcionalidad. Tal vez participar de este tipo de [DAOs](https://ethereum.org/es/dao/) que son administradas a través de este mecanismo te ayudará a entender poco a poco estos conceptos y poder desarrollar este tipo de contratos inteligentes.
+Sin duda, un concepto avanzado como el de Gobernanza requiere de bastante experiencia para el desarrollo de un contrato con esta funcionalidad. Tal vez participar de este tipo de [DAOs](https://ethereum.org/es/dao/ "DAOs") que son administradas a través de este mecanismo te ayudará a entender poco a poco estos conceptos y poder desarrollar este tipo de contratos inteligentes.
 
 ---
-Post creado en colaboración con el [Curso de OpenZeppelin](https://platzi.com/cursos/openzeppelin/) de **Platzi**.
+Post creado en colaboración con el [Curso de OpenZeppelin](https://platzi.com/cursos/openzeppelin/ "Curso de OpenZeppelin de Platzi") de **Platzi**.

@@ -18,8 +18,8 @@ Las transferencias y **el envío de ETH también pueden ser perjudiciales para u
 
 Los contratos inteligentes pueden recibir ETH a través de funciones especiales o *hooks*.
 
-* [**Fallback:**](https://docs.soliditylang.org/en/v0.8.12/contracts.html#fallback-function) La función `fallback()` se ejecuta por defecto cuando se hace un llamado a una función inexistente en un contrato. Puede ser sobreescrita y devolver un resultado o no.
-* [**Receive:**](https://docs.soliditylang.org/en/v0.8.12/contracts.html#receive-ether-function) La función `receive()` puede ser declarada para que el contrato ejecute determinada lógica al recibir ETH. Si esta no existe, se ejecutará en su lugar la función `fallback`.
+* [**Fallback:**](https://docs.soliditylang.org/en/v0.8.12/contracts.html#fallback-function "Fallback") La función `fallback()` se ejecuta por defecto cuando se hace un llamado a una función inexistente en un contrato. Puede ser sobreescrita y devolver un resultado o no.
+* [**Receive:**](https://docs.soliditylang.org/en/v0.8.12/contracts.html#receive-ether-function "Receive") La función `receive()` puede ser declarada para que el contrato ejecute determinada lógica al recibir ETH. Si esta no existe, se ejecutará en su lugar la función `fallback`.
 
 Es una buena práctica definir el comportamiento de `fallback()`. No necesariamente debemos utilizar `receive()`, ya que la regla de negocio de nuestro contrato puede no necesitarlo. Son dos maneras de controlar lo que sucede en nuestro contrato al recibir ETH.
 
@@ -40,7 +40,7 @@ Veamos un ejemplo de cómo puede explotarse esta vulnerabilidad:
 
 Comencemos entendiendo el funcionamiento del contrato principal que se trata de un simple juego que permite almacenar ETH y determinador un ganador al llegar a los X ETH.
 
-> **NOTA:** El ejemplo de esta vulnerabilidad fue tomado y adaptado originalmente de [Solidity by examples](https://solidity-by-example.org/hacks/self-destruct/).
+> **NOTA:** El ejemplo de esta vulnerabilidad fue tomado y adaptado originalmente de [Solidity by examples](https://solidity-by-example.org/hacks/self-destruct/ "Solidity by examples").
 
 * El objetivo del juego es llegar a un depósito de 7 ETH.
 * Los depósitos solo pueden ser de 1 ETH a la vez.

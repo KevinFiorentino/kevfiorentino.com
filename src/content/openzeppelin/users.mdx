@@ -53,7 +53,7 @@ contract MiContrato is Ownable {
 }
 ```
 
-Tu contrato hereda de [Ownable](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol) para disponer del modificador `onlyOwner`. De esta forma, **aseguras tu contrato a no cometer ningún error** con respecto a la manipulación de su dueño.
+Tu contrato hereda de [Ownable](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol "Ownable") para disponer del modificador `onlyOwner`. De esta forma, **aseguras tu contrato a no cometer ningún error** con respecto a la manipulación de su dueño.
 
 ### Cambiar el dueño de un contrato
 
@@ -74,7 +74,7 @@ En determinados contratos, **a veces no es suficiente disponer solo de un owner*
 
 Podemos **definir la cantidad de roles que vamos a necesitar en nuestro contrato**. Sin embargo, aún requerimos que exista un único dueño que asigne posteriormente los roles a otras cuentas.
 
-Importa y hereda [AccessControl](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/AccessControl.sol) desde OpenZeppelin para comenzar a definir tus propios roles.
+Importa y hereda [AccessControl](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/AccessControl.sol "AccessControl") desde OpenZeppelin para comenzar a definir tus propios roles.
 
 ```js
 // SPDX-License-Identifier: GPL-3.0
@@ -155,4 +155,4 @@ Por ejemplo, un contrato que guarda información de estudiantes y sus notas. Los
 Implementa la administración de roles de forma inteligente para crear tus contratos y que cada tipo de cuenta tenga sus responsabilidades. El caso de uso que tengas que resolver determinará cómo debes desarrollar tu contrato.
 
 ---
-Post creado en colaboración con el [Curso de OpenZeppelin](https://platzi.com/cursos/openzeppelin/) de **Platzi**.
+Post creado en colaboración con el [Curso de OpenZeppelin](https://platzi.com/cursos/openzeppelin/ "Curso de OpenZeppelin de Platzi") de **Platzi**.

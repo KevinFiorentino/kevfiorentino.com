@@ -29,7 +29,7 @@ Este es un problema grave de seguridad ya que si los valores se tratan de montos
 
 Afortunadamente, el problema ha sido resuelto a partir de la versión `0.8.0` del compilador de Solidity. Si ocurriese uno de estos tipos de errores, se lanzará una advertencia de error evitando que se pueda explotar la vulnerabilidad.
 
-Ten en cuenta la compatibilidad hacia atrás. Contratos inteligentes que fueron desarrollados con versiones anteriores a la `0.8.0` aún tienen este problema, que puede ser resulto con librerías que hagan las respectivas validaciones como [Math de OpenZeppelin](https://docs.openzeppelin.com/contracts/2.x/api/math).
+Ten en cuenta la compatibilidad hacia atrás. Contratos inteligentes que fueron desarrollados con versiones anteriores a la `0.8.0` aún tienen este problema, que puede ser resulto con librerías que hagan las respectivas validaciones como [Math de OpenZeppelin](https://docs.openzeppelin.com/contracts/2.x/api/math "Math de OpenZeppelin").
 
 Ten presente este problema si trabajas con versiones del compilador más antiguas y variables numéricas, tanto con signo como sin signo o de cualquier longitud.
 
@@ -65,7 +65,7 @@ contract Privado {
 }
 ```
 
-Las variables privadas de un contrato pueden ser accedidas a través de su índice en memoria con ayuda de librerías como [Truffle](https://archive.trufflesuite.com/) que permiten acceder a los datos privados de un contrato inteligente con métodos como `web3.eth.getStorageAt("<contract_address>", index)`. El mismo devolverá el valor de la variable codificado en Base64, muy fácilmente decodificable para obtener su verdadero valor.
+Las variables privadas de un contrato pueden ser accedidas a través de su índice en memoria con ayuda de librerías como [Truffle](https://archive.trufflesuite.com/ "Truffle") que permiten acceder a los datos privados de un contrato inteligente con métodos como `web3.eth.getStorageAt("<contract_address>", index)`. El mismo devolverá el valor de la variable codificado en Base64, muy fácilmente decodificable para obtener su verdadero valor.
 
 En síntesis, utiliza los diferentes tipos de visibilidad que Solidity tiene para ofrecer dependiendo la regla de negocio, pero sabiendo que todos los datos son visibles de alguna u otra manera. **No guardes contraseñas o secretos en variables privadas**, no han sido implementados para eso.
 
