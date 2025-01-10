@@ -8,6 +8,24 @@ h1, h2, h3, h4, h5, h5, h6 {
   line-height: normal;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  a {
+    text-decoration: none !important;
+    margin-left: 5px;
+  }
+  .copy {
+    display: none;
+  }
+  &:hover {
+    .copy {
+      display: inline;
+    }
+  }
+}
+
 h1 {
   font-size: 3rem;
   font-weight: 800;
