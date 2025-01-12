@@ -5,14 +5,30 @@ import { techWrapper } from '@utils/tech-wrapper';
 export const prerender = false;
 
 export const GET: APIRoute = async ({ url }) => {
-  const y = url.searchParams.get('year') ?? 'current';
-  console.log(url)
-  console.log(y)
+  const filter = url.searchParams.get('filter') ?? 'all';
+  console.log(filter)
+
+  console.log(techWrapper)
+
+  const yearRegex = /^(1[0-9]{3}|2[0-9]{3})$/;
+  let result = null;
+
+  if (filter == 'all') {
+    result = techWrapper;
+  } else if (filter == 'uni') {
+    console.log('uni');
+  } else if (filter == 'tier') {
+    console.log('tier');
+  } else if (yearRegex.test(filter)) {
+    console.log('YEAR');
+  } else {
+    result = techWrapper;
+  }
 
   return new Response(
     JSON.stringify({
       statusCode: 200,
-      data: techWrapper,
+      data: result,
     }),
     {
       headers: {

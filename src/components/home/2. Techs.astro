@@ -5,8 +5,6 @@ import TechsBox from './techs/TechsBox.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-
-console.log(techWrapper);
 ---
 
 <section class="bg-techs bg-polygon relative">
@@ -15,8 +13,26 @@ console.log(techWrapper);
       Tech Journey
     </h2>
     <br>
+    <div class="btn-techs">
+      <button aria-label="uni">Uni 🏫</button>
+      <button aria-label="2017">2017</button>
+      <button aria-label="2018">2018</button>
+      <button aria-label="2019">2019</button>
+      <button aria-label="2020">2020</button>
+      <button aria-label="2021">2021</button>
+      <button aria-label="2022">2022</button>
+      <button aria-label="2023">2023</button>
+      <button aria-label="2024">2024</button>
+      <button aria-label="2025">2025</button>
+      <button class="active" aria-label="all">All 💻</button>
+      <button aria-label="tier">Tier 🩵</button>
+    </div>
+    <br>
+    <p class="text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum  malesuada eleifend. Cras a velit dolor. Fusce augue purus, fringilla iaculis rhoncus vitae, convallis sit amet purus. Integer ornare, lacus  ut eleifend tincidunt, neque eros congue nisl, in dignissim augue velit  et tortor.
+    </p>
+    <br>
     <div role="list" class="tech-main-box flex flex-wrap justify-center items-center">
-
       {
         techWrapper.map((box: any) => (
           <TechsBox
@@ -24,10 +40,30 @@ console.log(techWrapper);
           ></TechsBox>
         ))
       }
-
     </div>
   </div>
 </section>
+
+<script>
+  async function handleTechBtn(filter: string | null) {
+    try {
+      const response = await fetch(`/api/techs?filter=${filter}`);
+      const data = await response.json();
+
+      console.log(data);
+    } catch (error) {
+      console.error('Error al obtener datos:', error);
+    }
+  }
+
+  document.querySelectorAll('.btn-techs button').forEach((button) => {
+    button.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement;
+      const filter = target.getAttribute('aria-label');
+      handleTechBtn(filter);
+    });
+  });
+</script>
 
 <style lang="scss">
 .bg-techs {
@@ -36,11 +72,35 @@ console.log(techWrapper);
     -webkit-text-fill-color: white;
     margin-bottom: 20px;
   }
-}
-.tech-main-box {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: start;
-  gap: 30px;
+  .tech-main-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    gap: 30px;
+  }
+  .btn-techs {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    justify-content: center;
+    gap: 15px;
+
+    button {
+      color: #1D1D1D;
+      background-color: #E5E7EB;
+      font-size: 22px;
+      font-weight: 600;
+      width: max-content;
+      padding: 0px 15px;
+      box-shadow: 0 3px 6px var(--shadow);
+      &.active, &:hover {
+        color: #E5E7EB;
+        background-color: var(--alternative);
+      }
+    }
+  }
+  .text {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
 }
 </style>
