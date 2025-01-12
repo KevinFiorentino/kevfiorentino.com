@@ -1,5 +1,5 @@
 import styles from './techs.module.scss';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { techWrapper } from '@utils/tech-wrapper';
 import type TechBox from '@utils/interfaces/tech-box.interface';
 import TechsBox from './techs/TechsBox';
@@ -8,7 +8,7 @@ const TechJourney = () => {
   const [techData, setTechData] = useState<TechBox[]>(techWrapper);
   const [loading, setLoading] = useState<boolean>(false);
 
-  const handleTechBtn = async (filter: string | null) => {
+  const handleTechBtn = async (filter: string) => {
     setLoading(true);
     try {
       const response = await fetch(`/api/techs?filter=${filter}`);
@@ -28,18 +28,18 @@ const TechJourney = () => {
         <h2 className="text-white text-center">Tech Journey</h2>
         <br />
         <div className={`${styles.btnTechs}`}>
-          <button onClick={() => handleTechBtn('uni')} aria-label="uni">Uni 🏫</button>
-          <button onClick={() => handleTechBtn('2017')} aria-label="2017">2017</button>
-          <button onClick={() => handleTechBtn('2018')} aria-label="2018">2018</button>
-          <button onClick={() => handleTechBtn('2019')} aria-label="2019">2019</button>
-          <button onClick={() => handleTechBtn('2020')} aria-label="2020">2020</button>
-          <button onClick={() => handleTechBtn('2021')} aria-label="2021">2021</button>
-          <button onClick={() => handleTechBtn('2022')} aria-label="2022">2022</button>
-          <button onClick={() => handleTechBtn('2023')} aria-label="2023">2023</button>
-          <button onClick={() => handleTechBtn('2024')} aria-label="2024">2024</button>
-          <button onClick={() => handleTechBtn('2025')} aria-label="2025">2025</button>
-          <button className={`${styles.active}`} onClick={() => handleTechBtn('all')} aria-label="all">All 💻</button>
-          <button onClick={() => handleTechBtn('tier')} aria-label="tier">Tier 🩵</button>
+          <button onClick={() => handleTechBtn('uni')}>Uni 🏫</button>
+          <button onClick={() => handleTechBtn('2017')}>2017</button>
+          <button onClick={() => handleTechBtn('2018')}>2018</button>
+          <button onClick={() => handleTechBtn('2019')}>2019</button>
+          <button onClick={() => handleTechBtn('2020')}>2020</button>
+          <button onClick={() => handleTechBtn('2021')}>2021</button>
+          <button onClick={() => handleTechBtn('2022')}>2022</button>
+          <button onClick={() => handleTechBtn('2023')}>2023</button>
+          <button onClick={() => handleTechBtn('2024')}>2024</button>
+          <button onClick={() => handleTechBtn('2025')}>2025</button>
+          <button className={`${styles.active}`} onClick={() => handleTechBtn('all')}>All 💻</button>
+          <button onClick={() => handleTechBtn('tier')}>Tier 🩵</button>
         </div>
         <br />
         <p className={`${styles.text}`}>

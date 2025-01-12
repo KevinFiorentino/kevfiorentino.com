@@ -1,14 +1,15 @@
 import type { APIRoute } from 'astro';
 import { techWrapper } from '@utils/tech-wrapper';
+import type TechBox from '@utils/interfaces/tech-box.interface';
+import type Tech from '@utils/interfaces/tech.interface';
 
 // Allows SSG route
 export const prerender = false;
 
 export const GET: APIRoute = async ({ url }) => {
   const filter = url.searchParams.get('filter') ?? 'all';
-  console.log(filter)
 
-  console.log(techWrapper)
+  console.log('techWrapper', techWrapper)
 
   const yearRegex = /^(1[0-9]{3}|2[0-9]{3})$/;
   let result = null;
@@ -20,8 +21,8 @@ export const GET: APIRoute = async ({ url }) => {
   } else if (filter == 'tier') {
     console.log('tier');
   } else if (yearRegex.test(filter)) {
-    console.log('YEAR');
-    result = techWrapper;
+    const r = filterByYear(parseInt(filter));
+    result = r;
   } else {
     result = techWrapper;
   }
@@ -38,3 +39,14 @@ export const GET: APIRoute = async ({ url }) => {
     }
   );
 };
+
+function filterByYear(year: number): TechBox[] {
+  const result: TechBox[] = techWrapper.map((box: TechBox) => {
+    const techsToShow = box.techs.filter((tech: Tech) => tech.years.includes(year));
+    if (techsToShow.length > 0) {
+      return { ...box, techs: techsToShow };
+    }
+    return null;
+  }).filter(Boolean) as TechBox[];
+  return result;
+}

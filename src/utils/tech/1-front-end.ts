@@ -19,7 +19,7 @@ export const frontend: TechBox = {
     {
       tech: 'Angular',
       image: '/tech/1-front-end/angular.webp',
-      years: [2020, 2021],
+      years: [2018, 2020, 2021],
       tier: 1
     },
     {
