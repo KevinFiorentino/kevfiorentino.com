@@ -1,0 +1,30 @@
+---
+import Tech from '@utils/interfaces/tech.interface';
+
+export interface Props {
+  tech: Tech;
+}
+
+const { tech } = Astro.props;
+---
+
+<div class="tech-image">
+  <img src={tech.image} alt={`${tech.tech} logo`} />
+</div>
+
+<style lang="scss">
+.tech-image {
+  img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    box-shadow: none;
+    transition: 100ms;
+
+    &:hover {
+      transform: scale(1.02);
+      transition: 100ms;
+    }
+  }
+}
+</style>

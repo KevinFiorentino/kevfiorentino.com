@@ -2,6 +2,7 @@ import type TechBox from '../interfaces/tech-box.interface';
 
 export const backend: TechBox = {
   name: 'Backend',
+  headerImage: 'backend.svg',
   techs: [
     {
       tech: 'NodeJS',

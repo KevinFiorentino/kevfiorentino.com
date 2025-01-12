@@ -1,70 +1,29 @@
 ---
 import { getLangFromUrl, useTranslations } from '@i18n/utils';
-
-/* import type TechBox from '@utils/interfaces/tech-box.interface';
-import { frontend } from '@utils/tech/1-front-end'; */
+import { techWrapper } from '@utils/tech-wrapper';
+import TechsBox from './techs/TechsBox.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-/* const techs: TechBox[] = [
-  frontend
-];
-
-console.log(techs); */
-
-/**
- * TOOLS:
- * - https://borderize.com/
- * - https://paintonline.editaraudio.com/
- * - https://www.remove.bg/
- * - https://www.iloveimg.com/
-*/
-
+console.log(techWrapper);
 ---
+
 <section class="bg-techs bg-polygon relative">
-  <div class="techs-main-box main-width relative z-10">
+  <div class="main-width relative z-10">
     <h2 class="text-white text-center">
-      {t('home.tech')}
+      Tech Journey
     </h2>
     <br>
-    <div role="list" class="flex flex-wrap justify-center items-center">
+    <div role="list" class="tech-main-box flex flex-wrap justify-center items-center">
 
-      <div class="techs-group m-3">
-        <img src="/tech/javascript.webp" alt="Javascript logo" title="Javascript" />
-        <img src="/tech/typescript.webp" alt="TypeScript logo" title="TypeScript" />
-        <img src="/tech/angular.webp" alt="Angular logo" title="Angular" />
-        <img src="/tech/react.webp" alt="React logo" title="React" />
-      </div>
-
-      <div class="techs-group m-3">
-        <img src="/tech/php.webp" alt="PHP logo" title="PHP" />
-        <img src="/tech/nodejs.webp" alt="NodeJS logo" title="NodeJS" />
-        <img src="/tech/rust.webp" alt="Rust logo" title="Rust" />
-        <img src="/tech/solidity.webp" alt="Solidity logo" title="Solidity" />
-      </div>
-
-      <div class="techs-group m-3">
-        <img src="/tech/solana.webp" alt="Solana logo" title="Solana Blockchain" />
-        <img src="/tech/ethereum.webp" alt="Ethereum logo" title="Ethereum Blockchain" />
-        <img src="/tech/ipfs.webp" alt="IPFS logo" title="Interplanetary File System" />
-      </div>
-
-      <div class="techs-group m-3">
-        <img src="/tech/docker.webp" alt="Docker logo" title="Docker" />
-        <img src="/tech/apache.webp" alt="Apache logo" title="Apache" />
-        <img src="/tech/nginx.webp" alt="NGINX logo" title="NGINX" />
-        <img src="/tech/heroku.webp" alt="Heroku logo" title="Heroku" />
-        <img src="/tech/ibm-cloud.webp" alt="IBM Cloud logo" title="IBM Cloud" />
-        <img src="/tech/firebase.webp" alt="Firebase logo" title="Firebase" />
-        <img src="/tech/linode.webp" alt="Linode logo" title="Linode" />
-      </div>
-
-      <div class="techs-group m-3">
-        <img src="/tech/mongodb.webp" alt="MongoDB logo" title="MongoDB" />
-        <img src="/tech/mysql.webp" alt="MySQL logo" title="MySQL" />
-        <img src="/tech/elasticsearch.webp" alt="Elasticsearch logo" title="Elasticsearch" />
-      </div>
+      {
+        techWrapper.map((box: any) => (
+          <TechsBox
+            techBox={box}
+          ></TechsBox>
+        ))
+      }
 
     </div>
   </div>
@@ -73,70 +32,15 @@ console.log(techs); */
 <style lang="scss">
 .bg-techs {
   background: var(--primary);
-
   h2 {
     -webkit-text-fill-color: white;
+    margin-bottom: 20px;
   }
 }
-.techs-main-box {
-  h2 {
-    line-height: 35px;
-  }
-  .techs-group {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    min-height: 100px;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-
-    img {
-      max-height: 70px;
-      max-width: 70px;
-      margin: 7px;
-      transform: scale(1);
-      transition: .5s;
-      z-index: 1;
-      box-shadow: none;
-      filter: drop-shadow(0 3px 6px var(--shadow));
-    }
-    img:hover {
-      transform: scale(1.1);
-      transition: .5s;
-    }
-  }
-  .techs-group:before, .techs-group:after {
-    content: "";
-    position: absolute;
-    background: rgba(255, 255, 255, 0.25);
-    width: 100%;
-    height: 115px;
-    left: 0;
-    overflow: hidden;
-    backface-visibility: visible;
-  }
-  .techs-group:before {
-    clip-path: polygon(0 25%, 100% 0, 100% 25%, 100% 100%, 0 100%);
-    top: -20px;
-  }
-  .techs-group:after {
-    clip-path: polygon(0 25%, 100% 0, 100% 25%, 100% 100%, 0 100%);
-    top: -20px;
-  }
-  @media (max-width: 600px) {
-    .techs-group {
-      min-height: 80px;
-
-      img {
-        max-height: 50px;
-        max-width: 50px;
-        margin: 5px;
-      }
-    }
-    .techs-group:before, .techs-group:after {
-      height: 90px;
-    }
-  }
+.tech-main-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+  gap: 30px;
 }
 </style>

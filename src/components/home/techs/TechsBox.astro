@@ -1,0 +1,52 @@
+---
+import TechImage from './TechImage.astro';
+import TechBox from '@utils/interfaces/tech-box.interface';
+
+export interface Props {
+  techBox: TechBox;
+}
+
+const { techBox } = Astro.props;
+---
+
+<div class="techs-box">
+  <div class="tech-title">
+    <img src={`/tech-headers/${techBox.headerImage}`} alt="Front-End">
+  </div>
+  <div class="images-box">
+
+    {
+      techBox.techs.map((t: any) => (
+        <TechImage
+          tech={t}
+        ></TechImage>
+      ))
+    }
+
+  </div>
+</div>
+
+<style lang="scss">
+.techs-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 10px;
+
+  .tech-title {
+    display: flex;
+    justify-content: center;
+    background-color: var(--accent);
+    padding: 7px 50px;
+    margin-top: -30px;
+    width: max-content;
+  }
+  .images-box {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+  }
+}
+</style>

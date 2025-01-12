@@ -20,7 +20,6 @@ export const ui = {
     'blog.others': 'More posts',
     'blog.toc': 'Table of Content',
 
-    'home.tech': 'My seven-year career knowledge went through',
     'home.kev': 'Hi, I\'m Kev!',
     'home.presentation1': 'Software engineer with more than 8 years of experience.',
     'home.presentation2': 'I consider myself agnostic to the technology, with a generalist perspective. I am full-stack developer, specialized in Javascript, with a slight inclination towards front-end. I love Docker (DevOps is not my passion). I am good at using Figma... but not a good designer. Where I perform best is having an holistic vision of the software we are building, coordinating people, technology, and business.',
@@ -46,7 +45,6 @@ export const ui = {
     'blog.others': 'Más posts',
     'blog.toc': 'Tabla de Contenido',
 
-    'home.tech': 'Mi conocimiento en seis años de carrera pasó por',
     'home.kev': '¡Hola, soy Kev!',
     'home.presentation1': 'Ingeniero de software con más de 8 años de experiencia profesional.',
     'home.presentation2': 'Me considero agnóstico a la tecnología, con una perspectiva generalista. Soy desarrollador full-stack, especializado en Javascript, con una leve inclinación hacia el front-end. Amo Docker (DevOps no es mi pasión). Soy bueno usando Figma... pero no buen diseñador. Donde mejor me desempeño es teniendo una visión holistica del software que estamos desarrollando, coordinando personas, tecnología y negocio.',

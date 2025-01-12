@@ -2,6 +2,7 @@ import type TechBox from '../interfaces/tech-box.interface';
 
 export const frontend: TechBox = {
   name: 'Front-end',
+  headerImage: 'front-end.svg',
   techs: [
     {
       tech: 'Angular',
