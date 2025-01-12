@@ -1,0 +1,37 @@
+.bgTechs {
+  background: var(--primary);
+  h2 {
+    -webkit-text-fill-color: white;
+    margin-bottom: 20px;
+  }
+  .techMainBox {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    gap: 30px;
+  }
+  .btnTechs {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    justify-content: center;
+    gap: 15px;
+
+    button {
+      color: #1D1D1D;
+      background-color: #E5E7EB;
+      font-size: 22px;
+      font-weight: 600;
+      width: max-content;
+      padding: 0px 15px;
+      box-shadow: 0 3px 6px var(--shadow);
+      &.active, &:hover {
+        color: #E5E7EB;
+        background-color: var(--alternative);
+      }
+    }
+  }
+  .text {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+}

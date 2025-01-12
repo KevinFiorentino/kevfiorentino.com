@@ -3,9 +3,9 @@ import { getEntry } from 'astro:content';
 import { languages } from '@i18n/ui';
 import { getLangFromUrl, useTranslations } from '@i18n/utils';
 import MainLayout from '@layouts/MainLayout.astro';
-import Presentation from '@components/home/1. Presentation.astro';
-import Techs from '@components/home/2. Techs.astro';
-import Blog from '@components/home/3. Blog.astro';
+import Presentation from '@components/home/Presentation.astro';
+import Techs from '@components/home/Techs';
+import Blog from '@components/home/Blog.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -50,7 +50,7 @@ const { posts } = Astro.props;
 
   <br><br>
 
-  <Techs></Techs>
+  <Techs client:load />
 
   <br><br>
 

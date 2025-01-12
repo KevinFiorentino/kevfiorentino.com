@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
@@ -12,7 +13,7 @@ const icon = '<span class="copy"/>#</span>';
 
 export default defineConfig({
   site: 'https://kevfiorentino.com',
-  integrations: [tailwind(), mdx(), sitemap()],
+  integrations: [react(), tailwind(), mdx(), sitemap()],
   markdown: {
     rehypePlugins: [
       rehypeSlug,

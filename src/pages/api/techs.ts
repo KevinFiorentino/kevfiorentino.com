@@ -21,6 +21,7 @@ export const GET: APIRoute = async ({ url }) => {
     console.log('tier');
   } else if (yearRegex.test(filter)) {
     console.log('YEAR');
+    result = techWrapper;
   } else {
     result = techWrapper;
   }

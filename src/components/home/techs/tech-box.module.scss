@@ -1,0 +1,22 @@
+.techsBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 10px;
+
+  .techTitle {
+    display: flex;
+    justify-content: center;
+    background-color: var(--accent);
+    padding: 7px 50px;
+    margin-top: -30px;
+    width: max-content;
+  }
+  .imagesBox {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+  }
+}
