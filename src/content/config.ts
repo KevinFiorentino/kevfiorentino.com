@@ -60,7 +60,7 @@ export const collectionMetadata: CollectionMetadata[] = [
   },
   {
     name: 'solidity',
-    image: '/tech/solidity.webp'
+    image: '/tech/solidity.png'
   },
 ];
 

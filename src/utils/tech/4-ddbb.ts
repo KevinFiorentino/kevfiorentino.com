@@ -10,5 +10,17 @@ export const ddbb: TechBox = {
       years: [2020, 2021, 2022],
       tier: 1
     },
+    {
+      tech: 'MySQL',
+      image: '/tech/4-ddbb/mysql.webp',
+      years: [2020, 2022],
+      tier: 2
+    },
+    {
+      tech: 'Elasticsearch',
+      image: '/tech/4-ddbb/elasticsearch.webp',
+      years: [2020, 2022],
+      tier: 2
+    },
   ]
 };
