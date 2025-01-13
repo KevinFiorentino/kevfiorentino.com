@@ -1,6 +1,6 @@
 import styles from './tech-box.module.scss';
 import TechImage from './TechImage';
-import type TechBox from '@utils/interfaces/tech-box.interface';
+import type { TechBox } from '@utils/interfaces/tech-box.interface';
 
 interface Props {
   techBox: TechBox;

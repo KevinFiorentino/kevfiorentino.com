@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 
   // Build pages of each content
   for await (let c of collectionMetadata) {
-    const coll = await getCollection(c.name as any);
+    const coll = await getCollection(c.name);
     coll.map((post) => {
       pages.push({
         params: {

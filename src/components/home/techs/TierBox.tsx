@@ -1,6 +1,6 @@
 import styles from './tier-box.module.scss';
 import TechImage from './TechImage';
-import type Tech from '@utils/interfaces/tech.interface';
+import type { Tech } from '@utils/interfaces/tech.interface';
 
 interface Props {
   tier: number;

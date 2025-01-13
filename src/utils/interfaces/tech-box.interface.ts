@@ -1,6 +1,6 @@
-import type Tech from './tech.interface';
+import type { Tech } from './tech.interface';
 
-export default interface TechBox {
+export interface TechBox {
   name: string,
   headerImage: string;
   techs: Tech[],

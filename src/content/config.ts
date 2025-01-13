@@ -32,8 +32,10 @@ export const collections = {
          CUSTOM CONFIGS
 ****************************** */
 
+export type CollectionNames = 'bitcoin' | 'blockchain' | 'ethereum' | 'openzeppelin' | 'solana' | 'solidity';
+
 export interface CollectionMetadata {
-  name: string;
+  name: CollectionNames;
   image: string;
 }
 

@@ -1,6 +1,8 @@
-export default interface Tech {
+import type { TierLevels } from './tier.interface';
+
+export interface Tech {
   tech: string,
   image: string,
   years: (number | string)[],
-  tier: 1 | 2 | 3 | 4,
+  tier: TierLevels,
 }

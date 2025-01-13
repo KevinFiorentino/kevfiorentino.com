@@ -1,5 +1,5 @@
 import styles from './tech-image.module.scss';
-import type Tech from '@utils/interfaces/tech.interface';
+import type { Tech } from '@utils/interfaces/tech.interface';
 
 interface Props {
   tech: Tech;

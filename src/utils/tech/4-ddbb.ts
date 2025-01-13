@@ -1,4 +1,4 @@
-import type TechBox from '../interfaces/tech-box.interface';
+import type { TechBox } from '../interfaces/tech-box.interface';
 
 export const ddbb: TechBox = {
   name: 'DDBB',
@@ -8,19 +8,19 @@ export const ddbb: TechBox = {
       tech: 'MongoDB',
       image: '/tech/4-ddbb/mongodb.webp',
       years: [2020, 2021, 2022],
-      tier: 1
+      tier: 't1',
     },
     {
       tech: 'MySQL',
       image: '/tech/4-ddbb/mysql.webp',
       years: [2020, 2022],
-      tier: 2
+      tier: 't2',
     },
     {
       tech: 'Elasticsearch',
       image: '/tech/4-ddbb/elasticsearch.webp',
       years: [2020, 2022],
-      tier: 2
+      tier: 't2',
     },
   ]
 };

@@ -1,8 +1,8 @@
 import styles from './techs.module.scss';
 import { useState } from 'react';
 import { techWrapper } from '@utils/tech-wrapper';
-import type TechBox from '@utils/interfaces/tech-box.interface';
-import type TierResponse from '@utils/interfaces/tier-response,interface';
+import type { TechBox } from '@utils/interfaces/tech-box.interface';
+import type { TierResponse } from '@utils/interfaces/tier.interface';
 import TechsBox from './techs/TechsBox';
 import TierBox from './techs/TierBox';
 
