@@ -5,7 +5,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section class="main-width grid grid-cols-1 gap-5 lg:grid-cols-3 lg:gap-8">
+<section class="hero main-width grid grid-cols-1 gap-5 lg:grid-cols-3 lg:gap-8">
   <div class="lg:col-span-2">
     <h1 class="text-gradient mt-0">
       {t('home.kev')}
@@ -85,6 +85,10 @@ const t = useTranslations(lang);
 </style>
 
 <style lang="scss">
+.hero {
+  height: calc(100vh - 160px);
+  align-items: center;
+}
 .kev-image {
   max-height: 280px;
   clip-path: polygon(15% 10%, 100% 0, 100% 25%, 100% 100%, 0 85%);
