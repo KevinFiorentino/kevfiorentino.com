@@ -12,7 +12,7 @@
   }
   .btnTechs {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(11, 1fr);
     justify-content: center;
     gap: 15px;
 
@@ -34,5 +34,10 @@
     color: var(--white);
     font-size: 18px;
     margin-bottom: 15px;
+  }
+  .tierMainBox {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
 }

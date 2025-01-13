@@ -1,5 +1,4 @@
 import styles from './tech-box.module.scss';
-import React from 'react';
 import TechImage from './TechImage';
 import type TechBox from '@utils/interfaces/tech-box.interface';
 
@@ -7,7 +6,7 @@ interface Props {
   techBox: TechBox;
 }
 
-const TechsBox: React.FC<Props> = ({ techBox }) => {
+const TechsBox = ({ techBox }: Props) => {
   return (
     <div className={`${styles.techsBox}`}>
       <div className={`${styles.techTitle}`}>

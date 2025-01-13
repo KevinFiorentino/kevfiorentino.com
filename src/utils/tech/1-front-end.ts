@@ -7,7 +7,7 @@ export const frontend: TechBox = {
     {
       tech: 'Javascript',
       image: '/tech/1-front-end/javascript.webp',
-      years: [2018, 2019, 2020],
+      years: ['uni', 2018, 2019, 2020],
       tier: 1
     },
     {
