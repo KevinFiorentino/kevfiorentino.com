@@ -33,20 +33,28 @@ const TechComponent = ({ tech }: Props) => {
       {isHovered && (
         ReactDOM.createPortal(
           <div
-            className="tech-dropdown flex justify-center align-center"
+            className="tech-dropdown flex justify-center align-center flex-col"
             style={{
               top: dropdownPosition.top,
               left: dropdownPosition.left,
             }}
           >
-            <img src={tech.image} alt={`${tech.tech} logo`} />
-            <div className='tech-info'>
-              <h4>{ tech.tech }</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div className='tech-header'>
+              <img src={tech.image} alt={`${tech.tech} logo`} />
+              <div className='tech-info'>
+                <h4>{ tech.tech }</h4>
+                <h5>What is it?</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+            <div className='tech-bottom'>
+              <div className='tech-info'>
+                <h5>Why or when I use it?</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor amet.</p>
+              </div>
             </div>
           </div>
         , document.body)
-
       )}
     </div>
   );
