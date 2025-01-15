@@ -17,7 +17,7 @@ export const blockchain: TechBox = {
       tier: 't2',
     },
     {
-      tech: 'Solana',
+      tech: 'IPFS',
       image: '/tech/7-blockchain/ipfs.webp',
       years: [2022, 2023],
       tier: 't2',
