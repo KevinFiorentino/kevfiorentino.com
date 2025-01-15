@@ -9,24 +9,56 @@ export const frontend: TechBox = {
       image: '/tech/1-front-end/javascript.webp',
       years: ['uni', 2018, 2019, 2020],
       tier: 't1',
+      description: {
+        en: '',
+        es: '',
+      },
+      comment: {
+        en: '',
+        es: '',
+      }
     },
     {
       tech: 'TypeScript',
       image: '/tech/1-front-end/typescript.webp',
       years: [2020, 2021, 2022],
       tier: 't1',
+      description: {
+        en: '',
+        es: '',
+      },
+      comment: {
+        en: '',
+        es: '',
+      }
     },
     {
       tech: 'Angular',
       image: '/tech/1-front-end/angular.webp',
       years: [2018, 2020, 2021],
       tier: 't1',
+      description: {
+        en: '',
+        es: '',
+      },
+      comment: {
+        en: '',
+        es: '',
+      }
     },
     {
       tech: 'React',
       image: '/tech/1-front-end/react.webp',
       years: [2019, 2020, 2021],
       tier: 't2',
+      description: {
+        en: '',
+        es: '',
+      },
+      comment: {
+        en: '',
+        es: '',
+      }
     },
   ]
 };

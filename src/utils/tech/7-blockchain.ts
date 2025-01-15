@@ -9,18 +9,42 @@ export const blockchain: TechBox = {
       image: '/tech/7-blockchain/solana.webp',
       years: [2022, 2023],
       tier: 't1',
+      description: {
+        en: '',
+        es: '',
+      },
+      comment: {
+        en: '',
+        es: '',
+      }
     },
     {
       tech: 'Ethereum',
       image: '/tech/7-blockchain/ethereum.webp',
       years: [2022, 2023],
       tier: 't2',
+      description: {
+        en: '',
+        es: '',
+      },
+      comment: {
+        en: '',
+        es: '',
+      }
     },
     {
       tech: 'IPFS',
       image: '/tech/7-blockchain/ipfs.webp',
       years: [2022, 2023],
       tier: 't2',
+      description: {
+        en: '',
+        es: '',
+      },
+      comment: {
+        en: '',
+        es: '',
+      }
     },
   ]
 };
