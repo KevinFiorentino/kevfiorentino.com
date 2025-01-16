@@ -59,7 +59,7 @@
   }
 }
 
-@for $i from 1 through 10 {
+@for $i from 1 through 5 {
   .tierBox:nth-child(#{$i}) {
     animation-delay: $i * 0.2s;
   }
