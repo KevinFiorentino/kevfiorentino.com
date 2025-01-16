@@ -10,6 +10,9 @@ import Blog from '@components/home/Blog.astro';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
+const currentUrl = Astro.url.pathname;
+const currentLang = currentUrl.split('/')[1];
+
 export async function getStaticPaths() {
 
   const pages: any[] = [];
@@ -48,7 +51,10 @@ const { posts } = Astro.props;
 
   <Presentation></Presentation>
 
-  <Techs client:load />
+  <Techs
+    client:load
+    currentLang={currentLang}
+  ></Techs>
 
   <br><br>
 

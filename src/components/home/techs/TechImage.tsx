@@ -1,13 +1,15 @@
 import { useState, useRef } from 'react';
+
 import ReactDOM from "react-dom";
 import styles from './tech-image.module.scss';
 import type { Tech } from '@utils/interfaces/tech.interface';
 
 interface Props {
   tech: Tech;
+  currentLang: string;
 }
 
-const TechComponent = ({ tech }: Props) => {
+const TechComponent = ({ tech, currentLang }: Props) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [dropdownPosition, setDropdownPosition] = useState({ top: 0, left: 0 });
   const [isHovered, setIsHovered] = useState(false);
@@ -44,13 +46,13 @@ const TechComponent = ({ tech }: Props) => {
               <div className='tech-info'>
                 <h4>{ tech.tech }</h4>
                 <h5>What is it?</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>{ currentLang == 'es' ? tech.description.es : tech.description.en }</p>
               </div>
             </div>
             <div className='tech-bottom'>
               <div className='tech-info'>
                 <h5>Why or when I use it?</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor amet.</p>
+                <p>{ currentLang == 'es' ? tech.comment.es : tech.comment.en }</p>
               </div>
             </div>
           </div>

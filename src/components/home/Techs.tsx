@@ -6,7 +6,11 @@ import type { TierResponse } from '@utils/interfaces/tier.interface';
 import TechsBox from './techs/TechsBox';
 import TierBox from './techs/TierBox';
 
-const TechJourney = () => {
+interface Props {
+  currentLang: string;
+}
+
+const TechJourney = ({ currentLang }: Props) => {
   const [selected, setSelected] = useState<string>('all');
   const [techData, setTechData] = useState<TechBox[]>(techWrapper);
   const [tierData, setTierData] = useState<TierResponse>();
@@ -64,7 +68,11 @@ const TechJourney = () => {
             <div className={`${styles.techMainBox} flex flex-wrap justify-center items-center`}>
               {
                 techData.map((box: any, index: number) => (
-                  <TechsBox key={index} techBox={box} />
+                  <TechsBox
+                    key={index}
+                    techBox={box}
+                    currentLang={currentLang}
+                  />
                 ))
               }
             </div>
@@ -76,9 +84,10 @@ const TechJourney = () => {
               {
                 tierData?.tiers.map((tier: any, index: number) => (
                   <TierBox
+                    key={index}
                     tier={tier.tier}
                     techs={tier.techs}
-                    key={index}
+                    currentLang={currentLang}
                   ></TierBox>
                 ))
               }

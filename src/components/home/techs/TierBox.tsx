@@ -5,9 +5,10 @@ import type { Tech } from '@utils/interfaces/tech.interface';
 interface Props {
   tier: number;
   techs: Tech[];
+  currentLang: string;
 }
 
-const TierBox = ({ tier, techs }: Props) => {
+const TierBox = ({ tier, techs, currentLang }: Props) => {
   return (
     <div className={`${styles.tierBox}`}>
       <div className={`${styles.tierTitle} ${styles[tier]}`}>
@@ -15,7 +16,11 @@ const TierBox = ({ tier, techs }: Props) => {
       </div>
       <div className={`${styles.imagesBox}`}>
         {techs.map((t, index) => (
-          <TechImage key={index} tech={t} />
+          <TechImage
+            key={index}
+            tech={t}
+            currentLang={currentLang}
+          />
         ))}
       </div>
     </div>

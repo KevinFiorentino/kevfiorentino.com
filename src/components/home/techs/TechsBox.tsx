@@ -4,9 +4,10 @@ import type { TechBox } from '@utils/interfaces/tech-box.interface';
 
 interface Props {
   techBox: TechBox;
+  currentLang: string;
 }
 
-const TechsBox = ({ techBox }: Props) => {
+const TechsBox = ({ techBox, currentLang }: Props) => {
   return (
     <div className={`${styles.techsBox}`}>
       <div className={`${styles.techTitle}`}>
@@ -14,7 +15,11 @@ const TechsBox = ({ techBox }: Props) => {
       </div>
       <div className={`${styles.imagesBox}`}>
         {techBox.techs.map((t, index) => (
-          <TechImage key={index} tech={t} />
+          <TechImage
+            key={index}
+            tech={t}
+            currentLang={currentLang}
+          />
         ))}
       </div>
     </div>

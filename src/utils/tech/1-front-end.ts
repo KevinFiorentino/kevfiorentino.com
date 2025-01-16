@@ -10,12 +10,12 @@ export const frontend: TechBox = {
       years: ['uni', 2018, 2019, 2020],
       tier: 't1',
       description: {
-        en: '',
-        es: '',
+        en: 'EN',
+        es: 'ES',
       },
       comment: {
-        en: '',
-        es: '',
+        en: 'EN',
+        es: 'ES',
       }
     },
     {
