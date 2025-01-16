@@ -8,10 +8,7 @@ h1, h2, h3, h4, h5, h5, h6 {
   line-height: normal;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
   a {
     text-decoration: none !important;
     margin-left: 5px;
@@ -109,7 +106,6 @@ hr {
   .cards-grid {
     grid-template-columns: 1fr;
   }
-
   .main-width {
     padding: 1rem;
   }
@@ -140,7 +136,7 @@ hr {
   filter: drop-shadow(0px 2px 2px var(--black));
 }
 
-// TechImage Dropdown
+// TechImage DROPDOWN
 
 .tech-dropdown {
   position: fixed;

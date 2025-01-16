@@ -1,4 +1,4 @@
-import styles from './techs.module.scss';
+import styles from './styles.module.scss';
 import { useState } from 'react';
 import { techWrapper } from '@utils/tech-wrapper';
 import type { TechBox } from '@utils/interfaces/tech-box.interface';

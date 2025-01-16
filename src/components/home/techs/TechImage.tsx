@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 
 import ReactDOM from "react-dom";
-import styles from './tech-image.module.scss';
+import styles from './styles.module.scss';
 import type { Tech } from '@utils/interfaces/tech.interface';
 
 interface Props {

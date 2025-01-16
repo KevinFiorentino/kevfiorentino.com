@@ -1,4 +1,4 @@
-import styles from './tier-box.module.scss';
+import styles from './styles.module.scss';
 import TechImage from './TechImage';
 import type { Tech } from '@utils/interfaces/tech.interface';
 
