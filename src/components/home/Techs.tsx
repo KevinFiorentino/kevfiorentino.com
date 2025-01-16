@@ -16,9 +16,12 @@ const TechJourney = ({ currentLang }: Props) => {
   const [tierData, setTierData] = useState<TierResponse>();
   const [viewType, setViewType] = useState<'tech' | 'tier'>('tech');
   const [loading, setLoading] = useState<boolean>(false);
+  const [firstRender, setFirstRender] = useState<boolean>(true);
 
   const handleTechBtn = async (filter: string) => {
-    setLoading(true);
+    if (firstRender) {
+      setLoading(true);
+    }
     setSelected(filter);
 
     try {
@@ -37,6 +40,7 @@ const TechJourney = ({ currentLang }: Props) => {
       console.error('Error:', error);
     } finally {
       setLoading(false);
+      setFirstRender(false);
     }
   };
 
@@ -63,8 +67,32 @@ const TechJourney = ({ currentLang }: Props) => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum malesuada eleifend. Cras a velit dolor. Fusce augue purus, fringilla iaculis rhoncus vitae, convallis sit amet purus. Integer ornare, lacus ut eleifend tincidunt, neque eros congue nisl, in dignissim augue velit et tortor.
         </p>
         <br />
+        {firstRender && !loading && (
+          <button onClick={() => handleTechBtn('all')}>
+            Let's explore!
+          </button>
+        )}
+        {loading && (
+          <div className={styles.skeletonWrapper}>
+            <div className={styles.skeletonBox}>
+              <div className={styles.skeletonTitle}>
+                <img src={`/loading.svg`} />
+              </div>
+            </div>
+            <div className={styles.skeletonBox}>
+              <div className={styles.skeletonTitle}>
+                <img src={`/loading.svg`} />
+              </div>
+            </div>
+            <div className={styles.skeletonBox}>
+              <div className={styles.skeletonTitle}>
+                <img src={`/loading.svg`} />
+              </div>
+            </div>
+          </div>
+        )}
         {
-          !loading && viewType === 'tech' && (
+          !loading && !firstRender && viewType === 'tech' && (
             <div className={`${styles.techMainBox} flex flex-wrap justify-center items-center`}>
               {
                 techData.map((box: any, index: number) => (
@@ -79,7 +107,7 @@ const TechJourney = ({ currentLang }: Props) => {
           )
         }
         {
-          !loading && viewType === 'tier' && (
+          !loading && !firstRender && viewType === 'tier' && (
             <div className={styles.tierMainBox}>
               {
                 tierData?.tiers.map((tier: any, index: number) => (

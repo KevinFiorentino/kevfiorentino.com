@@ -11,7 +11,7 @@ const TechsBox = ({ techBox, currentLang }: Props) => {
   return (
     <div className={`${styles.techsBox}`}>
       <div className={`${styles.techTitle}`}>
-        <img src={`/tech-headers/${techBox.headerImage}`} alt="Front-End" />
+        <img src={`/tech-headers/${techBox.headerImage}`} alt={techBox.name} />
       </div>
       <div className={`${styles.imagesBox}`}>
         {techBox.techs.map((t, index) => (
