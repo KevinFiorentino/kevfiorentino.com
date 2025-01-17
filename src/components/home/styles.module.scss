@@ -14,8 +14,7 @@
   .btnTechs {
     display: grid;
     grid-template-columns: repeat(11, 1fr);
-    justify-content: center;
-    gap: 15px;
+    gap: 10px;
 
     button {
       color: #1D1D1D;
