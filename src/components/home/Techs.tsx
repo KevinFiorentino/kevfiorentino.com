@@ -1,5 +1,4 @@
 import styles from './styles.module.scss';
-import DOMPurify from 'dompurify';
 import { useState } from 'react';
 import { useTranslations } from '@i18n/utils';
 import { techWrapper } from '@utils/tech-wrapper';
@@ -67,7 +66,7 @@ const TechJourney = ({ currentLang }: Props) => {
         <br />
         <p
           className={`${styles.text}`}
-          dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(t(selected)) }}
+          dangerouslySetInnerHTML={{ __html: t(selected) }}
         ></p>
         <br />
         {loading && (
