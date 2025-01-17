@@ -32,6 +32,21 @@ export const ui = {
 
     'collection': 'Colección',
     'read-post': 'Read post',
+
+    'uni': ``,
+    '2017': ``,
+    '2018': `
+      en 2018 <br>
+      en 2018
+    `,
+    '2019': ``,
+    '2020': ``,
+    '2021': ``,
+    '2022': ``,
+    '2023': ``,
+    '2024': ``,
+    'all': ``,
+    'tier': ``,
   },
   es: {
     'contact': 'Contacto',
@@ -56,6 +71,18 @@ export const ui = {
     'footer.source': 'Código fuente',
 
     'collection': 'Collection',
-    'read-post': 'Leer post'
+    'read-post': 'Leer post',
+
+    'uni': ``,
+    '2017': ``,
+    '2018': ``,
+    '2019': ``,
+    '2020': ``,
+    '2021': ``,
+    '2022': ``,
+    '2023': ``,
+    '2024': ``,
+    'all': ``,
+    'tier': ``,
   },
 } as const;

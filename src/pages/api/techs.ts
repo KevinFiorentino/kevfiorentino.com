@@ -11,7 +11,7 @@ export const GET: APIRoute = async ({ url }) => {
   const filter = url.searchParams.get('filter') ?? 'all';
 
   const yearRegex = /^(1[0-9]{3}|2[0-9]{3})$/;
-  let result = null;
+  let result: TechBox[] | TierResponse;
 
   if (filter == 'all') {
     result = techWrapper;

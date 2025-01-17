@@ -1,23 +1,29 @@
 import styles from './styles.module.scss';
+import DOMPurify from 'dompurify';
 import { useState } from 'react';
+import { useTranslations } from '@i18n/utils';
 import { techWrapper } from '@utils/tech-wrapper';
 import type { TechBox } from '@utils/interfaces/tech-box.interface';
 import type { TierResponse } from '@utils/interfaces/tier.interface';
 import TechsBox from './techs/TechsBox';
 import TierBox from './techs/TierBox';
 
+type Filter = 'uni' | '2017' | '2018' | '2019' | '2020' | '2021' | '2022' | '2023' | '2024' | 'all' | 'tier';
+
 interface Props {
   currentLang: string;
 }
 
 const TechJourney = ({ currentLang }: Props) => {
-  const [selected, setSelected] = useState<string>('all');
+  const [selected, setSelected] = useState<Filter>('all');
   const [techData, setTechData] = useState<TechBox[]>(techWrapper);
   const [tierData, setTierData] = useState<TierResponse>();
   const [viewType, setViewType] = useState<'tech' | 'tier'>('tech');
   const [loading, setLoading] = useState<boolean>(false);
 
-  const handleTechBtn = async (filter: string) => {
+  const t = useTranslations(currentLang as 'en' | 'es');
+
+  const handleTechBtn = async (filter: Filter) => {
     setLoading(true);
     setSelected(filter);
 
@@ -59,9 +65,10 @@ const TechJourney = ({ currentLang }: Props) => {
           <button className={`${selected === 'tier' && styles.active}`} onClick={() => handleTechBtn('tier')}>Tier 🩵</button>
         </div>
         <br />
-        <p className={`${styles.text}`}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum malesuada eleifend. Cras a velit dolor. Fusce augue purus, fringilla iaculis rhoncus vitae, convallis sit amet purus. Integer ornare, lacus ut eleifend tincidunt, neque eros congue nisl, in dignissim augue velit et tortor.
-        </p>
+        <p
+          className={`${styles.text}`}
+          dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(t(selected)) }}
+        ></p>
         <br />
         {loading && (
           <div className={styles.skeletonWrapper}>
