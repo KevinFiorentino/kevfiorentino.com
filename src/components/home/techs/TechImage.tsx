@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-
+import { useTranslations } from '@i18n/utils';
 import ReactDOM from "react-dom";
 import styles from './styles.module.scss';
 import type { Tech } from '@utils/interfaces/tech.interface';
@@ -13,6 +13,8 @@ const TechComponent = ({ tech, currentLang }: Props) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [dropdownPosition, setDropdownPosition] = useState({ top: 0, left: 0 });
   const [isHovered, setIsHovered] = useState(false);
+
+  const t = useTranslations(currentLang as 'en' | 'es');
 
   const handleMouseEnter = () => {
     if (containerRef.current) {
@@ -53,6 +55,14 @@ const TechComponent = ({ tech, currentLang }: Props) => {
               <div className='tech-info'>
                 <h5>Why or when I use it?</h5>
                 <p>{ currentLang == 'es' ? tech.comment.es : tech.comment.en }</p>
+                <div className='flex items-center justify-between'>
+                  <div className='flex items-center gap-3'>
+                    {tech.years.map((y) => <span className='capitalize'>{y}</span> )}
+                  </div>
+                  <span className={`${tech.tier}`}>
+                    {t(tech.tier)}
+                  </span>
+                </div>
               </div>
             </div>
           </div>

@@ -33,6 +33,12 @@ export const ui = {
     'collection': 'Colección',
     'read-post': 'Read post',
 
+    't1': 'Favorites',
+    't2': 'Nice to use',
+    't3': 'From time to time',
+    't4': 'Might use again',
+    't5': 'Deprecated',
+
     'uni': ``,
     '2017': ``,
     '2018': `
@@ -72,6 +78,12 @@ export const ui = {
 
     'collection': 'Collection',
     'read-post': 'Leer post',
+
+    't1': 'Favorites',
+    't2': 'Nice to use',
+    't3': 'From time to time',
+    't4': 'Might use again',
+    't5': 'Deprecated',
 
     'uni': ``,
     '2017': ``,

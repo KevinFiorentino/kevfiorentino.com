@@ -48,7 +48,7 @@ const TechJourney = ({ currentLang }: Props) => {
   return (
     <section className={`${styles.bgTechs} bg-polygon relative`}>
       <div className="main-width relative z-10">
-        <h2 className="text-white text-center">Tech Journey</h2>
+        <h2 className="text-white text-center">My Tech Journey</h2>
         <br />
         <div className={`${styles.btnTechs}`}>
           <button className={`${selected === 'uni' && styles.active}`} onClick={() => handleTechBtn('uni')}>Uni 🏫</button>

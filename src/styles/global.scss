@@ -163,6 +163,32 @@ hr {
     align-items: center;
     margin-bottom: 5px;
   }
+  .tech-bottom {
+    span {
+      color: white;
+      background-color: var(--alternative);
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 10px;
+      padding: 0 5px;
+
+      &.t1 {
+        background-color: var(--accent);
+      }
+      &.t2 {
+        background-color: #6DE039;
+      }
+      &.t3 {
+        background-color: var(--alternative);
+      }
+      &.t4 {
+        background-color: #E34F26;
+      }
+      &.t5 {
+        background-color: crimson;
+      }
+    }
+  }
   .tech-info {
     h4 {
       -webkit-text-fill-color: white;
