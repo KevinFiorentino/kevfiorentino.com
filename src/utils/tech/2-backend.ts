@@ -6,7 +6,7 @@ export const backend: TechBox = {
   techs: [
     {
       tech: 'NodeJS',
-      image: '/tech/2-backend/nodejs.webp',
+      image: '/tech/2-backend/nodejs.png',
       years: [2020, 2021],
       tier: 't1',
       description: {
@@ -20,7 +20,7 @@ export const backend: TechBox = {
     },
     {
       tech: 'PHP',
-      image: '/tech/2-backend/php.webp',
+      image: '/tech/2-backend/php.png',
       years: [2018, 2019],
       tier: 't2',
       description: {
@@ -34,7 +34,7 @@ export const backend: TechBox = {
     },
     {
       tech: 'Rust',
-      image: '/tech/2-backend/rust.webp',
+      image: '/tech/2-backend/rust.png',
       years: [2020, 2021],
       tier: 't3',
       description: {

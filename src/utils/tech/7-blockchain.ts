@@ -6,7 +6,7 @@ export const blockchain: TechBox = {
   techs: [
     {
       tech: 'Solana',
-      image: '/tech/7-blockchain/solana.webp',
+      image: '/tech/7-blockchain/solana.png',
       years: [2022, 2023],
       tier: 't1',
       description: {
@@ -20,7 +20,7 @@ export const blockchain: TechBox = {
     },
     {
       tech: 'Ethereum',
-      image: '/tech/7-blockchain/ethereum.webp',
+      image: '/tech/7-blockchain/ethereum.png',
       years: [2022, 2023],
       tier: 't2',
       description: {
@@ -34,7 +34,7 @@ export const blockchain: TechBox = {
     },
     {
       tech: 'IPFS',
-      image: '/tech/7-blockchain/ipfs.webp',
+      image: '/tech/7-blockchain/ipfs.png',
       years: [2022, 2023],
       tier: 't2',
       description: {

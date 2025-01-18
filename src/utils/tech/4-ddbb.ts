@@ -6,7 +6,7 @@ export const ddbb: TechBox = {
   techs: [
     {
       tech: 'MongoDB',
-      image: '/tech/4-ddbb/mongodb.webp',
+      image: '/tech/4-ddbb/mongodb.png',
       years: [2020, 2021, 2022],
       tier: 't1',
       description: {
@@ -20,7 +20,7 @@ export const ddbb: TechBox = {
     },
     {
       tech: 'MySQL',
-      image: '/tech/4-ddbb/mysql.webp',
+      image: '/tech/4-ddbb/mysql.png',
       years: [2020, 2022],
       tier: 't2',
       description: {
@@ -34,7 +34,7 @@ export const ddbb: TechBox = {
     },
     {
       tech: 'Elasticsearch',
-      image: '/tech/4-ddbb/elasticsearch.webp',
+      image: '/tech/4-ddbb/elasticsearch.png',
       years: [2020, 2022],
       tier: 't2',
       description: {

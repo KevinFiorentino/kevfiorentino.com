@@ -6,7 +6,7 @@ export const frontend: TechBox = {
   techs: [
     {
       tech: 'Javascript',
-      image: '/tech/1-front-end/javascript.webp',
+      image: '/tech/1-front-end/javascript.png',
       years: ['uni', 2018, 2019, 2020],
       tier: 't1',
       description: {
@@ -20,7 +20,7 @@ export const frontend: TechBox = {
     },
     {
       tech: 'TypeScript',
-      image: '/tech/1-front-end/typescript.webp',
+      image: '/tech/1-front-end/typescript.png',
       years: [2020, 2021, 2022],
       tier: 't1',
       description: {
@@ -34,7 +34,7 @@ export const frontend: TechBox = {
     },
     {
       tech: 'Angular',
-      image: '/tech/1-front-end/angular.webp',
+      image: '/tech/1-front-end/angular.png',
       years: [2018, 2020, 2021],
       tier: 't1',
       description: {
@@ -48,7 +48,7 @@ export const frontend: TechBox = {
     },
     {
       tech: 'React',
-      image: '/tech/1-front-end/react.webp',
+      image: '/tech/1-front-end/react.png',
       years: [2019, 2020, 2021],
       tier: 't2',
       description: {

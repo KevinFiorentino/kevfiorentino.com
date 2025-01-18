@@ -50,7 +50,7 @@ export const collectionMetadata: CollectionMetadata[] = [
   },
   {
     name: 'ethereum',
-    image: '/tech/ethereum.webp'
+    image: '/tech/ethereum.png'
   },
   {
     name: 'openzeppelin',
@@ -58,7 +58,7 @@ export const collectionMetadata: CollectionMetadata[] = [
   },
   {
     name: 'solana',
-    image: '/tech/solana.webp'
+    image: '/tech/7-blockchain/solana.png'
   },
   {
     name: 'solidity',
