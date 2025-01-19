@@ -33,7 +33,8 @@
       background-color: #E5E7EB;
     }
     .imagesBox {
-      grid-template-columns: repeat(2, 1fr);
+      display: flex;
+      flex-wrap: wrap;
     }
   }
 }

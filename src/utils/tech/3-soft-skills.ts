@@ -61,8 +61,8 @@ export const softskills: TechBox = {
       }
     },
     {
-      tech: 'Writting',
-      image: '/tech/3-soft-skills/writting.png',
+      tech: 'Emotional Intelligence',
+      image: '/tech/3-soft-skills/emotional.png',
       years: [],
       tier: 't1',
       description: {
@@ -75,8 +75,8 @@ export const softskills: TechBox = {
       }
     },
     {
-      tech: 'Emotional Intelligence',
-      image: '/tech/3-soft-skills/emotional.png',
+      tech: 'Writting',
+      image: '/tech/3-soft-skills/writting.png',
       years: [],
       tier: 't1',
       description: {

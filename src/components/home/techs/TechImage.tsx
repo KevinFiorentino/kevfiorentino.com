@@ -45,7 +45,9 @@ const TechComponent = ({ tech, currentLang, isSoftSkills }: Props) => {
             }}
           >
             <div className='tech-header'>
-              <img src={tech.image} alt={`${tech.tech} logo`} />
+              {!isSoftSkills &&
+                <img src={tech.image} alt={`${tech.tech} logo`} />
+              }
               <div className='tech-info'>
                 <h4>{ tech.tech }</h4>
                 <h5>What is it?</h5>
