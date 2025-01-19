@@ -20,7 +20,7 @@ export const GET: APIRoute = async ({ url }) => {
   } else if (filter == 'tier') {
     result = prepareTierData();
   } else if (yearRegex.test(filter)) {
-    result = filterByYear(parseInt(filter));
+    result = filterByYear(filter);
   } else {
     result = techWrapper;
   }
@@ -38,7 +38,7 @@ export const GET: APIRoute = async ({ url }) => {
   );
 };
 
-function filterByYear(year: number): TechBox[] {
+function filterByYear(year: string): TechBox[] {
   const result: TechBox[] = techWrapper.map((box: TechBox) => {
     const techsToShow = box.techs.filter((tech: Tech) => tech.years.includes(year));
     if (techsToShow.length > 0) {

@@ -3,7 +3,7 @@ import type { TierLevels } from './tier.interface';
 export interface Tech {
   tech: string,
   image: string,
-  years: (number | string)[],
+  years: string[],
   tier: TierLevels,
   description: {
     en: string,

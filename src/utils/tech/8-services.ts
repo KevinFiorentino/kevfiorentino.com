@@ -7,7 +7,7 @@ export const services: TechBox = {
     {
       tech: 'Firebase',
       image: '/tech/8-services/firebase.png',
-      years: [],
+      years: ['2021'],
       tier: 't2',
       description: {
         en: '',
@@ -21,7 +21,7 @@ export const services: TechBox = {
     {
       tech: 'Auth0',
       image: '/tech/8-services/auth0.png',
-      years: [],
+      years: ['2023'],
       tier: 't2',
       description: {
         en: '',
@@ -49,7 +49,7 @@ export const services: TechBox = {
     {
       tech: 'Lighthouse',
       image: '/tech/8-services/lighthouse.png',
-      years: [],
+      years: ['2021'],
       tier: 't2',
       description: {
         en: '',
@@ -63,7 +63,7 @@ export const services: TechBox = {
     {
       tech: 'Mercado Pago API',
       image: '/tech/8-services/mercadopago.png',
-      years: [],
+      years: ['2021'],
       tier: 't3',
       description: {
         en: '',
@@ -77,7 +77,7 @@ export const services: TechBox = {
     {
       tech: 'PayPal API',
       image: '/tech/8-services/paypal.png',
-      years: [],
+      years: ['2021'],
       tier: 't3',
       description: {
         en: '',
@@ -91,7 +91,7 @@ export const services: TechBox = {
     {
       tech: 'SendGrid',
       image: '/tech/8-services/sendgrid.png',
-      years: [],
+      years: ['2021'],
       tier: 't3',
       description: {
         en: '',
@@ -119,7 +119,7 @@ export const services: TechBox = {
     {
       tech: 'Meta Developers',
       image: '/tech/8-services/meta.png',
-      years: [],
+      years: ['2024'],
       tier: 't4',
       description: {
         en: '',
@@ -133,7 +133,7 @@ export const services: TechBox = {
     {
       tech: 'Sentry',
       image: '/tech/8-services/sentry.png',
-      years: [],
+      years: ['2022'],
       tier: 't4',
       description: {
         en: '',
@@ -147,7 +147,7 @@ export const services: TechBox = {
     {
       tech: 'OneSignal',
       image: '/tech/8-services/onesignal.png',
-      years: [],
+      years: ['2024'],
       tier: 't4',
       description: {
         en: '',
@@ -161,7 +161,7 @@ export const services: TechBox = {
     {
       tech: 'OpenWeatherMap',
       image: '/tech/8-services/openweathermap.png',
-      years: [],
+      years: ['uni'],
       tier: 't4',
       description: {
         en: '',
@@ -175,7 +175,7 @@ export const services: TechBox = {
     {
       tech: 'LivePerson',
       image: '/tech/8-services/liveperson.png',
-      years: [],
+      years: ['2024'],
       tier: 't5',
       description: {
         en: '',

@@ -7,7 +7,7 @@ export const ai: TechBox = {
     {
       tech: 'ChatGPT',
       image: '/tech/6-ia/chatgpt.png',
-      years: [],
+      years: ['2023'],
       tier: 't2',
       description: {
         en: '',
@@ -21,7 +21,7 @@ export const ai: TechBox = {
     {
       tech: 'GitHub Copilot',
       image: '/tech/6-ia/copilot.png',
-      years: [],
+      years: ['2024'],
       tier: 't2',
       description: {
         en: '',
@@ -35,7 +35,7 @@ export const ai: TechBox = {
     {
       tech: 'LangChain',
       image: '/tech/6-ia/langchain.png',
-      years: [],
+      years: ['2023'],
       tier: 't1',
       description: {
         en: '',
@@ -49,7 +49,7 @@ export const ai: TechBox = {
     {
       tech: 'LangGraph',
       image: '/tech/6-ia/langgraph.png',
-      years: [],
+      years: ['2024'],
       tier: 't1',
       description: {
         en: '',
@@ -63,7 +63,7 @@ export const ai: TechBox = {
     {
       tech: 'RAG Architecture',
       image: '/tech/6-ia/rag.png',
-      years: [],
+      years: ['2024'],
       tier: 't2',
       description: {
         en: '',
@@ -77,7 +77,7 @@ export const ai: TechBox = {
     {
       tech: 'Runware',
       image: '/tech/6-ia/runware.png',
-      years: [],
+      years: ['2024'],
       tier: 't2',
       description: {
         en: '',
@@ -91,7 +91,7 @@ export const ai: TechBox = {
     {
       tech: 'Pinecone',
       image: '/tech/6-ia/pinecone.png',
-      years: [],
+      years: ['2024'],
       tier: 't2',
       description: {
         en: '',
@@ -105,7 +105,7 @@ export const ai: TechBox = {
     {
       tech: 'V0',
       image: '/tech/6-ia/v0.png',
-      years: [],
+      years: ['2024'],
       tier: 't3',
       description: {
         en: '',
@@ -119,7 +119,7 @@ export const ai: TechBox = {
     {
       tech: 'IBM Watson',
       image: '/tech/6-ia/ibm-watson.png',
-      years: [],
+      years: ['2019'],
       tier: 't5',
       description: {
         en: '',

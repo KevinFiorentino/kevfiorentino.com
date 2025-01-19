@@ -7,7 +7,7 @@ export const devtools: TechBox = {
     {
       tech: 'VS Code',
       image: '/tech/9-dev-tools/vscode.png',
-      years: [],
+      years: ['2019'],
       tier: 't2',
       description: {
         en: '',
@@ -35,7 +35,7 @@ export const devtools: TechBox = {
     {
       tech: 'Eclipse',
       image: '/tech/9-dev-tools/eclipse.png',
-      years: [],
+      years: ['uni'],
       tier: 't5',
       description: {
         en: '',
@@ -49,7 +49,7 @@ export const devtools: TechBox = {
     {
       tech: 'Netbeans',
       image: '/tech/9-dev-tools/netbeans.png',
-      years: [],
+      years: ['uni'],
       tier: 't5',
       description: {
         en: '',
@@ -63,7 +63,7 @@ export const devtools: TechBox = {
     {
       tech: 'GIT',
       image: '/tech/9-dev-tools/git.png',
-      years: [],
+      years: ['uni', '2017'],
       tier: 't1',
       description: {
         en: '',
@@ -77,7 +77,7 @@ export const devtools: TechBox = {
     {
       tech: 'GitHub',
       image: '/tech/9-dev-tools/github.png',
-      years: [],
+      years: ['uni', '2017'],
       tier: 't1',
       description: {
         en: '',
@@ -91,7 +91,7 @@ export const devtools: TechBox = {
     {
       tech: 'Bitbucket',
       image: '/tech/9-dev-tools/bitbucket.png',
-      years: [],
+      years: ['2021'],
       tier: 't4',
       description: {
         en: '',
@@ -105,7 +105,7 @@ export const devtools: TechBox = {
     {
       tech: 'GitLab',
       image: '/tech/9-dev-tools/gitlab.png',
-      years: [],
+      years: ['2018'],
       tier: 't4',
       description: {
         en: '',
@@ -119,7 +119,7 @@ export const devtools: TechBox = {
     {
       tech: 'Jupyter Notebook',
       image: '/tech/9-dev-tools/jupyter-notebook.png',
-      years: [],
+      years: ['uni'],
       tier: 't4',
       description: {
         en: '',

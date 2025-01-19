@@ -50,16 +50,16 @@ const TechComponent = ({ tech, currentLang, isSoftSkills }: Props) => {
               }
               <div className='tech-info'>
                 <h4>{ tech.tech }</h4>
-                <h5>What is it?</h5>
+                <h5>Description</h5>
                 <p>{ currentLang == 'es' ? tech.description.es : tech.description.en }</p>
               </div>
             </div>
             <div className='tech-bottom'>
               <div className='tech-info'>
-                <h5>Why or when I use it?</h5>
+                <h5>Why or when did I use it?</h5>
                 <p>{ currentLang == 'es' ? tech.comment.es : tech.comment.en }</p>
                 <div className='flex items-center justify-between'>
-                  <div className='flex items-center gap-3'>
+                  <div className='flex items-center flex-wrap gap-1'>
                     {tech.years.map((y) => <span className='capitalize'>{y}</span> )}
                   </div>
                   <span className={`${tech.tier}`}>

@@ -7,7 +7,7 @@ export const backend: TechBox = {
     {
       tech: 'NodeJS',
       image: '/tech/2-backend/nodejs.png',
-      years: [],
+      years: ['2020', '2023'],
       tier: 't1',
       description: {
         en: '',
@@ -21,7 +21,7 @@ export const backend: TechBox = {
     {
       tech: 'NestJS',
       image: '/tech/2-backend/nestjs.png',
-      years: [],
+      years: ['2021', '2023'],
       tier: 't1',
       description: {
         en: '',
@@ -35,7 +35,7 @@ export const backend: TechBox = {
     {
       tech: 'Strapi',
       image: '/tech/2-backend/strapi.png',
-      years: [],
+      years: ['2024'],
       tier: 't3',
       description: {
         en: '',
@@ -49,7 +49,7 @@ export const backend: TechBox = {
     {
       tech: 'Express',
       image: '/tech/2-backend/express.png',
-      years: [],
+      years: ['2020'],
       tier: 't3',
       description: {
         en: '',
@@ -63,7 +63,7 @@ export const backend: TechBox = {
     {
       tech: 'Python',
       image: '/tech/2-backend/python.png',
-      years: [],
+      years: ['uni', '2019', '2023'],
       tier: 't3',
       description: {
         en: '',
@@ -77,7 +77,7 @@ export const backend: TechBox = {
     {
       tech: 'FastAPI',
       image: '/tech/2-backend/fastapi.png',
-      years: [],
+      years: ['2023'],
       tier: 't3',
       description: {
         en: '',
@@ -91,8 +91,8 @@ export const backend: TechBox = {
     {
       tech: 'Rust',
       image: '/tech/2-backend/rust.png',
-      years: [],
-      tier: 't3',
+      years: ['2022'],
+      tier: 't4',
       description: {
         en: '',
         es: '',
@@ -105,7 +105,7 @@ export const backend: TechBox = {
     {
       tech: 'PHP',
       image: '/tech/2-backend/php.png',
-      years: [],
+      years: ['uni', '2017'],
       tier: 't3',
       description: {
         en: '',
@@ -119,7 +119,7 @@ export const backend: TechBox = {
     {
       tech: 'Laravel',
       image: '/tech/2-backend/laravel.png',
-      years: [],
+      years: ['2023'],
       tier: 't5',
       description: {
         en: '',
@@ -133,7 +133,7 @@ export const backend: TechBox = {
     {
       tech: 'Codeigniter',
       image: '/tech/2-backend/codeigniter.png',
-      years: [],
+      years: ['2019'],
       tier: 't5',
       description: {
         en: '',
@@ -147,7 +147,7 @@ export const backend: TechBox = {
     {
       tech: 'Drupal',
       image: '/tech/2-backend/drupal.png',
-      years: [],
+      years: ['2018'],
       tier: 't3',
       description: {
         en: '',
@@ -161,7 +161,7 @@ export const backend: TechBox = {
     {
       tech: 'Wordpress',
       image: '/tech/2-backend/wordpress.png',
-      years: [],
+      years: ['2019'],
       tier: 't5',
       description: {
         en: '',
@@ -175,7 +175,7 @@ export const backend: TechBox = {
     {
       tech: 'C++',
       image: '/tech/2-backend/c++.png',
-      years: [],
+      years: ['uni'],
       tier: 't5',
       description: {
         en: '',
@@ -189,7 +189,7 @@ export const backend: TechBox = {
     {
       tech: 'Java',
       image: '/tech/2-backend/java.png',
-      years: [],
+      years: ['uni'],
       tier: 't5',
       description: {
         en: '',

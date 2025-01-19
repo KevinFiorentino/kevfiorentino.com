@@ -7,7 +7,7 @@ export const ddbb: TechBox = {
     {
       tech: 'MongoDB',
       image: '/tech/4-ddbb/mongodb.png',
-      years: [],
+      years: ['2020'],
       tier: 't1',
       description: {
         en: '',
@@ -21,7 +21,7 @@ export const ddbb: TechBox = {
     {
       tech: 'MySQL',
       image: '/tech/4-ddbb/mysql.png',
-      years: [],
+      years: ['uni', '2018'],
       tier: 't2',
       description: {
         en: '',
@@ -35,7 +35,7 @@ export const ddbb: TechBox = {
     {
       tech: 'MariaDB',
       image: '/tech/4-ddbb/mariadb.png',
-      years: [],
+      years: ['uni', '2018'],
       tier: 't2',
       description: {
         en: '',
@@ -49,7 +49,7 @@ export const ddbb: TechBox = {
     {
       tech: 'Elasticsearch',
       image: '/tech/4-ddbb/elasticsearch.png',
-      years: [],
+      years: ['2021'],
       tier: 't2',
       description: {
         en: '',
@@ -63,7 +63,7 @@ export const ddbb: TechBox = {
     {
       tech: 'Redis',
       image: '/tech/4-ddbb/redis.png',
-      years: [],
+      years: ['2020'],
       tier: 't4',
       description: {
         en: '',
@@ -77,7 +77,7 @@ export const ddbb: TechBox = {
     {
       tech: 'PostgreSQL',
       image: '/tech/4-ddbb/postgresql.png',
-      years: [],
+      years: ['2017'],
       tier: 't4',
       description: {
         en: '',
@@ -91,7 +91,7 @@ export const ddbb: TechBox = {
     {
       tech: 'DBearer',
       image: '/tech/4-ddbb/dbearer.png',
-      years: [],
+      years: ['2024'],
       tier: 't2',
       description: {
         en: '',
@@ -105,7 +105,7 @@ export const ddbb: TechBox = {
     {
       tech: 'PHPMyAdmin',
       image: '/tech/4-ddbb/phpmyadmin.png',
-      years: [],
+      years: ['uni', '2017'],
       tier: 't4',
       description: {
         en: '',

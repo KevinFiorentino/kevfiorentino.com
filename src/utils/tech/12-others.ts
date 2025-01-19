@@ -7,7 +7,7 @@ export const others: TechBox = {
     {
       tech: 'Figma',
       image: '/tech/12-others/figma.png',
-      years: [],
+      years: ['2024'],
       tier: 't1',
       description: {
         en: '',
@@ -161,7 +161,7 @@ export const others: TechBox = {
     {
       tech: 'Arduino',
       image: '/tech/12-others/arduino.png',
-      years: [],
+      years: ['uni'],
       tier: 't5',
       description: {
         en: '',

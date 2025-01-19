@@ -7,7 +7,7 @@ export const blockchain: TechBox = {
     {
       tech: 'Solana',
       image: '/tech/7-blockchain/solana.png',
-      years: [],
+      years: ['2022', '2023'],
       tier: 't1',
       description: {
         en: '',
@@ -21,7 +21,7 @@ export const blockchain: TechBox = {
     {
       tech: 'Anchor',
       image: '/tech/7-blockchain/anchor.png',
-      years: [],
+      years: ['2022', '2023'],
       tier: 't4',
       description: {
         en: '',
@@ -35,7 +35,7 @@ export const blockchain: TechBox = {
     {
       tech: 'Ethereum',
       image: '/tech/7-blockchain/ethereum.png',
-      years: [],
+      years: ['2022', '2023'],
       tier: 't4',
       description: {
         en: '',
@@ -49,7 +49,7 @@ export const blockchain: TechBox = {
     {
       tech: 'Solidity',
       image: '/tech/7-blockchain/solidity.png',
-      years: [],
+      years: ['2022', '2023'],
       tier: 't4',
       description: {
         en: '',
@@ -63,7 +63,7 @@ export const blockchain: TechBox = {
     {
       tech: 'Remix',
       image: '/tech/7-blockchain/remix.png',
-      years: [],
+      years: ['2022', '2023'],
       tier: 't4',
       description: {
         en: '',
@@ -77,7 +77,7 @@ export const blockchain: TechBox = {
     {
       tech: 'OpenZeppelin',
       image: '/tech/7-blockchain/openzeppelin.png',
-      years: [],
+      years: ['2023'],
       tier: 't4',
       description: {
         en: '',
@@ -91,7 +91,7 @@ export const blockchain: TechBox = {
     {
       tech: 'Arbitrum',
       image: '/tech/7-blockchain/arbitrum.png',
-      years: [],
+      years: ['2023'],
       tier: 't4',
       description: {
         en: '',
@@ -105,7 +105,7 @@ export const blockchain: TechBox = {
     {
       tech: 'Optimism',
       image: '/tech/7-blockchain/optimism.png',
-      years: [],
+      years: ['2023'],
       tier: 't4',
       description: {
         en: '',
@@ -119,7 +119,7 @@ export const blockchain: TechBox = {
     {
       tech: 'Polygon',
       image: '/tech/7-blockchain/polygon.png',
-      years: [],
+      years: ['2023'],
       tier: 't4',
       description: {
         en: '',
@@ -133,7 +133,7 @@ export const blockchain: TechBox = {
     {
       tech: 'Bitcoin',
       image: '/tech/7-blockchain/bitcoin.png',
-      years: [],
+      years: ['2023'],
       tier: 't4',
       description: {
         en: '',
@@ -147,7 +147,7 @@ export const blockchain: TechBox = {
     {
       tech: 'Helium',
       image: '/tech/7-blockchain/helium.png',
-      years: [],
+      years: ['2023'],
       tier: 't4',
       description: {
         en: '',
@@ -161,7 +161,7 @@ export const blockchain: TechBox = {
     {
       tech: 'Infura',
       image: '/tech/7-blockchain/infura.png',
-      years: [],
+      years: ['2023'],
       tier: 't4',
       description: {
         en: '',
@@ -175,7 +175,7 @@ export const blockchain: TechBox = {
     {
       tech: 'IPFS',
       image: '/tech/7-blockchain/ipfs.png',
-      years: [],
+      years: ['2023'],
       tier: 't4',
       description: {
         en: '',
@@ -189,7 +189,7 @@ export const blockchain: TechBox = {
     {
       tech: 'Lit Protocol',
       image: '/tech/7-blockchain/lit-protocol.png',
-      years: [],
+      years: ['2023'],
       tier: 't4',
       description: {
         en: '',
@@ -203,7 +203,7 @@ export const blockchain: TechBox = {
     {
       tech: 'Phantom',
       image: '/tech/7-blockchain/phantom.png',
-      years: [],
+      years: ['2022', '2023'],
       tier: 't4',
       description: {
         en: '',
@@ -217,7 +217,7 @@ export const blockchain: TechBox = {
     {
       tech: 'Metamask',
       image: '/tech/7-blockchain/metamask.png',
-      years: [],
+      years: ['2022', '2023'],
       tier: 't4',
       description: {
         en: '',
@@ -231,7 +231,7 @@ export const blockchain: TechBox = {
     {
       tech: 'Hardhat',
       image: '/tech/7-blockchain/hardhat.png',
-      years: [],
+      years: ['2023'],
       tier: 't4',
       description: {
         en: '',

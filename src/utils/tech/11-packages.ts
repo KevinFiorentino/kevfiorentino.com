@@ -201,9 +201,9 @@ export const packages: TechBox = {
       }
     },
     {
-      tech: 'Datatables',
+      tech: 'DataTables',
       image: '/tech/11-packages/datatables.png',
-      years: [],
+      years: ['2017'],
       tier: 't4',
       description: {
         en: '',
@@ -231,7 +231,7 @@ export const packages: TechBox = {
     {
       tech: 'Numpy',
       image: '/tech/11-packages/numpy.png',
-      years: [],
+      years: ['uni'],
       tier: 't4',
       description: {
         en: '',
@@ -245,7 +245,7 @@ export const packages: TechBox = {
     {
       tech: 'Pandas',
       image: '/tech/11-packages/pandas.png',
-      years: [],
+      years: ['uni'],
       tier: 't4',
       description: {
         en: '',
