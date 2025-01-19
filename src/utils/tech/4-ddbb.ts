@@ -7,7 +7,7 @@ export const ddbb: TechBox = {
     {
       tech: 'MongoDB',
       image: '/tech/4-ddbb/mongodb.png',
-      years: [2020, 2021, 2022],
+      years: [],
       tier: 't1',
       description: {
         en: '',
@@ -21,7 +21,21 @@ export const ddbb: TechBox = {
     {
       tech: 'MySQL',
       image: '/tech/4-ddbb/mysql.png',
-      years: [2020, 2022],
+      years: [],
+      tier: 't2',
+      description: {
+        en: '',
+        es: '',
+      },
+      comment: {
+        en: '',
+        es: '',
+      }
+    },
+    {
+      tech: 'MariaDB',
+      image: '/tech/4-ddbb/mariadb.png',
+      years: [],
       tier: 't2',
       description: {
         en: '',
@@ -35,8 +49,64 @@ export const ddbb: TechBox = {
     {
       tech: 'Elasticsearch',
       image: '/tech/4-ddbb/elasticsearch.png',
-      years: [2020, 2022],
+      years: [],
       tier: 't2',
+      description: {
+        en: '',
+        es: '',
+      },
+      comment: {
+        en: '',
+        es: '',
+      }
+    },
+    {
+      tech: 'Redis',
+      image: '/tech/4-ddbb/redis.png',
+      years: [],
+      tier: 't4',
+      description: {
+        en: '',
+        es: '',
+      },
+      comment: {
+        en: '',
+        es: '',
+      }
+    },
+    {
+      tech: 'PostgreSQL',
+      image: '/tech/4-ddbb/postgresql.png',
+      years: [],
+      tier: 't4',
+      description: {
+        en: '',
+        es: '',
+      },
+      comment: {
+        en: '',
+        es: '',
+      }
+    },
+    {
+      tech: 'DBearer',
+      image: '/tech/4-ddbb/dbearer.png',
+      years: [],
+      tier: 't2',
+      description: {
+        en: '',
+        es: '',
+      },
+      comment: {
+        en: '',
+        es: '',
+      }
+    },
+    {
+      tech: 'PHPMyAdmin',
+      image: '/tech/4-ddbb/phpmyadmin.png',
+      years: [],
+      tier: 't4',
       description: {
         en: '',
         es: '',
