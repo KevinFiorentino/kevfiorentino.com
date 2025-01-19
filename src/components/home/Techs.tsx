@@ -91,6 +91,7 @@ const TechJourney = ({ currentLang }: Props) => {
                     key={index}
                     techBox={box}
                     currentLang={currentLang}
+                    isSoftSkills={box.name.includes('Soft')}
                   />
                 ))
               }

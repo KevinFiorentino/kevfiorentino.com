@@ -17,12 +17,24 @@
     padding: 7px 40px;
     margin-top: -30px;
     width: max-content;
+    img {
+      box-shadow: none;
+    }
   }
   .imagesBox {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 5px;
     margin-top: 10px;
+  }
+
+  &.softSkills {
+    .techTitle {
+      background-color: #E5E7EB;
+    }
+    .imagesBox {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
 
@@ -44,6 +56,13 @@
     &:hover {
       transform: scale(1.05);
       transition: 100ms;
+    }
+  }
+
+  &.ssImage{
+    img {
+      width: auto;
+      height: auto;
     }
   }
 }

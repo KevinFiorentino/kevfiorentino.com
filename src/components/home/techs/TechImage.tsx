@@ -7,9 +7,10 @@ import type { Tech } from '@utils/interfaces/tech.interface';
 interface Props {
   tech: Tech;
   currentLang: string;
+  isSoftSkills?: boolean;
 }
 
-const TechComponent = ({ tech, currentLang }: Props) => {
+const TechComponent = ({ tech, currentLang, isSoftSkills }: Props) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [dropdownPosition, setDropdownPosition] = useState({ top: 0, left: 0 });
   const [isHovered, setIsHovered] = useState(false);
@@ -32,7 +33,7 @@ const TechComponent = ({ tech, currentLang }: Props) => {
   };
 
   return (
-    <div className={`${styles.techImage}`} ref={containerRef} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <div className={`${styles.techImage} ${isSoftSkills ? styles.ssImage : ''}`} ref={containerRef} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <img src={tech.image} alt={`${tech.tech} logo`} />
       {isHovered && (
         ReactDOM.createPortal(

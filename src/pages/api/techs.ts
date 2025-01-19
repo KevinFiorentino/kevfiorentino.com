@@ -67,6 +67,9 @@ function prepareTierData(): TierResponse {
   const t4: Tech[] = [];
   const t5: Tech[] = [];
   techWrapper.map((box: TechBox) => {
+    if (box.name.includes('Soft')) {
+      return;
+    }
     box.techs.map((t: Tech) => {
       if (t.tier === 't1') {
         t1.push(t);

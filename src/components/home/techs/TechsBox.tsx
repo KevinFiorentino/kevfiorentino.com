@@ -5,11 +5,12 @@ import type { TechBox } from '@utils/interfaces/tech-box.interface';
 interface Props {
   techBox: TechBox;
   currentLang: string;
+  isSoftSkills?: boolean;
 }
 
-const TechsBox = ({ techBox, currentLang }: Props) => {
+const TechsBox = ({ techBox, currentLang, isSoftSkills }: Props) => {
   return (
-    <div className={`${styles.techsBox}`}>
+    <div className={`${styles.techsBox} ${isSoftSkills ? styles.softSkills : ''}`}>
       <div className={`${styles.techTitle}`}>
         <img src={`/tech-headers/${techBox.headerImage}`} alt={techBox.name} />
       </div>
@@ -19,6 +20,7 @@ const TechsBox = ({ techBox, currentLang }: Props) => {
             key={index}
             tech={t}
             currentLang={currentLang}
+            isSoftSkills={isSoftSkills}
           />
         ))}
       </div>
