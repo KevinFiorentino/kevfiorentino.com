@@ -36,7 +36,7 @@ export const backend: TechBox = {
       tech: 'Strapi',
       image: '/tech/2-backend/strapi.png',
       years: ['2024'],
-      tier: 't3',
+      tier: 't5',
       description: {
         en: '',
         es: '',
