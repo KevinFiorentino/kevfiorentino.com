@@ -98,8 +98,8 @@ export const frontend: TechBox = {
         es: 'NextJS es una framework basado en React para crear aplicaciones web con renderizado desde el servidor y renderizado estático.',
       },
       comment: {
-        en: 'Throughout my experience as CTO, we based our front-end architecture on Vercel technologies. I\'ve dicovered in NextJS an excellent ecosystem to build web apps.',
-        es: 'A lo largo de mi experiencia como CTO, basamos nuestra arquitectura front-end en tecnologías de Vercel. Descubrí en NextJS un excelente ecosistema para construir aplicaciones web.',
+        en: 'Throughout my experience as CTO, we based our front-end architecture on Vercel technologies. Also, I\'ve worked with NextJS in freelance projects.',
+        es: 'A lo largo de mi experiencia como CTO, basamos nuestra arquitectura front-end en tecnologías de Vercel. También he trabajado con NextJS en proyectos freelance.',
       }
     },
     {
