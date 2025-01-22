@@ -64,7 +64,7 @@ export const others: TechBox = {
       tech: 'Trello',
       image: '/tech/12-others/trello.png',
       years: [],
-      tier: 't2',
+      tier: 't1',
       description: {
         en: '',
         es: '',
