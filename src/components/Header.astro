@@ -121,7 +121,7 @@ const langToSwith = currentLang === 'es' ? 'en' : 'es';
   const svgMoon = document.getElementById('moon-icon');
   const svgSun = document.getElementById('sun-icon');
 
-  const dark = localStorage.getItem('kevin-them');
+  const dark = localStorage.getItem('kevin-theme');
   if (dark && dark == 'false') {
     elementHtml?.classList.toggle('dark');
     svgMoon?.classList.toggle('hide-icon');
@@ -133,7 +133,7 @@ const langToSwith = currentLang === 'es' ? 'en' : 'es';
       elementHtml?.classList.toggle('dark');
       svgMoon?.classList.toggle('hide-icon');
       svgSun?.classList.toggle('hide-icon');
-      localStorage.setItem('kevin-them', elementHtml?.classList.contains('dark') ? 'true' : 'false');
+      localStorage.setItem('kevin-theme', elementHtml?.classList.contains('dark') ? 'true' : 'false');
     });
 </script>
 
