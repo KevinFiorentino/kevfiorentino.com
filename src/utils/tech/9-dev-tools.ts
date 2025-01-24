@@ -117,6 +117,20 @@ export const devtools: TechBox = {
       }
     },
     {
+      tech: 'Bash',
+      image: '/tech/9-dev-tools/bash.png',
+      years: [],
+      tier: 't3',
+      description: {
+        en: '',
+        es: '',
+      },
+      comment: {
+        en: '',
+        es: '',
+      }
+    },
+    {
       tech: 'Jupyter Notebook',
       image: '/tech/9-dev-tools/jupyter-notebook.png',
       years: ['uni'],

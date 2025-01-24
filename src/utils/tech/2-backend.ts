@@ -19,6 +19,20 @@ export const backend: TechBox = {
       }
     },
     {
+      tech: 'Express',
+      image: '/tech/2-backend/express.png',
+      years: ['2020'],
+      tier: 't3',
+      description: {
+        en: '',
+        es: '',
+      },
+      comment: {
+        en: '',
+        es: '',
+      }
+    },
+    {
       tech: 'NestJS',
       image: '/tech/2-backend/nestjs.png',
       years: ['2021', '2023'],
@@ -47,10 +61,10 @@ export const backend: TechBox = {
       }
     },
     {
-      tech: 'Express',
-      image: '/tech/2-backend/express.png',
-      years: ['2020'],
-      tier: 't3',
+      tech: 'Payload CMS',
+      image: '/tech/2-backend/payload-cms.png',
+      years: ['2024'],
+      tier: 't2',
       description: {
         en: '',
         es: '',

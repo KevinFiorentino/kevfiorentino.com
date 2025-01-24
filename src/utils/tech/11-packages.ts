@@ -159,6 +159,20 @@ export const packages: TechBox = {
       }
     },
     {
+      tech: 'Passport.js',
+      image: '/tech/11-packages/passport.png',
+      years: [],
+      tier: 't4',
+      description: {
+        en: '',
+        es: '',
+      },
+      comment: {
+        en: '',
+        es: '',
+      }
+    },
+    {
       tech: 'Editorconfig',
       image: '/tech/11-packages/editorconfig.png',
       years: [],
