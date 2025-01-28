@@ -22,7 +22,7 @@ const TechComponent = ({ tech, currentLang, isSoftSkills }: Props) => {
       const rect = containerRef.current.getBoundingClientRect();
       setDropdownPosition({
         top: rect.bottom,
-        left: rect.left,
+        left: rect.left - 100,
       });
       setIsHovered(true);
     }
