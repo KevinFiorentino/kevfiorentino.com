@@ -106,7 +106,7 @@ export const ddbb: TechBox = {
       tech: 'PHPMyAdmin',
       image: '/tech/4-ddbb/phpmyadmin.png',
       years: ['uni', '2017'],
-      tier: 't4',
+      tier: 't5',
       description: {
         en: 'A web-based tool for managing MySQL and MariaDB databases through a user-friendly interface.',
         es: 'Una herramienta basada en web para administrar bases de datos MySQL y MariaDB a través de una interfaz fácil de usar.',
