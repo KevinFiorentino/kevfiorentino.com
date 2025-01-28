@@ -33,6 +33,9 @@ export const ui = {
     'collection': 'Colección',
     'read-post': 'Read post',
 
+    'description': 'Description',
+    'comment': 'Comment or opinion',
+
     't1': 'Favorites',
     't2': 'Nice to use',
     't3': 'From time to time',
@@ -78,6 +81,9 @@ export const ui = {
 
     'collection': 'Collection',
     'read-post': 'Leer post',
+
+    'description': 'Descripción',
+    'comment': 'Comentario u opinión',
 
     't1': 'Favorites',
     't2': 'Nice to use',
