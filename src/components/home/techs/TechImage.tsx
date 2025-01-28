@@ -50,13 +50,19 @@ const TechComponent = ({ tech, currentLang, isSoftSkills }: Props) => {
               }
               <div className='tech-info'>
                 <h4>{ tech.tech }</h4>
-                <h5>Description</h5>
-                <p>{ currentLang == 'es' ? tech.description.es : tech.description.en }</p>
+                {!isSoftSkills &&
+                  <>
+                    <h5>Description</h5>
+                    <p>{ currentLang == 'es' ? tech.description.es : tech.description.en }</p>
+                  </>
+                }
               </div>
             </div>
             <div className='tech-bottom'>
               <div className='tech-info'>
-                <h5>Why or when did I use it?</h5>
+                {!isSoftSkills &&
+                  <h5>Why or when did I use it?</h5>
+                }
                 <p>{ currentLang == 'es' ? tech.comment.es : tech.comment.en }</p>
                 <div className='flex items-center justify-between'>
                   <div className='flex items-center flex-wrap gap-1'>
