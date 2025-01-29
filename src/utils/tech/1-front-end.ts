@@ -173,7 +173,7 @@ export const frontend: TechBox = {
       }
     },
     {
-      tech: 'Tailwind',
+      tech: 'Tailwind CSS',
       image: '/tech/1-front-end/taildwind.png',
       years: ['2021'],
       tier: 't2',
