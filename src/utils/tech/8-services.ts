@@ -10,12 +10,12 @@ export const services: TechBox = {
       years: ['2021'],
       tier: 't2',
       description: {
-        en: '',
-        es: '',
+        en: 'A cloud platform by Google offering backend services like authentication, databases, and hosting for web and mobile apps.',
+        es: 'Una plataforma en la nube de Google que ofrece servicios backend como autenticación, bases de datos y alojamiento para aplicaciones web y móviles.',
       },
       comment: {
-        en: '',
-        es: '',
+        en: 'I think Firebase is perfect for freelance projects and to learn the basics of programming. I’ve implemented several times. However, for startups or more robust projects, I would prefer other solutions.',
+        es: 'Pienso que Firebase es perfecto para proyectos freelance y para aprender las bases de la programación. Lo he implementado varias veces. Sin embargo, para startups o proyectos más robustos, eligiría otras soluciones.',
       }
     },
     {
@@ -24,12 +24,12 @@ export const services: TechBox = {
       years: ['2023'],
       tier: 't2',
       description: {
-        en: '',
-        es: '',
+        en: 'A secure identity platform providing authentication and authorization solutions for applications.',
+        es: 'Una plataforma de identidad segura que proporciona soluciones de autenticación y autorización para aplicaciones.',
       },
       comment: {
-        en: '',
-        es: '',
+        en: 'At my startup, we implemented and base our entire authentication system through Auth0.',
+        es: 'En mi startup, implementamos y basamos todo nuestro sistema de autenticación a través de Auth0.',
       }
     },
     {
@@ -38,12 +38,12 @@ export const services: TechBox = {
       years: [],
       tier: 't3',
       description: {
-        en: '',
-        es: '',
+        en: 'An open standard for secure user authorization, allowing third-party apps to access resources without sharing passwords.',
+        es: 'Un estándar abierto para la autorización segura de usuarios, que permite que aplicaciones de terceros accedan a recursos sin compartir contraseñas.',
       },
       comment: {
-        en: '',
-        es: '',
+        en: 'I mainly implemented OAuth 2.0 through Auth0, but I also studied these types of protocols with libraries like Passport JS.',
+        es: 'Implementé principalmente OAuth 2.0 a través de Auth0, pero también estudié este tipo de protocolos con librerías como Passport JS.',
       }
     },
     {
