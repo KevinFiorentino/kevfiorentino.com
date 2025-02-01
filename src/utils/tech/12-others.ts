@@ -131,20 +131,6 @@ export const others: TechBox = {
       }
     },
     {
-      tech: 'Google Marketplace',
-      image: '/tech/12-others/google-marketplace.png',
-      years: [],
-      tier: 't5',
-      description: {
-        en: '',
-        es: '',
-      },
-      comment: {
-        en: '',
-        es: '',
-      }
-    },
-    {
       tech: 'Document360',
       image: '/tech/12-others/document360.png',
       years: [],

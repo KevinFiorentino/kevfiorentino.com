@@ -52,12 +52,12 @@ export const services: TechBox = {
       years: ['2021'],
       tier: 't2',
       description: {
-        en: '',
-        es: '',
+        en: 'An open-source tool by Google for auditing web performance, SEO, accessibility, and best practices.',
+        es: 'Una herramienta de código abierto de Google para auditar el rendimiento web, SEO, accesibilidad y mejores prácticas.',
       },
       comment: {
-        en: '',
-        es: '',
+        en: 'It is an excellent tool for testing and improving many aspects of a website’s performance. I’ve used it several times.',
+        es: 'Es una excelente herramienta para probar y mejorar muchos aspectos del rendimiento de un sitio web. Lo he usado varias veces.',
       }
     },
     {
@@ -66,12 +66,12 @@ export const services: TechBox = {
       years: ['2021'],
       tier: 't3',
       description: {
-        en: '',
-        es: '',
+        en: 'A payment solution API for integrating secure online payments in Latin American markets.',
+        es: 'Una API de solución de pago para integrar pagos seguros en línea en los mercados latinoamericanos.',
       },
       comment: {
-        en: '',
-        es: '',
+        en: 'I’ve integrated MP API with NodeJS several times to create an e-commerce.',
+        es: 'He integrado MP API con NodeJS varias veces para crear un e-commerce.',
       }
     },
     {
@@ -80,12 +80,12 @@ export const services: TechBox = {
       years: ['2021'],
       tier: 't3',
       description: {
-        en: '',
-        es: '',
+        en: 'A versatile API for integrating PayPal payments, subscriptions, and transactions into web and mobile applications.',
+        es: 'Una API versátil para integrar pagos, suscripciones y transacciones de PayPal en aplicaciones web y móviles.',
       },
       comment: {
-        en: '',
-        es: '',
+        en: 'I’ve integrated PP API once with NodeJS and Angular to receive international payments.',
+        es: 'He integrado PP API con NodeJS y Angular para recibir pagos internacionales.',
       }
     },
     {
@@ -94,12 +94,12 @@ export const services: TechBox = {
       years: ['2021'],
       tier: 't3',
       description: {
-        en: '',
-        es: '',
+        en: 'An email delivery platform for transactional and marketing emails, offering scalable API integration.',
+        es: 'Una plataforma de entrega de correo electrónico transaccionales y de marketing, que ofrece integración API escalable.',
       },
       comment: {
-        en: '',
-        es: '',
+        en: 'I’ve integrated SendGrid API to send emails. Easy to use and with a good free plan.',
+        es: 'He integrado SendGrid API para envío de correos electrónicos. Fácil de usar y con un buen plan gratuito.',
       }
     },
     {
@@ -108,12 +108,12 @@ export const services: TechBox = {
       years: [],
       tier: 't4',
       description: {
-        en: '',
-        es: '',
+        en: 'A reliable email service for fast delivery of transactional emails with detailed tracking.',
+        es: 'Un servicio de correo electrónico confiable para la entrega rápida de correos electrónicos transaccionales con seguimiento detallado.',
       },
       comment: {
-        en: '',
-        es: '',
+        en: 'I used it, but its free plan is less generous than SendGrid one. I would rather use SendGrid.',
+        es: 'Lo utilicé, pero su plan gratuito es menos generoso que el de SendGrid. Prefiero utilizar este último.',
       }
     },
     {
@@ -122,12 +122,12 @@ export const services: TechBox = {
       years: ['2024'],
       tier: 't4',
       description: {
-        en: '',
-        es: '',
+        en: 'Tools and API for building apps and integrations across Meta platforms like Facebook or Instagram.',
+        es: 'Herramientas y API para crear aplicaciones e integraciones en metaplataformas como Facebook o Instagram.',
       },
       comment: {
-        en: '',
-        es: '',
+        en: 'I have good and bad experiences with Meta API integration, mainly bad. The hardest part is authentication.',
+        es: 'Tengo experiencias buenas y malas en la integración de Meta API, principalmente malas. La parte más difícil es la autenticación.',
       }
     },
     {
@@ -136,12 +136,12 @@ export const services: TechBox = {
       years: ['2022'],
       tier: 't4',
       description: {
-        en: '',
-        es: '',
+        en: 'An error monitoring platform that helps developers identify and fix bugs in web and mobile applications.',
+        es: 'Una plataforma de monitoreo de errores que ayuda a los desarrolladores a identificar y corregir errores en aplicaciones web y móviles.',
       },
       comment: {
-        en: '',
-        es: '',
+        en: 'I integrated it with Angular some years ago. Good tool, a little difficult to understand all the information it generates.',
+        es: 'Lo integré con Angular hace algunos años. Buena herramienta, un poco difícil de entender toda la información que genera.',
       }
     },
     {
@@ -150,12 +150,12 @@ export const services: TechBox = {
       years: ['2024'],
       tier: 't4',
       description: {
-        en: '',
-        es: '',
+        en: 'A messaging platform for sending push notifications, in-app messages, and emails to engage users.',
+        es: 'Una plataforma de mensajería para enviar notificaciones automáticas, mensajes dentro de la aplicación y correos electrónicos para atraer a los usuarios.',
       },
       comment: {
-        en: '',
-        es: '',
+        en: 'Good and sophisticated service for sending notifications and other types of messaging.',
+        es: 'Buen y sofisticado servicio para envío de notificaciones y otro tipo de mensajería.',
       }
     },
     {
@@ -164,12 +164,12 @@ export const services: TechBox = {
       years: ['uni'],
       tier: 't4',
       description: {
-        en: '',
-        es: '',
+        en: 'A weather API providing real-time and forecast data for web and mobile applications.',
+        es: 'Una API meteorológica que proporciona datos de pronóstico y en tiempo real para aplicaciones web y móviles.',
       },
       comment: {
-        en: '',
-        es: '',
+        en: 'Nice API to learn and play. I used it for my thesis project.',
+        es: 'Linda API para aprender y jugar. La utilicé para mi proyecto de tesis.',
       }
     },
     {
@@ -178,12 +178,26 @@ export const services: TechBox = {
       years: ['2024'],
       tier: 't5',
       description: {
-        en: '',
-        es: '',
+        en: 'A conversational AI platform for customer engagement across messaging channels like web and mobile.',
+        es: 'Una plataforma de IA conversacional para la participación del cliente a través de canales de mensajería como la web y el móvil.',
       },
       comment: {
-        en: '',
-        es: '',
+        en: 'LP is a great company with strong communication API. We tried to create a project alongside Google Marketplace services that, luckily, did not prosper. Too difficult to use their services.',
+        es: 'LP es una gran empresa con una sólida API de comunicación. Intentamos crear un proyecto junto a servicios de Google Marketplace que, por suerte, no prosperó. Muy difícil utilizar sus servicios.',
+      }
+    },
+    {
+      tech: 'Google Marketplace',
+      image: '/tech/8-services/google-marketplace.png',
+      years: [],
+      tier: 't5',
+      description: {
+        en: 'A platform for discovering and deploying third-party business apps that integrate seamlessly with Google Workspace.',
+        es: 'Una plataforma para descubrir e implementar aplicaciones empresariales de terceros que se integran perfectamente con Google Workspace.',
+      },
+      comment: {
+        en: 'We tried to combine it with LivePerson services to create a chatbot that works in gmail. Bad idea, too difficult to develop and sell.',
+        es: 'Intentamos combinarlo con los servicios de LivePerson para crear un chatbot que funcionen en Gmail. Mala idea, demasiado difícil de desarrollar y vender.',
       }
     },
   ]
