@@ -52,8 +52,8 @@ export const testing: TechBox = {
       years: [],
       tier: 't2',
       description: {
-        en: 'JavaScript testing framework designed for simplicity and support for unit and integration tests.',
-        es: 'Marco de pruebas de JavaScript diseñado para brindar simplicidad y compatibilidad con pruebas unitarias y de integración.',
+        en: 'Javascript testing framework designed for simplicity and support for unit and integration tests.',
+        es: 'Marco de pruebas de Javascript diseñado para brindar simplicidad y compatibilidad con pruebas unitarias y de integración.',
       },
       comment: {
         en: 'It is the best to test both backend or front-end nowadays. But I’ve used Jasmine and Mocha too, all of them are very similar.',
@@ -108,8 +108,8 @@ export const testing: TechBox = {
       years: [],
       tier: 't5',
       description: {
-        en: 'A flexible JavaScript test framework for NodeJS and browsers, supporting asynchronous testing.',
-        es: 'Un marco de prueba de JavaScript flexible para NodeJS y navegadores, que admite pruebas asincrónicas.',
+        en: 'A flexible Javascript test framework for NodeJS and browsers, supporting asynchronous testing.',
+        es: 'Un marco de prueba de Javascript flexible para NodeJS y navegadores, que admite pruebas asincrónicas.',
       },
       comment: {
         en: 'I used to use it to test especially API. But nowadays it is better to use Jest.',
@@ -122,8 +122,8 @@ export const testing: TechBox = {
       years: [],
       tier: 't5',
       description: {
-        en: 'A behavior-driven testing framework for JavaScript with a focus on simplicity and readability.',
-        es: 'Un framework de pruebas basado en el comportamiento para JavaScript centrado en la simplicidad y la legibilidad.',
+        en: 'A behavior-driven testing framework for Javascript with a focus on simplicity and readability.',
+        es: 'Un framework de pruebas basado en el comportamiento para Javascript centrado en la simplicidad y la legibilidad.',
       },
       comment: {
         en: 'I used to use it in the Angular ecosystem. I liked it, but nowadays it is better to use Jest.',

@@ -94,8 +94,8 @@ export const ddbb: TechBox = {
       years: [],
       tier: 't2',
       description: {
-        en: 'An ORM for TypeScript and JavaScript that simplifies database interactions with support for SQL and NoSQL databases.',
-        es: 'Un ORM para TypeScript y JavaScript que simplifica las interacciones de bases de datos con soporte para bases de datos SQL y NoSQL.',
+        en: 'An ORM for TypeScript and Javascript that simplifies database interactions with support for SQL and NoSQL databases.',
+        es: 'Un ORM para TypeScript y Javascript que simplifica las interacciones de bases de datos con soporte para bases de datos SQL y NoSQL.',
       },
       comment: {
         en: 'It is very good for mapping SQL databases and manage migrations. I use it alongside NestJS and MySQL.',
