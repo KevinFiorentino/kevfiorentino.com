@@ -160,7 +160,7 @@ export const devtools: TechBox = {
     },
     {
       tech: 'Google Colab',
-      image: '/tech/8-services/google-colab.png',
+      image: '/tech/9-dev-tools/google-colab.png',
       years: ['uni'],
       tier: 't4',
       description: {

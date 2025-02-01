@@ -13,7 +13,7 @@
   }
   .btnTechs {
     display: grid;
-    grid-template-columns: repeat(11, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     gap: 10px;
 
     button {
@@ -81,5 +81,39 @@
   }
   100% {
     background-position: 200%;
+  }
+}
+
+.techMobile {
+  display: none !important;
+}
+
+@media (max-width: 1024px) {
+  .bgTechs {
+    .techMainBox {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .btnTechs {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+}
+
+@media (max-width: 896px) {
+  .bgTechs {
+    display: none !important;
+  }
+  .techMobile {
+    display: block !important;
+    text-align: center;
+
+    h2 {
+      -webkit-text-fill-color: white;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    p {
+      font-weight: 400;
+    }
   }
 }
