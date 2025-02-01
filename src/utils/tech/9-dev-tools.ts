@@ -159,6 +159,20 @@ export const devtools: TechBox = {
       }
     },
     {
+      tech: 'Google Colab',
+      image: '/tech/8-services/google-colab.png',
+      years: ['uni'],
+      tier: 't4',
+      description: {
+        en: 'A cloud-based Jupyter Notebook environment for running Python code, ideal for machine learning and data analysis.',
+        es: 'Un entorno Jupyter Notebook basado en la nube para ejecutar código Python, ideal para aprendizaje automático y análisis de datos.',
+      },
+      comment: {
+        en: 'I used to use it to practice and learn the basics of data science and play with Python at university.',
+        es: 'Solía utilizarlo para practicar y aprender las bases de ciencia de datos y jugar con Python en la universidad.',
+      }
+    },
+    {
       tech: 'Chrome Devtools',
       image: '/tech/9-dev-tools/chrome-devs.png',
       years: [],

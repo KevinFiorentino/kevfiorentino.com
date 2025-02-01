@@ -145,6 +145,20 @@ export const services: TechBox = {
       }
     },
     {
+      tech: 'FortiClient',
+      image: '/tech/8-services/forticlient.png',
+      years: [],
+      tier: 't4',
+      description: {
+        en: 'A security solution offering VPN, endpoint protection, and threat detection for secure remote access and device management.',
+        es: 'Una solución de seguridad que ofrece VPN, protección de terminales y detección de amenazas para acceso remoto seguro y administración de dispositivos.',
+      },
+      comment: {
+        en: 'I used to use it to connect via VPN to access development environments at my first job.',
+        es: 'Solía utilizarlo para conectarme por VPN para tener acceso a entornos de desarrollo en mi primer trabajo.',
+      }
+    },
+    {
       tech: 'OneSignal',
       image: '/tech/8-services/onesignal.png',
       years: ['2024'],
@@ -170,6 +184,20 @@ export const services: TechBox = {
       comment: {
         en: 'Nice API to learn and play. I used it for my thesis project.',
         es: 'Linda API para aprender y jugar. La utilicé para mi proyecto de tesis.',
+      }
+    },
+    {
+      tech: 'Kaggle',
+      image: '/tech/8-services/kaggle.png',
+      years: ['uni'],
+      tier: 't5',
+      description: {
+        en: 'A data science platform offering datasets, competitions, and a cloud-based environment for machine learning projects.',
+        es: 'Una plataforma de ciencia de datos que ofrece conjuntos de datos, competiciones y un entorno basado en la nube para proyectos de aprendizaje automático.',
+      },
+      comment: {
+        en: 'I used to use it to practice and learn the basics of data science alongside Python and Jupyther Notebook at university.',
+        es: 'Solía utilizarlo para aprender las bases sobre ciencia de datos junto con Python y Jupyther Notebook en la universidad.',
       }
     },
     {

@@ -89,6 +89,34 @@ export const others: TechBox = {
       }
     },
     {
+      tech: 'Asana',
+      image: '/tech/12-others/asana.png',
+      years: [],
+      tier: 't4',
+      description: {
+        en: '',
+        es: '',
+      },
+      comment: {
+        en: '',
+        es: '',
+      }
+    },
+    {
+      tech: 'ClickUp',
+      image: '/tech/12-others/clickup.png',
+      years: [],
+      tier: 't5',
+      description: {
+        en: '',
+        es: '',
+      },
+      comment: {
+        en: '',
+        es: '',
+      }
+    },
+    {
       tech: 'Android',
       image: '/tech/12-others/android.png',
       years: [],
