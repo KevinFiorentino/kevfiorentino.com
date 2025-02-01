@@ -164,12 +164,12 @@ export const packages: TechBox = {
       years: [],
       tier: 't3',
       description: {
-        en: '',
-        es: '',
+        en: 'A NodeJS library for automating headless Chrome or Chromium, useful for web scraping and testing.',
+        es: 'Una librería NodeJS para automatizar Chrome o Chromium sin UI, útil para pruebas y web scraping.',
       },
       comment: {
-        en: '',
-        es: '',
+        en: 'I’ve used it several times for creating PDF files and web scraping. But it is too heavym, more than 2 GB inside a docker container.',
+        es: 'Lo he utilizado varias veces para crear archivos PDF y hacer web scraping. Pero es demasiado pesado, más de 2 GB dentro de un contenedor docker.',
       }
     },
     {
@@ -178,12 +178,12 @@ export const packages: TechBox = {
       years: [],
       tier: 't3',
       description: {
-        en: '',
-        es: '',
+        en: 'A simple and flexible Javascript charting library for creating interactive and responsive charts.',
+        es: 'Una librería de gráficos Javascript simple y flexible para crear gráficos interactivos y responsivos.',
       },
       comment: {
-        en: '',
-        es: '',
+        en: 'Easy to use to create a simple dashboard in a front-end. I would like to use a different alternative.',
+        es: 'Fácil de usar para crear un simple dashboard en un front-end. Me gustaría usar alguna alternativa diferente.',
       }
     },
     {
@@ -192,12 +192,12 @@ export const packages: TechBox = {
       years: [],
       tier: 't4',
       description: {
-        en: '',
-        es: '',
+        en: 'A middleware for NodeJS that simplifies user authentication with various strategies like OAuth and JWT.',
+        es: 'Un middleware para NodeJS que simplifica la autenticación de usuarios con varias estrategias como OAuth y JWT.',
       },
       comment: {
-        en: '',
-        es: '',
+        en: 'I’ve explored to authenticate through GitHub and Gmail accounts. Good alternative to implement it manually, but I prefer using Auth0.',
+        es: 'Lo exploré para autenticarte mediante cuentas de GitHub o Gmail. Buena alternative para implementarlo manualmente, pero prefiero usar Auth0.',
       }
     },
     {
@@ -206,12 +206,12 @@ export const packages: TechBox = {
       years: [],
       tier: 't1',
       description: {
-        en: '',
-        es: '',
+        en: 'A tool that defines and maintains consistent coding styles across different editors and IDEs.',
+        es: 'Una herramienta que define y mantiene estilos de codificación consistentes en diferentes editores e IDE.',
       },
       comment: {
-        en: '',
-        es: '',
+        en: 'My favorite, easy to configure. It can’t be missing from one of my projects.',
+        es: 'Mi favorito, fácil de configurar. No puede faltar en uno de mis proyectos.',
       }
     },
     {
@@ -220,12 +220,12 @@ export const packages: TechBox = {
       years: [],
       tier: 't3',
       description: {
-        en: '',
-        es: '',
+        en: 'A code formatter that enforces consistent style by automatically formatting code according to predefined rules.',
+        es: 'Un formateador de código que impone un estilo coherente formateando automáticamente el código según reglas predefinidas.',
       },
       comment: {
-        en: '',
-        es: '',
+        en: 'I always like using this kind of libraries. My code will always be organized, but it is difficult to use the same plugins or settings with the rest of the team.',
+        es: 'Siempre me gusta usar este tipo de librerías. Mi código siempre estará organizado, pero es difícil usar los mismos plugins o configuraciones con el resto del equipo.',
       }
     },
     {
@@ -234,12 +234,12 @@ export const packages: TechBox = {
       years: [],
       tier: 't3',
       description: {
-        en: '',
-        es: '',
+        en: 'A static code analysis tool for identifying and fixing problems in Javascript code, improving code quality.',
+        es: 'Una herramienta de análisis de código estático para identificar y solucionar problemas en el código Javascript, mejorando la calidad del código.',
       },
       comment: {
-        en: '',
-        es: '',
+        en: 'I always like using this kind of libraries. My code will always be organized, but it is difficult to use the same plugins or settings with the rest of the team.',
+        es: 'Siempre me gusta usar este tipo de librerías. Mi código siempre estará organizado, pero es difícil usar los mismos plugins o configuraciones con el resto del equipo.',
       }
     },
     {
@@ -248,12 +248,12 @@ export const packages: TechBox = {
       years: ['2017'],
       tier: 't4',
       description: {
-        en: '',
-        es: '',
+        en: 'A jQuery plugin for creating interactive and feature-rich HTML tables with sorting, pagination, and search capabilities.',
+        es: 'Un plugin de jQuery para crear tablas HTML interactivas y ricas en funciones con capacidades de clasificación, paginación y búsqueda.',
       },
       comment: {
-        en: '',
-        es: '',
+        en: 'Probably, my first JS library that I used ever in 2017 at my first job.',
+        es: 'Probablemente, la primera librería JS que utilicé alguna vez en el 2017 en mi primer trabajo.',
       }
     },
     {
@@ -262,12 +262,40 @@ export const packages: TechBox = {
       years: [],
       tier: 't5',
       description: {
-        en: '',
-        es: '',
+        en: 'A dependency manager for PHP, helping to manage libraries and project dependencies.',
+        es: 'Un administrador de dependencias para PHP, que ayuda a administrar librerías y dependencias de proyectos.',
       },
       comment: {
-        en: '',
-        es: '',
+        en: 'Despite I worked with PHP several years, I almost didn’t used Composer. I never found the same versatility as with NPM. I mainly worked with Drupal which has its own dependency manager.',
+        es: 'A pesar de que trabajé con PHP varios años, casi no usé Composer. Nunca encontré la misma versatilidad que con NPM. Trabajé principalmente con Drupal, que tiene su propio administrador de dependencias.',
+      }
+    },
+    {
+      tech: 'Drush',
+      image: '/tech/11-packages/drush.png',
+      years: [],
+      tier: 't3',
+      description: {
+        en: 'A command-line tool for managing Drupal websites, simplifying tasks like updates and configuration.',
+        es: 'Una herramienta de línea de comandos para administrar sitios web Drupal, simplificando tareas como actualizaciones y configuración.',
+      },
+      comment: {
+        en: 'If you work with Drupal, you’ll use Drush. Excellent for automating tasks and processes.',
+        es: 'Si trabajas con Drupal, usarás Drush. Excelente para automatizar tareas y procesos.',
+      }
+    },
+    {
+      tech: 'Twig',
+      image: '/tech/11-packages/twig.png',
+      years: [],
+      tier: 't3',
+      description: {
+        en: 'A flexible, fast, and secure templating engine for PHP, used for generating HTML views in web applications.',
+        es: 'Un motor de plantillas para PHP flexible, rápido y seguro, utilizado para generar vistas HTML en aplicaciones web.',
+      },
+      comment: {
+        en: 'Probably, the ugliest logo in this dashboard. I used it to generate HTML with PHP in Drupal projects.',
+        es: 'Probablemente, el logo más feo en este dashboard. Lo usé para generar HTML con PHP en proyectos Drupal.',
       }
     },
     {
@@ -276,12 +304,12 @@ export const packages: TechBox = {
       years: ['uni'],
       tier: 't4',
       description: {
-        en: '',
-        es: '',
+        en: 'A Python library for numerical computing, providing support for large, multi-dimensional arrays and matrices.',
+        es: 'Una biblioteca de Python para computación numérica, que brinda soporte para matrices y arreglos multidimensionales grandes.',
       },
       comment: {
-        en: '',
-        es: '',
+        en: 'I used Numpy and Pandas to learn the basics of data science alongside Jupyter Notebook and Kaggle in college several years ago.',
+        es: 'Utilicé Numpy y Pandas para aprender los conceptos básicos de la ciencia de datos junto con Jupyter Notebook y Kaggle en la universidad hace varios años.',
       }
     },
     {
@@ -290,12 +318,12 @@ export const packages: TechBox = {
       years: ['uni'],
       tier: 't4',
       description: {
-        en: '',
-        es: '',
+        en: 'A Python library for data manipulation and analysis, offering powerful data structures like DataFrames.',
+        es: 'Una biblioteca de Python para manipulación y análisis de datos que ofrece potentes estructuras de datos como DataFrames.',
       },
       comment: {
-        en: '',
-        es: '',
+        en: 'I used Numpy and Pandas to learn the basics of data science alongside Jupyter Notebook and Kaggle in college several years ago.',
+        es: 'Utilicé Numpy y Pandas para aprender los conceptos básicos de la ciencia de datos junto con Jupyter Notebook y Kaggle en la universidad hace varios años.',
       }
     },
   ]
