@@ -89,6 +89,34 @@ export const ddbb: TechBox = {
       }
     },
     {
+      tech: 'TypeORM',
+      image: '/tech/4-ddbb/typeorm.png',
+      years: [],
+      tier: 't2',
+      description: {
+        en: 'An ORM for TypeScript and JavaScript that simplifies database interactions with support for SQL and NoSQL databases.',
+        es: 'Un ORM para TypeScript y JavaScript que simplifica las interacciones de bases de datos con soporte para bases de datos SQL y NoSQL.',
+      },
+      comment: {
+        en: 'It is very good for mapping SQL databases and manage migrations. I use it alongside NestJS and MySQL.',
+        es: 'Es muy bueno para mapear bases de datos SQL y administrar migraciones. Lo utilizo junto con NestJS y MySQL.',
+      }
+    },
+    {
+      tech: 'Mongoose JS',
+      image: '/tech/4-ddbb/mongoose.png',
+      years: [],
+      tier: 't2',
+      description: {
+        en: 'An ODM for MongoDB and NodeJS, offering schema-based solutions to model data and interact with MongoDB.',
+        es: 'Un ODM para MongoDB y NodeJS, que ofrece soluciones basadas en esquemas para modelar datos e interactuar con MongoDB.',
+      },
+      comment: {
+        en: 'If I love MongoDB, I love Mongoose. The perfect tool for mapping MongoDB databases. I mainly use it alongside NestJS.',
+        es: 'Si me encanta MongoDB, me encanta Mongoose. La herramienta perfecta para mapear bases de datos MongoDB. Principalmente lo utiliza con NestJS.',
+      }
+    },
+    {
       tech: 'DBearer',
       image: '/tech/4-ddbb/dbearer.png',
       years: ['2024'],
@@ -114,6 +142,20 @@ export const ddbb: TechBox = {
       comment: {
         en: 'I liked using it until I discovered DBearer.',
         es: 'Me gustaba utilizarlo hasta que descubrí DBearer.',
+      }
+    },
+    {
+      tech: 'MySQL Workbench',
+      image: '/tech/4-ddbb/workbench.png',
+      years: ['uni'],
+      tier: 't5',
+      description: {
+        en: 'A visual tool for database design, management, and administration, providing a user-friendly interface for MySQL databases.',
+        es: 'Una herramienta visual para el diseño, gestión y administración de bases de datos, que proporciona una interfaz fácil de usar para bases de datos MySQL.',
+      },
+      comment: {
+        en: 'I loved creating and visualizing entity relationship diagram with Workbench at university. I learned it in 2015 alongside MySQL.',
+        es: 'Me encantaba crear y visualizar diagramas de entidad relación con Workbench en la universidad. Lo aprendí en 2015 junto con MySQL.',
       }
     },
   ]

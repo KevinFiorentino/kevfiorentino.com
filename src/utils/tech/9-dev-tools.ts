@@ -34,7 +34,7 @@ export const devtools: TechBox = {
     },
     {
       tech: 'Nano',
-      image: '/tech/9-dev-tools/Nano.png',
+      image: '/tech/9-dev-tools/nano.png',
       years: [],
       tier: 't3',
       description: {
