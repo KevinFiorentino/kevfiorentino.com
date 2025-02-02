@@ -133,7 +133,7 @@ export const backend: TechBox = {
     {
       tech: 'Laravel',
       image: '/tech/2-backend/laravel.png',
-      years: ['2023', '2024'],
+      years: ['2024'],
       tier: 't5',
       description: {
         en: 'A PHP framework for building API or modern web applications with features like routing, ORM, and templating.',
@@ -161,7 +161,7 @@ export const backend: TechBox = {
     {
       tech: 'Drupal',
       image: '/tech/2-backend/drupal.png',
-      years: ['2018', '2019', '2020'],
+      years: ['2018', '2019', '2020', '2025'],
       tier: 't3',
       description: {
         en: 'A robust open-source CMS based on PHP for building complex websites with flexible content management and extensive plugins.',

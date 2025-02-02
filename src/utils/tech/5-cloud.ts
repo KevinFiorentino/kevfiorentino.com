@@ -189,7 +189,7 @@ export const cloud: TechBox = {
     {
       tech: "GitHub Actions",
       image: '/tech/5-cloud/github-actions.png',
-      years: ['2024', '2025'],
+      years: ['2024'],
       tier: 't3',
       description: {
         en: 'A CI/CD tool for automating workflows, testing, and deployment directly within GitHub repositories.',

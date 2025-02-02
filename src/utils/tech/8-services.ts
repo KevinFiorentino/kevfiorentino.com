@@ -21,7 +21,7 @@ export const services: TechBox = {
     {
       tech: 'Auth0',
       image: '/tech/8-services/auth0.png',
-      years: ['2023', '2024'],
+      years: ['2024', '2025'],
       tier: 't2',
       description: {
         en: 'A secure identity platform providing authentication and authorization solutions for applications.',
@@ -63,7 +63,7 @@ export const services: TechBox = {
     {
       tech: 'Mercado Pago API',
       image: '/tech/8-services/mercadopago.png',
-      years: ['2021', '2022'],
+      years: ['2021', '2022', '2024'],
       tier: 't3',
       description: {
         en: 'A payment solution API for integrating secure online payments in Latin American markets.',
@@ -91,7 +91,7 @@ export const services: TechBox = {
     {
       tech: 'SendGrid',
       image: '/tech/8-services/sendgrid.png',
-      years: ['2021', '2022'],
+      years: ['2021', '2022', '2024'],
       tier: 't3',
       description: {
         en: 'An email delivery platform for transactional and marketing emails, offering scalable API integration.',
@@ -231,7 +231,7 @@ export const services: TechBox = {
     {
       tech: 'Google Marketplace',
       image: '/tech/8-services/google-marketplace.png',
-      years: [],
+      years: ['2024'],
       tier: 't5',
       description: {
         en: 'A platform for discovering and deploying third-party business apps that integrate seamlessly with Google Workspace.',

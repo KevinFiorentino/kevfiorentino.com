@@ -287,7 +287,7 @@ export const packages: TechBox = {
     {
       tech: 'Drush',
       image: '/tech/11-packages/drush.png',
-      years: ['2019', '2020'],
+      years: ['2019', '2020', '2025'],
       tier: 't3',
       description: {
         en: 'A command-line tool for managing Drupal websites, simplifying tasks like updates and configuration.',

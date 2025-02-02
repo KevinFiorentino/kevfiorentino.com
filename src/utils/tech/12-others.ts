@@ -105,7 +105,7 @@ export const others: TechBox = {
     {
       tech: 'ClickUp',
       image: '/tech/12-others/clickup.png',
-      years: [],
+      years: ['2024'],
       tier: 't5',
       description: {
         en: 'An all-in-one productivity platform for task management, project planning, and team collaboration.',
@@ -175,7 +175,7 @@ export const others: TechBox = {
     {
       tech: 'Kdenlive',
       image: '/tech/12-others/kdenlive.png',
-      years: [],
+      years: ['2024'],
       tier: 't5',
       description: {
         en: 'An open-source video editing software with advanced features for creating professional multimedia content.',

@@ -91,7 +91,7 @@ export const ai: TechBox = {
     {
       tech: 'Runware',
       image: '/tech/6-ia/runware.png',
-      years: [],
+      years: ['2024', '2025'],
       tier: 't2',
       description: {
         en: 'A platform for generating high-quality AI images very quickly and cheaply, powered by the company’s custom hardware. Enables effortless content creation without machine learning experience.',

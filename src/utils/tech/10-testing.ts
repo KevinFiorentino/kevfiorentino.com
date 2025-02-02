@@ -77,7 +77,7 @@ export const testing: TechBox = {
     {
       tech: 'Artillery',
       image: '/tech/10-testing/artillery.png',
-      years: [],
+      years: ['2021', '2022'],
       tier: 't2',
       description: {
         en: 'A modern performance testing tool for load testing APIs and simulating high-traffic scenarios.',

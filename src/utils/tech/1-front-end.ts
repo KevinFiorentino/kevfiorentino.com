@@ -63,7 +63,7 @@ export const frontend: TechBox = {
     {
       tech: 'Angular',
       image: '/tech/1-front-end/angular.png',
-      years: ['uni', '2020', '2021', '2022'],
+      years: ['uni', '2020', '2021', '2022', '2024'],
       tier: 't1',
       description: {
         en: 'A robust TypeScript framework by Google for building dynamic, enterprise-grade web applications with a focus on scalability.',
@@ -105,7 +105,7 @@ export const frontend: TechBox = {
     {
       tech: 'Astro',
       image: '/tech/1-front-end/astro.png',
-      years: ['2023', '2024', '2025'],
+      years: ['2023', '2024'],
       tier: 't2',
       description: {
         en: 'A front-end framework for building fast, lightweight websites. Ships zero Javascript by default for better performance.',
@@ -175,7 +175,7 @@ export const frontend: TechBox = {
     {
       tech: 'Tailwind CSS',
       image: '/tech/1-front-end/taildwind.png',
-      years: ['2023', '2024', '2025'],
+      years: ['2024', '2025'],
       tier: 't2',
       description: {
         en: 'A utility-first CSS framework for rapidly building custom, responsive designs directly in your HTML.',
