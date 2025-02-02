@@ -21,7 +21,7 @@ export const devtools: TechBox = {
     {
       tech: 'Vim',
       image: '/tech/9-dev-tools/vim.png',
-      years: [],
+      years: ['2019', '2020', '2021', '2022', '2023', '2024', '2025'],
       tier: 't1',
       description: {
         en: 'A highly customizable and efficient terminal-based text editor favored by developers for its speed and shortcuts.',

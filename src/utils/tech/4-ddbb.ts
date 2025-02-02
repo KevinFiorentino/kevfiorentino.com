@@ -7,7 +7,7 @@ export const ddbb: TechBox = {
     {
       tech: 'MongoDB',
       image: '/tech/4-ddbb/mongodb.png',
-      years: ['2021'],
+      years: ['2021', '2022', '2023', '2024', '2025'],
       tier: 't1',
       description: {
         en: 'A NoSQL database that stores data flexibly, JSON-like documents, ideal for scalable applications.',
@@ -49,7 +49,7 @@ export const ddbb: TechBox = {
     {
       tech: 'Elasticsearch',
       image: '/tech/4-ddbb/elasticsearch.png',
-      years: ['2021'],
+      years: ['2021', '2022'],
       tier: 't2',
       description: {
         en: 'A NoSQL database, with a distributed search and analytics engine for fast and scalable data querying and full-text search.',
@@ -105,7 +105,7 @@ export const ddbb: TechBox = {
     {
       tech: 'Mongoose JS',
       image: '/tech/4-ddbb/mongoose.png',
-      years: [],
+      years: ['2021', '2022', '2023', '2024', '2025'],
       tier: 't2',
       description: {
         en: 'An ODM for MongoDB and NodeJS, offering schema-based solutions to model data and interact with MongoDB.',
@@ -119,7 +119,7 @@ export const ddbb: TechBox = {
     {
       tech: 'DBearer',
       image: '/tech/4-ddbb/dbearer.png',
-      years: ['2024'],
+      years: ['2024', '2025'],
       tier: 't2',
       description: {
         en: 'A security-focused platform for managing and auditing database access in modern applications.',
@@ -161,7 +161,7 @@ export const ddbb: TechBox = {
     {
       tech: 'PHPMyAdmin',
       image: '/tech/4-ddbb/phpmyadmin.png',
-      years: ['2018', '2019', '2020'],
+      years: ['2018', '2019', '2020', '2021', '2022', '2023'],
       tier: 't5',
       description: {
         en: 'A web-based tool for managing MySQL and MariaDB databases through a user-friendly interface.',

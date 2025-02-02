@@ -7,7 +7,7 @@ export const services: TechBox = {
     {
       tech: 'Firebase',
       image: '/tech/8-services/firebase.png',
-      years: ['2021'],
+      years: ['2021', '2022'],
       tier: 't2',
       description: {
         en: 'A cloud platform by Google offering backend services like authentication, databases, and hosting for web and mobile apps.',
@@ -63,7 +63,7 @@ export const services: TechBox = {
     {
       tech: 'Mercado Pago API',
       image: '/tech/8-services/mercadopago.png',
-      years: ['2021'],
+      years: ['2021', '2022'],
       tier: 't3',
       description: {
         en: 'A payment solution API for integrating secure online payments in Latin American markets.',
@@ -77,7 +77,7 @@ export const services: TechBox = {
     {
       tech: 'PayPal API',
       image: '/tech/8-services/paypal.png',
-      years: ['2021'],
+      years: ['2021', '2022'],
       tier: 't3',
       description: {
         en: 'A versatile API for integrating PayPal payments, subscriptions, and transactions into web and mobile applications.',
@@ -91,7 +91,7 @@ export const services: TechBox = {
     {
       tech: 'SendGrid',
       image: '/tech/8-services/sendgrid.png',
-      years: ['2021'],
+      years: ['2021', '2022'],
       tier: 't3',
       description: {
         en: 'An email delivery platform for transactional and marketing emails, offering scalable API integration.',
@@ -133,7 +133,7 @@ export const services: TechBox = {
     {
       tech: 'Sentry',
       image: '/tech/8-services/sentry.png',
-      years: [],
+      years: ['2021', '2022'],
       tier: 't4',
       description: {
         en: 'An error monitoring platform that helps developers identify and fix bugs in web and mobile applications.',
@@ -147,7 +147,7 @@ export const services: TechBox = {
     {
       tech: 'FortiClient',
       image: '/tech/8-services/forticlient.png',
-      years: ['2018', '2019'],
+      years: ['2018', '2019', '2020'],
       tier: 't4',
       description: {
         en: 'A security solution offering VPN, endpoint protection, and threat detection for secure remote access and device management.',

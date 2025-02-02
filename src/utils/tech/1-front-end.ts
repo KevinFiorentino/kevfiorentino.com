@@ -63,7 +63,7 @@ export const frontend: TechBox = {
     {
       tech: 'Angular',
       image: '/tech/1-front-end/angular.png',
-      years: ['uni', '2020'],
+      years: ['uni', '2020', '2021', '2022'],
       tier: 't1',
       description: {
         en: 'A robust TypeScript framework by Google for building dynamic, enterprise-grade web applications with a focus on scalability.',
@@ -147,7 +147,7 @@ export const frontend: TechBox = {
     {
       tech: 'Storybook',
       image: '/tech/1-front-end/storybook.png',
-      years: ['2024'],
+      years: [],
       tier: 't4',
       description: {
         en: 'A UI development tool for building, testing, and documenting isolated components in a sandboxed environment.',

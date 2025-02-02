@@ -21,7 +21,7 @@ export const packages: TechBox = {
     {
       tech: 'PNPM',
       image: '/tech/11-packages/pnpm.png',
-      years: [],
+      years: ['2023', '2024', '2025'],
       tier: 't2',
       description: {
         en: 'A fast and efficient package manager that saves disk space by sharing dependencies across projects.',
@@ -175,7 +175,7 @@ export const packages: TechBox = {
     {
       tech: 'Chart.js',
       image: '/tech/11-packages/chartjs.png',
-      years: [],
+      years: ['2021', '2022'],
       tier: 't3',
       description: {
         en: 'A simple and flexible Javascript charting library for creating interactive and responsive charts.',

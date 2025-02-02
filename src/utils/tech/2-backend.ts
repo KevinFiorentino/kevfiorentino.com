@@ -7,7 +7,7 @@ export const backend: TechBox = {
     {
       tech: 'NodeJS',
       image: '/tech/2-backend/nodejs.png',
-      years: ['uni', '2020', '2021'],
+      years: ['uni', '2020', '2021', '2022', '2023', '2024', '2025'],
       tier: 't1',
       description: {
         en: 'A runtime for executing Javascript on the server, enabling scalable, high-performance backend applications.',
@@ -35,7 +35,7 @@ export const backend: TechBox = {
     {
       tech: 'NestJS',
       image: '/tech/2-backend/nestjs.png',
-      years: ['2021'],
+      years: ['2021', '2022', '2023', '2024', '2025'],
       tier: 't1',
       description: {
         en: 'A progressive NodeJS framework for building scalable server-side applications using TypeScript and modular architecture.',
@@ -91,7 +91,7 @@ export const backend: TechBox = {
     {
       tech: 'FastAPI',
       image: '/tech/2-backend/fastapi.png',
-      years: ['2023'],
+      years: [],
       tier: 't3',
       description: {
         en: 'A modern Python framework for building API, focusing on speed, type hints, and developer productivity.',
@@ -105,7 +105,7 @@ export const backend: TechBox = {
     {
       tech: 'Rust',
       image: '/tech/2-backend/rust.png',
-      years: ['2022'],
+      years: [],
       tier: 't4',
       description: {
         en: 'A systems programming language known for high performance, safety, and memory management without a garbage collector.',

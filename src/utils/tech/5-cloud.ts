@@ -7,7 +7,7 @@ export const cloud: TechBox = {
     {
       tech: 'Linux',
       image: '/tech/5-cloud/linux.png',
-      years: ['2018', '2019', '2020'],
+      years: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
       tier: 't1',
       description: {
         en: 'An open-source operating system known for stability, security, and use in servers and development environments.',
@@ -49,7 +49,7 @@ export const cloud: TechBox = {
     {
       tech: 'AWS',
       image: '/tech/5-cloud/aws.png',
-      years: ['2021'],
+      years: ['2021', '2022'],
       tier: 't2',
       description: {
         en: 'Amazon Web Services provides scalable cloud computing solutions, including storage, databases, among other services.',
@@ -63,7 +63,7 @@ export const cloud: TechBox = {
     {
       tech: 'Docker',
       image: '/tech/5-cloud/docker.png',
-      years: ['2021'],
+      years: ['2021', '2022'],
       tier: 't1',
       description: {
         en: 'A platform for containerizing applications, enabling them to run consistently across different environments.',
@@ -77,7 +77,7 @@ export const cloud: TechBox = {
     {
       tech: 'NGINX',
       image: '/tech/5-cloud/nginx.png',
-      years: ['2021'],
+      years: ['2021', '2022'],
       tier: 't1',
       description: {
         en: 'A high-performance web server and reverse proxy for serving web content and handling load balancing.',
@@ -105,7 +105,7 @@ export const cloud: TechBox = {
     {
       tech: 'S3',
       image: '/tech/5-cloud/s3.png',
-      years: ['2021'],
+      years: ['2021', '2022'],
       tier: 't1',
       description: {
         en: 'Amazon’s scalable object storage service for storing and retrieving data from the cloud. Ideally to use like a CDN for creating a file system to save images.',
@@ -119,7 +119,7 @@ export const cloud: TechBox = {
     {
       tech: "Let's Encrypt",
       image: '/tech/5-cloud/letsencrypt.png',
-      years: [],
+      years: ['2021', '2022'],
       tier: 't3',
       description: {
         en: 'A free certificate authority that provides SSL/TLS certificates to secure websites with HTTPS.',
@@ -133,7 +133,7 @@ export const cloud: TechBox = {
     {
       tech: "PM2",
       image: '/tech/5-cloud/pm2.png',
-      years: [],
+      years: ['2021', '2022'],
       tier: 't2',
       description: {
         en: 'A process manager for NodeJS applications, ensuring uptime, load balancing, and monitoring.',
@@ -175,7 +175,7 @@ export const cloud: TechBox = {
     {
       tech: "Cloudflare",
       image: '/tech/5-cloud/cloudflare.png',
-      years: ['2023'],
+      years: ['2023', '2024', '2025'],
       tier: 't1',
       description: {
         en: 'A web performance and security platform offering CDN, DDoS protection, and DNS services.',
@@ -189,7 +189,7 @@ export const cloud: TechBox = {
     {
       tech: "GitHub Actions",
       image: '/tech/5-cloud/github-actions.png',
-      years: ['2023'],
+      years: [],
       tier: 't3',
       description: {
         en: 'A CI/CD tool for automating workflows, testing, and deployment directly within GitHub repositories.',
@@ -203,7 +203,7 @@ export const cloud: TechBox = {
     {
       tech: "IBM Cloud",
       image: '/tech/5-cloud/ibm-cloud.png',
-      years: ['2021'],
+      years: ['2021', '2022'],
       tier: 't3',
       description: {
         en: 'A cloud platform providing infrastructure, AI, and data solutions for building and scaling applications.',
@@ -245,7 +245,7 @@ export const cloud: TechBox = {
     {
       tech: "Heroku",
       image: '/tech/5-cloud/heroku.png',
-      years: ['uni'],
+      years: ['uni', '2020', '2021'],
       tier: 't5',
       description: {
         en: 'A platform-as-a-service (PaaS) for deploying, managing, and scaling applications effortlessly in the cloud.',

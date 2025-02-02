@@ -7,7 +7,7 @@ export const others: TechBox = {
     {
       tech: 'Figma',
       image: '/tech/12-others/figma.png',
-      years: [],
+      years: ['2024', '2025'],
       tier: 't1',
       description: {
         en: 'A collaborative design tool for creating user interfaces, wireframes, and prototypes in real time.',
@@ -21,7 +21,7 @@ export const others: TechBox = {
     {
       tech: 'Notion',
       image: '/tech/12-others/notion.png',
-      years: [],
+      years: ['2023', '2024', '2025'],
       tier: 't1',
       description: {
         en: 'An all-in-one workspace for note-taking, task management, and collaboration, ideal for teams and individuals.',
@@ -35,7 +35,7 @@ export const others: TechBox = {
     {
       tech: 'Sublime Text',
       image: '/tech/12-others/sublime-text.png',
-      years: [],
+      years: ['2023', '2024', '2025'],
       tier: 't2',
       description: {
         en: 'A lightweight and versatile text editor known for its speed, customizability, and powerful features.',
@@ -49,7 +49,7 @@ export const others: TechBox = {
     {
       tech: 'Excalidraw',
       image: '/tech/12-others/excalidraw.png',
-      years: [],
+      years: ['2023', '2024', '2025'],
       tier: 't1',
       description: {
         en: 'A collaborative whiteboard tool for creating hand-drawn-style diagrams and visual ideas.',
@@ -63,7 +63,7 @@ export const others: TechBox = {
     {
       tech: 'Trello',
       image: '/tech/12-others/trello.png',
-      years: ['2018', '2019', '2020', '2021', '2022'],
+      years: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
       tier: 't1',
       description: {
         en: 'A project management tool that uses boards, lists, and cards to organize tasks and workflows.',
@@ -119,7 +119,7 @@ export const others: TechBox = {
     {
       tech: 'Mobile Development Knowledge',
       image: '/tech/12-others/android.png',
-      years: [],
+      years: ['2023', '2024'],
       tier: 't4',
       description: {
         en: 'Expertise in building apps for iOS and Android platforms using mobile technologies.',
@@ -147,7 +147,7 @@ export const others: TechBox = {
     {
       tech: 'Discord',
       image: '/tech/12-others/discord.png',
-      years: [],
+      years: ['2023', '2024', '2025'],
       tier: 't3',
       description: {
         en: 'A communication platform for voice, video, and text chats, popular among gaming and community groups.',
