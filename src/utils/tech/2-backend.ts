@@ -7,7 +7,7 @@ export const backend: TechBox = {
     {
       tech: 'NodeJS',
       image: '/tech/2-backend/nodejs.png',
-      years: ['uni', '2020', '2023'],
+      years: ['uni', '2020', '2021'],
       tier: 't1',
       description: {
         en: 'A runtime for executing Javascript on the server, enabling scalable, high-performance backend applications.',
@@ -21,7 +21,7 @@ export const backend: TechBox = {
     {
       tech: 'Express',
       image: '/tech/2-backend/express.png',
-      years: ['uni', '2020'],
+      years: ['uni', '2020', '2021'],
       tier: 't3',
       description: {
         en: 'A minimalist web framework for NodeJS, used to build API and web applications with ease and flexibility.',
@@ -35,7 +35,7 @@ export const backend: TechBox = {
     {
       tech: 'NestJS',
       image: '/tech/2-backend/nestjs.png',
-      years: ['2021', '2023'],
+      years: ['2021'],
       tier: 't1',
       description: {
         en: 'A progressive NodeJS framework for building scalable server-side applications using TypeScript and modular architecture.',
@@ -49,7 +49,7 @@ export const backend: TechBox = {
     {
       tech: 'Strapi',
       image: '/tech/2-backend/strapi.png',
-      years: ['2024'],
+      years: [],
       tier: 't5',
       description: {
         en: 'A headless CMS that provides an API-first approach to manage and deliver content across platforms.',
@@ -63,7 +63,7 @@ export const backend: TechBox = {
     {
       tech: 'Payload CMS',
       image: '/tech/2-backend/payload-cms.png',
-      years: ['2024'],
+      years: ['2025'],
       tier: 't2',
       description: {
         en: 'A powerful, developer-first headless CMS built with NextJS for custom content management solutions.',
@@ -77,7 +77,7 @@ export const backend: TechBox = {
     {
       tech: 'Python',
       image: '/tech/2-backend/python.png',
-      years: ['uni', '2019', '2023'],
+      years: ['uni', '2020'],
       tier: 't3',
       description: {
         en: 'A versatile, beginner-friendly programming language known for simplicity and wide-ranging applications.',
@@ -119,7 +119,7 @@ export const backend: TechBox = {
     {
       tech: 'PHP',
       image: '/tech/2-backend/php.png',
-      years: ['2017', '2018', '2019'],
+      years: ['2017', '2018', '2019', '2020'],
       tier: 't3',
       description: {
         en: 'A server-side scripting language widely used for building dynamic websites and web applications.',
@@ -147,7 +147,7 @@ export const backend: TechBox = {
     {
       tech: 'Codeigniter',
       image: '/tech/2-backend/codeigniter.png',
-      years: ['2019'],
+      years: [],
       tier: 't5',
       description: {
         en: 'A lightweight PHP framework for developing small-to-medium web applications with simple tools and fast performance.',

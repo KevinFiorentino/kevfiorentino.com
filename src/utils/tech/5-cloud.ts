@@ -7,7 +7,7 @@ export const cloud: TechBox = {
     {
       tech: 'Linux',
       image: '/tech/5-cloud/linux.png',
-      years: ['2018', '2019'],
+      years: ['2018', '2019', '2020'],
       tier: 't1',
       description: {
         en: 'An open-source operating system known for stability, security, and use in servers and development environments.',
@@ -21,21 +21,21 @@ export const cloud: TechBox = {
     {
       tech: 'Ubuntu',
       image: '/tech/5-cloud/ubuntu.png',
-      years: ['2020'],
+      years: ['2020', '2021', '2022', '2023', '2024', '2025'],
       tier: 't1',
       description: {
         en: 'A popular Linux distribution with a user-friendly interface, widely used for development and server deployments.',
         es: 'Una distribución de linux muy popular con una interfaz amigable con el usuario, ampliamente utilizado para desarrollo e implementaciones de servidores.',
       },
       comment: {
-        en: 'My favorite Linux distribution. Nowadays I work with Ubuntu on my personal computers.',
-        es: 'Mi distribución de linux favorita. Hoy en día trabajo con Ubuntu en mi computadora personal.',
+        en: 'My favorite Linux distribution. Nowadays I work with Ubuntu on my personal computers since 2020.',
+        es: 'Mi distribución de linux favorita. Hoy en día trabajo con Ubuntu en mi computadora personal desde 2020.',
       }
     },
     {
       tech: 'CentOS',
       image: '/tech/5-cloud/centos.png',
-      years: ['2018', '2019'],
+      years: ['2018', '2019', '2020'],
       tier: 't5',
       description: {
         en: 'A discontinued Linux distribution designed for servers and business-critical applications created by Ret Hat.',
@@ -91,7 +91,7 @@ export const cloud: TechBox = {
     {
       tech: "Apache Server",
       image: '/tech/5-cloud/apache.png',
-      years: ['2017', '2018', '2019'],
+      years: ['2017', '2018', '2019', '2020'],
       tier: 't3',
       description: {
         en: 'A robust and widely-used web server for hosting websites and serving content securely and efficiently.',
@@ -119,7 +119,7 @@ export const cloud: TechBox = {
     {
       tech: "Let's Encrypt",
       image: '/tech/5-cloud/letsencrypt.png',
-      years: ['2022'],
+      years: [],
       tier: 't3',
       description: {
         en: 'A free certificate authority that provides SSL/TLS certificates to secure websites with HTTPS.',
@@ -133,7 +133,7 @@ export const cloud: TechBox = {
     {
       tech: "PM2",
       image: '/tech/5-cloud/pm2.png',
-      years: ['2021'],
+      years: [],
       tier: 't2',
       description: {
         en: 'A process manager for NodeJS applications, ensuring uptime, load balancing, and monitoring.',
@@ -217,7 +217,7 @@ export const cloud: TechBox = {
     {
       tech: "Linode",
       image: '/tech/5-cloud/linode.png',
-      years: ['2021'],
+      years: ['2021', '2022'],
       tier: 't3',
       description: {
         en: 'A cloud hosting service offering virtual servers for deploying applications and scalable infrastructure.',
@@ -259,7 +259,7 @@ export const cloud: TechBox = {
     {
       tech: "VirtualBox",
       image: '/tech/5-cloud/virtual-box.png',
-      years: ['2018', '2019'],
+      years: ['2018', '2019', '2020'],
       tier: 't3',
       description: {
         en: 'A free, open-source virtualization tool for running multiple operating systems on a single machine.',

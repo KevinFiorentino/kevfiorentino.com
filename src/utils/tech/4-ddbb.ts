@@ -21,7 +21,7 @@ export const ddbb: TechBox = {
     {
       tech: 'MySQL',
       image: '/tech/4-ddbb/mysql.png',
-      years: ['uni', '2018', '2019'],
+      years: ['uni', '2018', '2019', '2020'],
       tier: 't2',
       description: {
         en: 'A widely-used relational database known for reliability, performance, and compatibility with web applications.',
@@ -63,7 +63,7 @@ export const ddbb: TechBox = {
     {
       tech: 'Redis',
       image: '/tech/4-ddbb/redis.png',
-      years: ['2020'],
+      years: [],
       tier: 't4',
       description: {
         en: 'An in-memory data store used for caching, real-time analytics, and session management with high performance.',
@@ -161,7 +161,7 @@ export const ddbb: TechBox = {
     {
       tech: 'PHPMyAdmin',
       image: '/tech/4-ddbb/phpmyadmin.png',
-      years: ['2018'],
+      years: ['2018', '2019', '2020'],
       tier: 't5',
       description: {
         en: 'A web-based tool for managing MySQL and MariaDB databases through a user-friendly interface.',

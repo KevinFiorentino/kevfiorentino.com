@@ -7,7 +7,7 @@ export const devtools: TechBox = {
     {
       tech: 'VS Code',
       image: '/tech/9-dev-tools/vscode.png',
-      years: ['2017', '2018', '2019'],
+      years: ['2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
       tier: 't2',
       description: {
         en: 'A lightweight, versatile code editor by Microsoft with extensive extensions and debugging support.',
@@ -21,7 +21,7 @@ export const devtools: TechBox = {
     {
       tech: 'Vim',
       image: '/tech/9-dev-tools/vim.png',
-      years: ['2018', '2019'],
+      years: [],
       tier: 't1',
       description: {
         en: 'A highly customizable and efficient terminal-based text editor favored by developers for its speed and shortcuts.',
@@ -91,7 +91,7 @@ export const devtools: TechBox = {
     {
       tech: 'GitHub',
       image: '/tech/9-dev-tools/github.png',
-      years: ['uni', '2017'],
+      years: ['uni', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
       tier: 't1',
       description: {
         en: 'A cloud-based platform for hosting and managing Git repositories with collaboration and CI/CD tools.',
@@ -105,7 +105,7 @@ export const devtools: TechBox = {
     {
       tech: 'GitLab',
       image: '/tech/9-dev-tools/gitlab.png',
-      years: ['2018', '2019'],
+      years: ['2018', '2019', '2020'],
       tier: 't4',
       description: {
         en: 'A DevOps platform offering Git repository hosting, CI/CD pipelines, and project management features.',
@@ -119,7 +119,7 @@ export const devtools: TechBox = {
     {
       tech: 'Bitbucket',
       image: '/tech/9-dev-tools/bitbucket.png',
-      years: ['2021'],
+      years: ['2021', '2022'],
       tier: 't4',
       description: {
         en: 'A Git-based repository management tool by Atlassian, ideal for integrating with Jira and CI/CD pipelines.',

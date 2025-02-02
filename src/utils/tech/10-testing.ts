@@ -7,7 +7,7 @@ export const testing: TechBox = {
     {
       tech: 'Postman',
       image: '/tech/10-testing/postman.png',
-      years: [],
+      years: ['2021'],
       tier: 't3',
       description: {
         en: 'An API development platform for building, testing, and documenting APIs with a user-friendly interface.',
@@ -35,7 +35,7 @@ export const testing: TechBox = {
     {
       tech: 'Swagger',
       image: '/tech/10-testing/swagger.png',
-      years: [],
+      years: ['2021', '2022', '2023', '2024', '2025'],
       tier: 't1',
       description: {
         en: 'A toolset for designing, documenting, and testing APIs with interactive documentation features.',
@@ -119,7 +119,7 @@ export const testing: TechBox = {
     {
       tech: 'Jasmine',
       image: '/tech/10-testing/jasmine.png',
-      years: [],
+      years: ['2021', '2022'],
       tier: 't5',
       description: {
         en: 'A behavior-driven testing framework for Javascript with a focus on simplicity and readability.',
@@ -133,7 +133,7 @@ export const testing: TechBox = {
     {
       tech: 'Karma',
       image: '/tech/10-testing/karma.png',
-      years: [],
+      years: ['2021', '2022'],
       tier: 't5',
       description: {
         en: 'A deprecated test runner for Angular apps designed to run tests across multiple browsers in real-time.',
@@ -147,7 +147,7 @@ export const testing: TechBox = {
     {
       tech: 'Protractor',
       image: '/tech/10-testing/protractor.png',
-      years: [],
+      years: ['2021', '2022'],
       tier: 't5',
       description: {
         en: 'A deprecated end-to-end testing framework for Angular apps, built on top of WebDriverJS for seamless testing.',

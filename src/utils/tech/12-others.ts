@@ -63,7 +63,7 @@ export const others: TechBox = {
     {
       tech: 'Trello',
       image: '/tech/12-others/trello.png',
-      years: ['2018', '2019'],
+      years: ['2018', '2019', '2020', '2021', '2022'],
       tier: 't1',
       description: {
         en: 'A project management tool that uses boards, lists, and cards to organize tasks and workflows.',
@@ -77,7 +77,7 @@ export const others: TechBox = {
     {
       tech: 'Jira',
       image: '/tech/12-others/jira.png',
-      years: ['2021'],
+      years: ['2021', '2022'],
       tier: 't4',
       description: {
         en: 'A powerful project management and issue-tracking platform for software development teams.',
@@ -161,7 +161,7 @@ export const others: TechBox = {
     {
       tech: 'Slack',
       image: '/tech/12-others/slack.png',
-      years: [],
+      years: ['2021', '2022'],
       tier: 't4',
       description: {
         en: 'A messaging app designed for team collaboration, featuring channels, direct messaging, and integration with other tools.',
@@ -189,7 +189,7 @@ export const others: TechBox = {
     {
       tech: 'Document360',
       image: '/tech/12-others/document360.png',
-      years: [],
+      years: ['2022', '2023'],
       tier: 't5',
       description: {
         en: 'A knowledge base platform for creating, managing, and sharing documentation for software and customer support.',

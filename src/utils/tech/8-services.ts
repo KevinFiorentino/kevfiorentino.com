@@ -49,7 +49,7 @@ export const services: TechBox = {
     {
       tech: 'Lighthouse',
       image: '/tech/8-services/lighthouse.png',
-      years: ['2019'],
+      years: ['2019', '2020'],
       tier: 't2',
       description: {
         en: 'An open-source tool by Google for auditing web performance, SEO, accessibility, and best practices.',
@@ -133,7 +133,7 @@ export const services: TechBox = {
     {
       tech: 'Sentry',
       image: '/tech/8-services/sentry.png',
-      years: ['2022'],
+      years: [],
       tier: 't4',
       description: {
         en: 'An error monitoring platform that helps developers identify and fix bugs in web and mobile applications.',

@@ -7,7 +7,7 @@ export const packages: TechBox = {
     {
       tech: 'NPM',
       image: '/tech/11-packages/npm.png',
-      years: ['uni'],
+      years: ['uni', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
       tier: 't1',
       description: {
         en: 'The default package manager for Node.js, used to manage project dependencies and run scripts.',
@@ -49,7 +49,7 @@ export const packages: TechBox = {
     {
       tech: 'RxJS',
       image: '/tech/11-packages/rxjs.png',
-      years: [],
+      years: ['2021', '2022'],
       tier: 't1',
       description: {
         en: 'A reactive programming library for handling asynchronous events and data streams in Javascript applications, especially with observers.',
@@ -63,7 +63,7 @@ export const packages: TechBox = {
     {
       tech: 'NgRx',
       image: '/tech/11-packages/ngrx.png',
-      years: [],
+      years: ['2021', '2022'],
       tier: 't1',
       description: {
         en: 'A reactive state management library for Angular applications, built on Redux and RxJS principles for scalable state handling.',
@@ -161,7 +161,7 @@ export const packages: TechBox = {
     {
       tech: 'Puppeteer',
       image: '/tech/11-packages/puppeteer.png',
-      years: [],
+      years: ['2021', '2022'],
       tier: 't3',
       description: {
         en: 'A NodeJS library for automating headless Chrome or Chromium, useful for web scraping and testing.',
@@ -287,7 +287,7 @@ export const packages: TechBox = {
     {
       tech: 'Drush',
       image: '/tech/11-packages/drush.png',
-      years: ['2019'],
+      years: ['2019', '2020'],
       tier: 't3',
       description: {
         en: 'A command-line tool for managing Drupal websites, simplifying tasks like updates and configuration.',
@@ -301,7 +301,7 @@ export const packages: TechBox = {
     {
       tech: 'Twig',
       image: '/tech/11-packages/twig.png',
-      years: ['2019'],
+      years: ['2019', '2020'],
       tier: 't3',
       description: {
         en: 'A flexible, fast, and secure templating engine for PHP, used for generating HTML views in web applications.',
