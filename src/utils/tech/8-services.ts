@@ -154,8 +154,22 @@ export const services: TechBox = {
         es: 'Una solución de seguridad que ofrece VPN, protección de terminales y detección de amenazas para acceso remoto seguro y administración de dispositivos.',
       },
       comment: {
-        en: 'I used to use it to connect via VPN to access development environments at my first job.',
-        es: 'Solía utilizarlo para conectarme por VPN para tener acceso a entornos de desarrollo en mi primer trabajo.',
+        en: 'I used to use it to connect via VPN to access development environments at work.',
+        es: 'Solía utilizarlo para conectarme por VPN para tener acceso a entornos de desarrollo en el trabajo.',
+      }
+    },
+    {
+      tech: 'OpenVPN',
+      image: '/tech/8-services/OPENVPN.png',
+      years: [],
+      tier: 't4',
+      description: {
+        en: 'A secure, open-source VPN solution for creating encrypted connections to protect online communication and data.',
+        es: 'Una solución VPN segura y de código abierto para crear conexiones cifradas para proteger las comunicaciones y los datos en línea.',
+      },
+      comment: {
+        en: 'I used to use it to connect via VPN to access development environments at work.',
+        es: 'Solía utilizarlo para conectarme por VPN para tener acceso a entornos de desarrollo en el trabajo.',
       }
     },
     {

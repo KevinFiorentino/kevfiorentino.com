@@ -117,6 +117,20 @@ export const ai: TechBox = {
       }
     },
     {
+      tech: 'Clipchamp',
+      image: '/tech/6-ia/clipchamp.png',
+      years: [],
+      tier: 't3',
+      description: {
+        en: 'A user-friendly online video editor for creating, editing, and sharing videos directly from the browser.',
+        es: 'Un editor de vídeo en línea fácil de usar para crear, editar y compartir vídeos directamente desde el navegador.',
+      },
+      comment: {
+        en: 'It is not an AI tool per se, but I like using its free text-to-speech or speech-to-text services.',
+        es: 'No es una herramienta de IA en sí, pero me gusta usar sus servicios gratuitos de texto a voz o voz a texto.',
+      }
+    },
+    {
       tech: 'IBM Watson',
       image: '/tech/6-ia/ibm-watson.png',
       years: ['2019'],
