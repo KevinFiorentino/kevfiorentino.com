@@ -77,7 +77,7 @@ export const packages: TechBox = {
     {
       tech: 'Redux',
       image: '/tech/11-packages/redux.png',
-      years: [],
+      years: ['2023', '2024', '2025'],
       tier: 't2',
       description: {
         en: 'A predictable state management library for Javascript apps, often used with React to maintain application state.',
@@ -119,7 +119,7 @@ export const packages: TechBox = {
     {
       tech: 'Socket.io',
       image: '/tech/11-packages/socketio.png',
-      years: [],
+      years: ['2024'],
       tier: 't3',
       description: {
         en: 'A library for real-time, bidirectional communication between web clients and servers using WebSockets.',

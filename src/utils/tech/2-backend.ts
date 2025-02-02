@@ -21,7 +21,7 @@ export const backend: TechBox = {
     {
       tech: 'Express',
       image: '/tech/2-backend/express.png',
-      years: ['uni', '2020', '2021', '2022'],
+      years: ['uni', '2020', '2021'],
       tier: 't3',
       description: {
         en: 'A minimalist web framework for NodeJS, used to build API and web applications with ease and flexibility.',
@@ -77,7 +77,7 @@ export const backend: TechBox = {
     {
       tech: 'Python',
       image: '/tech/2-backend/python.png',
-      years: ['uni', '2020'],
+      years: ['uni', '2020', '2023', '2024'],
       tier: 't3',
       description: {
         en: 'A versatile, beginner-friendly programming language known for simplicity and wide-ranging applications.',
@@ -91,7 +91,7 @@ export const backend: TechBox = {
     {
       tech: 'FastAPI',
       image: '/tech/2-backend/fastapi.png',
-      years: [],
+      years: ['2024'],
       tier: 't3',
       description: {
         en: 'A modern Python framework for building API, focusing on speed, type hints, and developer productivity.',
@@ -133,7 +133,7 @@ export const backend: TechBox = {
     {
       tech: 'Laravel',
       image: '/tech/2-backend/laravel.png',
-      years: ['2023'],
+      years: ['2023', '2024'],
       tier: 't5',
       description: {
         en: 'A PHP framework for building API or modern web applications with features like routing, ORM, and templating.',

@@ -231,7 +231,7 @@ export const cloud: TechBox = {
     {
       tech: "DonWeb",
       image: '/tech/5-cloud/donweb.png',
-      years: ['2020'],
+      years: ['2020', '2021'],
       tier: 't3',
       description: {
         en: 'A Latin American web hosting and domain provider offering email, cloud, and hosting services.',

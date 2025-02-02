@@ -21,7 +21,7 @@ export const services: TechBox = {
     {
       tech: 'Auth0',
       image: '/tech/8-services/auth0.png',
-      years: ['2023'],
+      years: ['2023', '2024'],
       tier: 't2',
       description: {
         en: 'A secure identity platform providing authentication and authorization solutions for applications.',
