@@ -160,7 +160,7 @@ export const services: TechBox = {
     },
     {
       tech: 'OpenVPN',
-      image: '/tech/8-services/OPENVPN.png',
+      image: '/tech/8-services/openvpn.png',
       years: [],
       tier: 't4',
       description: {

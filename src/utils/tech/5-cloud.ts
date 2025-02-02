@@ -229,7 +229,7 @@ export const cloud: TechBox = {
       }
     },
     {
-      tech: "Donweb",
+      tech: "DonWeb",
       image: '/tech/5-cloud/donweb.png',
       years: ['2020'],
       tier: 't3',
@@ -245,7 +245,7 @@ export const cloud: TechBox = {
     {
       tech: "Heroku",
       image: '/tech/5-cloud/heroku.png',
-      years: [ '2019'],
+      years: ['uni', '2019'],
       tier: 't5',
       description: {
         en: 'A platform-as-a-service (PaaS) for deploying, managing, and scaling applications effortlessly in the cloud.',
@@ -273,7 +273,7 @@ export const cloud: TechBox = {
     {
       tech: "XAMPP",
       image: '/tech/5-cloud/xampp.png',
-      years: ['uni', '2017'],
+      years: ['2017'],
       tier: 't5',
       description: {
         en: 'A free local development environment that includes Apache, MySQL, PHP, and Perl.',

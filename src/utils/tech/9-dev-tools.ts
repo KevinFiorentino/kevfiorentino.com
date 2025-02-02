@@ -7,7 +7,7 @@ export const devtools: TechBox = {
     {
       tech: 'VS Code',
       image: '/tech/9-dev-tools/vscode.png',
-      years: [],
+      years: ['2017'],
       tier: 't2',
       description: {
         en: 'A lightweight, versatile code editor by Microsoft with extensive extensions and debugging support.',

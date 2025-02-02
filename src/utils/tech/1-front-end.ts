@@ -7,7 +7,7 @@ export const frontend: TechBox = {
     {
       tech: 'HTML',
       image: '/tech/1-front-end/html.png',
-      years: ['uni'],
+      years: ['uni', '2017'],
       tier: 't2',
       description: {
         en: 'The standard markup language used to structure content on the web, forming the backbone of all websites.',
@@ -21,7 +21,7 @@ export const frontend: TechBox = {
     {
       tech: 'CSS',
       image: '/tech/1-front-end/css.png',
-      years: ['uni'],
+      years: ['uni', '2017'],
       tier: 't2',
       description: {
         en: 'A style sheet language used to design and control the layout, colors, and fonts of web pages written with HTML.',

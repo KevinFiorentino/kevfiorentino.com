@@ -117,7 +117,7 @@ export const others: TechBox = {
       }
     },
     {
-      tech: 'Mobile development knowledge',
+      tech: 'Mobile Development Knowledge',
       image: '/tech/12-others/android.png',
       years: [],
       tier: 't4',

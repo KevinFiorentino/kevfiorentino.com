@@ -131,20 +131,6 @@ export const ddbb: TechBox = {
       }
     },
     {
-      tech: 'PHPMyAdmin',
-      image: '/tech/4-ddbb/phpmyadmin.png',
-      years: ['uni', '2017'],
-      tier: 't5',
-      description: {
-        en: 'A web-based tool for managing MySQL and MariaDB databases through a user-friendly interface.',
-        es: 'Una herramienta basada en web para administrar bases de datos MySQL y MariaDB a través de una interfaz fácil de usar.',
-      },
-      comment: {
-        en: 'I liked using it until I discovered DBearer.',
-        es: 'Me gustaba utilizarlo hasta que descubrí DBearer.',
-      }
-    },
-    {
       tech: 'MySQL Workbench',
       image: '/tech/4-ddbb/workbench.png',
       years: ['uni'],
@@ -156,6 +142,34 @@ export const ddbb: TechBox = {
       comment: {
         en: 'I loved creating and visualizing entity relationship diagram with Workbench at university. I learned it in 2015 alongside MySQL.',
         es: 'Me encantaba crear y visualizar diagramas de entidad relación con Workbench en la universidad. Lo aprendí en 2015 junto con MySQL.',
+      }
+    },
+    {
+      tech: 'pgAdmin',
+      image: '/tech/4-ddbb/pgadmin.png',
+      years: ['2017'],
+      tier: 't5',
+      description: {
+        en: 'A comprehensive and user-friendly management tool for PostgreSQL databases, providing query execution and administrative functions.',
+        es: 'Una herramienta de gestión integral y fácil de usar para bases de datos PostgreSQL, que proporciona funciones administrativas y de ejecución de consultas.',
+      },
+      comment: {
+        en: 'If you work with PostgreSQL, probably you’ll use pgAdmin to manage its DDBB.',
+        es: 'Si trabajas con PostgreSQL, probablemente utilices pgAdmin para administrar sus bases de datos.',
+      }
+    },
+    {
+      tech: 'PHPMyAdmin',
+      image: '/tech/4-ddbb/phpmyadmin.png',
+      years: [],
+      tier: 't5',
+      description: {
+        en: 'A web-based tool for managing MySQL and MariaDB databases through a user-friendly interface.',
+        es: 'Una herramienta basada en web para administrar bases de datos MySQL y MariaDB a través de una interfaz fácil de usar.',
+      },
+      comment: {
+        en: 'I liked using it until I discovered DBearer.',
+        es: 'Me gustaba utilizarlo hasta que descubrí DBearer.',
       }
     },
   ]

@@ -61,6 +61,7 @@ const TechJourney = ({ currentLang }: Props) => {
             <button className={`${selected === '2022' && styles.active}`} onClick={() => handleTechBtn('2022')}>2022</button>
             <button className={`${selected === '2023' && styles.active}`} onClick={() => handleTechBtn('2023')}>2023</button>
             <button className={`${selected === '2024' && styles.active}`} onClick={() => handleTechBtn('2024')}>2024</button>
+            <button className={`${selected === '2025' && styles.active}`} onClick={() => handleTechBtn('2025')}>2024</button>
             <button className={`${selected === 'all' && styles.active}`} onClick={() => handleTechBtn('all')}>All 💻</button>
             <button className={`${selected === 'tier' && styles.active}`} onClick={() => handleTechBtn('tier')}>Tier 🩵</button>
           </div>

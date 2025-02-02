@@ -7,7 +7,7 @@ export const packages: TechBox = {
     {
       tech: 'NPM',
       image: '/tech/11-packages/npm.png',
-      years: [],
+      years: ['uni'],
       tier: 't1',
       description: {
         en: 'The default package manager for Node.js, used to manage project dependencies and run scripts.',
@@ -259,7 +259,7 @@ export const packages: TechBox = {
     {
       tech: 'Composer',
       image: '/tech/11-packages/composer.png',
-      years: [],
+      years: ['2017'],
       tier: 't5',
       description: {
         en: 'A dependency manager for PHP, helping to manage libraries and project dependencies.',

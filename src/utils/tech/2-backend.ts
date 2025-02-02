@@ -7,7 +7,7 @@ export const backend: TechBox = {
     {
       tech: 'NodeJS',
       image: '/tech/2-backend/nodejs.png',
-      years: ['2020', '2023'],
+      years: ['uni', '2020', '2023'],
       tier: 't1',
       description: {
         en: 'A runtime for executing Javascript on the server, enabling scalable, high-performance backend applications.',
@@ -21,7 +21,7 @@ export const backend: TechBox = {
     {
       tech: 'Express',
       image: '/tech/2-backend/express.png',
-      years: ['2020'],
+      years: ['uni', '2020'],
       tier: 't3',
       description: {
         en: 'A minimalist web framework for NodeJS, used to build API and web applications with ease and flexibility.',
@@ -119,7 +119,7 @@ export const backend: TechBox = {
     {
       tech: 'PHP',
       image: '/tech/2-backend/php.png',
-      years: ['uni', '2017'],
+      years: ['2017'],
       tier: 't3',
       description: {
         en: 'A server-side scripting language widely used for building dynamic websites and web applications.',
