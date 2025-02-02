@@ -7,7 +7,7 @@ export const devtools: TechBox = {
     {
       tech: 'VS Code',
       image: '/tech/9-dev-tools/vscode.png',
-      years: ['2017'],
+      years: ['2017', '2018'],
       tier: 't2',
       description: {
         en: 'A lightweight, versatile code editor by Microsoft with extensive extensions and debugging support.',
@@ -21,7 +21,7 @@ export const devtools: TechBox = {
     {
       tech: 'Vim',
       image: '/tech/9-dev-tools/vim.png',
-      years: [],
+      years: ['2018'],
       tier: 't1',
       description: {
         en: 'A highly customizable and efficient terminal-based text editor favored by developers for its speed and shortcuts.',
@@ -77,7 +77,7 @@ export const devtools: TechBox = {
     {
       tech: 'Git',
       image: '/tech/9-dev-tools/git.png',
-      years: ['uni', '2017'],
+      years: ['uni', '2017', '2018'],
       tier: 't1',
       description: {
         en: 'A distributed version control system for tracking changes in code and enabling collaborative software development.',

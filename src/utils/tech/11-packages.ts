@@ -243,6 +243,20 @@ export const packages: TechBox = {
       }
     },
     {
+      tech: 'Swiper',
+      image: '/tech/11-packages/swiperjs.png',
+      years: ['2018', '2019'],
+      tier: 't4',
+      description: {
+        en: 'A modern, touch-friendly slider and carousel library for creating responsive and customizable web experiences.',
+        es: 'Una biblioteca de carrusel y control deslizante moderna y táctil para crear experiencias web responsivas y personalizables.',
+      },
+      comment: {
+        en: 'I used it to create basic carousels on a website.',
+        es: 'Lo usé para crear carruseles básicos en un sitio web.',
+      }
+    },
+    {
       tech: 'DataTables',
       image: '/tech/11-packages/datatables.png',
       years: ['2017'],
@@ -259,7 +273,7 @@ export const packages: TechBox = {
     {
       tech: 'Composer',
       image: '/tech/11-packages/composer.png',
-      years: ['2017'],
+      years: ['2017', '2018'],
       tier: 't5',
       description: {
         en: 'A dependency manager for PHP, helping to manage libraries and project dependencies.',
@@ -273,7 +287,7 @@ export const packages: TechBox = {
     {
       tech: 'Drush',
       image: '/tech/11-packages/drush.png',
-      years: [],
+      years: ['2018'],
       tier: 't3',
       description: {
         en: 'A command-line tool for managing Drupal websites, simplifying tasks like updates and configuration.',
@@ -287,7 +301,7 @@ export const packages: TechBox = {
     {
       tech: 'Twig',
       image: '/tech/11-packages/twig.png',
-      years: [],
+      years: ['2018'],
       tier: 't3',
       description: {
         en: 'A flexible, fast, and secure templating engine for PHP, used for generating HTML views in web applications.',

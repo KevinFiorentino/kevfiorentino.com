@@ -91,7 +91,7 @@ export const cloud: TechBox = {
     {
       tech: "Apache Server",
       image: '/tech/5-cloud/apache.png',
-      years: ['2017'],
+      years: ['2017', '2018'],
       tier: 't3',
       description: {
         en: 'A robust and widely-used web server for hosting websites and serving content securely and efficiently.',
@@ -273,7 +273,7 @@ export const cloud: TechBox = {
     {
       tech: "XAMPP",
       image: '/tech/5-cloud/xampp.png',
-      years: ['2017'],
+      years: ['2017', '2018'],
       tier: 't5',
       description: {
         en: 'A free local development environment that includes Apache, MySQL, PHP, and Perl.',

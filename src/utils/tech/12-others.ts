@@ -63,7 +63,7 @@ export const others: TechBox = {
     {
       tech: 'Trello',
       image: '/tech/12-others/trello.png',
-      years: [],
+      years: ['2018'],
       tier: 't1',
       description: {
         en: 'A project management tool that uses boards, lists, and cards to organize tasks and workflows.',

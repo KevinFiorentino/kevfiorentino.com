@@ -119,7 +119,7 @@ export const backend: TechBox = {
     {
       tech: 'PHP',
       image: '/tech/2-backend/php.png',
-      years: ['2017'],
+      years: ['2017', '2018'],
       tier: 't3',
       description: {
         en: 'A server-side scripting language widely used for building dynamic websites and web applications.',

@@ -147,7 +147,7 @@ export const services: TechBox = {
     {
       tech: 'FortiClient',
       image: '/tech/8-services/forticlient.png',
-      years: [],
+      years: ['2018'],
       tier: 't4',
       description: {
         en: 'A security solution offering VPN, endpoint protection, and threat detection for secure remote access and device management.',

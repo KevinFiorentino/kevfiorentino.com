@@ -7,7 +7,7 @@ export const testing: TechBox = {
     {
       tech: 'Postman',
       image: '/tech/10-testing/postman.png',
-      years: ['2017'],
+      years: [],
       tier: 't3',
       description: {
         en: 'An API development platform for building, testing, and documenting APIs with a user-friendly interface.',
