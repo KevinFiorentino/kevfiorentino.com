@@ -245,7 +245,7 @@ export const packages: TechBox = {
     {
       tech: 'Swiper',
       image: '/tech/11-packages/swiperjs.png',
-      years: ['2018', '2019'],
+      years: ['2019'],
       tier: 't4',
       description: {
         en: 'A modern, touch-friendly slider and carousel library for creating responsive and customizable web experiences.',
@@ -287,7 +287,7 @@ export const packages: TechBox = {
     {
       tech: 'Drush',
       image: '/tech/11-packages/drush.png',
-      years: ['2018'],
+      years: ['2019'],
       tier: 't3',
       description: {
         en: 'A command-line tool for managing Drupal websites, simplifying tasks like updates and configuration.',
@@ -301,7 +301,7 @@ export const packages: TechBox = {
     {
       tech: 'Twig',
       image: '/tech/11-packages/twig.png',
-      years: ['2018'],
+      years: ['2019'],
       tier: 't3',
       description: {
         en: 'A flexible, fast, and secure templating engine for PHP, used for generating HTML views in web applications.',

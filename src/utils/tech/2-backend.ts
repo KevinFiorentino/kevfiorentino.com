@@ -119,7 +119,7 @@ export const backend: TechBox = {
     {
       tech: 'PHP',
       image: '/tech/2-backend/php.png',
-      years: ['2017', '2018'],
+      years: ['2017', '2018', '2019'],
       tier: 't3',
       description: {
         en: 'A server-side scripting language widely used for building dynamic websites and web applications.',
@@ -175,7 +175,7 @@ export const backend: TechBox = {
     {
       tech: 'Wordpress',
       image: '/tech/2-backend/wordpress.png',
-      years: ['2019'],
+      years: [],
       tier: 't5',
       description: {
         en: 'The world’s most popular CMS based on PHP, ideal for creating blogs, websites, or online stores with customizable themes and plugins.',

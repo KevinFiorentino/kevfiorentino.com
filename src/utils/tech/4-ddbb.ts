@@ -21,7 +21,7 @@ export const ddbb: TechBox = {
     {
       tech: 'MySQL',
       image: '/tech/4-ddbb/mysql.png',
-      years: ['uni', '2018'],
+      years: ['uni', '2018', '2019'],
       tier: 't2',
       description: {
         en: 'A widely-used relational database known for reliability, performance, and compatibility with web applications.',
@@ -35,7 +35,7 @@ export const ddbb: TechBox = {
     {
       tech: 'MariaDB',
       image: '/tech/4-ddbb/mariadb.png',
-      years: ['2018'],
+      years: ['2018', '2019'],
       tier: 't4',
       description: {
         en: 'A fork of MySQL with enhanced features, improved performance, and open-source community support.',

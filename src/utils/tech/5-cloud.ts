@@ -7,7 +7,7 @@ export const cloud: TechBox = {
     {
       tech: 'Linux',
       image: '/tech/5-cloud/linux.png',
-      years: ['2018'],
+      years: ['2018', '2019'],
       tier: 't1',
       description: {
         en: 'An open-source operating system known for stability, security, and use in servers and development environments.',
@@ -35,7 +35,7 @@ export const cloud: TechBox = {
     {
       tech: 'CentOS',
       image: '/tech/5-cloud/centos.png',
-      years: ['2018'],
+      years: ['2018', '2019'],
       tier: 't5',
       description: {
         en: 'A discontinued Linux distribution designed for servers and business-critical applications created by Ret Hat.',
@@ -91,7 +91,7 @@ export const cloud: TechBox = {
     {
       tech: "Apache Server",
       image: '/tech/5-cloud/apache.png',
-      years: ['2017', '2018'],
+      years: ['2017', '2018', '2019'],
       tier: 't3',
       description: {
         en: 'A robust and widely-used web server for hosting websites and serving content securely and efficiently.',
@@ -245,7 +245,7 @@ export const cloud: TechBox = {
     {
       tech: "Heroku",
       image: '/tech/5-cloud/heroku.png',
-      years: ['uni', '2019'],
+      years: ['uni'],
       tier: 't5',
       description: {
         en: 'A platform-as-a-service (PaaS) for deploying, managing, and scaling applications effortlessly in the cloud.',
@@ -259,7 +259,7 @@ export const cloud: TechBox = {
     {
       tech: "VirtualBox",
       image: '/tech/5-cloud/virtual-box.png',
-      years: ['2018'],
+      years: ['2018', '2019'],
       tier: 't3',
       description: {
         en: 'A free, open-source virtualization tool for running multiple operating systems on a single machine.',

@@ -133,7 +133,7 @@ export const ai: TechBox = {
     {
       tech: 'IBM Watson',
       image: '/tech/6-ia/ibm-watson.png',
-      years: ['2019'],
+      years: [],
       tier: 't5',
       description: {
         en: 'An AI platform by IBM providing machine learning, natural language processing, and automation solutions.',

@@ -49,7 +49,7 @@ export const services: TechBox = {
     {
       tech: 'Lighthouse',
       image: '/tech/8-services/lighthouse.png',
-      years: ['2021'],
+      years: ['2019'],
       tier: 't2',
       description: {
         en: 'An open-source tool by Google for auditing web performance, SEO, accessibility, and best practices.',
@@ -147,7 +147,7 @@ export const services: TechBox = {
     {
       tech: 'FortiClient',
       image: '/tech/8-services/forticlient.png',
-      years: ['2018'],
+      years: ['2018', '2019'],
       tier: 't4',
       description: {
         en: 'A security solution offering VPN, endpoint protection, and threat detection for secure remote access and device management.',
@@ -189,7 +189,7 @@ export const services: TechBox = {
     {
       tech: 'OpenWeatherMap',
       image: '/tech/8-services/openweathermap.png',
-      years: ['uni'],
+      years: ['uni', '2019'],
       tier: 't4',
       description: {
         en: 'A weather API providing real-time and forecast data for web and mobile applications.',

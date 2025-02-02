@@ -7,7 +7,7 @@ export const frontend: TechBox = {
     {
       tech: 'HTML',
       image: '/tech/1-front-end/html.png',
-      years: ['uni', '2017', '2018'],
+      years: ['uni', '2017', '2018', '2019'],
       tier: 't2',
       description: {
         en: 'The standard markup language used to structure content on the web, forming the backbone of all websites.',
@@ -21,7 +21,7 @@ export const frontend: TechBox = {
     {
       tech: 'CSS',
       image: '/tech/1-front-end/css.png',
-      years: ['uni', '2017', '2018'],
+      years: ['uni', '2017', '2018', '2019'],
       tier: 't2',
       description: {
         en: 'A style sheet language used to design and control the layout, colors, and fonts of web pages written with HTML.',
@@ -49,7 +49,7 @@ export const frontend: TechBox = {
     {
       tech: 'TypeScript',
       image: '/tech/1-front-end/typescript.png',
-      years: ['uni', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+      years: ['uni', '2020', '2021', '2022', '2023', '2024', '2025'],
       tier: 't1',
       description: {
         en: 'A superset of Javascript that adds static typing, improving code reliability and scalability.',
@@ -189,7 +189,7 @@ export const frontend: TechBox = {
     {
       tech: 'Bootstrap',
       image: '/tech/1-front-end/bootstrap.png',
-      years: ['uni', '2017', '2018'],
+      years: ['uni', '2017', '2018', '2019'],
       tier: 't3',
       description: {
         en: 'A popular CSS framework with pre-designed components and grid systems for building responsive websites quickly.',
@@ -203,7 +203,7 @@ export const frontend: TechBox = {
     {
       tech: 'jQuery',
       image: '/tech/1-front-end/jquery.png',
-      years: ['uni', '2017', '2018'],
+      years: ['uni', '2017', '2018', '2019'],
       tier: 't5',
       description: {
         en: 'A lightweight Javascript library for simplifying DOM manipulation, event handling, and animations.',
