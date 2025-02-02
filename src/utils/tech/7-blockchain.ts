@@ -203,7 +203,7 @@ export const blockchain: TechBox = {
     {
       tech: 'IPFS',
       image: '/tech/7-blockchain/ipfs.png',
-      years: ['2023'],
+      years: ['2022', '2023'],
       tier: 't4',
       description: {
         en: 'A peer-to-peer file storage protocol for decentralized, distributed, and permanent data sharing.',

@@ -49,7 +49,7 @@ export const testing: TechBox = {
     {
       tech: 'Jest',
       image: '/tech/10-testing/jest.png',
-      years: [],
+      years: ['2023', '2024'],
       tier: 't2',
       description: {
         en: 'Javascript testing framework designed for simplicity and support for unit and integration tests.',

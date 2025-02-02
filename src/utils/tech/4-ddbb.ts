@@ -21,7 +21,7 @@ export const ddbb: TechBox = {
     {
       tech: 'MySQL',
       image: '/tech/4-ddbb/mysql.png',
-      years: ['uni', '2018', '2019', '2020'],
+      years: ['uni', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
       tier: 't2',
       description: {
         en: 'A widely-used relational database known for reliability, performance, and compatibility with web applications.',
@@ -91,7 +91,7 @@ export const ddbb: TechBox = {
     {
       tech: 'TypeORM',
       image: '/tech/4-ddbb/typeorm.png',
-      years: [],
+      years: ['2024', '2025'],
       tier: 't2',
       description: {
         en: 'An ORM for TypeScript and Javascript that simplifies database interactions with support for SQL and NoSQL databases.',

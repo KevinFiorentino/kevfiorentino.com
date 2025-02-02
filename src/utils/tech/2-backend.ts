@@ -21,7 +21,7 @@ export const backend: TechBox = {
     {
       tech: 'Express',
       image: '/tech/2-backend/express.png',
-      years: ['uni', '2020', '2021'],
+      years: ['uni', '2020', '2021', '2022'],
       tier: 't3',
       description: {
         en: 'A minimalist web framework for NodeJS, used to build API and web applications with ease and flexibility.',
@@ -105,7 +105,7 @@ export const backend: TechBox = {
     {
       tech: 'Rust',
       image: '/tech/2-backend/rust.png',
-      years: [],
+      years: ['2022', '2023'],
       tier: 't4',
       description: {
         en: 'A systems programming language known for high performance, safety, and memory management without a garbage collector.',

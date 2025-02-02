@@ -49,7 +49,7 @@ export const cloud: TechBox = {
     {
       tech: 'AWS',
       image: '/tech/5-cloud/aws.png',
-      years: ['2021', '2022'],
+      years: ['2023', '2024', '2025'],
       tier: 't2',
       description: {
         en: 'Amazon Web Services provides scalable cloud computing solutions, including storage, databases, among other services.',
@@ -63,7 +63,7 @@ export const cloud: TechBox = {
     {
       tech: 'Docker',
       image: '/tech/5-cloud/docker.png',
-      years: ['2021', '2022'],
+      years: ['2021', '2022', '2023', '2024', '2025'],
       tier: 't1',
       description: {
         en: 'A platform for containerizing applications, enabling them to run consistently across different environments.',
@@ -77,7 +77,7 @@ export const cloud: TechBox = {
     {
       tech: 'NGINX',
       image: '/tech/5-cloud/nginx.png',
-      years: ['2021', '2022'],
+      years: ['2021', '2022', '2023', '2024', '2025'],
       tier: 't1',
       description: {
         en: 'A high-performance web server and reverse proxy for serving web content and handling load balancing.',
@@ -105,7 +105,7 @@ export const cloud: TechBox = {
     {
       tech: 'S3',
       image: '/tech/5-cloud/s3.png',
-      years: ['2021', '2022'],
+      years: ['2021', '2022', '2023', '2024', '2025'],
       tier: 't1',
       description: {
         en: 'Amazon’s scalable object storage service for storing and retrieving data from the cloud. Ideally to use like a CDN for creating a file system to save images.',
@@ -133,7 +133,7 @@ export const cloud: TechBox = {
     {
       tech: "PM2",
       image: '/tech/5-cloud/pm2.png',
-      years: ['2021', '2022'],
+      years: ['2021', '2022', '2023', '2024', '2025'],
       tier: 't2',
       description: {
         en: 'A process manager for NodeJS applications, ensuring uptime, load balancing, and monitoring.',
@@ -147,7 +147,7 @@ export const cloud: TechBox = {
     {
       tech: "Vercel",
       image: '/tech/5-cloud/vercel.png',
-      years: ['2023'],
+      years: ['2023', '2024', '2025'],
       tier: 't2',
       description: {
         en: 'A cloud platform for hosting static sites and serverless functions, optimized for NextJS and React applications.',
@@ -189,7 +189,7 @@ export const cloud: TechBox = {
     {
       tech: "GitHub Actions",
       image: '/tech/5-cloud/github-actions.png',
-      years: [],
+      years: ['2024', '2025'],
       tier: 't3',
       description: {
         en: 'A CI/CD tool for automating workflows, testing, and deployment directly within GitHub repositories.',
