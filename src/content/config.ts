@@ -42,19 +42,19 @@ export interface CollectionMetadata {
 export const collectionMetadata: CollectionMetadata[] = [
   {
     name: 'bitcoin',
-    image: '/tech/bitcoin.png'
+    image: '/tech/7-blockchain/bitcoin.png'
   },
   {
     name: 'blockchain',
-    image: '/tech/blockchain.png'
+    image: '/tech/7-blockchain/blockchain.png'
   },
   {
     name: 'ethereum',
-    image: '/tech/ethereum.png'
+    image: '/tech/7-blockchain/ethereum.png'
   },
   {
     name: 'openzeppelin',
-    image: '/tech/openzeppelin.png'
+    image: '/tech/7-blockchain/openzeppelin.png'
   },
   {
     name: 'solana',
@@ -62,7 +62,7 @@ export const collectionMetadata: CollectionMetadata[] = [
   },
   {
     name: 'solidity',
-    image: '/tech/solidity.png'
+    image: '/tech/7-blockchain/solidity.png'
   },
 ];
 
