@@ -10,18 +10,20 @@ const t = useTranslations(lang);
     <h1 class="text-gradient mt-0">
       {t('home.kev')}
     </h1>
-    <p class="mb-3">
-      {t('home.presentation1')}
-    </p>
-    <p class="mb-3">
-      {t('home.presentation2')}
-    </p>
-    <p class="mb-3">
-      {t('home.presentation3')}
-    </p>
-    <p class="mb-3">
-      {t('home.presentation4')}
-    </p>
+    <div class="presentation">
+      <p class="mb-2">
+        {t('home.presentation1')}
+      </p>
+      <p class="mb-2">
+        {t('home.presentation2')}
+      </p>
+      <p class="mb-2">
+        {t('home.presentation3')}
+      </p>
+      <p class="mb-2">
+        {t('home.presentation4')}
+      </p>
+    </div>
   </div>
   <div class="order-first md:order-last">
 
@@ -96,6 +98,11 @@ const t = useTranslations(lang);
 @media (max-width: 1024px) {
   .hero {
     height: auto;
+  }
+}
+.presentation {
+  p {
+    font-size: 15px;
   }
 }
 </style>
