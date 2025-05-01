@@ -17,13 +17,28 @@ const TechComponent = ({ tech, currentLang, isSoftSkills }: Props) => {
 
   const t = useTranslations(currentLang as 'en' | 'es');
 
+  const DROPDOWN_WIDTH = 400;
+  const SIDE_MARGIN = 10;
+
   const handleMouseEnter = () => {
     if (containerRef.current) {
       const rect = containerRef.current.getBoundingClientRect();
-      setDropdownPosition({
-        top: rect.bottom,
-        left: rect.left - 100,
-      });
+      const viewportWidth = window.innerWidth;
+
+      let left = rect.left - 100;
+      const top = rect.bottom;
+
+      // Ajuste si se pasa del lado izquierdo
+      if (left < SIDE_MARGIN) {
+        left = SIDE_MARGIN;
+      }
+
+      // Ajuste si se pasa del lado derecho
+      if (left + DROPDOWN_WIDTH > viewportWidth - SIDE_MARGIN) {
+        left = viewportWidth - DROPDOWN_WIDTH - SIDE_MARGIN;
+      }
+
+      setDropdownPosition({ top, left });
       setIsHovered(true);
     }
   };
