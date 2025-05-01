@@ -13,7 +13,8 @@ const Projects = ({ currentLang }: Props) => {
     <>
       <section className={`${styles.projects}`}>
         <div className={`main-width z-10`}>
-          <h2 className="text-white text-center">Projects</h2>
+          <h2 className="text-white">Projects</h2>
+          <hr className="hr mt-2 mb-0" />
           <br />
         </div>
       </section>
