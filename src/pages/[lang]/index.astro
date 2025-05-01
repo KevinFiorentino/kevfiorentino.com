@@ -4,7 +4,8 @@ import { languages } from '@i18n/ui';
 import { getLangFromUrl, useTranslations } from '@i18n/utils';
 import MainLayout from '@layouts/MainLayout.astro';
 import Presentation from '@components/home/Presentation.astro';
-import Techs from '@components/home/Techs';
+import Projects from '@components/home/Projects/Projects';
+import Techs from '@components/home/Techs/Techs';
 import Blog from '@components/home/Blog.astro';
 
 const lang = getLangFromUrl(Astro.url);
@@ -50,6 +51,11 @@ const { posts } = Astro.props;
 >
 
   <Presentation></Presentation>
+
+  <Projects
+    client:load
+    currentLang={currentLang}
+  ></Projects>
 
   <Techs
     client:load

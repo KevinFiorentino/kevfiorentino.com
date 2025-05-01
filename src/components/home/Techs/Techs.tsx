@@ -4,8 +4,8 @@ import { useTranslations } from '@i18n/utils';
 import { techWrapper } from '@utils/tech-wrapper';
 import type { TechBox } from '@utils/interfaces/tech-box.interface';
 import type { TierResponse } from '@utils/interfaces/tier.interface';
-import TechsBox from './techs/TechsBox';
-import TierBox from './techs/TierBox';
+import TechsBox from './components/TechsBox';
+import TierBox from './components/TierBox';
 
 type Filter = 'uni' | '2017' | '2018' | '2019' | '2020' | '2021' | '2022' | '2023' | '2024' | '2025' | 'all' | 'tier';
 
@@ -125,7 +125,6 @@ const TechJourney = ({ currentLang }: Props) => {
         </div>
       </section>
     </>
-
   );
 };
 
