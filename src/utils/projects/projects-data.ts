@@ -75,7 +75,7 @@ export const projectsDataES: Project[] = [
     position: "Full Stack PHP Developer",
     date: "Released Sep. 2020",
     description: ``,
-    url: null,
+    url: "https://fadepsa.com.ar",
     images: [
       "/projects/fadepsa/web1.png",
       "/projects/fadepsa/web2.png",
