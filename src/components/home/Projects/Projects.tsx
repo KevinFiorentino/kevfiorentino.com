@@ -29,7 +29,7 @@ const Projects = ({ currentLang }: Props) => {
           ))}
         </div>
 
-        <br /><br /><br /><br /><br />
+        <br /><br /><br />
 
       </div>
     </section>

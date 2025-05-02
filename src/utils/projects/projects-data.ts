@@ -2,40 +2,139 @@ import type { Project } from "@utils/interfaces/project.interface";
 
 export const projectsDataES: Project[] = [
   {
-    title: "FADEPSA.COM.AR",
-    position: "Freelance project: Software Developer",
-    date: "Sep. 2020",
-    description: `
-      <p>Nunc maximus posuere commodo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vitae mi elit. Donec porttitor neque vitae nibh posuere pretium. Sed lacinia lorem sed lacus sollicitudin varius. Integer non nisl purus. Nunc posuere fringilla lobortis.</p>
-      <p>Nunc maximus posuere commodo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vitae mi elit. Donec porttitor neque vitae nibh posuere pretium. Sed lacinia lorem sed lacus sollicitudin varius. Integer non nisl purus. Nunc posuere fringilla lobortis.</p>
-    `,
+    title: "ASTREAVIRTUAL.COM",
+    position: "Full Stack Javascript Developer",
+    date: "Released 2022",
+    description: ``,
+    url: "https://astreavirtual.com",
+    images: [
+      "/projects/astrea/av1.png",
+      "/projects/astrea/av2.png",
+      "/projects/astrea/av3.png"
+    ],
+    techs: [
+      "/tech/1-front-end/typescript.png",
+      "/tech/1-front-end/angular.png",
+      "/tech/1-front-end/scss.png",
+      "/tech/2-backend/nodejs.png",
+      "/tech/2-backend/nestjs.png",
+      "/tech/4-ddbb/mongodb.png",
+      "/tech/4-ddbb/elasticsearch.png",
+      "/tech/5-cloud/aws.png",
+      "/tech/5-cloud/docker.png",
+      "/tech/8-services/firebase.png",
+    ],
+  },
+  {
+    title: "ASTREA.COM.AR",
+    position: "Full Stack Javascript Developer",
+    date: "Released 2022",
+    description: ``,
+    url: "https://astrea.com.ar",
+    images: [
+      "/projects/astrea/web1.png",
+      "/projects/astrea/web2.png",
+      "/projects/astrea/web3.png"
+    ],
+    techs: [
+      "/tech/1-front-end/typescript.png",
+      "/tech/1-front-end/angular.png",
+      "/tech/1-front-end/scss.png",
+      "/tech/2-backend/nodejs.png",
+      "/tech/2-backend/nestjs.png",
+      "/tech/4-ddbb/mongodb.png",
+      "/tech/5-cloud/aws.png",
+      "/tech/5-cloud/docker.png",
+      "/tech/8-services/firebase.png",
+    ],
+  },
+  {
+    title: "ASTREA BACKOFFICE",
+    position: "Full Stack Javascript Developer",
+    date: "Released 2022",
+    description: ``,
     url: null,
     images: [
-      "/projects/fadepsa/fadepsa1.png"
+      "/projects/astrea/bo1.png",
+      "/projects/astrea/bo2.png",
+      "/projects/astrea/bo3.png"
+    ],
+    techs: [
+      "/tech/1-front-end/typescript.png",
+      "/tech/1-front-end/angular.png",
+      "/tech/1-front-end/scss.png",
+      "/tech/2-backend/nodejs.png",
+      "/tech/2-backend/nestjs.png",
+      "/tech/4-ddbb/mongodb.png",
+      "/tech/5-cloud/vercel.png",
+      "/tech/8-services/firebase.png",
+    ],
+  },
+  {
+    title: "FADEPSA.COM.AR",
+    position: "Full Stack PHP Developer",
+    date: "Released Sep. 2020",
+    description: ``,
+    url: null,
+    images: [
+      "/projects/fadepsa/web1.png",
+      "/projects/fadepsa/web2.png",
+      "/projects/fadepsa/web3.png"
     ],
     techs: [
       "/tech/1-front-end/html.png",
       "/tech/1-front-end/css.png",
-      "/tech/1-front-end/javascript.png"
+      "/tech/1-front-end/javascript.png",
+      "/tech/1-front-end/jquery.png",
+      "/tech/1-front-end/bootstrap.png",
+      "/tech/2-backend/php.png",
+      "/tech/2-backend/drupal.png",
+      "/tech/4-ddbb/mysql.png",
+      "/tech/5-cloud/aws.png",
+      "/tech/5-cloud/docker.png",
     ],
   },
   {
     title: "TIENDA.FADEPSA.COM.AR",
-    position: "Freelance project: Software Developer",
-    date: "XXX",
-    description: `
-      <p>Nunc maximus posuere commodo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vitae mi elit. Donec porttitor neque vitae nibh posuere pretium. Sed lacinia lorem sed lacus sollicitudin varius. Integer non nisl purus. Nunc posuere fringilla lobortis.</p>
-      <p>Nunc maximus posuere commodo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vitae mi elit. Donec porttitor neque vitae nibh posuere pretium. Sed lacinia lorem sed lacus sollicitudin varius. Integer non nisl purus. Nunc posuere fringilla lobortis.</p>
-    `,
+    position: "Full Stack Javascript Developer",
+    date: "Released Mar. 2025",
+    description: ``,
     url: "https://tienda.fadepsa.com.ar",
     images: [
       "/projects/fadepsa/tienda1.png",
-      "/projects/fadepsa/fadepsa1.png"
+      "/projects/fadepsa/tienda2.png",
+      "/projects/fadepsa/tienda3.png",
+    ],
+    techs: [
+      "/tech/1-front-end/typescript.png",
+      "/tech/1-front-end/react.png",
+      "/tech/1-front-end/nextjs.png",
+      "/tech/1-front-end/scss.png",
+      "/tech/2-backend/nodejs.png",
+      "/tech/4-ddbb/mysql.png",
+      "/tech/5-cloud/vercel.png",
+      "/tech/8-services/firebase.png",
+    ],
+  },
+  {
+    title: "TURISMO.BUENOSAIRES.GOB.AR",
+    position: "Full Stack PHP developer",
+    date: "Sep. 2018 - Dic 2020",
+    description: ``,
+    url: "https://turismo.buenosaires.gob.ar",
+    images: [
+      "/projects/others/turismo1.png",
+      "/projects/others/turismo2.png"
     ],
     techs: [
       "/tech/1-front-end/html.png",
       "/tech/1-front-end/css.png",
-      "/tech/1-front-end/javascript.png"
+      "/tech/1-front-end/javascript.png",
+      "/tech/1-front-end/jquery.png",
+      "/tech/1-front-end/bootstrap.png",
+      "/tech/2-backend/php.png",
+      "/tech/2-backend/drupal.png",
+      "/tech/4-ddbb/mysql.png",
     ],
-  }
+  },
 ];
