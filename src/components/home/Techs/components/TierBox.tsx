@@ -15,9 +15,9 @@ const TierBox = ({ tier, techs, currentLang }: Props) => {
         <img src={`/tier-texts/${tier}.svg`} alt={`${tier}`} />
       </div>
       <div className={`${styles.imagesBox}`}>
-        {techs.map((t, index) => (
+        {techs.map((t, i) => (
           <TechImage
-            key={index}
+            key={i}
             tech={t}
             currentLang={currentLang}
           />

@@ -21,8 +21,9 @@ const Projects = ({ currentLang }: Props) => {
         <br />
 
         <div className={`${styles.projectWrapper}`}>
-          {projectsDataES.map((p: Project) => (
+          {projectsDataES.map((p: Project, i: number) => (
             <ProjectCard
+              key={i}
               project={p}
               currentLang={currentLang}
             ></ProjectCard>

@@ -15,9 +15,9 @@ const TechsBox = ({ techBox, currentLang, isSoftSkills }: Props) => {
         <img src={`/tech-headers/${techBox.headerImage}`} alt={techBox.name} />
       </div>
       <div className={`${styles.imagesBox}`}>
-        {techBox.techs.map((t, index) => (
+        {techBox.techs.map((t, i) => (
           <TechImage
-            key={index}
+            key={i}
             tech={t}
             currentLang={currentLang}
             isSoftSkills={isSoftSkills}

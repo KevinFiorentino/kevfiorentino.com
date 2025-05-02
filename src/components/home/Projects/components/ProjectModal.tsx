@@ -55,7 +55,12 @@ const ProjectModal = ({ project, currentLang, setShowModal }: Props) => {
             </div>
             <div className={styles.techs}>
               {project.techs.map((i: string, k: number) => (
-                <img key={k} src={i} alt={i.split("/")[3].replace(".png", "")} title={i.split("/")[3].replace(".png", "")} />
+                <img
+                  key={k}
+                  src={i}
+                  alt={i.split("/")[3].replace(".png", "")}
+                  title={i.split("/")[3].replace(".png", "")}
+                />
               ))}
             </div>
           </div>
