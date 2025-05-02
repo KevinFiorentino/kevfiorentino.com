@@ -66,11 +66,17 @@ const TechJourney = ({ currentLang }: Props) => {
             <button className={`${selected === 'tier' && styles.active}`} onClick={() => handleTechBtn('tier')}>Tier 🩵</button>
           </div>
           <br />
-          <p
-            className={`${styles.text}`}
-            dangerouslySetInnerHTML={{ __html: t(selected) }}
-          ></p>
-          <br />
+          <div className={styles.techDescription}>
+            {/* <p
+              className={`${styles.text}`}
+              dangerouslySetInnerHTML={{ __html: t(selected) }}
+            ></p> */}
+            <p
+              className={`${styles.text}`}
+              dangerouslySetInnerHTML={{ __html: t('tech_text') }}
+            ></p>
+          </div>
+          <br /><br />
           {loading && (
             <div className={styles.skeletonWrapper}>
               {[1, 2, 3].map(() => (

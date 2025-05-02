@@ -16,6 +16,8 @@ export const ui = {
     'prev': 'Previous',
     'next': 'Next',
 
+    'projects': 'Projects',
+
     'blog.all-collections': 'All collections',
     'blog.others': 'More posts',
     'blog.toc': 'Table of Content',
@@ -42,6 +44,11 @@ export const ui = {
     't4': 'Might use again',
     't5': 'Deprecated',
 
+    'tech_text': `
+      <p>I love technology logos — that’s my excuse for creating this dashboard, where you can find all the technologies I’ve used. Have you ever wondered how many technologies we, as developers, come across throughout our careers? It's surprising!</p>
+      <p>Creating this dashboard was a retrospective of my professional journey; it made me reflect on it and helped organize my profile to better understand what kind of IT professional I am — and what I want to do.</p>
+    `,
+
     'uni': ``,
     '2017': ``,
     '2018': ``,
@@ -62,6 +69,8 @@ export const ui = {
     'share-by': 'Compartir por',
     'prev': 'Anterior',
     'next': 'Siguiente',
+
+    'projects': 'Proyectos',
 
     'blog.all-collections': 'Todas las categorías',
     'blog.others': 'Más posts',
@@ -88,6 +97,11 @@ export const ui = {
     't3': 'From time to time',
     't4': 'Might use again',
     't5': 'Deprecated',
+
+    'tech_text': `
+      <p>Me encantan los logo de las tecnologías; esa es mi escusa para crear este panel donde puedes encontrar todas las tecnologías que he usado. ¿Te has preguntado alguna vez cuántas tecnologías nos encontramos como desarrolladores a lo largo de nuestra carrera? ¡Es sorprendente!</p>
+      <p>Crear este panel fue una retrospectiva de mi trayectoria profesional; me hizo reflexionar sobre ella y me ayudó a organizar mi perfil para comprender mejor qué tipo de profesional de TI soy y qué quiero hacer.</p>
+    `,
 
     'uni': ``,
     '2017': ``,

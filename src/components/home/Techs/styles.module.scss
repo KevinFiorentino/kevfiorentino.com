@@ -5,6 +5,12 @@
     margin-bottom: 20px;
     font-weight: 900;
   }
+  .techDescription {
+    p {
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+  }
   .techMainBox {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

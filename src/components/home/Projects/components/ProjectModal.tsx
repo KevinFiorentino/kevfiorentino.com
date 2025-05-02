@@ -6,10 +6,11 @@ import DOMPurify from "isomorphic-dompurify";
 
 interface Props {
   project: Project;
+  currentLang: string;
   setShowModal: (i: boolean) => void;
 }
 
-const ProjectModal = ({ project, setShowModal }: Props) => {
+const ProjectModal = ({ project, currentLang, setShowModal }: Props) => {
 
   const { dropdownRef } = useCloseDropdown<HTMLDivElement>({
     setOpen: setShowModal,
@@ -44,11 +45,11 @@ const ProjectModal = ({ project, setShowModal }: Props) => {
             <div className={styles.visit}>
               {project.url ? (
                 <a href={project.url} title={project.title} target='_blank'>
-                  Visit site
+                  { currentLang == 'en' ? 'Visit site' : 'Visitar sitio' }
                 </a>
               ) : (
                 <span>
-                  Acceso privado
+                  { currentLang == 'en' ? 'Private access' : 'Acceso privado' }
                 </span>
               )}
             </div>

@@ -16,7 +16,7 @@ const Projects = ({ currentLang }: Props) => {
   return (
     <section className={`${styles.projects}`}>
       <div className={`main-width z-10`}>
-        <h2 className="text-white">Projects</h2>
+        <h2 className="text-white">{t('projects')}</h2>
         <hr className="hr mt-2 mb-0" />
         <br />
 
@@ -24,6 +24,7 @@ const Projects = ({ currentLang }: Props) => {
           {projectsDataES.map((p: Project) => (
             <ProjectCard
               project={p}
+              currentLang={currentLang}
             ></ProjectCard>
           ))}
         </div>

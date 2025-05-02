@@ -6,9 +6,10 @@ import ProjectModal from './ProjectModal';
 
 interface Props {
   project: Project;
+  currentLang: string;
 }
 
-const ProjectCard = ({ project }: Props) => {
+const ProjectCard = ({ project, currentLang }: Props) => {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -23,6 +24,7 @@ const ProjectCard = ({ project }: Props) => {
         ReactDOM.createPortal(
           <ProjectModal
             project={project}
+            currentLang={currentLang}
             setShowModal={setShowModal}
           ></ProjectModal>
         , document.body)
