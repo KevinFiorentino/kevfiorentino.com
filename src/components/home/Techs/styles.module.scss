@@ -88,13 +88,19 @@
   display: none !important;
 }
 
+
+@media (max-width: 1152px) {
+  .bgTechs {
+    .btnTechs {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   .bgTechs {
     .techMainBox {
       grid-template-columns: repeat(2, 1fr);
-    }
-    .btnTechs {
-      grid-template-columns: repeat(6, 1fr);
     }
   }
 }
