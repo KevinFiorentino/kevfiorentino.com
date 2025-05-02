@@ -1,0 +1,95 @@
+.projectCard {
+  img {
+    transition: .1s;
+  }
+  img:hover {
+    outline: 5px solid var(--primary);
+  }
+}
+
+.projectModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.3s ease-in-out forwards;
+
+  width: 100vw;
+  height: 100vh;
+
+  .modalContainer {
+    position: relative;
+    background-color: #E5E7EB;
+    border: 3px solid var(--primary );
+    border-radius: 5px;
+    box-shadow: 0 3px 6px #00000029;
+    animation: scaleIn 0.3s ease-in-out forwards;
+    padding: 20px;
+
+    width: 1100px;
+
+    .projectLayout {
+      display: grid;
+      grid-template-columns: 40% calc(60% - 20px);
+      gap: 20px;
+
+      .projectImage {
+        img {
+
+        }
+      }
+      .projectInfo {
+        h3 {
+          font-weight: 800;
+          margin-bottom: 0;
+        }
+        span {
+          color: var(--grey);
+          display: inline-block;
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  }
+
+  @media (max-width: 1152px) {
+    .modalContainer {
+      width: max-content;
+
+      .projectLayout {
+        grid-template-columns: 100%;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.5);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}

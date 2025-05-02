@@ -3,9 +3,15 @@
     margin-bottom: 20px;
     font-weight: 900;
   }
-
+  .projectWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    gap: 30px;
+  }
+  @media (max-width: 1152px) {
+    .projectWrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }
-
-
-
-
