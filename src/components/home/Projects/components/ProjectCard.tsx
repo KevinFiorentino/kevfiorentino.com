@@ -15,7 +15,7 @@ const ProjectCard = ({ project }: Props) => {
     <>
       <div className={styles.projectCard}>
         <button onClick={() => {setShowModal(!showModal)}}>
-          <img src={`/projects/${project.images[0]}`} alt={project.title} />
+          <img src={project.images[0]} alt={project.title} />
         </button>
       </div>
 
