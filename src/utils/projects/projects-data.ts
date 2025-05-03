@@ -2,6 +2,29 @@ import type { Project } from "@utils/interfaces/project.interface";
 
 export const projectsDataES: Project[] = [
   {
+    title: "ASTREA.COM.AR",
+    position: "Full Stack Javascript Developer",
+    date: "Released 2022",
+    description: ``,
+    url: "https://astrea.com.ar",
+    images: [
+      "/projects/astrea/web1.png",
+      "/projects/astrea/web2.png",
+      "/projects/astrea/web3.png"
+    ],
+    techs: [
+      "/tech/1-front-end/typescript.png",
+      "/tech/1-front-end/angular.png",
+      "/tech/1-front-end/scss.png",
+      "/tech/2-backend/nodejs.png",
+      "/tech/2-backend/nestjs.png",
+      "/tech/4-ddbb/mongodb.png",
+      "/tech/5-cloud/aws.png",
+      "/tech/5-cloud/docker.png",
+      "/tech/8-services/firebase.png",
+    ],
+  },
+  {
     title: "ASTREAVIRTUAL.COM",
     position: "Full Stack Javascript Developer",
     date: "Released 2022",
@@ -20,29 +43,6 @@ export const projectsDataES: Project[] = [
       "/tech/2-backend/nestjs.png",
       "/tech/4-ddbb/mongodb.png",
       "/tech/4-ddbb/elasticsearch.png",
-      "/tech/5-cloud/aws.png",
-      "/tech/5-cloud/docker.png",
-      "/tech/8-services/firebase.png",
-    ],
-  },
-  {
-    title: "ASTREA.COM.AR",
-    position: "Full Stack Javascript Developer",
-    date: "Released 2022",
-    description: ``,
-    url: "https://astrea.com.ar",
-    images: [
-      "/projects/astrea/web1.png",
-      "/projects/astrea/web2.png",
-      "/projects/astrea/web3.png"
-    ],
-    techs: [
-      "/tech/1-front-end/typescript.png",
-      "/tech/1-front-end/angular.png",
-      "/tech/1-front-end/scss.png",
-      "/tech/2-backend/nodejs.png",
-      "/tech/2-backend/nestjs.png",
-      "/tech/4-ddbb/mongodb.png",
       "/tech/5-cloud/aws.png",
       "/tech/5-cloud/docker.png",
       "/tech/8-services/firebase.png",
