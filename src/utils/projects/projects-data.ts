@@ -106,12 +106,12 @@ export const projectsDataES: Project[] = [
     position: "Full Stack PHP Developer",
     date: "Released Sep. 2020",
     descriptEN: `
-      <p>In September 2020, we released the institutional website of this company. I made it with PHP, Drupal and MySQL which was my main stack back then. It was especially an SEO challenge with high demands from the customer.</p>
+      <p>In September 2020, I released the institutional website of this company. I made it with PHP, Drupal and MySQL which was my main stack back then. It was especially an SEO challenge with high demands from the customer. The site was originally on cheap hosting for a few years, but I migrated it to AWS for better performance.</p>
       <p>The main feature of this software is lead generation and creating product quotes. Moreover, a complete internal backoffice to manage products, clients, news, and the blog section. Drupal provided a useful UI to create it.</p>
       <p>I have been maintaining it since then in several small developments.</p>
     `,
     descriptES: `
-      <p>En septiembre de 2020, lanzamos el sitio web institucional de esta empresa. Lo creé con PHP, Drupal y MySQL, que era mi stack principal en aquel entonces.</p>
+      <p>En septiembre de 2020, lancé el sitio web institucional de esta empresa. Lo creé con PHP, Drupal y MySQL, que era mi stack principal en aquel entonces. El sitio estuvo originalmente en un hosting barato durante algunos años, pero lo migré a AWS para tener un mejor rendimiento.</p>
       <p>Fue un reto de SEO especialmente exigente por el cliente. La principal característica de este software es la generación de leads y la creación de presupuestos de productos. Además, cuenta con un completo backoffice interno para gestionar productos, clientes, noticias y la sección del blog. Drupal proporcionó una interfaz de usuario muy útil para su creación.</p>
       <p>Desde entonces, lo he mantenido con varios desarrollos menores.</p>
     `,
