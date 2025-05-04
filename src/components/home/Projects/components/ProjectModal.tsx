@@ -22,7 +22,7 @@ const ProjectModal = ({ project, currentLang, setShowModal }: Props) => {
 
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const sanitizedHTML = DOMPurify.sanitize(project.description);
+  const sanitizedHTML = DOMPurify.sanitize(currentLang == 'en' ? project.descriptEN : project.descriptES);
 
   return (
     <div className={styles.projectModal}>
