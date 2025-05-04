@@ -47,11 +47,13 @@ const lang = getLangFromUrl(Astro.url);
   --shadow: #00000029;
 }
 html {
-  scroll-behavior: smooth;
   font-family: "Poppins", serif;
   background-color: #F6F6F6;
-  scrollbar-width: thin !important;
-  scrollbar-color: var(--primary) #e8e8e8;
+  scroll-behavior: smooth;
+  scrollbar-color: var(--alternative) var(--white);
+}
+html.dark {
+  scrollbar-color: var(--alternative) var(--bg-dark);
 }
 body {
   min-height: 100vh;
