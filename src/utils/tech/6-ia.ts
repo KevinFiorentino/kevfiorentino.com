@@ -75,10 +75,24 @@ export const ai: TechBox = {
       }
     },
     {
+      tech: 'Qdrant',
+      image: '/tech/6-ia/qdrant.png',
+      years: ['2024', '2025'],
+      tier: 't2',
+      description: {
+        en: 'A high-performance vector database for storing, searching, and managing embeddings in AI and machine learning applications.',
+        es: 'Una base de datos vectorial de alto rendimiento para almacenar, buscar y administrar incrustaciones en aplicaciones de inteligencia artificial y aprendizaje automático.',
+      },
+      comment: {
+        en: 'Much better than Pinecone because it has no limits on applying filters to your embeddings.',
+        es: 'Mucho mejor que Pinecone debido a que no tiene límites para aplicar filtros a tus embeddings.',
+      }
+    },
+    {
       tech: 'Pinecone',
       image: '/tech/6-ia/pinecone.png',
       years: ['2024', '2025'],
-      tier: 't2',
+      tier: 't4',
       description: {
         en: 'A vector database for storing and querying embeddings, optimized for AI search and recommendation systems.',
         es: 'Una base de datos vectorial para almacenar y consultar embeddings, optimizada para sistemas de búsqueda y recomendación de IA.',
