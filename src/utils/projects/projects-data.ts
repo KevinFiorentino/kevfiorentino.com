@@ -87,8 +87,7 @@ export const projectsDataES: Project[] = [
     url: null,
     images: [
       "/projects/astrea/bo1.png",
-      "/projects/astrea/bo2.png",
-      "/projects/astrea/bo3.png"
+      "/projects/astrea/bo2.png"
     ],
     techs: [
       "/tech/1-front-end/typescript.png",
