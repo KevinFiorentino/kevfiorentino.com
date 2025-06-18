@@ -196,4 +196,31 @@ export const projectsDataES: Project[] = [
       "/tech/4-ddbb/mysql.png",
     ],
   },
+  {
+    title: "PORTFOLIO PROFESIONAL",
+    position: "Javascript Developer",
+    date: "Released Jun. 2025",
+    descriptEN: `
+      <p>I developed this website in collaboration with my English teacher, Dani, with the goal of presenting her professional profile in a clear, modern, and accessible way. We worked together from the design stage through to the final implementation, aiming for a style that reflects her personality and experience—not only as a teacher, but also as a translator and audio describer. The result is a clean, functional, and responsive portfolio.</p>
+      <p>I really enjoyed working on this project, as it was a way to contribute to someone else's professional growth. Now she has a concrete tool to showcase her work and continue growing in her career.</p>
+      <p>I also want to thank her for all her language teaching, which has undoubtedly helped me improve my English significantly.</p>
+    `,
+    descriptES: `
+      <p>Desarrollé este sitio web en colaboración con mi profesora de inglés, Dani, con el objetivo de presentar su perfil profesional de forma clara, moderna y accesible. Trabajamos juntos desde el diseño hasta la implementación final, buscando un estilo que reflejara su personalidad y experiencia, no solo como docente, sino también como traductora y audiodescriptora. El resultado es un portfolio elegante, funcional y adaptable a distintos dispositivos.</p>
+      <p>Disfruté mucho trabajando en este proyecto, porque fue una forma de contribuir al crecimiento profesional de otra persona. Ahora ella cuenta con una herramienta concreta para mostrarse y seguir desarrollando su carrera.</p>
+      <p>También quiero agradecerle por todas sus enseñanzas del idioma, que sin duda me han ayudado a mejorar significativamente mi inglés.</p>
+    `,
+    url: "https://danieladumon.vercel.app/en",
+    images: [
+      "/projects/dani/dani1.png",
+    ],
+    techs: [
+      "/tech/1-front-end/typescript.png",
+      "/tech/1-front-end/react.png",
+      "/tech/1-front-end/nextjs.png",
+      "/tech/1-front-end/scss.png",
+      "/tech/5-cloud/vercel.png",
+      "/tech/12-others/figma.png",
+    ],
+  },
 ];

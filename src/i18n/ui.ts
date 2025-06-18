@@ -18,7 +18,7 @@ export const ui = {
 
     'projects': 'Projects',
 
-    'blog.all-collections': 'All collections',
+    'blog.all-collections': 'All categories',
     'blog.others': 'More posts',
     'blog.toc': 'Table of Content',
 
