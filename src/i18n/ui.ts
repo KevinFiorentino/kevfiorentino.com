@@ -18,6 +18,7 @@ export const ui = {
 
     'projects': 'Projects',
 
+    'blog.text': 'I wrote all the blockchain articles a few years ago, during my time as a content creator for the educational platform Platzi. That professional experience significantly enhanced my writing, SEO, and written communication skills, as well as my technical understanding of these technologies.',
     'blog.all-collections': 'All categories',
     'blog.others': 'More posts',
     'blog.toc': 'Table of Content',
@@ -72,6 +73,7 @@ export const ui = {
 
     'projects': 'Proyectos',
 
+    'blog.text': 'Todos los artículos sobre blockchain los redacté hace algunos años, durante mi colaboración como creador de contenido para la plataforma educativa, Platzi. Esa etapa profesional enriqueció significativamente mis habilidades de redacción, SEO y comunicación escrita, además de conocimiento técnico en estas tecnologías.',
     'blog.all-collections': 'Todas las categorías',
     'blog.others': 'Más posts',
     'blog.toc': 'Tabla de Contenido',

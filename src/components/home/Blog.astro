@@ -3,7 +3,11 @@ export interface Props {
   posts: any;
 }
 
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
 import BlogCard from '@components/BlogCard.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const param = Astro.params;
 const { posts } = Astro.props;
@@ -15,6 +19,9 @@ const { posts } = Astro.props;
       Blog
     </h2>
     <hr class="hr mt-2 mb-0">
+    <p class="text-gray-800 dark:text-white">
+      {t('blog.text')}
+    </p>
     <br>
     <div role="list" class="cards-grid mt-4">
       {
