@@ -18,16 +18,17 @@ export const ui = {
 
     'projects': 'Projects',
 
-    'blog.text': 'I wrote all the blockchain articles a few years ago, during my time as a content creator for the educational platform Platzi. That professional experience significantly enhanced my writing, SEO, and written communication skills, as well as my technical understanding of these technologies.',
+    'blog.text': 'I wrote all the blockchain articles a few years ago, during my time as a content creator for the educational platform, Platzi. That professional experience significantly enhanced my writing, SEO, and written communication skills, as well as my technical understanding of these technologies.',
     'blog.all-collections': 'All categories',
     'blog.others': 'More posts',
     'blog.toc': 'Table of Content',
 
     'home.kev': 'Hi, I\'m Kev!',
-    'home.presentation1': `Software engineer with more than 8 years of experience.`,
-    'home.presentation2': `I consider myself agnostic to technology with a generalist perspective. I am a full-stack developer specializing in Javascript, with a slight preference for front-end development working with Angular and React. I enjoy working with Docker and infrastructure services like AWS, although DevOps isn't my main passion. I have a solid grasp of Figma, but I wouldn't consider myself a top designer. My strength lies in having a holistic vision of the software we are building, ensuring alignment between people, technology, and business objectives.`,
-    'home.presentation3': `Throughout my career, I have worked with two clients as a freelancer. I have experience working in the public sector, also with blockchain and AI projects, as well as with some startups. I took the role of CTO and Team Manager in a startup, where I designed the architecture of a complex software system and led a full team of developers for two years. Sadly, the project did no prosper.`,
-    'home.presentation4': `Currently, I am looking to start a new stage. My priority is connecting with people, being part of and collaborating with multidisciplinary teams, regardless of the technology or project. I am looking to contribute my experience while continuing to grow both professionally and personally.`,
+    'home.presentation1': `Software professional with more than 8 years of experience in development.`,
+    'home.presentation2': `I've gone through different stages: I started programming in PHP and later specialized as a full-stack JavaScript developer. I had the chance to work on several projects: as a freelancer, in the public and private sectors, on blockchain and AI projects, and also in some startups—in one of them, I took the role of CTO, where I led a complete staff of about 20 developers and built a complex software architecture. That experience marked a turning point in my professional journey.`,
+    'home.presentation3': `I consider myself technology-agnostic, with a generalist perspective that allows me to adapt to different tools and workflows. I am a full-stack developer specialized in JavaScript, with a slight preference for front-end development. My main strength lies in having a holistic vision of the software we build, ensuring alignment between people, technology, and business objectives.`,
+    'home.presentation4': `Beyond the technical side, I've learned that communication is my biggest contribution in a team, and what I enjoy most is listening, connecting, and building good relationships with people.`,
+    'home.presentation5': `Currently starting a new position as a software architect at Accenture. A completely different professional experience, this time in a large multinational company.`,
 
     'footer.recommends': 'Might interest you',
     'footer.resources': 'Resources',
@@ -79,10 +80,11 @@ export const ui = {
     'blog.toc': 'Tabla de Contenido',
 
     'home.kev': '¡Hola, soy Kev!',
-    'home.presentation1': `Ingeniero de software con más de 8 años de experiencia profesional.`,
-    'home.presentation2': `Me considero agnóstico a la tecnología, con una perspectiva generalista. Soy desarrollador full-stack, especializado en Javascript, con una leve inclinación hacia el front-end trabajando con Angular y React. Distruto trabajar con Docker y servicios de infraestructura como AWS, aunque DevOps no es mi pasión. Soy bueno usando Figma... pero no me consideraría un diseñador top. Donde mejor me desempeño es teniendo una visión holistica del software que estamos desarrollando, coordinando personas, tecnología y negocio.`,
-    'home.presentation3': `A lo largo de mi carrera, he trabajado con dos clientes propios como freelancer. Trabajé para el sector público, también en proyectos blockchain e IA, y en algunas startups. Asumí el rol de CTO y Team Manager en una startup, diseñando la arquitectura de un complejo software y liderando a un completo staff de desarrolladores durante 2 años. Lamentablemente, el proyecto no prosperó.`,
-    'home.presentation4': `Actualmente, estoy buscando comenzar una nueva etapa. Mi prioridad es conectar con nuevas personas, pertenecer y trabajar en equipos multidisciplinarios, independientemente de la tecnología o el proyecto. Busco aportar mi experiencia y seguir desarrollándome profesional y personalmente.`,
+    'home.presentation1': `Profesional en software con más de 8 años de experiencia en desarrollo.`,
+    'home.presentation2': `He pasado por diferentes etapas en mi carrera: comencé a programar en PHP y posteriormente me especialicé como desarrollador full-stack JavaScript. Tuve la oportunidad de trabajar en varios proyectos: como freelance, en los sectores público y privado, en proyectos de blockchain e IA, y también en algunas startups. En una de ellas, asumí el cargo de CTO, donde dirigí un equipo completo de unos 20 desarrolladores y construí una arquitectura de software compleja. Esa experiencia marcó un punto de inflexión en mi trayectoria profesional.`,
+    'home.presentation3': `Me considero agnóstico a la tecnología, con una perspectiva generalista que me permite adaptarme a diferentes herramientas y flujos de trabajo. Soy un desarrollador full-stack especializado en JavaScript, con una ligera preferencia por el desarrollo front-end. Mi principal fortaleza reside en tener una visión holística del software que desarrollamos, asegurando la alineación entre las personas, tecnología y objetivos del negocio.`,
+    'home.presentation4': `Más allá de los aspectos técnicos, he aprendido que la comunicación es mi mayor aporte en un equipo, y lo que más disfruto es escuchar, conectar y construir buenas relaciones con la gente.`,
+    'home.presentation5': `Actualmente estoy comenzando un nuevo puesto como arquitecto de software en Accenture. Una experiencia profesional completamente diferente, esta vez en una gran empresa multinacional.`,
 
     'footer.recommends': 'Puede interesarte',
     'footer.resources': 'Recursos',
