@@ -113,7 +113,21 @@ export const ai: TechBox = {
       },
       comment: {
         en: 'I found in Runware the best, cheapest and easiest to use AI to generate images.',
-        es: 'Encontré en RUnware el mejor, más barata y fácil de usar IA para generar imágenes.',
+        es: 'Encontré en Runware el mejor, más barata y fácil de usar IA para generar imágenes.',
+      }
+    },
+    {
+      tech: 'ElevenLabs',
+      image: '/tech/6-ia/elevenlabs.png',
+      years: ['2024'],
+      tier: 't4',
+      description: {
+        en: 'An AI-powered text-to-speech platform known for generating realistic, human-like voiceovers.',
+        es: 'Una plataforma de texto a voz impulsada por inteligencia artificial conocida por generar voces en off realistas y similares a las humanas.',
+      },
+      comment: {
+        en: 'A very useful platform for generating sounds and voices. I experimented with it a bit.',
+        es: 'Una plataforma muy útil para generar sonidos y voces. Experimenté un poco con ella.',
       }
     },
     {

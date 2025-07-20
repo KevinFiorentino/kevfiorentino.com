@@ -253,7 +253,7 @@ export const cloud: TechBox = {
       },
       comment: {
         en: 'I used to use Heroku to deploy all kinds of apps, until they closed its free tier.',
-        es: 'Solía ​​usar Heroku para desplegar todo tipo de aplicaciones, hasta que cerraron su servicio gratuito.',
+        es: 'Solía usar Heroku para desplegar todo tipo de aplicaciones, hasta que cerraron su servicio gratuito.',
       }
     },
     {
@@ -267,7 +267,7 @@ export const cloud: TechBox = {
       },
       comment: {
         en: 'I used to use it to work on a CentOS Linux distribution, until I started using Ubuntu as my main operating system and was introduced to Docker.',
-        es: 'Solía ​​usarlo para trabajar en una distribución CentOS Linux, hasta que comencé a usar Ubuntu como mi sistema operativo principal y conocí Docker.',
+        es: 'Solía usarlo para trabajar en una distribución CentOS Linux, hasta que comencé a usar Ubuntu como mi sistema operativo principal y conocí Docker.',
       }
     },
     {
@@ -281,7 +281,35 @@ export const cloud: TechBox = {
       },
       comment: {
         en: 'I used to use it in my first job to develop a web project with PHP and MySQL.',
-        es: 'Solía ​​usarlo en mi primer trabajo para desarrollar un proyecto web con PHP y MySQL.',
+        es: 'Solía usarlo en mi primer trabajo para desarrollar un proyecto web con PHP y MySQL.',
+      }
+    },
+    {
+      tech: "Apache Solr",
+      image: '/tech/5-cloud/solr.png',
+      years: ['2019'],
+      tier: 't5',
+      description: {
+        en: 'An open-source search platform by Apache, optimized for full-text search, scalability, and real-time indexing.',
+        es: 'Una plataforma de búsqueda de código abierto de Apache, optimizada para búsqueda de texto completo, escalabilidad e indexación en tiempo real.',
+      },
+      comment: {
+        en: 'I inherited a project that used Solr as a search engine. I kept it, but I wouldn’t choose it today.',
+        es: 'Heredé un proyecto que utilizaba Solr como motor de búsqueda. Lo mantuve, pero no lo elegiria hoy en día.',
+      }
+    },
+    {
+      tech: "Sphinx",
+      image: '/tech/5-cloud/sphinx.png',
+      years: [],
+      tier: 't5',
+      description: {
+        en: 'An open-source search engine designed for high-performance full-text search, ideal for indexing large datasets.',
+        es: 'Un motor de búsqueda de código abierto diseñado para búsquedas de texto completo de alto rendimiento, ideal para indexar grandes conjuntos de datos.',
+      },
+      comment: {
+        en: 'I inherited a project that used Sphinx as a search engine. I kept it, but I wouldn’t choose it today. The project was deprecated.',
+        es: 'Heredé un proyecto que utilizaba Solr como motor de búsqueda. Lo mantuve, pero no lo elegiria hoy en día. El proyecto fue deprecado.',
       }
     },
     {

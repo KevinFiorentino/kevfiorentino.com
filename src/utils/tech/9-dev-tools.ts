@@ -47,6 +47,20 @@ export const devtools: TechBox = {
       }
     },
     {
+      tech: 'WSL (Windows Subsystem for Linux)',
+      image: '/tech/9-dev-tools/wsl.png',
+      years: ['2025'],
+      tier: 't2',
+      description: {
+        en: 'A compatibility layer that lets you run Linux distributions natively on Windows.',
+        es: 'Una capa de compatibilidad que le permite ejecutar distribuciones de Linux de forma nativa en Windows.',
+      },
+      comment: {
+        en: 'If I have to work on Windows... WSL.',
+        es: 'Si tengo que trabajar sobre Windows... WSL.',
+      }
+    },
+    {
       tech: 'Eclipse',
       image: '/tech/9-dev-tools/eclipse.png',
       years: ['uni'],

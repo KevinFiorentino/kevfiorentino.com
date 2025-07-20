@@ -89,17 +89,31 @@ export const services: TechBox = {
       }
     },
     {
+      tech: 'Mailersend',
+      image: '/tech/8-services/mailersend.png',
+      years: ['2024', '2025'],
+      tier: 't3',
+      description: {
+        en: 'A transactional email API designed for developers to send and manage emails with advanced tracking and templates.',
+        es: 'Una API de correo electrónico transaccional diseñada para que los desarrolladores envíen y administren correos electrónicos con seguimiento y plantillas avanzados.',
+      },
+      comment: {
+        en: 'Nowadays, the easiest email service to implement and use.',
+        es: 'Hoy en día, el servicio de envío de emails más fácil de implementar y usar.',
+      }
+    },
+    {
       tech: 'SendGrid',
       image: '/tech/8-services/sendgrid.png',
       years: ['2021', '2022', '2024'],
-      tier: 't3',
+      tier: 't4',
       description: {
         en: 'An email delivery platform for transactional and marketing emails, offering scalable API integration.',
         es: 'Una plataforma de entrega de correo electrónico transaccionales y de marketing, que ofrece integración API escalable.',
       },
       comment: {
-        en: 'I’ve integrated SendGrid API to send emails. Easy to use and with a good free plan.',
-        es: 'He integrado SendGrid API para envío de correos electrónicos. Fácil de usar y con un buen plan gratuito.',
+        en: 'I’ve integrated SendGrid API to send emails. I used to use it, but now it doesn’t have free plan.',
+        es: 'He integrado SendGrid API para envío de correos electrónicos. Solía utilizarlo, pero ahora no tiene plan grauito.',
       }
     },
     {
@@ -114,6 +128,20 @@ export const services: TechBox = {
       comment: {
         en: 'I used it, but its free plan is less generous than SendGrid one. I would rather use SendGrid.',
         es: 'Lo utilicé, pero su plan gratuito es menos generoso que el de SendGrid. Prefiero utilizar este último.',
+      }
+    },
+    {
+      tech: 'Schema.org',
+      image: '/tech/8-services/schema.org.png',
+      years: [],
+      tier: 't2',
+      description: {
+        en: 'A collaborative initiative that provides structured data schemas to improve how search engines understand web content.',
+        es: 'Una iniciativa colaborativa que proporciona esquemas de datos estructurados para mejorar la forma en que los motores de búsqueda entienden el contenido web.',
+      },
+      comment: {
+        en: 'I implemented in several front-ends to improve SEO. I think it is a crucial tool for web positioning.',
+        es: 'Lo implementé en varios front-end para mejorar SEO. Pienso que es una herramienta crucial para posicionamiento web.',
       }
     },
     {
