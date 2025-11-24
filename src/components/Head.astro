@@ -5,6 +5,9 @@ const { title, description, image } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const lang = getLangFromUrl(Astro.url);
 
+const base = "https://www.kevfiorentino.com";
+const ogImage = image?.startsWith("http") ? image : `${base}${image}`;
+
 const urlWithoutLang = Astro.url.pathname.slice(3);
 const alternateES = new URL(`es${urlWithoutLang}`, Astro.site);
 const alternateEN = new URL(`en${urlWithoutLang}`, Astro.site);
@@ -36,13 +39,13 @@ const alternateEN = new URL(`en${urlWithoutLang}`, Astro.site);
 	<meta property="og:url" content={canonicalURL} />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
-	<meta property="og:image" content={image} />
+	<meta property="og:image" content={ogImage} />
 
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
-	<meta name="twitter:image" content={image} />
+	<meta name="twitter:image" content={ogImage} />
 	<meta name="twitter:image:alt" content={title} />
 	<meta name="twitter:site" content="@Kevfiorentino" />
 	<meta name="twitter:creator" content="@Kevfiorentino" />
