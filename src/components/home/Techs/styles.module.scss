@@ -6,9 +6,13 @@
     font-weight: 900;
   }
   .techDescription {
+    width: 95%;
+    margin: auto;
     p {
       font-size: 15px;
-      margin-bottom: 5px;
+      font-weight: 400;
+      margin-bottom: 10px;
+      line-height: 20px;
     }
   }
   .techMainBox {
