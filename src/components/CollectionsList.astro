@@ -1,6 +1,6 @@
 ---
 import { getLangFromUrl, useTranslations } from '@i18n/utils';
-import { CollectionMetadata, collectionMetadata, collectionNameMapping } from '@content/config';
+import { type CollectionMetadata, collectionMetadata, collectionNameMapping } from '@content/config';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);

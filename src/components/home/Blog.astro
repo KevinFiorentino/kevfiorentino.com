@@ -5,6 +5,7 @@ export interface Props {
 
 import { getLangFromUrl, useTranslations } from '@i18n/utils';
 import BlogCard from '@components/BlogCard.astro';
+import Button from '@components/Button.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -39,6 +40,13 @@ const { posts } = Astro.props;
           </div>
         ))
       }
+    </div>
+    <br><br>
+    <div class="flex items-center justify-center">
+      <Button
+        text='Ver blog'
+        link={`/${param.lang}/blog`}
+      ></Button>
     </div>
   </div>
 </section>

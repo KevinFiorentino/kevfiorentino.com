@@ -1,0 +1,29 @@
+---
+export interface Props {
+  text: string;
+  link: string;
+}
+
+const { text, link } = Astro.props;
+---
+
+<a class="btn" href={link} title={text}>
+  {text}
+</a>
+
+<style lang="scss">
+.btn {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--white);
+  line-height: 22px;
+  box-shadow: 0 3px 6px #00000029;
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 15px 30px;
+}
+.btn:hover, .btn:focus {
+  background-color: var(--alternative);
+  border: 2px solid var(--alternative);
+}
+</style>
