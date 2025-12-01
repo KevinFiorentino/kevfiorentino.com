@@ -270,5 +270,33 @@ export const services: TechBox = {
         es: 'Intentamos combinarlo con los servicios de LivePerson para crear un chatbot que funcionen en Gmail. Mala idea, demasiado difícil de desarrollar y vender.',
       }
     },
+    {
+      tech: 'Keycloak',
+      image: '/tech/8-services/keycloak.png',
+      years: [],
+      tier: 't5',
+      description: {
+        en: 'An open-source identity and access management solution that provides authentication, authorization, and single sign-on for modern applications and services.',
+        es: 'Una solución de gestión de acceso e identidad de código abierto que proporciona autenticación, autorización e inicio de sesión único para aplicaciones y servicios modernos.',
+      },
+      comment: {
+        en: 'A very good alternative to services like Auth0. I explored this technology to implement an authentication system, but dismissed it because it requires hosting.',
+        es: 'Muy buena solución alternativa a servicios como Auth0. Exploré esta tecnología para implementar un sistema de autenticación, pero lo desestimé porque es necesario hostearlo.',
+      }
+    },
+    {
+      tech: 'OpenAthens',
+      image: '/tech/8-services/openathens.png',
+      years: [],
+      tier: 't5',
+      description: {
+        en: 'A federated identity and access management service that simplifies secure, single sign-on authentication across libraries, institutions, and digital resources, mainly educational.',
+        es: 'Un servicio de gestión de acceso e identidad federada que simplifica la autenticación segura de inicio de sesión único en bibliotecas, instituciones y recursos digitales, principalmente educativos.',
+      },
+      comment: {
+        en: "I implemented the OpenAthens proxy with a NodeJS backend to integrate a client's system with that of some educational institutions.",
+        es: 'Implementé el proxy de OpenAthens con un backend NodeJS para integrar el sistema de un cliente con el de algunas instituciones educativas.',
+      }
+    },
   ]
 };

@@ -28,8 +28,22 @@ export const ai: TechBox = {
         es: 'Un asistente de código impulsado por IA que sugiere fragmentos de código y acelera el desarrollo en herramientas como VS Code .',
       },
       comment: {
-        en: 'I spent a time coding on VS Code with Copilot or even Amazon Codewhisperer. I like it, but sometimes it is unnecessary and annoying.',
-        es: 'Pasé un tiempo programando en VS Code con Copilot or incluso Amazon Codewhisperer. Me gusta, pero a veces es innecesario y molesto.',
+        en: 'I use GitHub Copilot in VS Code personally, and I also have an enterprise license working for Accenture.',
+        es: 'Utilizo GitHub Copilot en VS Code de forma personal, y también tengo licencia empresarial trabajando para Accenture.',
+      }
+    },
+    {
+      tech: 'MCP (Model Context Protocol)',
+      image: '/tech/6-ia/mcp.png',
+      years: ['2025'],
+      tier: 't2',
+      description: {
+        en: 'A protocol that standardizes how applications communicate context and tools to AI models, enabling more capable and integrated AI workflows.',
+        es: 'Un protocolo que estandariza cómo las aplicaciones comunican el contexto y las herramientas a los modelos de IA, lo que permite flujos de trabajo de IA más capaces e integrados.',
+      },
+      comment: {
+        en: 'I believe MCP is changing us as developers bt allowing us to expose services to LLMs, instead of developing Rest API to expose endpoits to clients. I implemented and gave a workshop about it at Accenture to promote this technology.',
+        es: 'Creo que MCP nos está transformando como desarrolladores al permitirnos exponer servicios a LLM, en lugar de desarrollar API Rest para exponer endpoints a los clientes. Implementé esta tecnología e impartí un taller al respecto en Accenture para promocionarla.',
       }
     },
     {
@@ -70,8 +84,8 @@ export const ai: TechBox = {
         es: 'Retrieval-Augmented Generation combina LLM con la recuperación de datos externos, como una base de datos normal o una base de datos vectorial, para obtener respuestas precisas de IA.',
       },
       comment: {
-        en: 'We implemented a RAG architecture with a multi-agents system developed with LangGraph and information coming from MongoDB and a vector database, Pinecone.',
-        es: 'Implementamos una arquitectura RAG con un sistema multiagentes desarrollado con LangGraph e información proveniente de MongoDB y una base de datos vectorial, Pinecone.',
+        en: 'We implemented a RAG architecture with a multi-agents system developed with LangGraph and information coming from MongoDB and a vector database, Pinecone and Qdrant.',
+        es: 'Implementamos una arquitectura RAG con un sistema multiagentes desarrollado con LangGraph e información proveniente de MongoDB y una base de datos vectorial, Pinecone and Qdrant.',
       }
     },
     {
@@ -131,10 +145,24 @@ export const ai: TechBox = {
       }
     },
     {
+      tech: 'Lovable',
+      image: '/tech/6-ia/lovable.png',
+      years: ['2025'],
+      tier: 't3',
+      description: {
+        en: 'A no-code/low-code AI-assisted builder that lets users create full web apps, components, and designs through natural-language instructions.',
+        es: 'Una herramienta no-code/low-code asistida por IA que permite a los usuarios crear aplicaciones web, componentes y diseños completos a través de instrucciones en lenguaje natural.',
+      },
+      comment: {
+        en: "My first vibe coding experience was with Lovable. I made a landing page for a customer, I enjoyed it a lot. A very powerful service, it's amazing!",
+        es: 'Mi primera experiencia vibe coding fue con Lovable. Creé una landing page para un cliente y me encantó. ¡Un servicio muy potente, increíble!',
+      }
+    },
+    {
       tech: 'V0',
       image: '/tech/6-ia/v0.png',
       years: [],
-      tier: 't3',
+      tier: 't4',
       description: {
         en: 'A generative UI tool by Vercel that creates React components from text prompts using shadcn/ui and Tailwind CSS.',
         es: 'Una herramienta de interfaz de usuario generativa de Vercel que crea componentes de React a partir de mensajes de texto usando shadcn/ui y Tailwind CSS.',
@@ -142,6 +170,20 @@ export const ai: TechBox = {
       comment: {
         en: 'I explored it among other AI services. Probably the best for front-end development. I like the Vercel technology ecosystem in general.',
         es: 'Lo exploré entre otros servicios de IA. Probablemente, el mejor para el desarrollo front-end. Me gusta el ecosistema de tecnologías de Vercel en general.',
+      }
+    },
+    {
+      tech: 'Mermaid.js',
+      image: '/tech/6-ia/mermaid-js.png',
+      years: [],
+      tier: 't2',
+      description: {
+        en: 'A JavaScript-based diagramming tool that converts simple text syntax into flowcharts, sequence diagrams, and other visual representations for documentation and technical content.',
+        es: 'Una herramienta de diagramación basada en JavaScript que convierte la sintaxis de texto simple en diagramas de flujo, diagramas de secuencia y otras representaciones visuales para documentación y contenido técnico.',
+      },
+      comment: {
+        en: "It's not an AI library, I know. But I wanted to include it in this category because I think it's a fantastic complement for generating different types of diagrams with AI. Mermaid's language is complex, but with AI you can document anything you want. Mermaid is text-based, cheaper and faster than generating images.",
+        es: 'No es una librería IA, lo sé. Pero quería incluirla en esta categoría porque creo que es un complemento fantástico para generar diferentes tipos de diagramas con IA. El lenguaje de Mermaid es complejo, pero con IA puedes documentar lo que quieras. Mermaid está basado en texto, más barato y rápido que generar imágenes.',
       }
     },
     {
