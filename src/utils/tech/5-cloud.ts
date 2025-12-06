@@ -56,8 +56,36 @@ export const cloud: TechBox = {
         es: 'Amazon Web Services proporciona soluciones escalables de computación en la nube, que incluyen almacenamiento, bases de datos, entre otros servicios.',
       },
       comment: {
-        en: 'I’ve worked with AWS on some projects, especially with EC2, RDS and S3. I am not fanatic of DevOps, but it is enough for my needs.',
-        es: 'He trabajado con AWS en algunos proyectos, especialmente con EC2, RDS y S3. No soy fanático de las cosas DevOps, pero es suficiente para mis necesidades.',
+        en: `
+          I've worked with AWS on several projects. I'm not a big fan of DevOps tools, but I learned a lot about this service from real-world needs. The main services I use are:
+          <ul>
+            <li>IAM</li>
+            <li>EC2</li>
+            <li>RDS</li>
+            <li>S3</li>
+            <li>CloudFront</li>
+            <li>CloudWatch</li>
+            <li>Certificate Manager</li>
+            <li>AWS Backup</li>
+            <li>AWS Health Dashboard</li>
+            <li>Billing and Cost Management</li>
+          </ul>
+        `,
+        es: `
+          He trabajado con AWS en varios proyectos. No soy fanático de las herramientas DevOps, pero he aprendido mucho de este servicio a partir de necesidades reales. Los principales servicios que utilizo son:
+          <ul>
+            <li>IAM</li>
+            <li>EC2</li>
+            <li>RDS</li>
+            <li>S3</li>
+            <li>CloudFront</li>
+            <li>CloudWatch</li>
+            <li>Certificate Manager</li>
+            <li>AWS Backup</li>
+            <li>AWS Health Dashboard</li>
+            <li>Billing and Cost Management</li>
+          </ul>
+        `,
       }
     },
     {

@@ -78,7 +78,10 @@ const TechComponent = ({ tech, currentLang, isSoftSkills }: Props) => {
                 {!isSoftSkills &&
                   <h5>{t('comment')}</h5>
                 }
-                <p>{ currentLang == 'es' ? tech.comment.es : tech.comment.en }</p>
+                <p
+                  dangerouslySetInnerHTML={{ __html: currentLang == 'es' ? tech.comment.es : tech.comment.en  }}
+                >
+                </p>
                 <div className='flex items-center justify-between'>
                   <div className='flex items-center flex-wrap gap-1'>
                     {tech.years.map((y) => <span className='capitalize'>{y}</span> )}
