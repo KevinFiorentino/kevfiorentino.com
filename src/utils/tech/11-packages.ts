@@ -173,6 +173,20 @@ export const packages: TechBox = {
       }
     },
     {
+      tech: 'Nx',
+      image: '/tech/11-packages/nx.png',
+      years: [],
+      tier: 't4',
+      description: {
+        en: 'A powerful monorepo toolset that optimizes development workflows with smart project graph analysis, fast builds, and scalable code organization for JavaScript and TypeScript ecosystems.',
+        es: 'Un poderoso conjunto de herramientas monorepositorio que optimiza los flujos de trabajo de desarrollo con análisis de gráficos de proyectos inteligentes, compilaciones rápidas y organización de código escalable para ecosistemas JavaScript y TypeScript.',
+      },
+      comment: {
+        en: 'I’ve never used Nx to build a monorepo architecture in a project from scratch, but I have worked on some very large Angular projects that used it. I think it’s a good option to consider for a solid architecture.',
+        es: 'Nunca me tocó utilizar Nx para levantar una arquitectura monorepo en un proyecto desde cero, pero si he trabajado en proyectos Angular realmente muy grandes que lo utilizaban. Me parece una buena opción a considerar para tener una buena arquitectura.',
+      }
+    },
+    {
       tech: 'Chart.js',
       image: '/tech/11-packages/chartjs.png',
       years: ['2021', '2022'],
@@ -184,6 +198,20 @@ export const packages: TechBox = {
       comment: {
         en: 'Easy to use to create a simple dashboard in a front-end. I would like to use a different alternative.',
         es: 'Fácil de usar para crear un simple dashboard en un front-end. Me gustaría usar alguna alternativa diferente.',
+      }
+    },
+    {
+      tech: 'Serverless Framework',
+      image: '/tech/11-packages/serverless-framework.png',
+      years: ['2025', '2026'],
+      tier: 't3',
+      description: {
+        en: 'A deployment and management toolkit that simplifies building serverless applications by automating infrastructure, configuration, and deployments across cloud providers like AWS, Azure, and GCP.',
+        es: 'Un kit de herramientas de implementación y administración que simplifica la creación de aplicaciones serverless al automatizar la infraestructura, la configuración y las implementaciones en proveedores de nube como AWS, Azure y GCP.',
+      },
+      comment: {
+        en: 'If we’re talking about serverless, the Serverless Framework is a must-have. Especially when used with AWS Lambda and DynamoDB.',
+        es: 'Si se trata de serverless, Serverless Framework no puede faltar. Especialmente junto a AWS Lambda y DynamoDB.',
       }
     },
     {

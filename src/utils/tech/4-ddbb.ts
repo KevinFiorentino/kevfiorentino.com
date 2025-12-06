@@ -89,6 +89,20 @@ export const ddbb: TechBox = {
       }
     },
     {
+      tech: 'DynamoDB',
+      image: '/tech/4-ddbb/dynamodb.png',
+      years: [],
+      tier: 't4',
+      description: {
+        en: 'A fully managed, serverless NoSQL database by AWS designed for high-performance, low-latency applications with seamless scalability and flexible key-value and document data models.',
+        es: 'Una base de datos serverless NoSQL completamente administrada de AWS diseñada para aplicaciones de alto rendimiento y baja latencia con escalabilidad perfecta y modelos de datos de documentos y clave-valor flexibles.',
+      },
+      comment: {
+        en: 'For serverless solutions alongside AWS Lambda, DynamoDB is an excellent option to consider. I find the architectures that can be created using serverless services very interesting.',
+        es: 'Para soluciones serverless junto con AWS Lambda, DynamoDB es una excelente opción a considerar. Me parece muy interesante las arquitecturas que es posible crear utilizando servicios serverless.',
+      }
+    },
+    {
       tech: 'TypeORM',
       image: '/tech/4-ddbb/typeorm.png',
       years: ['2024', '2025'],

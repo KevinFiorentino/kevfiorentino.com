@@ -89,10 +89,24 @@ export const testing: TechBox = {
       }
     },
     {
+      tech: 'Playwright',
+      image: '/tech/10-testing/playwright.png',
+      years: [],
+      tier: 't4',
+      description: {
+        en: 'A cross-browser automation framework for end-to-end testing that provides fast, reliable, and consistent interactions with web applications.',
+        es: 'Un marco de automatización entre navegadores para pruebas de extremo a extremo que proporciona interacciones rápidas, confiables y consistentes con aplicaciones web.',
+      },
+      comment: {
+        en: 'I never actually used Playwright to write E2E tests; but I have collaborated on improving a project’s architecture and integrating it into a continuous integration pipeline.',
+        es: 'Nunca utilicé Playwright para escribir pruebas E2E realmente; pero si he colaborado mejorando la arquitectura de un proyecto e integrandolo en un pipeline de integración continua.',
+      }
+    },
+    {
       tech: 'Cypress',
       image: '/tech/10-testing/cypress.png',
       years: [],
-      tier: 't3',
+      tier: 't4',
       description: {
         en: 'A powerful end-to-end testing framework for web applications, offering fast and reliable test execution.',
         es: 'Un potente marco de pruebas de un extremo a otro para aplicaciones web, que ofrece una ejecución de pruebas rápida y confiable.',

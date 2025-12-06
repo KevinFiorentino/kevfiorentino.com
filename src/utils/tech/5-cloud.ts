@@ -65,8 +65,11 @@ export const cloud: TechBox = {
             <li>S3</li>
             <li>CloudFront</li>
             <li>CloudWatch</li>
-            <li>Certificate Manager</li>
+            <li>AWS Lambda</li>
+            <li>AWS Step Functions</li>
+            <li>Amazon Bedrock</li>
             <li>AWS Backup</li>
+            <li>Certificate Manager</li>
             <li>AWS Health Dashboard</li>
             <li>Billing and Cost Management</li>
           </ul>
@@ -80,8 +83,11 @@ export const cloud: TechBox = {
             <li>S3</li>
             <li>CloudFront</li>
             <li>CloudWatch</li>
-            <li>Certificate Manager</li>
+            <li>AWS Lambda</li>
+            <li>AWS Step Functions</li>
+            <li>Amazon Bedrock</li>
             <li>AWS Backup</li>
+            <li>Certificate Manager</li>
             <li>AWS Health Dashboard</li>
             <li>Billing and Cost Management</li>
           </ul>
@@ -142,6 +148,20 @@ export const cloud: TechBox = {
       comment: {
         en: 'My favorite file system technology for creating a website’s image bank. I implemented AWS and IBM Cloud S3 services.',
         es: 'Mi tecnología de sistema de archivos favorita para crear un banco de imágenes de un sitio web. Implementé servicios de AWS e IBM Cloud S3.',
+      }
+    },
+    {
+      tech: 'AWS Lambda',
+      image: '/tech/5-cloud/aws-lambda.png',
+      years: ['2025', '2026'],
+      tier: 't3',
+      description: {
+        en: 'A serverless compute service that runs code on demand, automatically scaling and managing infrastructure so developers can focus solely on application logic.',
+        es: 'Un servicio serverless que ejecuta código a pedido, escalando y administrando automáticamente la infraestructura para que los desarrolladores puedan concentrarse únicamente en la lógica de la aplicación.',
+      },
+      comment: {
+        en: 'I discovered the serverless paradigm at Accenture. I find it very interesting to move away from typical REST APIs and instead use serverless services to reduce costs, although other technical considerations must be taken into account.',
+        es: 'Descubrí el paradigma serverless en Accenture. Encuentro muy interesante salir de las típicas API Rest y en su lugar utilizar servicios serverless para abaratar costos, aunque teniendo que tener otras consideraciones técnicas en cuenta.',
       }
     },
     {

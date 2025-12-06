@@ -131,6 +131,20 @@ export const devtools: TechBox = {
       }
     },
     {
+      tech: 'Azure DevOps',
+      image: '/tech/9-dev-tools/azure-devops.png',
+      years: ['2025', '2026'],
+      tier: 't4',
+      description: {
+        en: 'A cloud-based platform that provides version control, CI/CD pipelines, project tracking, and collaboration tools for end-to-end software development.',
+        es: 'Una plataforma basada en la nube que proporciona control de versiones, pipelines CI/CD, seguimiento de proyectos y herramientas de colaboración para el desarrollo de software de extremo a extremo.',
+      },
+      comment: {
+        en: 'ADO is an excellent service for managing complex projects. From tasks and incidents to source code, pipelines, deployments, and more. Robust and complex, it’s only suitable for large-scale solutions.',
+        es: 'ADO es un excelente servicio para gestionar proyectos complejos. Desde tareas e incidentes, código fuente, pipelines, despliegues, etc. Robusto y complejo, solo para grandes soluciones.',
+      }
+    },
+    {
       tech: 'Bitbucket',
       image: '/tech/9-dev-tools/bitbucket.png',
       years: ['2021', '2022'],
@@ -151,7 +165,7 @@ export const devtools: TechBox = {
       tier: 't3',
       description: {
         en: 'A command-line shell and scripting language for Unix-based systems, widely used for automation and system management.',
-        es: 'Un shell de línea de comandos y un lenguaje de secuencias de comandos para sistemas basados ​​en Unix, ampliamente utilizado para la automatización y la gestión de sistemas.',
+        es: 'Un shell de línea de comandos y un lenguaje de secuencias de comandos para sistemas basados en Unix, ampliamente utilizado para la automatización y la gestión de sistemas.',
       },
       comment: {
         en: 'I’ve created some bash scripts for automate deployments or SSL renewal. DevOps things are not my specialty, but I like it.',

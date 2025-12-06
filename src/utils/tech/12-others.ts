@@ -145,6 +145,20 @@ export const others: TechBox = {
       }
     },
     {
+      tech: 'Microsoft 365',
+      image: '/tech/12-others/microsoft365.png',
+      years: [],
+      tier: 't3',
+      description: {
+        en: 'A productivity suite that integrates cloud-based apps like Word, Excel, Teams, and Outlook to enable communication, collaboration, and workflow management across organizations.',
+        es: 'Una suite de productividad que integra aplicaciones basadas en la nube como Word, Excel, Teams y Outlook para permitir la comunicación, la colaboración y la gestión del flujo de trabajo en todas las organizaciones.',
+      },
+      comment: {
+        en: 'Everything at Accenture is Microsoft. M365 seems like a great interconnected ecosystem to me; complex, it brings headaches, but also many solutions for a company with 800,000 employees.',
+        es: 'Todo en Accenture es Microsoft. M365 me parece un gran ecosistema interconectado; complejo, trae dolores de cabeza, para también muchas soluciones para una empresa con 800 mil empleados.',
+      }
+    },
+    {
       tech: 'Discord',
       image: '/tech/12-others/discord.png',
       years: ['2023', '2024', '2025'],
