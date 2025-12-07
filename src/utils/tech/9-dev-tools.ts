@@ -7,7 +7,7 @@ export const devtools: TechBox = {
     {
       tech: 'VS Code',
       image: '/tech/9-dev-tools/vscode.png',
-      years: ['2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+      years: ['2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026'],
       tier: 't2',
       description: {
         en: 'A lightweight, versatile code editor by Microsoft with extensive extensions and debugging support.',
@@ -21,7 +21,7 @@ export const devtools: TechBox = {
     {
       tech: 'Vim',
       image: '/tech/9-dev-tools/vim.png',
-      years: ['2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+      years: ['2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026'],
       tier: 't1',
       description: {
         en: 'A highly customizable and efficient terminal-based text editor favored by developers for its speed and shortcuts.',
@@ -49,7 +49,7 @@ export const devtools: TechBox = {
     {
       tech: 'WSL (Windows Subsystem for Linux)',
       image: '/tech/9-dev-tools/wsl.png',
-      years: ['2025'],
+      years: ['2025', '2026'],
       tier: 't2',
       description: {
         en: 'A compatibility layer that lets you run Linux distributions natively on Windows.',
@@ -91,7 +91,7 @@ export const devtools: TechBox = {
     {
       tech: 'Git',
       image: '/tech/9-dev-tools/git.png',
-      years: ['uni', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+      years: ['uni', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026'],
       tier: 't1',
       description: {
         en: 'A distributed version control system for tracking changes in code and enabling collaborative software development.',
@@ -105,7 +105,7 @@ export const devtools: TechBox = {
     {
       tech: 'GitHub',
       image: '/tech/9-dev-tools/github.png',
-      years: ['uni', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+      years: ['uni', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026'],
       tier: 't1',
       description: {
         en: 'A cloud-based platform for hosting and managing Git repositories with collaboration and CI/CD tools.',

@@ -7,7 +7,7 @@ export const cloud: TechBox = {
     {
       tech: 'Linux',
       image: '/tech/5-cloud/linux.png',
-      years: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+      years: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026'],
       tier: 't1',
       description: {
         en: 'An open-source operating system known for stability, security, and use in servers and development environments.',
@@ -21,7 +21,7 @@ export const cloud: TechBox = {
     {
       tech: 'Ubuntu',
       image: '/tech/5-cloud/ubuntu.png',
-      years: ['2020', '2021', '2022', '2023', '2024', '2025'],
+      years: ['2020', '2021', '2022', '2023', '2024', '2025', '2026'],
       tier: 't1',
       description: {
         en: 'A popular Linux distribution with a user-friendly interface, widely used for development and server deployments.',
@@ -181,7 +181,7 @@ export const cloud: TechBox = {
     {
       tech: "PM2",
       image: '/tech/5-cloud/pm2.png',
-      years: ['2021', '2022', '2023', '2024', '2025'],
+      years: ['2021', '2022', '2023', '2024'],
       tier: 't2',
       description: {
         en: 'A process manager for NodeJS applications, ensuring uptime, load balancing, and monitoring.',
@@ -246,6 +246,20 @@ export const cloud: TechBox = {
       comment: {
         en: 'I automated some basic things like running tests, building apps, and deployments, especially on Vercel.',
         es: 'Automaticé algunas cosas básicas como ejecución de pruebas, buildeo de apps, y despliegues, especialmente en Vercel.',
+      }
+    },
+    {
+      tech: "Azure DevOps Pipelines",
+      image: '/tech/5-cloud/azure-devops-pipelines.png',
+      years: ['2025', '2026'],
+      tier: 't3',
+      description: {
+        en: 'A cloud-based CI/CD service that automates building, testing, and deploying applications across diverse platforms with scalable, customizable workflows.',
+        es: 'Un servicio de CI/CD basado en la nube que automatiza la creación, prueba e implementación de aplicaciones en diversas plataformas con flujos de trabajo escalables y personalizables.',
+      },
+      comment: {
+        en: 'Similar to GitHub Actions, ADO has its own for creating CI/CD pipelines. Very similar, same features.',
+        es: 'A lo igual que GitHub Actions, ADO tiene el suyo para la creación de pipelines CI/CD. Muy similar, mismas prestaciones.',
       }
     },
     {

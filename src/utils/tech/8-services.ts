@@ -7,7 +7,7 @@ export const services: TechBox = {
     {
       tech: 'Firebase',
       image: '/tech/8-services/firebase.png',
-      years: ['2021', '2022'],
+      years: ['2021', '2022', '2025'],
       tier: 't2',
       description: {
         en: 'A cloud platform by Google offering backend services like authentication, databases, and hosting for web and mobile apps.',
@@ -21,7 +21,7 @@ export const services: TechBox = {
     {
       tech: 'Auth0',
       image: '/tech/8-services/auth0.png',
-      years: ['2024', '2025'],
+      years: ['2024'],
       tier: 't2',
       description: {
         en: 'A secure identity platform providing authentication and authorization solutions for applications.',

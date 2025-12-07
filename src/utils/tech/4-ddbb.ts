@@ -91,7 +91,7 @@ export const ddbb: TechBox = {
     {
       tech: 'DynamoDB',
       image: '/tech/4-ddbb/dynamodb.png',
-      years: [],
+      years: ['2025', '2026'],
       tier: 't4',
       description: {
         en: 'A fully managed, serverless NoSQL database by AWS designed for high-performance, low-latency applications with seamless scalability and flexible key-value and document data models.',

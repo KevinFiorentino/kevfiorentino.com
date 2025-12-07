@@ -91,7 +91,7 @@ export const testing: TechBox = {
     {
       tech: 'Playwright',
       image: '/tech/10-testing/playwright.png',
-      years: [],
+      years: ['2025'],
       tier: 't4',
       description: {
         en: 'A cross-browser automation framework for end-to-end testing that provides fast, reliable, and consistent interactions with web applications.',

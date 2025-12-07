@@ -21,7 +21,7 @@ export const others: TechBox = {
     {
       tech: 'Notion',
       image: '/tech/12-others/notion.png',
-      years: ['2023', '2024', '2025'],
+      years: [],
       tier: 't1',
       description: {
         en: 'An all-in-one workspace for note-taking, task management, and collaboration, ideal for teams and individuals.',
@@ -35,7 +35,7 @@ export const others: TechBox = {
     {
       tech: 'Sublime Text',
       image: '/tech/12-others/sublime-text.png',
-      years: ['2023', '2024', '2025'],
+      years: [],
       tier: 't2',
       description: {
         en: 'A lightweight and versatile text editor known for its speed, customizability, and powerful features.',
@@ -49,7 +49,7 @@ export const others: TechBox = {
     {
       tech: 'Excalidraw',
       image: '/tech/12-others/excalidraw.png',
-      years: ['2023', '2024', '2025'],
+      years: [],
       tier: 't1',
       description: {
         en: 'A collaborative whiteboard tool for creating hand-drawn-style diagrams and visual ideas.',
@@ -147,7 +147,7 @@ export const others: TechBox = {
     {
       tech: 'Microsoft 365',
       image: '/tech/12-others/microsoft365.png',
-      years: [],
+      years: ['2025', '2026'],
       tier: 't3',
       description: {
         en: 'A productivity suite that integrates cloud-based apps like Word, Excel, Teams, and Outlook to enable communication, collaboration, and workflow management across organizations.',
@@ -161,7 +161,7 @@ export const others: TechBox = {
     {
       tech: 'Discord',
       image: '/tech/12-others/discord.png',
-      years: ['2023', '2024', '2025'],
+      years: ['2023', '2024'],
       tier: 't3',
       description: {
         en: 'A communication platform for voice, video, and text chats, popular among gaming and community groups.',

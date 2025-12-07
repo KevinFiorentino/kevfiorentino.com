@@ -7,7 +7,7 @@ export const frontend: TechBox = {
     {
       tech: 'HTML',
       image: '/tech/1-front-end/html.png',
-      years: ['uni', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+      years: ['uni', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026'],
       tier: 't2',
       description: {
         en: 'The standard markup language used to structure content on the web, forming the backbone of all websites.',
@@ -21,7 +21,7 @@ export const frontend: TechBox = {
     {
       tech: 'CSS',
       image: '/tech/1-front-end/css.png',
-      years: ['uni', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+      years: ['uni', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026'],
       tier: 't2',
       description: {
         en: 'A style sheet language used to design and control the layout, colors, and fonts of web pages written with HTML.',
@@ -35,7 +35,7 @@ export const frontend: TechBox = {
     {
       tech: 'Javascript',
       image: '/tech/1-front-end/javascript.png',
-      years: ['uni', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+      years: ['uni', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026'],
       tier: 't1',
       description: {
         en: 'A versatile programming language for adding interactivity, animations, and dynamic features to websites.',
@@ -49,7 +49,7 @@ export const frontend: TechBox = {
     {
       tech: 'TypeScript',
       image: '/tech/1-front-end/typescript.png',
-      years: ['uni', '2020', '2021', '2022', '2023', '2024', '2025'],
+      years: ['uni', '2020', '2021', '2022', '2023', '2024', '2025', '2026'],
       tier: 't1',
       description: {
         en: 'A superset of Javascript that adds static typing, improving code reliability and scalability.',
@@ -63,7 +63,7 @@ export const frontend: TechBox = {
     {
       tech: 'Angular',
       image: '/tech/1-front-end/angular.png',
-      years: ['uni', '2020', '2021', '2022', '2024'],
+      years: ['uni', '2020', '2021', '2022', '2024', '2025', '2026'],
       tier: 't1',
       description: {
         en: 'A robust TypeScript framework by Google for building dynamic, enterprise-grade web applications with a focus on scalability.',
