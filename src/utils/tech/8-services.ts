@@ -22,7 +22,7 @@ export const services: TechBox = {
       tech: 'Auth0',
       image: '/tech/8-services/auth0.png',
       years: ['2024'],
-      tier: 't2',
+      tier: 't4',
       description: {
         en: 'A secure identity platform providing authentication and authorization solutions for applications.',
         es: 'Una plataforma de identidad segura que proporciona soluciones de autenticación y autorización para aplicaciones.',
@@ -36,7 +36,7 @@ export const services: TechBox = {
       tech: 'OAuth 2.0',
       image: '/tech/8-services/oauth2.png',
       years: [],
-      tier: 't3',
+      tier: 't4',
       description: {
         en: 'An open standard for secure user authorization, allowing third-party apps to access resources without sharing passwords.',
         es: 'Un estándar abierto para la autorización segura de usuarios, que permite que aplicaciones de terceros accedan a recursos sin compartir contraseñas.',
@@ -58,6 +58,34 @@ export const services: TechBox = {
       comment: {
         en: 'It is an excellent tool for testing and improving many aspects of a website’s performance. I’ve used it several times.',
         es: 'Es una excelente herramienta para probar y mejorar muchos aspectos del rendimiento de un sitio web. Lo he usado varias veces.',
+      }
+    },
+    {
+      tech: 'Datadog',
+      image: '/tech/8-services/datadog.png',
+      years: ['2025'],
+      tier: 't4',
+      description: {
+        en: 'A cloud-based observability and monitoring platform that unifies logs, metrics, and traces to help teams analyze performance and reliability across modern applications and infrastructure.',
+        es: 'Una plataforma de monitoreo y observabilidad basada en la nube que unifica registros, métricas y seguimientos para ayudar a los equipos a analizar el rendimiento y la confiabilidad en aplicaciones e infraestructura modernas.',
+      },
+      comment: {
+        en: 'I never needed to use a logging and monitoring service of the scale of Datadog and Splunk. I learned their importance and how to use them while working at Accenture.',
+        es: 'Nunca tuve necesidad de utilizar un servicio de logs y monitoreo de la embergadura de Datadog y Splunk. Aprendí de su importancia y el cómo utilizarlos trabajando en Accenture.',
+      }
+    },
+    {
+      tech: 'Splunk',
+      image: '/tech/8-services/splunk.png',
+      years: ['2025'],
+      tier: 't4',
+      description: {
+        en: 'A data analytics and observability platform that ingests and correlates massive machine-generated data to deliver insights, security monitoring, and operational intelligence at scale.',
+        es: 'Una plataforma de análisis y observación de datos que ingiere y correlaciona datos masivos generados por máquinas para brindar información, monitoreo de seguridad e inteligencia operativa a escala.',
+      },
+      comment: {
+        en: 'I never needed to use a logging and monitoring service of the scale of Datadog and Splunk. I learned their importance and how to use them while working at Accenture.',
+        es: 'Nunca tuve necesidad de utilizar un servicio de logs y monitoreo de la embergadura de Datadog y Splunk. Aprendí de su importancia y el cómo utilizarlos trabajando en Accenture.',
       }
     },
     {
@@ -114,20 +142,6 @@ export const services: TechBox = {
       comment: {
         en: 'I’ve integrated SendGrid API to send emails. I used to use it, but now it doesn’t have free plan.',
         es: 'He integrado SendGrid API para envío de correos electrónicos. Solía utilizarlo, pero ahora no tiene plan grauito.',
-      }
-    },
-    {
-      tech: 'Postmark',
-      image: '/tech/8-services/postmark.png',
-      years: [],
-      tier: 't4',
-      description: {
-        en: 'A reliable email service for fast delivery of transactional emails with detailed tracking.',
-        es: 'Un servicio de correo electrónico confiable para la entrega rápida de correos electrónicos transaccionales con seguimiento detallado.',
-      },
-      comment: {
-        en: 'I used it, but its free plan is less generous than SendGrid one. I would rather use SendGrid.',
-        es: 'Lo utilicé, pero su plan gratuito es menos generoso que el de SendGrid. Prefiero utilizar este último.',
       }
     },
     {
@@ -282,6 +296,20 @@ export const services: TechBox = {
       comment: {
         en: 'A very good alternative to services like Auth0. I explored this technology to implement an authentication system, but dismissed it because it requires hosting.',
         es: 'Muy buena solución alternativa a servicios como Auth0. Exploré esta tecnología para implementar un sistema de autenticación, pero lo desestimé porque es necesario hostearlo.',
+      }
+    },
+    {
+      tech: 'MinIO',
+      image: '/tech/8-services/minio.png',
+      years: [],
+      tier: 't5',
+      description: {
+        en: 'An open-source, high-performance object storage platform compatible with the Amazon S3 API, designed for scalable, cloud-native data workloads.',
+        es: 'Una plataforma de almacenamiento de objetos de código abierto y alto rendimiento compatible con la API de Amazon S3, diseñada para cargas de trabajo de datos escalables y nativas de la nube.',
+      },
+      comment: {
+        en: 'An interesting alternative to any S3 service for storing files on a completely dedicated server. I’ve never implemented it, but I like learning about open-source alternatives.',
+        es: 'Interesante alternativa a cualquier servicio S3 para guardar archivos en un servidor 100% propio. Nunca lo implementé, pero me gusta conocer las alternativas open source.',
       }
     },
     {

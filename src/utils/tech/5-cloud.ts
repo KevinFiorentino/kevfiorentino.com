@@ -207,6 +207,20 @@ export const cloud: TechBox = {
       }
     },
     {
+      tech: 'Red Hat Openshift',
+      image: '/tech/5-cloud/openshift.png',
+      years: [],
+      tier: 't4',
+      description: {
+        en: 'A Kubernetes-based container platform by Red Hat that provides automated deployment, scaling, and management of cloud-native applications with enterprise-grade security and developer tooling.',
+        es: 'Una plataforma de contenedores basada en Kubernetes de Red Hat que proporciona implementación, escalamiento y gestión automatizados de aplicaciones nativas de la nube con seguridad de nivel empresarial y herramientas para desarrolladores.',
+      },
+      comment: {
+        en: 'I never actually used OpenShift, but I’m quite familiar with Red Hat technologies thanks to things a good friend who works at this company tells me.',
+        es: 'Nunca utilicé Openshift realmente, pero estoy bastante familiariazado con las tecnologías de Red Hat gracias a las cosas que me cuenta un gran amigo que trabaja en esta empresa.',
+      }
+    },
+    {
       tech: "Fly.io",
       image: '/tech/5-cloud/flyio.png',
       years: ['2022'],
@@ -294,14 +308,28 @@ export const cloud: TechBox = {
       tech: "DonWeb",
       image: '/tech/5-cloud/donweb.png',
       years: ['2020', '2021'],
-      tier: 't3',
+      tier: 't5',
       description: {
         en: 'A Latin American web hosting and domain provider offering email, cloud, and hosting services.',
         es: 'Un proveedor latinoamericano de dominios y alojamiento web que ofrece servicios de alojamiento, nube y correo electrónico.',
       },
       comment: {
-        en: 'I use it to register domains and maintain a Drupal project on a server.',
-        es: 'Lo uso para registrar dominios y mantengo un proyecto Drupal en un servidor.',
+        en: 'I use it to register domains for local projects. As a business, it leaves much to be desired.',
+        es: 'Lo uso para registrar dominios para proyectos locales. Como empresa, deja mucho que desear.',
+      }
+    },
+    {
+      tech: 'GoDaddy',
+      image: '/tech/5-cloud/godaddy.png',
+      years: [],
+      tier: 't4',
+      description: {
+        en: 'A global web services company that provides domain registration, hosting, and website management tools for individuals and businesses building an online presence.',
+        es: 'Una empresa global de servicios web que ofrece registro de dominios, alojamiento y herramientas de gestión de sitios web para personas y empresas que crean una presencia en línea.',
+      },
+      comment: {
+        en: 'I’ve had to register and manage domains using GoDaddy. If it’s a domain for a global project, I prefer to use this service.',
+        es: 'He tenido que registrar y administrar dominios utilizando GoDaddy. Si se trata de un dominio para un proyecto global, prefiero hacerlo con este servicio.',
       }
     },
     {

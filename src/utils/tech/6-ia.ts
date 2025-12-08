@@ -19,9 +19,65 @@ export const ai: TechBox = {
       }
     },
     {
+      tech: 'Claude',
+      image: '/tech/6-ia/claude.png',
+      years: [],
+      tier: 't3',
+      description: {
+        en: 'An advanced AI model developed by Anthropic, built for safe reasoning, high-quality language understanding, and enterprise-ready intelligence.',
+        es: 'Un modelo de IA avanzado desarrollado por Anthropic, diseñado para razonamiento seguro, comprensión del lenguaje de alta calidad e inteligencia empresarial.',
+      },
+      comment: {
+        en: 'Claude Sonet 4.5 is one of my favorite models. Especially for use with GitHub Copilot.',
+        es: 'Claude Sonet 4.5 es uno de mis modelos favoritos. Especialmente para utilizar con GitHub Copilot.',
+      }
+    },
+    {
+      tech: 'Gemini',
+      image: '/tech/6-ia/gemini.png',
+      years: [],
+      tier: 't3',
+      description: {
+        en: 'A multimodal AI system built by Google, capable of understanding text, images, audio, and video to deliver powerful reasoning and seamless product integration.',
+        es: 'Un sistema de inteligencia artificial multimodal creado por Google, capaz de comprender texto, imágenes, audio y video para ofrecer un razonamiento poderoso y una integración perfecta de productos.',
+      },
+      comment: {
+        en: 'Along with OpenAI’s models, Google’s are the best on the market. I like to experiment with each one and compare results depending on the task at hand.',
+        es: 'Junto con los modelos de OpenAI, los de Google son los mejores del mercado. Me gusta experimentar con cada uno y comparar resultados dependiendo la tarea que tengo.',
+      }
+    },
+    {
+      tech: 'Glok',
+      image: '/tech/6-ia/glok.png',
+      years: [],
+      tier: 't3',
+      description: {
+        en: 'A real-time conversational AI created by xAI, designed for fast reasoning, live information access, and a bold, humorous interaction style.',
+        es: 'Una IA conversacional en tiempo real creada por xAI, diseñada para un razonamiento rápido, acceso a información en vivo y un estilo de interacción audaz y divertido.',
+      },
+      comment: {
+        en: 'Glok has given me very good results for writing code and solving somewhat complex logic problems.',
+        es: 'Glok me ha dado muy buenos resultados para escribir código y resolver problemas de lógica algo complejos.',
+      }
+    },
+    {
+      tech: 'Mistral',
+      image: '/tech/6-ia/mistral.png',
+      years: [],
+      tier: 't4',
+      description: {
+        en: 'A family of high-performance open-source AI models developed by Mistral AI, focused on efficient reasoning, fast inference, and flexible deployment for enterprise and developer use cases.',
+        es: 'Una familia de modelos de IA de código abierto de alto rendimiento desarrollados por Mistral AI, centrados en el razonamiento eficiente, la inferencia rápida y la implementación flexible para casos de uso empresariales y de desarrolladores.',
+      },
+      comment: {
+        en: 'I primarily used Mistral’s models through AWS Bedrock. It’s also a very good model for local testing with Ollama.',
+        es: 'Utilicé los modelos de Mistral principalmente a través de AWS Bedrock. También es muy buen modelo para hacer pruebas en local con Ollama.',
+      }
+    },
+    {
       tech: 'GitHub Copilot',
       image: '/tech/6-ia/copilot.png',
-      years: [],
+      years: ['2025', '2026'],
       tier: 't3',
       description: {
         en: 'An AI-powered code assistant that suggests code snippets and accelerates development in tools like VS Code.',
@@ -33,9 +89,37 @@ export const ai: TechBox = {
       }
     },
     {
+      tech: 'Ollama',
+      image: '/tech/6-ia/ollama.png',
+      years: [],
+      tier: 't2',
+      description: {
+        en: 'A lightweight runtime that lets developers run and manage large language models locally with simple commands, customizable model files, and efficient on-device inference.',
+        es: 'Un entorno de ejecución liviano que permite a los desarrolladores ejecutar y administrar modelos de lenguaje grandes localmente con comandos simples, archivos de modelo personalizables e inferencia eficiente en el dispositivo.',
+      },
+      comment: {
+        en: "I've downloaded models to my computer using Ollama and used them in applications via LangChain. It's very easy to use; the tricky part is having a good computer.",
+        es: 'Con Ollama he descargado modelos en mi computadora y utilizado en aplicaciones a través de LangChain. Muy fácil de usar; la parte complicada es tener un buen computador.',
+      }
+    },
+    {
+      tech: 'LM Studio',
+      image: '/tech/6-ia/lmstudio.png',
+      years: [],
+      tier: 't4',
+      description: {
+        en: 'A desktop application that lets users run, test, and manage local large language models with an easy UI, offering fast inference, model downloading, and developer-friendly tooling for offline AI workflows.',
+        es: 'Una aplicación de escritorio que permite a los usuarios ejecutar, probar y administrar modelos de lenguaje locales de gran tamaño con una interfaz de usuario sencilla, que ofrece inferencia rápida, descarga de modelos y herramientas fáciles de usar para desarrolladores para flujos de trabajo de IA sin conexión.',
+      },
+      comment: {
+        en: "I haven't used LM Studio much for local LLM testing; I prefer Ollama. It has a very good, very practical UI.",
+        es: 'He utilizado poco LM Studio para pruebas de LLM en local, prefiero Ollama. Tiene una muy buena UI, muy práctica.',
+      }
+    },
+    {
       tech: 'MCP (Model Context Protocol)',
       image: '/tech/6-ia/mcp.png',
-      years: ['2025'],
+      years: ['2025', '2026'],
       tier: 't2',
       description: {
         en: 'A protocol that standardizes how applications communicate context and tools to AI models, enabling more capable and integrated AI workflows.',
@@ -114,6 +198,34 @@ export const ai: TechBox = {
       comment: {
         en: 'We chose it as our vector database for our projects in my CTO time. Easy to implement with Python or Javascript.',
         es: 'Elegimos Pinecone como la base de datos vectorial para nuestros proyectos en mi tiempo como CTO. Fácil de implementar tanto en Python como con Javascript.',
+      }
+    },
+    {
+      tech: 'AI Refinery',
+      image: '/tech/6-ia/ai-refinery-accenture.png',
+      years: ['2025', '2026'],
+      tier: 't2',
+      description: {
+        en: 'A platform from Accenture —built using NVIDIA’s AI stack— that enables enterprises to deploy, customize and orchestrate multi-agent AI solutions at scale, integrating LLMs, vision, and other AI capabilities to automate complex workflows across business domains.',
+        es: 'Una plataforma de Accenture, desarrollada con tecnología IA de NVIDIA, que permite a las empresas implementar, personalizar y orquestar soluciones de IA de múltiples agentes a escala, integrando LLM, visión y otras capacidades de IA para automatizar flujos de trabajo complejos en todos los dominios comerciales.',
+      },
+      comment: {
+        en: 'While working for Accenture, I used AI Refinery to develop AI applications for my team. It has an SDK written in Python for prompting and orchestrating agents.',
+        es: 'Trabajando para Accenture, utilicé AI Refinery para desarrollar aplicaciones IA para mi equipo. Posee un SDK escrito en Python para prompting y orquestar agentes.',
+      }
+    },
+    {
+      tech: 'AWS Bedrock',
+      image: '/tech/6-ia/aws-bedrock.png',
+      years: ['2024'],
+      tier: 't4',
+      description: {
+        en: 'A fully managed AI service by AWS that provides access to leading foundation models and tools for building, scaling, and integrating generative AI into applications.',
+        es: 'Un servicio de IA completamente administrado por AWS que brinda acceso a modelos y herramientas fundamentales líderes para construir, escalar e integrar IA generativa en aplicaciones.',
+      },
+      comment: {
+        en: 'I experimented with Bedrock as an alternative to OpenAI so I could easily use other models via API.',
+        es: 'Experimenté con Bedrock como alternativa a OpenAI para poder utilizar otros modelos por API fácilmente.',
       }
     },
     {
