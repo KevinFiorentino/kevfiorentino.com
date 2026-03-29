@@ -1,6 +1,6 @@
 import type { Project } from "@shared/utils/interfaces/project.interface";
 
-export const projectsDataES: Project[] = [
+export const projectsData: Project[] = [
   {
     title: "ASTREA.COM.AR",
     position: "Full Stack Javascript Developer",
@@ -17,7 +17,7 @@ export const projectsDataES: Project[] = [
       <p>Este proyecto consiste en un sitio web institucional y una tienda online para la venta de libros. El front se creó con Angular y Firebase, y el back con NestJS y MongoDB. Toda la tecnología de Astrea está integrada y bajo el mismo stack.</p>
       <p>Estoy orgulloso de esta arquitectura completa que he creado y sigo manteniendo como freelance.</p>
     `,
-    url: "https://astrea.com.ar",
+    url: "https://www.astrea.com.ar",
     images: [
       "/projects/astrea/web1.png",
       "/projects/astrea/web2.png",
@@ -51,7 +51,7 @@ export const projectsDataES: Project[] = [
       <p>Migré todo el software de Astrea desde una versión legacy desarrollada en PHP. El proceso de migración duró 8 meses y finalizó en 2022, lo que implicó mucho esfuerzo y desafíos para reconstruir el proyecto con tecnologías modernas.</p>
       <p>Con la infraestructura que diseñé, la empresa ahorra USD ∼4,000 anuales en costos en comparación con la anterior.</p>
     `,
-    url: "https://astreavirtual.com",
+    url: "https://www.astreavirtual.com",
     images: [
       "/projects/astrea/av1.png",
       "/projects/astrea/av2.png",
@@ -114,7 +114,7 @@ export const projectsDataES: Project[] = [
       <p>Fue un reto de SEO especialmente exigente por el cliente. La principal característica de este software es la generación de leads y la creación de presupuestos de productos. Además, cuenta con un completo backoffice interno para gestionar productos, clientes, noticias y la sección del blog. Drupal proporcionó una interfaz de usuario muy útil para su creación.</p>
       <p>Desde entonces, lo he mantenido con varios desarrollos menores.</p>
     `,
-    url: "https://fadepsa.com.ar",
+    url: "https://www.fadepsa.com.ar",
     images: [
       "/projects/fadepsa/web1.png",
       "/projects/fadepsa/web2.png",
@@ -147,7 +147,7 @@ export const projectsDataES: Project[] = [
       <p>El front-end lo desarrollé con React, NextJS y Firebase. Para el back-end, aproveché NextJS con una solución monolítica, y reutilicé la base de datos de Drupal del sitio institucional para gestionar productos y compras.</p>
       <p>Disfruté creando este proyecto porque también fui el diseñador. Usé Figma para crearlo y validarlo con el cliente antes de empezar a programar. Fue una experiencia completa de principio a fin.</p>
     `,
-    url: "https://tienda.fadepsa.com.ar",
+    url: "https://www.tienda.fadepsa.com.ar",
     images: [
       "/projects/fadepsa/tienda1.png",
       "/projects/fadepsa/tienda2.png",
@@ -224,3 +224,92 @@ export const projectsDataES: Project[] = [
     ],
   },
 ];
+
+export const aiProjectsData: Project[] = [
+  {
+    title: "ASTREAVIRTUAL.ASTREA.COM.AR",
+    position: "AI & Javascript Developer",
+    date: "Released Oct. 2025",
+    descriptEN: `
+      <p>I developed this landing page to promote a digital product of a client. It was my first fully vibe-coded project using the Lovable platform. I really liked Lovable; it's very powerful for creating websites or even apps with artificial intelligence.</p>
+      <p>The current status of this project wasn't generated with Lovable. Once I generated the base project with its design and styles, I extracted it from that platform and continued working on it with ChatGPT and Copilot, updating the content and applying other changes requested by the client.</p>
+    `,
+    descriptES: `
+      <p>Desarrollé esta landing page para promocionar un producto digital de un cliente. Fue mi primer proyecto full vibe codeado utilizando la plataforma Lovable. Me gustó mucho Lovable realmente; es superpoderosa para crear sitios o incluso aplicaciones con inteligencia artificial.</p>
+      <p>El estado actual del sitio no es el generado completamente con Lovable. Una vez generé el proyecto base, principalmente con el diseño y los estilos, extraje el proyecto de dicha plataforma y lo continué trabajando con ChatGPT y Copilot, actualizando el contenido y aplicando varios cambios solicitados por el cliente.</p>
+    `,
+    url: "https://astreavirtual.astrea.com.ar",
+    images: [
+      "/projects/astrea/landing1.png"
+    ],
+    techs: [
+      "/tech/1-front-end/react.png",
+      "/tech/1-front-end/vite.png",
+      "/tech/5-cloud/vercel.png",
+      "/tech/6-ia/lovable.png",
+      "/tech/6-ia/chatgpt.png",
+      "/tech/6-ia/copilot.png"
+    ],
+  },
+  {
+    title: "CREATUENVASE.FADEPSA.COM.AR",
+    position: "AI & Javascript Developer",
+    date: "Released Nov. 2025",
+    descriptEN: `
+      <p>Creating this site was a very good marketing idea for giving the possibility for users to create their own plastic bottle with artificial intelligence and being able to see how it would look.</p>
+      <p>The process is simple: users choose a base bottle that they like, upload an image of their current bottle with the label or logo of his business, select the colors that represent their brand, and in a few seconds they will receive a demonstrative image of their bottle. At the same time, Fadep receives a notification of the generation of a new lead to contact them.</p>
+      <p>This project was built mainly with NextJS, NestJS, and using OpenAI services.</p>
+    `,
+    descriptES: `
+      <p>Crear este sitio fue una gran idea de marketing para darle la posibilidad a los usuarios de crear su propio envase de plástico con inteligencia artificial y poder previsualizar cómo se vería el mismo.</p>
+      <p>El proceso es simple: el usuario elige un envase base que le guste, carga una imagen de su actual envase con la etiqueta o logo de su negocio, seleccionar los colores que representen a su marca y en menos de un minuto recibe una imagen demostrativa de su envase. A la vez que Fadep recibe una notificación de generación de lead para poder contactarlo.</p>
+      <p>Este proyecto fue construido principalmente con NextJS, NestJS y utilizando los servicios de OpenAI.</p>
+    `,
+    url: "https://www.creatuenvase.fadepsa.com.ar",
+    images: [
+      "/projects/fadepsa/crea1.png",
+      "/projects/fadepsa/crea2.png"
+    ],
+    techs: [
+      "/tech/1-front-end/react.png",
+      "/tech/1-front-end/nextjs.png",
+      "/tech/2-backend/nestjs.png",
+      "/tech/5-cloud/vercel.png",
+      "/tech/6-ia/chatgpt.png",
+      "/tech/6-ia/copilot.png",
+      "/tech/8-services/firebase.png"
+    ],
+  },
+  {
+    title: "USEFULSHUB.COM",
+    position: "AI & Javascript Developer",
+    date: "Released Feb. 2026",
+    descriptEN: `
+      <p>UsefulsHub is a personal long-term project that I started with the goal of having a useful platform for my daily needs. I usually use online tools for manipulating images, counting words, formatting code, generating a QR, among other needs. Why not have my own platform?</p>
+      <p>I fully created UsefulsHub with artificial intelligence. Especially every tool. It would be tedious to program them one by one on my own. With any AI assistance like Copilot or Claude Code, I can add a new one in a few minutes.</p>
+      <p>But I'm proud of saying that the brand and design isn't made with AI. Initially, I did it on Figma, and I love the result!</p>
+      <p>I have a plan to continue this project bit by bit, adding more tools and languages. It taught me a lot about SEO for ranking the site on Google and getting visits. In the future, I would like to monetize it with ads and learn about that industry.</p>
+    `,
+    descriptES: `
+      <p>UsefulsHub es un proyecto personal a largo plazo que comencé con el objetivo de tener una plataforma de utilidades diarias. Normalmente utilizo herramientas online para manipular imágenes, contar palabras, formatear código, generar un QR, entre otras necesidades. ¿Por qué no tener mi propia plataforma?</p>
+      <p>Lo creé completamente con inteligencia artificial. Especialmente cada herramienta. Hubiera sido tedioso programarlas una a una yo mismo. Con cualquier asistente IA como Copilot o Claude Code, puedo agregar una nueva en pocos minutos.</p>
+      <p>Estoy orgulloso de decir que la marca y el diseño no fueron hechos con IA. Inicialmente, lo hice en Figma y me encanta el resultado!</p>
+      <p>Tengo el plan de continuar este proyecto poco a poco, agregando más herramientas e idiomas. Me enseñó mucho sobre SEO para rankear sitios en Google y recibir visitas. En el futuro, me gustaría monetizarlo con ads y aprender de esa industria.</p>
+    `,
+    url: "https://usefulshub.com",
+    images: [
+      "/projects/usefuls/uh1.png",
+      "/projects/usefuls/uh2.png",
+      "/projects/usefuls/uh3.png"
+    ],
+    techs: [
+      "/tech/1-front-end/react.png",
+      "/tech/1-front-end/nextjs.png",
+      "/tech/5-cloud/vercel.png",
+      "/tech/6-ia/chatgpt.png",
+      "/tech/6-ia/copilot.png",
+      "/tech/6-ia/claude.png",
+      "/tech/12-others/figma.png"
+    ],
+  },
+]

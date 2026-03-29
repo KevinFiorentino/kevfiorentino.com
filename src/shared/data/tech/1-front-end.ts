@@ -1,4 +1,4 @@
-import type { TechBox } from '../interfaces/tech-box.interface';
+import type { TechBox } from '@shared/utils/interfaces/tech-box.interface';
 
 export const frontend: TechBox = {
   name: 'Front-end',
@@ -100,6 +100,20 @@ export const frontend: TechBox = {
       comment: {
         en: 'Throughout my experience as CTO, we based our front-end architecture on Vercel technologies. Also, I’ve worked with NextJS in freelance projects.',
         es: 'A lo largo de mi experiencia como CTO, basamos nuestra arquitectura front-end en tecnologías de Vercel. También he trabajado con NextJS en proyectos freelance.',
+      }
+    },
+    {
+      tech: 'Vite',
+      image: '/tech/1-front-end/vite.png',
+      years: [],
+      tier: 't3',
+      description: {
+        en: 'A build tool that aims to provide a faster and leaner development experience for modern web projects.',
+        es: 'Una herramienta de compilación que busca proporcionar una experiencia de desarrollo más rápida y eficiente para proyectos web modernos.',
+      },
+      comment: {
+        en: 'I used Vite to build some AI-coded vibe projects. If I had to choose a front-end framework for a React project, I would prefer or am more familiar with NextJS.',
+        es: 'Utilicé Vite para construir algunos proyectos vibe codeados con IA. Si tuviese que elegir framework front-end para un proyecto React, preferiría o estoy más familiarizado con NextJS.',
       }
     },
     {
