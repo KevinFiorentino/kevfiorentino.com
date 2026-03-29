@@ -1,12 +1,12 @@
 ---
 import { getCollection } from 'astro:content';
 import { collectionMetadata } from '@content/config';
-import MainLayout from '@layouts/MainLayout.astro';
-import Breadcrumbs from '@components/articles/Breadcrumbs.astro';
-import ToC from '@components/articles/ToC.astro';
-import PrevNext from '@components/articles/PrevNext.astro';
+import MainLayout from '@shared/layouts/MainLayout.astro';
+import Breadcrumbs from '@shared/components/articles/Breadcrumbs.astro';
+import ToC from '@shared/components/articles/ToC.astro';
+import PrevNext from '@shared/components/articles/PrevNext.astro';
 
-import '@styles/article.scss';
+import '@shared/styles/article.scss';
 
 export async function getStaticPaths() {
 

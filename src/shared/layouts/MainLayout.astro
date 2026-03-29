@@ -1,0 +1,83 @@
+---
+export interface Props {
+	title: string;
+  description: string;
+  image: string;
+  addWidth: boolean;
+}
+
+import { getLangFromUrl } from '@shared/i18n/utils';
+import Head from '@shared/components/Head.astro';
+import Header from '@shared/components/Header.astro';
+import Footer from '@shared/components/Footer.astro';
+
+import '@shared/styles/global.scss';
+
+const { title, description, image, addWidth } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+---
+
+<!DOCTYPE html>
+<html id="kevin" class="dark" lang={lang}>
+	<Head
+    title={title}
+    description={description}
+    image={image}
+  ></Head>
+	<body class="bg-gray-200 bg-dark">
+    <Header></Header>
+    <main class={`${addWidth ? 'main-width' : ''}`}>
+      <slot />
+    </main>
+    <br><br><br>
+    <Footer></Footer>
+	</body>
+</html>
+
+<style lang="scss" is:global>
+:root {
+  --white: #FAFAFA;
+  --black: #1D1D1D;
+  --grey: #797979;
+  --primary: #2596BE;
+  --accent: #2A72B2;
+  --alternative: #E1C546;
+  --bg-dark: #13161C;
+  --bg-gradient: linear-gradient(0deg, var(--primary) 0%, var(--accent) 100%);
+  --shadow: #00000029;
+}
+html {
+  font-family: "Poppins", serif;
+  background-color: #F6F6F6;
+  scroll-behavior: smooth;
+  scrollbar-color: var(--alternative) var(--white);
+}
+html.dark {
+  scrollbar-color: var(--alternative) var(--bg-dark);
+}
+body {
+  min-height: 100vh;
+}
+code {
+  font-size: .9rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+.dark {
+  .bg-dark {
+    background-color: var(--bg-dark);
+  }
+}
+.bg-gradient {
+  background-image: var(--bg-gradient);
+}
+.bg-primary-blue {
+  background-color: var(--primary);
+}
+.bg-accent-blue {
+  background-color: var(--accent);
+}
+.fill-alternative {
+  fill: var(--alternative);
+}
+</style>

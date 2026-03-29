@@ -1,0 +1,93 @@
+---
+export interface Props {
+  slug: string;
+  collection: string;
+	title: string;
+  description: string;
+  image: string;
+  pubDate: Date;
+}
+
+import { getLangFromUrl, useTranslations } from '@shared/i18n/utils';
+import { collectionNameMapping } from '@content/config';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const {
+  slug,
+  collection,
+  title,
+  description,
+  image,
+  pubDate,
+} = Astro.props;
+---
+
+<article class="blog-card relative" role="listitem">
+  <a href={`/${lang}/blog/${collection}/${slug}`} title={ title } class="flex relative">
+
+    <div class="flex flex-1 flex-col justify-between p-3">
+      <div class="mb-3">
+        <div class="flex justify-start align-center">
+          <img class="mr-2" src={image} alt={title}>
+          <h3 class="font-bold">
+            { title }
+          </h3>
+        </div>
+        <p class="mt-2 text-sm leading-relaxed dark:text-white">
+          { description }
+        </p>
+      </div>
+      <div class="flex items-end justify-between">
+        <span class="post-collection">
+          { collectionNameMapping(collection) }
+        </span>
+        <div class="btn-read text-gray-400 dark:text-white text-center font-bold">
+          {t('read-post')}
+        </div>
+      </div>
+    </div>
+  </a>
+</article>
+
+<style lang="scss">
+.blog-card {
+  border-left: 2px solid var(--primary);
+
+  h3 {
+    line-height: 35px;
+    margin-bottom: 0;
+  }
+  img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    box-shadow: none;
+  }
+  .post-collection {
+    color: var(--white);
+    background-color: var(--primary);
+    font-size: 14px;
+    padding: 0 5px;
+  }
+  .btn-read {
+    font-size: 14px;
+    padding: 0 5px;
+  }
+  &:hover {
+    box-shadow: 0 3px 6px #2596BE29;
+  }
+}
+
+</style>
+
+<style is:global lang="scss">
+.dark {
+  .blog-card {
+    h3 {
+      -webkit-text-fill-color: var(--white) !important;
+    }
+  }
+}
+</style>

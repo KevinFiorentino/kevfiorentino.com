@@ -8,13 +8,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["src/components/*"],
       "@content/*": ["src/content/*"],
-      "@i18n/*": ["src/i18n/*"],
-      "@layouts/*": ["src/layouts/*"],
       "@pages/*": ["src/pages/*"],
-      "@styles/*": ["src/styles/*"],
-      "@utils/*": ["src/utils/*"]
+      "@shared/*": ["src/shared/*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"

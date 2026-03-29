@@ -1,8 +1,8 @@
 import type { APIRoute } from 'astro';
-import { techWrapper } from '@utils/tech-wrapper';
-import type { TechBox } from '@utils/interfaces/tech-box.interface';
-import type { Tech } from '@utils/interfaces/tech.interface';
-import type { TierResponse } from '@utils/interfaces/tier.interface';
+import { techWrapper } from '@shared/data/tech/tech-wrapper';
+import type { TechBox } from '@shared/utils/interfaces/tech-box.interface';
+import type { Tech } from '@shared/utils/interfaces/tech.interface';
+import type { TierResponse } from '@shared/utils/interfaces/tier.interface';
 
 // Allows SSG route
 export const prerender = false;

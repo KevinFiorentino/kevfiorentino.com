@@ -1,0 +1,59 @@
+---
+export interface Props {
+  collection: string;
+  pubDate: Date;
+}
+
+import { getLangFromUrl, useTranslations } from '@shared/i18n/utils';
+import { collectionNameMapping } from '@content/config';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const { collection, pubDate } = Astro.props;
+
+let months = ['January','February','March','April','May','Jun','July','August','September','October','November','December'];
+if (lang == 'es') {
+  months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','September','Octubre','Noviembre','Diciembre'];
+}
+
+const year = pubDate.getFullYear();
+const month = months[pubDate.getMonth()];
+---
+
+<div class="mb-3">
+  <div class="flex items-center justify-between">
+    <ul class="flex">
+      <li class="dark:text-white mr-2">
+        <a href=`/${lang}` class="" title="Home">
+          <span class="sr-only">Home</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" style="margin-top: 4px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+          </svg>
+        </a>
+      </li>
+      <li class="dark:text-white mr-2">/</li>
+      <li class="dark:text-white mr-2">
+        <a href=`/${lang}/blog` class="" title="Blog">Blog</a>
+      </li>
+      <li class="dark:text-white mr-2">/</li>
+      <li class="dark:text-white mr-2">
+        <a href=`/${lang}/blog/${collection}` class="mr-2" title={`${t('collection')}: ${collectionNameMapping(collection)}`}>
+          { collectionNameMapping(collection) }
+        </a>
+      </li>
+    </ul>
+    <time datetime={ pubDate.toString() } class="text-gray-500 dark:text-gray-300">
+      { month } { year }
+    </time>
+  </div>
+</div>
+
+<style>
+li, li a {
+  font-weight: 300;
+}
+li a:hover {
+  text-decoration: underline;
+}
+</style>

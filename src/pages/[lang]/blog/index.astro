@@ -1,10 +1,10 @@
 ---
-import { languages } from '@i18n/ui';
-import { getLangFromUrl, useTranslations } from '@i18n/utils';
+import { languages } from '@shared/i18n/ui';
+import { getLangFromUrl, useTranslations } from '@shared/i18n/utils';
 import { getEntry } from 'astro:content';
-import MainLayout from '@layouts/MainLayout.astro';
-import BlogCard from '@components/BlogCard.astro';
-import CollectionsList from '@components/CollectionsList.astro';
+import MainLayout from '@shared/layouts/MainLayout.astro';
+import BlogCard from '@shared/components/BlogCard.astro';
+import CollectionsList from '@shared/components/CollectionsList.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
