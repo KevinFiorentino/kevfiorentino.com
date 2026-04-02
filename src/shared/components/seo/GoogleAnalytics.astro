@@ -1,0 +1,23 @@
+---
+const gaId = "G-QNMPMXHRJD";
+const currentUrl = Astro.url.href;
+const isProduction = currentUrl.includes('kevfiorentino.com');
+
+if (!isProduction || !gaId) {
+  return;
+}
+---
+
+<script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+
+<script define:vars={{ gaId }}>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(...args) {
+    window.dataLayer.push(args);
+  }
+  window.gtag = gtag;
+  gtag('js', new Date());
+  gtag('config', gaId, {
+    anonymize_ip: true
+  });
+</script>
