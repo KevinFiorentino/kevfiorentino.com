@@ -63,7 +63,7 @@ export const packages: TechBox = {
     {
       tech: 'NgRx',
       image: '/tech/11-packages/ngrx.png',
-      years: ['2021', '2022'],
+      years: ['2021', '2022', '2026'],
       tier: 't1',
       description: {
         en: 'A reactive state management library for Angular applications, built on Redux and RxJS principles for scalable state handling.',

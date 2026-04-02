@@ -21,7 +21,7 @@ export const ddbb: TechBox = {
     {
       tech: 'MySQL',
       image: '/tech/4-ddbb/mysql.png',
-      years: ['uni', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+      years: ['uni', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026'],
       tier: 't2',
       description: {
         en: 'A widely-used relational database known for reliability, performance, and compatibility with web applications.',

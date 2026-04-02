@@ -7,7 +7,7 @@ import type { TierResponse } from '@shared/utils/interfaces/tier.interface';
 import TechsBox from './components/TechsBox';
 import TierBox from './components/TierBox';
 
-type Filter = 'uni' | '2017' | '2018' | '2019' | '2020' | '2021' | '2022' | '2023' | '2024' | '2025' | 'all' | 'tier';
+type Filter = 'uni' | '2017' | '2018' | '2019' | '2020' | '2021' | '2022' | '2023' | '2024' | '2025' | '2026' | 'all' | 'tier';
 
 interface Props {
   currentLang: string;
@@ -62,6 +62,7 @@ const TechJourney = ({ currentLang }: Props) => {
             <button className={`${selected === '2023' && styles.active}`} onClick={() => handleTechBtn('2023')}>2023</button>
             <button className={`${selected === '2024' && styles.active}`} onClick={() => handleTechBtn('2024')}>2024</button>
             <button className={`${selected === '2025' && styles.active}`} onClick={() => handleTechBtn('2025')}>2025</button>
+            <button className={`${selected === '2026' && styles.active}`} onClick={() => handleTechBtn('2026')}>2026</button>
             <button className={`${selected === 'all' && styles.active}`} onClick={() => handleTechBtn('all')}>All 💻</button>
             <button className={`${selected === 'tier' && styles.active}`} onClick={() => handleTechBtn('tier')}>Tier 🩵</button>
           </div>

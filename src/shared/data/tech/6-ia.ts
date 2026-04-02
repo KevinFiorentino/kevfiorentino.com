@@ -7,7 +7,7 @@ export const ai: TechBox = {
     {
       tech: 'ChatGPT',
       image: '/tech/6-ia/chatgpt.png',
-      years: ['2024', '2025'],
+      years: ['2024', '2025', '2026'],
       tier: 't2',
       description: {
         en: 'The most popular artificial intelligence language model created by OpenAI to generate human-like text responses and assist in various tasks.',
@@ -21,15 +21,15 @@ export const ai: TechBox = {
     {
       tech: 'Claude',
       image: '/tech/6-ia/claude.png',
-      years: [],
+      years: ['2026'],
       tier: 't3',
       description: {
         en: 'An advanced AI model developed by Anthropic, built for safe reasoning, high-quality language understanding, and enterprise-ready intelligence.',
         es: 'Un modelo de IA avanzado desarrollado por Anthropic, diseñado para razonamiento seguro, comprensión del lenguaje de alta calidad e inteligencia empresarial.',
       },
       comment: {
-        en: 'Claude Sonet 4.5 is one of my favorite models. Especially for use with GitHub Copilot.',
-        es: 'Claude Sonet 4.5 es uno de mis modelos favoritos. Especialmente para utilizar con GitHub Copilot.',
+        en: 'Claude Sonet is one of my favorite models for development. Especially for use with GitHub Copilot.',
+        es: 'Claude Sonet es uno de mis modelos favoritos para desarrollo. Especialmente para utilizar con GitHub Copilot.',
       }
     },
     {
@@ -133,7 +133,7 @@ export const ai: TechBox = {
     {
       tech: 'LangChain',
       image: '/tech/6-ia/langchain.png',
-      years: ['2024', '2025'],
+      years: ['2024', '2025', '2026'],
       tier: 't1',
       description: {
         en: 'A framework for building AI-driven applications by chaining together LLMs and integrating external tools.',
@@ -147,7 +147,7 @@ export const ai: TechBox = {
     {
       tech: 'LangGraph',
       image: '/tech/6-ia/langgraph.png',
-      years: ['2024', '2025'],
+      years: ['2024', '2025', '2026'],
       tier: 't1',
       description: {
         en: 'A multi-agent architecture framework for creating complex AI workflows and dynamic interactions.',
@@ -161,7 +161,7 @@ export const ai: TechBox = {
     {
       tech: 'RAG Architecture',
       image: '/tech/6-ia/rag.png',
-      years: ['2024', '2025'],
+      years: ['2024', '2025', '2026'],
       tier: 't2',
       description: {
         en: 'Retrieval-Augmented Generation combines LLM with retrieval of external data such as a regular database or a vector database, to get accurate AI responses.',

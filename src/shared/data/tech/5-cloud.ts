@@ -49,7 +49,7 @@ export const cloud: TechBox = {
     {
       tech: 'AWS',
       image: '/tech/5-cloud/aws.png',
-      years: ['2023', '2024', '2025'],
+      years: ['2023', '2024', '2025', '2026'],
       tier: 't2',
       description: {
         en: 'Amazon Web Services provides scalable cloud computing solutions, including storage, databases, among other services.',
@@ -97,7 +97,7 @@ export const cloud: TechBox = {
     {
       tech: 'Docker',
       image: '/tech/5-cloud/docker.png',
-      years: ['2021', '2022', '2023', '2024', '2025'],
+      years: ['2021', '2022', '2023', '2024', '2025', '2026'],
       tier: 't1',
       description: {
         en: 'A platform for containerizing applications, enabling them to run consistently across different environments.',
@@ -195,7 +195,7 @@ export const cloud: TechBox = {
     {
       tech: "Vercel",
       image: '/tech/5-cloud/vercel.png',
-      years: ['2023', '2024', '2025'],
+      years: ['2023', '2024', '2025', '2026'],
       tier: 't2',
       description: {
         en: 'A cloud platform for hosting static sites and serverless functions, optimized for NextJS and React applications.',

@@ -77,7 +77,7 @@ export const frontend: TechBox = {
     {
       tech: 'React',
       image: '/tech/1-front-end/react.png',
-      years: ['uni', '2023', '2024', '2025'],
+      years: ['uni', '2023', '2024', '2025', '2026'],
       tier: 't2',
       description: {
         en: 'A Javascript library by Meta for building interactive user interfaces using a component-based architecture.',
@@ -91,7 +91,7 @@ export const frontend: TechBox = {
     {
       tech: 'NextJS',
       image: '/tech/1-front-end/nextjs.png',
-      years: ['2023', '2024', '2025'],
+      years: ['2023', '2024', '2025', '2026'],
       tier: 't1',
       description: {
         en: 'A React framework for building server-rendered and static web apps with features like routing, SEO, and API handling.',

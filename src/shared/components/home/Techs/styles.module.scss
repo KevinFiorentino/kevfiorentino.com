@@ -22,8 +22,10 @@
     gap: 30px;
   }
   .btnTechs {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
 
     button {
@@ -96,15 +98,6 @@
 
 .techMobile {
   display: none !important;
-}
-
-
-@media (max-width: 1152px) {
-  .bgTechs {
-    .btnTechs {
-      grid-template-columns: repeat(6, 1fr);
-    }
-  }
 }
 
 @media (max-width: 1024px) {
