@@ -84,7 +84,7 @@ const TechComponent = ({ tech, currentLang, isSoftSkills }: Props) => {
                 </p>
                 <div className='flex items-center justify-between'>
                   <div className='flex items-center flex-wrap gap-1'>
-                    {tech.years.map((y) => <span className='capitalize'>{y}</span> )}
+                    {tech.years.map((y, i) => <span className='capitalize' key={i}>{y}</span> )}
                   </div>
                   <span className={`${tech.tier}`}>
                     {t(tech.tier)}

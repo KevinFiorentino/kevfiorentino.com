@@ -68,14 +68,10 @@ const TechJourney = ({ currentLang }: Props) => {
           </div>
           <br />
           <div className={styles.techDescription}>
-            <p
+            <div
               className={`${styles.text}`}
-              dangerouslySetInnerHTML={{ __html: t(selected) }}
-            ></p>
-            {/* <p
-              className={`${styles.text}`}
-              dangerouslySetInnerHTML={{ __html: t('tech_text') }}
-            ></p> */}
+              dangerouslySetInnerHTML={{ __html: t(selected) || '' }}
+            ></div>
           </div>
           <br /><br />
           {loading && (
