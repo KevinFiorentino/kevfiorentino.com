@@ -11,7 +11,8 @@ const mainSchema = z.object({
   pubDate: z.string().transform((str: string | number | Date) => new Date(str)),
   englishMetadata: z.object({
     title: z.string(),
-    description: z.string()
+    description: z.string(),
+    hasEnglishVersion: z.boolean().optional()
   }).optional(),
   prev: z.string().optional(),
   next: z.string().optional(),
