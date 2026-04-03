@@ -87,11 +87,9 @@
           border-right-color: var(--white);
           padding: 5px;
         }
-
         th:first-child {
           border-left: 1px solid var(--accent);
         }
-
         th:last-child {
           border-right: 1px solid var(--accent);
         }
@@ -106,13 +104,11 @@
           padding: 5px;
         }
       }
-
       tr:nth-child(odd) {
         td {
           border: 1px solid var(--primary);
         }
       }
-
       tr:nth-child(even) {
         color: var(--white);
         background: var(--primary);
@@ -121,11 +117,9 @@
           border: 1px solid var(--white);
           border-bottom-color: var(--primary);
         }
-
         td:first-child {
           border-left: 1px solid var(--primary);
         }
-
         td:last-child {
           border-right: 1px solid var(--primary);
         }
@@ -154,6 +148,12 @@
       }
     }
   }
+
+  .no-english-version {
+    small {
+      font-weight: 300;
+    }
+  }
 }
 
 .dark {
@@ -165,18 +165,20 @@
         }
       }
     }
-
     tbody {
       tr:nth-child(odd) {
         color: var(--white);
       }
-
       tr:nth-child(even) {
         td {
           border: 1px solid #1F2937;
         }
       }
     }
-
+  }
+  .no-english-version {
+    small {
+      color: var(--white);
+    }
   }
 }

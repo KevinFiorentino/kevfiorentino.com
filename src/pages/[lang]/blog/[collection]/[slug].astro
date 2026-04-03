@@ -15,7 +15,7 @@ export async function getStaticPaths() {
   // Build pages of each content
   for await (let c of collectionMetadata) {
     const coll = await getCollection(c.name);
-    coll.map((post) => {
+    for (const post of coll) {
       pages.push({
         params: {
           lang: 'es',
@@ -24,41 +24,73 @@ export async function getStaticPaths() {
         },
         props: {
           post: post,
+          isEnglishAvailable: true, // Spanish is always available
         },
       });
-      if (post.data.englishMetadata) {
-        pages.push({
-          params: {
-            lang: 'en',
-            collection: c.name,
-            slug: post.slug,
-          },
-          props: {
-            post: post,
-          },
-        });
+      // Always generate English route
+      let enPost: any = post as any; // Default to Spanish post
+      let isEnglishAvailable = false;
+      if (post.data.englishMetadata?.hasEnglishVersion) {
+        if (c.name === 'blockchain') {
+          const enColl = await getCollection('blockchain-en');
+          const found = enColl.find(p => p.slug === post.slug);
+          if (found) {
+            enPost = found;
+            isEnglishAvailable = true;
+          }
+        } else if (c.name === 'solana') {
+          const enColl = await getCollection('solana-en');
+          const found = enColl.find(p => p.slug === post.slug);
+          if (found) {
+            enPost = found;
+            isEnglishAvailable = true;
+          }
+        }
       }
-    });
+      pages.push({
+        params: {
+          lang: 'en',
+          collection: c.name,
+          slug: post.slug,
+        },
+        props: {
+          post: enPost,
+          isEnglishAvailable,
+        },
+      });
+    }
   }
 
   return pages;
 }
 
 const param = Astro.params;
-const post = Astro.props.post;
+const { post, isEnglishAvailable } = Astro.props;
 
 const { collection } = post;
 const { title, description, pubDate, englishMetadata, prev, next } = post.data;
 
-const enTitle = englishMetadata.title;
-const enDescription = englishMetadata.description;
+let displayTitle = title;
+let displayDescription = description;
+
+if (param.lang === 'en') {
+  if (isEnglishAvailable) {
+    // Use English title and description from the English post
+    displayTitle = title;
+    displayDescription = description;
+  } else {
+    // Use English metadata from Spanish post
+    displayTitle = englishMetadata?.title || title;
+    displayDescription = englishMetadata?.description || description;
+  }
+}
 
 const { Content, headings } = await post.render();
 ---
 
 <MainLayout
-  title={`${param.lang == 'es' ? title : enTitle} | Kevin Fiorentino`}
-  description={`${param.lang == 'es' ? description : enDescription}`}
+  title={`${displayTitle} | Kevin Fiorentino`}
+  description={displayDescription}
   image='/kevin2025.jpg'
   addWidth={true}
 >
@@ -71,7 +103,17 @@ const { Content, headings } = await post.render();
         ></Breadcrumbs>
       </section>
       <article class="main-article-content">
-        <Content />
+        {param.lang === 'en' && !isEnglishAvailable ? (
+          <>
+            <h1>{displayTitle}</h1>
+            <div class="no-english-version">
+              <p>Sorry, this article is not available in English. You can <a href={`/es/blog/${collection}/${post.slug}`} class="btn">read the Spanish version</a>.</p>
+              <small class="fill-black dark:fill-white">(if you don't know Spanish, I recommend using any AI translator 😊)</small>
+            </div>
+          </>
+        ) : (
+          <Content />
+        )}
       </article>
       <PrevNext
         collection={collection}

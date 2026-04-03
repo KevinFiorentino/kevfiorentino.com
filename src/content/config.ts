@@ -26,6 +26,10 @@ export const collections = {
   'openzeppelin': defineCollection({ schema: mainSchema }),
   'solana': defineCollection({ schema: mainSchema }),
   'solidity': defineCollection({ schema: mainSchema }),
+
+  // English versions
+  'blockchain-en': defineCollection({ type: 'content', schema: mainSchema }),
+  'solana-en': defineCollection({ type: 'content', schema: mainSchema }),
 };
 
 
