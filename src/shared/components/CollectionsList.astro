@@ -39,38 +39,37 @@ const t = useTranslations(lang);
   margin: 0 auto;
 
   .badge-box {
-    filter: drop-shadow(0px 3px 6px var(--shadow));
+    box-shadow: 0px 1px 2px #00000010;
     margin: 0.3em 0.6em;
 
     .badge {
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
+      gap: 10px;
       font-size: 20px;
       font-weight: 500;
       color: var(--primary);
       border: dotted 1px var(--white);
       background-color: var(--white);
-      padding: 1rem 2rem;
-      clip-path: polygon(10% 10%, 100% 0, 100% 25%, 100% 100%, 0 85%);
-      transition: .5s;
+      padding: .8rem;
 
       img {
-        width: 45px;
-        height: 45px;
+        width: 30px;
+        height: 30px;
         object-fit: contain;
         box-shadow: none;
       }
     }
-
-    .badge:hover, .badge:focus {
-      clip-path: polygon(0% 0%, 100% 10%, 100% 25%, 100% 100%, 0% 90%);
-      transition: .5s;
-    }
   }
 
   .badge-box:hover, .badge-box:focus {
-    filter: drop-shadow(0px 2px 2px var(--black));
+    box-shadow: 0px 3px 6px #00000039;
+
+    .badge {
+      color: var(--white);
+      background-color: var(--alternative);
+    }
   }
 }
 </style>
