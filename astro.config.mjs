@@ -12,7 +12,7 @@ import { fromHtmlIsomorphic } from "hast-util-from-html-isomorphic";
 const icon = '<span class="copy"/>#</span>';
 
 export default defineConfig({
-  site: 'https://kevfiorentino.com',
+  site: 'https://www.kevfiorentino.com',
   integrations: [react(), tailwind(), mdx(), sitemap()],
   markdown: {
     rehypePlugins: [

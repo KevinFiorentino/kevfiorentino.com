@@ -12,8 +12,8 @@ if (!isProduction || !gaId) {
 
 <script define:vars={{ gaId }}>
   window.dataLayer = window.dataLayer || [];
-  function gtag(...args) {
-    window.dataLayer.push(args);
+  function gtag() {
+    window.dataLayer.push(arguments);
   }
   window.gtag = gtag;
   gtag('js', new Date());
