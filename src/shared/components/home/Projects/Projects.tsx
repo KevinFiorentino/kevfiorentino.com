@@ -32,7 +32,7 @@ const Projects = ({ currentLang }: Props) => {
 
       <div className={`main-width z-10`}>
         <h2 className="text-white">
-          AI & Vibe Conding
+          AI & Vibe Coding
         </h2>
         <hr className="hr mt-2 mb-0" />
         <br />
